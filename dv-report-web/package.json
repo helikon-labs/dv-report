@@ -1,0 +1,25 @@
+{
+    "name": "submerge-dv-report",
+    "version": "1.0.0",
+    "description": "W3F Decentralized Voices delegate report page. Developed part of Submerge.",
+    "scripts": {
+        "format:check": "prettier . --check",
+        "format": "prettier . --write",
+        "lint": "eslint ./",
+        "build": "webpack --config ./src/client/webpack.prod.js",
+        "dev": "webpack serve --config ./src/client/webpack.dev.js",
+        "start": "node ./dist/server/server.js"
+    },
+    "author": "kukabi @ Helikon Labs",
+    "license": "GPL 3",
+    "devDependencies": {
+        "@types/d3": "^7.4.3",
+        "@types/express": "^5.0.2",
+        "d3": "^7.9.0",
+        "express": "^5.1.0",
+        "prettier": "3.5.3",
+        "ts-loader": "^9.5.2",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.1"
+    }
+}
