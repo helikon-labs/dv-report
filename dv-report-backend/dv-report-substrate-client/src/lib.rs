@@ -1,12 +1,12 @@
 use crate::event::get_referendum_events_in_block;
 use crate::storage_utility::{decode_hex_string, get_rpc_storage_plain_params};
 use crate::vote::get_vote_calls_in_block;
-use dv_report_types::governance::referendum::ReferendumEvent;
 pub use dv_report_types::metadata::polkadot::{
     self, api::referenda::storage::types::referendum_info_for::ReferendumInfoFor as ReferendumInfo,
 };
 use dv_report_types::substrate::block::BlockHeader;
 use dv_report_types::substrate::chain::Chain;
+use dv_report_types::substrate::event::ReferendumEvent;
 use dv_report_types::substrate::vote::BlockVoteCalls;
 use jsonrpsee::ws_client::WsClientBuilder;
 use jsonrpsee_core::client::{Client, ClientT};

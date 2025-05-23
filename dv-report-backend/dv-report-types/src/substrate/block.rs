@@ -1,4 +1,3 @@
-use crate::substrate::event::TransferEvent;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
@@ -8,20 +7,6 @@ pub struct Block {
     pub hash: String,
     pub parent_hash: String,
     pub author_address: Option<String>,
-    pub transfers: Vec<TransferEvent>,
-}
-
-impl Block {
-    pub fn convert_to_old_dot(&self) -> Block {
-        let mut block = self.clone();
-        block.transfers = Vec::new();
-        for transfer in self.transfers.iter() {
-            let mut transfer = transfer.clone();
-            transfer.amount /= 100;
-            block.transfers.push(transfer);
-        }
-        block
-    }
 }
 
 #[derive(Serialize, Deserialize, Debug)]

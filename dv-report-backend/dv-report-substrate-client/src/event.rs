@@ -1,10 +1,11 @@
-use dv_report_types::governance::referendum::{ReferendumEvent, Tally};
 use dv_report_types::metadata::polkadot::api::referenda::events::{
     Approved, Cancelled, ConfirmAborted, ConfirmStarted, Confirmed, DecisionDepositPlaced,
     DecisionDepositRefunded, DecisionStarted, DepositSlashed, Killed, Rejected,
     SubmissionDepositRefunded, Submitted, TimedOut,
 };
 use dv_report_types::substrate::account_id::AccountId;
+use dv_report_types::substrate::event::ReferendumEvent;
+use dv_report_types::substrate::vote::Tally;
 
 pub(super) async fn get_referendum_events_in_block(
     block: &crate::vote::Block,

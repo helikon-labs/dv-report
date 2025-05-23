@@ -7,4 +7,5 @@ pub mod chain;
 pub mod event;
 pub mod identity;
 pub mod system;
+pub mod track;
 pub mod vote;

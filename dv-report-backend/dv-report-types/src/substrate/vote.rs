@@ -1,5 +1,6 @@
 use crate::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 use crate::substrate::account_id::AccountId;
+use frame_support::{Deserialize, Serialize};
 
 #[derive(Debug, Default)]
 pub struct BlockVoteCalls {
@@ -44,4 +45,11 @@ pub struct RemoveVoteCall {
     pub signer: AccountId,
     pub voter: AccountId,
     pub referendum_index: u32,
+}
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
+pub struct Tally {
+    pub ayes: u128,
+    pub nays: u128,
+    pub support: u128,
 }

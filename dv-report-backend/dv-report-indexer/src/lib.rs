@@ -8,8 +8,8 @@ use dv_report_substrate_client::SubstrateClient;
 use dv_report_types::dv::cohort::Cohort;
 use dv_report_types::dv::delegate::Delegate;
 use dv_report_types::governance::referendum::{Referendum, ReferendumStatus};
-use dv_report_types::governance::track::Track;
 use dv_report_types::substrate::chain::Chain;
+use dv_report_types::substrate::track::Track;
 use lazy_static::lazy_static;
 
 mod metrics;
@@ -130,7 +130,7 @@ impl Service for Indexer {
         self.init_cohort(&chain, &cohort, delegates.as_slice())
             .await?;
         let header = self.substrate_client.get_finalized_block_header().await?;
-        for block_number in 26073110..header.get_number()? {
+        for block_number in 26088680..header.get_number()? {
             log::info!("Process block {}.", block_number);
             let hash = self.substrate_client.get_block_hash(block_number).await?;
             let vote_calls = self.substrate_client.get_vote_calls_in_block(&hash).await?;
@@ -142,10 +142,6 @@ impl Service for Indexer {
             );
             for vote_call in vote_calls.vote_calls.iter() {
                 let voter = vote_call.voter;
-                log::info!(
-                    "VOTER: {}",
-                    voter.to_ss58_check_with_version(chain.ss58_prefix)
-                );
                 if let Some(delegate) = delegates
                     .iter()
                     .find(|delegate| delegate.delegation.delegate_account_id == voter)
@@ -157,6 +153,13 @@ impl Service for Indexer {
                         vote_call.referendum_index
                     );
                 }
+            }
+            let referendum_events = self
+                .substrate_client
+                .get_referendum_events_in_block(&hash)
+                .await?;
+            if !referendum_events.is_empty() {
+                log::error!("Found {} referendum_events.", referendum_events.len());
             }
         }
         // tokio::spawn(async move {});
