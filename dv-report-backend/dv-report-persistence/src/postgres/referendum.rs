@@ -27,7 +27,7 @@ impl PostgreSQLStorage {
             r#"
             UPDATE referendum SET status_id = $1
             WHERE network_id = $2 AND index = $3
-            RETURNING (network_id, index)
+            RETURNING network_id, index
             "#,
         )
         .bind(status.id() as i32)
@@ -51,7 +51,7 @@ impl PostgreSQLStorage {
             SET
                 status_id = EXCLUDED.status_id,
                 updated_at = now()
-            RETURNING (network_id, index)
+            RETURNING network_id, index
             "#,
         )
         .bind(referendum.network_id as i32)

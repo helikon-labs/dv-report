@@ -36,7 +36,7 @@ impl PostgreSQLStorage {
             r#"
             INSERT INTO vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)
-            RETURNING (id)
+            RETURNING id
             "#,
         )
             .bind(vote_call.network_id as i32)
@@ -70,7 +70,7 @@ impl PostgreSQLStorage {
             r#"
             INSERT INTO remove_vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, signer_account_id, voter_account_id)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
-            RETURNING (id)
+            RETURNING id
             "#,
         )
             .bind(remove_vote_call.network_id as i32)
