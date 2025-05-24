@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS remove_vote
     signer_account_id VARCHAR(64)                 NOT NULL,
     voter_account_id  VARCHAR(64)                 NOT NULL,
     created_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    CONSTRAINT remove_vote_u_vote UNIQUE (network_id, referendum_index, block_hash, extrinsic_index),
     CONSTRAINT remove_vote_fk_network
         FOREIGN KEY (network_id)
             REFERENCES network (id)
