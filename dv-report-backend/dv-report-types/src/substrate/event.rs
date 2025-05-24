@@ -4,18 +4,61 @@ use frame_support::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum ReferendumEvent {
-    Submitted(u32, u16),
-    DecisionDepositPlaced(u32, u128, AccountId),
-    DecisionDepositRefunded(u32, u128, AccountId),
-    DepositSlashed(u128, AccountId),
-    DecisionStarted(u32, u16, Tally),
-    ConfirmStarted(u32),
-    ConfirmAborted(u32),
-    Confirmed(u32, Tally),
-    Approved(u32),
-    Rejected(u32, Tally),
-    Cancelled(u32, Tally),
-    TimedOut(u32, Tally),
-    Killed(u32, Tally),
-    SubmissionDepositRefunded(u32, u128, AccountId),
+    Submitted {
+        referendum_index: u32,
+        track_id: u16,
+    },
+    DecisionDepositPlaced {
+        referendum_index: u32,
+        amount: u128,
+        who: AccountId,
+    },
+    DecisionDepositRefunded {
+        referendum_index: u32,
+        amount: u128,
+        who: AccountId,
+    },
+    DepositSlashed {
+        amount: u128,
+        who: AccountId,
+    },
+    DecisionStarted {
+        referendum_index: u32,
+        track_id: u16,
+        tally: Tally,
+    },
+    ConfirmStarted {
+        referendum_index: u32,
+    },
+    ConfirmAborted {
+        referendum_index: u32,
+    },
+    Confirmed {
+        referendum_index: u32,
+        tally: Tally,
+    },
+    Approved {
+        referendum_index: u32,
+    },
+    Rejected {
+        referendum_index: u32,
+        tally: Tally,
+    },
+    Cancelled {
+        referendum_index: u32,
+        tally: Tally,
+    },
+    TimedOut {
+        referendum_index: u32,
+        tally: Tally,
+    },
+    Killed {
+        referendum_index: u32,
+        tally: Tally,
+    },
+    SubmissionDepositRefunded {
+        referendum_index: u32,
+        amount: u128,
+        who: AccountId,
+    },
 }

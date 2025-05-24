@@ -1,9 +1,8 @@
 CREATE TABLE IF NOT EXISTS vote
 (
-    id                SERIAL PRIMARY KEY,
+    id                SERIAL PRIMARY KEY          NOT NULL,
     network_id        INTEGER                     NOT NULL,
     referendum_index  INTEGER                     NOT NULL,
-    track             INTEGER                     NOT NULL,
     block_hash        VARCHAR(64)                 NOT NULL,
     extrinsic_index   INTEGER                     NOT NULL,
     extrinsic_hash    VARCHAR(64)                 NOT NULL,
@@ -15,12 +14,18 @@ CREATE TABLE IF NOT EXISTS vote
     voter_account_id  VARCHAR(64)                 NOT NULL,
     vote_type         VARCHAR(16)                 NOT NULL,
     is_aye            BOOLEAN,
+    conviction        INTEGER,
     balance           TEXT,
     aye               TEXT,
     nay               TEXT,
     abstain           TEXT,
     created_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
+    CONSTRAINT vote_u_vote UNIQUE (network_id, referendum_index, block_hash, extrinsic_index),
+    CONSTRAINT remove_vote_fk_network
+        FOREIGN KEY (network_id)
+            REFERENCES network (id)
+            ON DELETE RESTRICT
+            ON UPDATE CASCADE,
     CONSTRAINT vote_fk_referendum
         FOREIGN KEY (network_id, referendum_index)
             REFERENCES referendum (network_id, index)

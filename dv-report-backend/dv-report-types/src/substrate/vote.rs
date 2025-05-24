@@ -1,5 +1,6 @@
 use crate::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 use crate::substrate::account_id::AccountId;
+use crate::substrate::block::Block;
 use frame_support::{Deserialize, Serialize};
 
 #[derive(Debug, Default)]
@@ -18,8 +19,8 @@ impl BlockVoteCalls {
 
 #[derive(Debug)]
 pub struct VoteCall {
-    pub block_hash: String,
-    pub block_number: u64,
+    pub network_id: u32,
+    pub block: Block,
     pub extrinsic_index: u32,
     pub extrinsic_hash: String,
     pub is_batch: bool,
@@ -34,8 +35,8 @@ pub struct VoteCall {
 
 #[derive(Debug)]
 pub struct RemoveVoteCall {
-    pub block_hash: String,
-    pub block_number: u64,
+    pub network_id: u32,
+    pub block: Block,
     pub extrinsic_index: u32,
     pub extrinsic_hash: String,
     pub is_batch: bool,

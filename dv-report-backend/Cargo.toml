@@ -5,6 +5,7 @@ members = [
     "dv-report-logging",
     "dv-report-metrics",
     "dv-report-persistence",
+    "dv-report-repository",
     "dv-report-service",
     "dv-report-subsquare-client",
     "dv-report-substrate-client",

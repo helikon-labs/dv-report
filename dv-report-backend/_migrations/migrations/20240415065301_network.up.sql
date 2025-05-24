@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS network
 (
-    id                  INTEGER PRIMARY KEY,
+    id                  INTEGER PRIMARY KEY         NOT NULL,
     hash                VARCHAR(64)                 NOT NULL,
     chain               VARCHAR(50)                 NOT NULL,
     display             VARCHAR(50)                 NOT NULL,
@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS network
     token_ticker        VARCHAR(16)                 NOT NULL,
     token_decimal_count INTEGER                     NOT NULL,
     created_at          TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at          TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT network_u_hash UNIQUE (hash),
     CONSTRAINT network_u_chain UNIQUE (chain),
     CONSTRAINT network_u_display UNIQUE (display)

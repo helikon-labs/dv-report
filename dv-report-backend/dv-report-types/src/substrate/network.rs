@@ -4,7 +4,7 @@ use std::fmt::{Display, Formatter};
 use std::str::FromStr;
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
-pub struct Chain {
+pub struct Network {
     pub id: u32,
     pub chain: String,
     pub display: String,
@@ -13,12 +13,11 @@ pub struct Chain {
     pub token_decimals: usize,
     pub token_format_decimal_points: usize,
     pub ss58_prefix: u16,
-    pub block_time_seconds: u16,
 }
 
-impl Chain {
+impl Network {
     pub fn polkadot() -> Self {
-        Chain {
+        Network {
             id: 1,
             chain: "polkadot".to_string(),
             display: "Polkadot".to_string(),
@@ -27,12 +26,11 @@ impl Chain {
             token_decimals: 10,
             token_format_decimal_points: 4,
             ss58_prefix: 0,
-            block_time_seconds: 6,
         }
     }
 
     pub fn kusama() -> Self {
-        Chain {
+        Network {
             id: 2,
             chain: "kusama".to_string(),
             display: "Kusama".to_string(),
@@ -41,12 +39,11 @@ impl Chain {
             token_decimals: 12,
             token_format_decimal_points: 4,
             ss58_prefix: 2,
-            block_time_seconds: 6,
         }
     }
 }
 
-impl Display for Chain {
+impl Display for Network {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.display)
     }
@@ -63,10 +60,10 @@ impl Display for ParseChainError {
 
 impl std::error::Error for ParseChainError {}
 
-impl FromStr for Chain {
+impl FromStr for Network {
     type Err = ParseChainError;
 
-    /// Get chain from string.
+    /// Get network from string.
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s.to_lowercase().as_str() {
             "kusama" | "ksm" => Ok(Self::kusama()),
@@ -76,7 +73,7 @@ impl FromStr for Chain {
     }
 }
 
-impl Chain {
+impl Network {
     pub fn from_id(id: u32) -> Self {
         match id {
             2 => Self::kusama(),

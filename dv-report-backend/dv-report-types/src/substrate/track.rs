@@ -49,30 +49,6 @@ impl Track {
         }
     }
 
-    pub fn short_name(&self) -> &str {
-        match self {
-            Track::Root => "R",
-            Track::WhitelistedCaller => "WC",
-            Track::WishForChange => "WFC",
-            // general admin
-            Track::StakingAdmin => "SA",
-            Track::Treasurer => "T",
-            Track::LeaseAdmin => "LA",
-            Track::FellowshipAdmin => "FA",
-            Track::GeneralAdmin => "GA",
-            Track::AuctionAdmin => "AA",
-            // referendum admins
-            Track::ReferendumCanceller => "RC",
-            Track::ReferendumKiller => "RK",
-            // limited treasury spenders
-            Track::SmallTipper => "ST",
-            Track::BigTipper => "BT",
-            Track::SmallSpender => "SS",
-            Track::MediumSpender => "MS",
-            Track::BigSpender => "BS",
-        }
-    }
-
     pub fn name(&self) -> &str {
         match self {
             Track::Root => "Root",

@@ -1,3 +1,4 @@
+use crate::substrate::block::Block;
 use crate::substrate::track::Track;
 use serde::{Deserialize, Serialize};
 
@@ -43,6 +44,6 @@ pub struct Referendum {
     pub network_id: u32,
     pub index: u32,
     pub track: Track,
-    pub submission_block_number: u64,
+    pub submission_block: Block,
     pub status: ReferendumStatus,
 }

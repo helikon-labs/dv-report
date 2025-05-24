@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS cohort
     delegation_date   TIMESTAMP WITHOUT TIME ZONE NOT NULL,
     start_block_hash  VARCHAR(64)                 NOT NULL,
     created_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT cohort_pk PRIMARY KEY (network_id, number),
     CONSTRAINT cohort_fk_network
         FOREIGN KEY (network_id)

@@ -14,13 +14,14 @@ use dv_report_types::metadata::polkadot::api::{
     utility::calls::types::ForceBatch as ForceBatchExtrinsic,
 };
 use dv_report_types::substrate::account_id::AccountId;
+use dv_report_types::substrate::block::Block;
 use dv_report_types::substrate::vote::{BlockVoteCalls, RemoveVoteCall, VoteCall};
 use parity_scale_codec::{Decode, Encode};
 use subxt::blocks::ExtrinsicEvents;
 use subxt::utils::{AccountId32, MultiAddress};
 use subxt::{OnlineClient, PolkadotConfig};
 
-pub(crate) type Block = subxt::blocks::Block<PolkadotConfig, OnlineClient<PolkadotConfig>>;
+pub(crate) type SubstrateBlock = subxt::blocks::Block<PolkadotConfig, OnlineClient<PolkadotConfig>>;
 
 fn extrinsic_is_successful(events: ExtrinsicEvents<PolkadotConfig>) -> anyhow::Result<bool> {
     let mut is_successful = false;
@@ -36,6 +37,7 @@ fn extrinsic_is_successful(events: ExtrinsicEvents<PolkadotConfig>) -> anyhow::R
 
 #[allow(clippy::too_many_arguments)]
 fn get_vote_call_in_conviction_voting_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -53,8 +55,8 @@ fn get_vote_call_in_conviction_voting_call(
             log::trace!("Vote call found : {poll_index}, vote: {:?}", vote);
             let encoded_vote = vote.encode();
             Some(VoteCall {
-                block_hash: block.hash().to_string(),
-                block_number: block.number() as u64,
+                network_id,
+                block: block.clone(),
                 extrinsic_index,
                 extrinsic_hash: extrinsic_hash.to_string(),
                 is_batch,
@@ -74,6 +76,7 @@ fn get_vote_call_in_conviction_voting_call(
 
 #[allow(clippy::too_many_arguments)]
 fn get_remove_vote_call_in_conviction_voting_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -89,8 +92,8 @@ fn get_remove_vote_call_in_conviction_voting_call(
     let maybe_remove_vote_call = match call {
         ConvictionVotingCall::vote { .. } => None,
         ConvictionVotingCall::remove_vote { class: _, index } => Some(RemoveVoteCall {
-            block_hash: block.hash().to_string(),
-            block_number: block.number() as u64,
+            network_id,
+            block: block.clone(),
             extrinsic_index,
             extrinsic_hash: extrinsic_hash.to_string(),
             is_batch,
@@ -108,6 +111,7 @@ fn get_remove_vote_call_in_conviction_voting_call(
 
 #[allow(clippy::too_many_arguments)]
 fn get_vote_calls_in_proxy_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -131,6 +135,7 @@ fn get_vote_calls_in_proxy_call(
                 return Ok(BlockVoteCalls::default());
             };
             get_vote_calls_in_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -154,6 +159,7 @@ fn get_vote_calls_in_proxy_call(
                 return Ok(BlockVoteCalls::default());
             };
             get_vote_calls_in_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -173,6 +179,7 @@ fn get_vote_calls_in_proxy_call(
 
 #[allow(clippy::too_many_arguments)]
 fn get_vote_calls_in_utility_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -190,6 +197,7 @@ fn get_vote_calls_in_utility_call(
         UtilityCall::batch { calls } => {
             for call in calls {
                 let mut to_append = get_vote_calls_in_call(
+                    network_id,
                     block,
                     extrinsic_index,
                     extrinsic_hash,
@@ -207,6 +215,7 @@ fn get_vote_calls_in_utility_call(
         UtilityCall::batch_all { calls } => {
             for call in calls {
                 let mut to_append = get_vote_calls_in_call(
+                    network_id,
                     block,
                     extrinsic_index,
                     extrinsic_hash,
@@ -224,6 +233,7 @@ fn get_vote_calls_in_utility_call(
         UtilityCall::force_batch { calls } => {
             for call in calls {
                 let mut to_append = get_vote_calls_in_call(
+                    network_id,
                     block,
                     extrinsic_index,
                     extrinsic_hash,
@@ -245,6 +255,7 @@ fn get_vote_calls_in_utility_call(
 
 #[allow(clippy::too_many_arguments)]
 fn get_vote_calls_in_multisig_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -271,6 +282,7 @@ fn get_vote_calls_in_multisig_call(
                 1,
             );
             get_vote_calls_in_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -299,6 +311,7 @@ fn get_vote_calls_in_multisig_call(
                 *threshold,
             );
             get_vote_calls_in_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -318,6 +331,7 @@ fn get_vote_calls_in_multisig_call(
 
 #[allow(clippy::too_many_arguments)]
 fn get_vote_calls_in_call(
+    network_id: u32,
     block: &Block,
     extrinsic_index: u32,
     extrinsic_hash: &str,
@@ -331,6 +345,7 @@ fn get_vote_calls_in_call(
 ) -> anyhow::Result<BlockVoteCalls> {
     let vote_calls = match call {
         RuntimeCall::Utility(utility_call) => get_vote_calls_in_utility_call(
+            network_id,
             block,
             extrinsic_index,
             extrinsic_hash,
@@ -343,6 +358,7 @@ fn get_vote_calls_in_call(
             utility_call,
         )?,
         RuntimeCall::Proxy(proxy_call) => get_vote_calls_in_proxy_call(
+            network_id,
             block,
             extrinsic_index,
             extrinsic_hash,
@@ -355,6 +371,7 @@ fn get_vote_calls_in_call(
             proxy_call,
         )?,
         RuntimeCall::Multisig(multisig_call) => get_vote_calls_in_multisig_call(
+            network_id,
             block,
             extrinsic_index,
             extrinsic_hash,
@@ -369,6 +386,7 @@ fn get_vote_calls_in_call(
         RuntimeCall::ConvictionVoting(conviction_voting_call) => {
             let mut vote_calls = BlockVoteCalls::default();
             if let Some(vote_call) = get_vote_call_in_conviction_voting_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -383,6 +401,7 @@ fn get_vote_calls_in_call(
                 vote_calls.vote_calls.push(vote_call);
             }
             if let Some(remove_vote_call) = get_remove_vote_call_in_conviction_voting_call(
+                network_id,
                 block,
                 extrinsic_index,
                 extrinsic_hash,
@@ -425,8 +444,12 @@ fn get_account_id_from_multi(
     Ok(signer)
 }
 
-pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<BlockVoteCalls> {
-    let extrinsics = block.extrinsics().await?;
+pub(super) async fn get_vote_calls_in_block(
+    network_id: u32,
+    block: &Block,
+    substrate_block: &SubstrateBlock,
+) -> anyhow::Result<BlockVoteCalls> {
+    let extrinsics = substrate_block.extrinsics().await?;
     let mut block_vote_calls = BlockVoteCalls::default();
 
     for proxy_extrinsic in extrinsics.find::<ProxyExtrinsic>() {
@@ -444,6 +467,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         };
         log::trace!("Proxy extrinsic found. Is successful: {is_successful}");
         let mut extrinsic_vote_calls = get_vote_calls_in_call(
+            network_id,
             block,
             proxy_extrinsic.details.index(),
             tx_hash.as_str(),
@@ -474,6 +498,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         };
         log::trace!("ProxyAnnounced extrinsic found. Is successful: {is_successful}");
         let mut extrinsic_vote_calls = get_vote_calls_in_call(
+            network_id,
             block,
             proxy_announced_extrinsic.details.index(),
             tx_hash.as_str(),
@@ -501,6 +526,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         log::trace!("ForceBatch extrinsic found. Is successful: {is_successful}");
         for call in force_batch_extrinsic.value.calls.iter() {
             let mut extrinsic_vote_calls = get_vote_calls_in_call(
+                network_id,
                 block,
                 force_batch_extrinsic.details.index(),
                 tx_hash.as_str(),
@@ -528,6 +554,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         log::trace!("BatchAll extrinsic found. Is successful: {is_successful}");
         for call in batch_all_extrinsic.value.calls.iter() {
             let mut extrinsic_vote_calls = get_vote_calls_in_call(
+                network_id,
                 block,
                 batch_all_extrinsic.details.index(),
                 tx_hash.as_str(),
@@ -554,6 +581,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         log::trace!("Batch extrinsic found. Is successful: {is_successful}");
         for call in batch_extrinsic.value.calls.iter() {
             let mut extrinsic_vote_calls = get_vote_calls_in_call(
+                network_id,
                 block,
                 batch_extrinsic.details.index(),
                 tx_hash.as_str(),
@@ -590,6 +618,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         );
         log::trace!("AsMulti extrinsic found. Is successful: {is_successful}");
         let mut extrinsic_vote_calls = get_vote_calls_in_call(
+            network_id,
             block,
             as_multi_extrinsic.details.index(),
             tx_hash.as_str(),
@@ -626,6 +655,7 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         );
         log::trace!("AsMultiThreshold1 extrinsic found. Is successful: {is_successful}");
         let mut extrinsic_vote_calls = get_vote_calls_in_call(
+            network_id,
             block,
             as_multi_threshold_1_extrinsic.details.index(),
             tx_hash.as_str(),
@@ -652,8 +682,8 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         };
         log::trace!("RemoveVote extrinsic found. Is successful: {is_successful}");
         block_vote_calls.remove_vote_calls.push(RemoveVoteCall {
-            block_hash: block.hash().to_string(),
-            block_number: block.number() as u64,
+            network_id,
+            block: block.clone(),
             extrinsic_index: remove_vote_extrinsic.details.index(),
             extrinsic_hash: tx_hash,
             is_batch: false,
@@ -677,8 +707,8 @@ pub(super) async fn get_vote_calls_in_block(block: &Block) -> anyhow::Result<Blo
         log::trace!("Vote extrinsic found. Is successful: {is_successful}");
         let encoded_vote = vote_extrinsic.value.vote.encode();
         block_vote_calls.vote_calls.push(VoteCall {
-            block_hash: block.hash().to_string(),
-            block_number: block.number() as u64,
+            network_id,
+            block: block.clone(),
             extrinsic_index: vote_extrinsic.details.index(),
             extrinsic_hash: tx_hash,
             is_batch: false,

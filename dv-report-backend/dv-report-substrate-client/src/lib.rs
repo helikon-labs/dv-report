@@ -4,9 +4,9 @@ use crate::vote::get_vote_calls_in_block;
 pub use dv_report_types::metadata::polkadot::{
     self, api::referenda::storage::types::referendum_info_for::ReferendumInfoFor as ReferendumInfo,
 };
-use dv_report_types::substrate::block::BlockHeader;
-use dv_report_types::substrate::chain::Chain;
+use dv_report_types::substrate::block::{Block, BlockHeader};
 use dv_report_types::substrate::event::ReferendumEvent;
+use dv_report_types::substrate::network::Network;
 use dv_report_types::substrate::vote::BlockVoteCalls;
 use jsonrpsee::ws_client::WsClientBuilder;
 use jsonrpsee_core::client::{Client, ClientT};
@@ -22,7 +22,7 @@ mod storage_utility;
 mod vote;
 
 pub struct SubstrateClient {
-    pub chain: Chain,
+    pub network: Network,
     api: OnlineClient<PolkadotConfig>,
     ws_client: Client,
 }
@@ -42,7 +42,7 @@ impl SubstrateClient {
             .build(rpc_url)
             .await?;
         let chain: String = ws_client.request("system_chain", rpc_params!()).await?;
-        let chain = Chain::from_str(chain.as_str())?;
+        let chain = Network::from_str(chain.as_str())?;
         log::info!("{} Substrate connection successful.", chain);
 
         log::info!("Constructing {} SubXT API.", chain.display);
@@ -60,7 +60,7 @@ impl SubstrateClient {
         let api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client).await?;
         log::info!("SubXT {} API ready.", chain.display);
         Ok(SubstrateClient {
-            chain,
+            network: chain,
             api,
             ws_client,
         })
@@ -117,6 +117,22 @@ impl SubstrateClient {
         Ok(header)
     }
 
+    pub async fn get_block(&self, hash: &str) -> anyhow::Result<Block> {
+        let header = self.get_block_header(hash).await?;
+        let timestamp = self.get_block_timestamp(hash).await?;
+        Ok(Block {
+            timestamp,
+            number: header.get_number()?,
+            hash: hash.to_string().trim_start_matches("0x").to_string(),
+            parent_hash: header.parent_hash,
+        })
+    }
+
+    pub async fn get_block_by_number(&self, number: u64) -> anyhow::Result<Block> {
+        let hash = self.get_block_hash(number).await?;
+        self.get_block(&hash).await
+    }
+
     pub async fn get_referendum_count(&self, at: &str) -> anyhow::Result<u32> {
         let storage_query = polkadot::api::storage().referenda().referendum_count();
         let block_hash = H256::from_str(at)?;
@@ -150,11 +166,13 @@ impl SubstrateClient {
 
     pub async fn get_vote_calls_in_block(
         &self,
+        network_id: u32,
         block_hash: &str,
     ) -> anyhow::Result<BlockVoteCalls> {
+        let block = self.get_block(block_hash).await?;
         let block_hash = H256::from_str(block_hash)?;
-        let block = self.api.blocks().at(block_hash).await?;
-        get_vote_calls_in_block(&block).await
+        let substrate_block = self.api.blocks().at(block_hash).await?;
+        get_vote_calls_in_block(network_id, &block, &substrate_block).await
     }
 
     pub async fn get_referendum_events_in_block(
@@ -164,5 +182,21 @@ impl SubstrateClient {
         let block_hash = H256::from_str(block_hash)?;
         let block = self.api.blocks().at(block_hash).await?;
         get_referendum_events_in_block(&block).await
+    }
+
+    pub async fn get_extrinsic_hash(
+        &self,
+        block_hash: &str,
+        extrinsic_index: u32,
+    ) -> anyhow::Result<String> {
+        let block_hash = H256::from_str(block_hash)?;
+        let block = self.api.blocks().at(block_hash).await?;
+        let extrinsics = block.extrinsics().await?;
+        for (index, extrinsic) in extrinsics.iter().enumerate() {
+            if (index as u32) == extrinsic_index {
+                return Ok(hex::encode(extrinsic.hash().0));
+            }
+        }
+        Err(anyhow::Error::msg("Extrinsic not found."))
     }
 }

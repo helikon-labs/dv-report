@@ -1,1 +1,1 @@
-DROP TYPE referendum_status;
+DROP TABLE referendum_status CASCADE;

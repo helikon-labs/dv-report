@@ -2,7 +2,7 @@
 
 use async_trait::async_trait;
 use dv_report_config::Config;
-use dv_report_types::substrate::chain::Chain;
+use dv_report_types::substrate::network::Network;
 use std::str::FromStr;
 
 pub mod err;
@@ -16,7 +16,7 @@ pub trait Service {
     async fn start(&'static self) {
         let config = Config::default();
         dv_report_logging::init(&config);
-        Chain::from_str(&config.substrate.chain)
+        Network::from_str(&config.substrate.chain)
             .unwrap()
             .sp_core_set_default_ss58_version();
         log::info!("Starting service...");

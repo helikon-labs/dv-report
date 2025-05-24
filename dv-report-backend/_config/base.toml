@@ -18,7 +18,7 @@ pool_max_connections = 64
 connection_timeout_seconds = 5
 
 [substrate]
-chain_id = 1
+network_id = 1
 chain = "polkadot"
 chain_display = "Polkadot"
 rpc_url = "wss://rpc.helikon.io:443/polkadot"
@@ -40,4 +40,4 @@ cohort_number = 4
 
 [metrics]
 host = "127.0.0.1"
-indexer_port = 11010
+indexer_port = 13000

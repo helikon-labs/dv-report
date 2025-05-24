@@ -1,5 +1,5 @@
 [substrate]
-chain_id = 2
+network_id = 2
 chain = "kusama"
 chain_display = "Kusama"
 rpc_url = "wss://rpc.helikon.io:443/kusama"

@@ -1505,12 +1505,9 @@ dependencies = [
  "async-trait",
  "dv-report-config",
  "dv-report-metrics",
- "dv-report-persistence",
+ "dv-report-repository",
  "dv-report-service",
- "dv-report-subsquare-client",
- "dv-report-substrate-client",
  "dv-report-types",
- "env_logger",
  "lazy_static",
  "log",
  "once_cell",
@@ -1530,7 +1527,6 @@ dependencies = [
 name = "dv-report-metrics"
 version = "0.1.0"
 dependencies = [
- "env_logger",
  "log",
  "once_cell",
  "prometheus",
@@ -1549,6 +1545,19 @@ dependencies = [
  "lazy_static",
  "log",
  "sqlx",
+]
+
+[[package]]
+name = "dv-report-repository"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "dv-report-config",
+ "dv-report-persistence",
+ "dv-report-subsquare-client",
+ "dv-report-substrate-client",
+ "dv-report-types",
+ "log",
 ]
 
 [[package]]
@@ -1582,16 +1591,13 @@ name = "dv-report-substrate-client"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "dv-report-config",
  "dv-report-types",
  "frame-metadata 20.0.0",
  "hex",
  "jsonrpsee",
  "jsonrpsee-core",
- "jsonrpsee-types",
  "log",
  "parity-scale-codec",
- "rustc-hash",
  "sp-core",
  "subxt",
 ]
@@ -1606,13 +1612,13 @@ dependencies = [
  "frame-support",
  "frame-system",
  "hex",
- "log",
  "pallet-balances",
  "pallet-identity",
  "parity-scale-codec",
  "serde",
  "serde_json",
  "sp-core",
+ "sqlx",
  "subxt",
  "thiserror 2.0.12",
 ]

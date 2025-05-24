@@ -2,7 +2,7 @@ use dv_report_config::Config;
 use dv_report_types::governance::subsquare::{
     SubsquareReferendum, SubsquareReferendumList, SubsquareVoteCall,
 };
-use dv_report_types::substrate::chain::Chain;
+use dv_report_types::substrate::network::Network;
 
 pub struct SubsquareClient {
     http_client: reqwest::Client,
@@ -21,12 +21,12 @@ impl SubsquareClient {
 
     pub async fn fetch_referendum(
         &self,
-        chain: &Chain,
+        network: &Network,
         index: u32,
     ) -> anyhow::Result<Option<SubsquareReferendum>> {
         let url = format!(
             "https://{}-api.subsquare.io/gov2/referendums/{index}?simple=false",
-            chain.chain,
+            network.chain,
         );
         let response = self.http_client.get(url).send().await?;
         if response.status().as_u16() == 404 {
@@ -38,7 +38,7 @@ impl SubsquareClient {
 
     pub async fn fetch_referenda(
         &self,
-        chain: &Chain,
+        chain: &Network,
         page: u16,
         page_size: u16,
     ) -> anyhow::Result<SubsquareReferendumList> {
@@ -57,7 +57,7 @@ impl SubsquareClient {
 
     pub async fn fetch_vote_calls(
         &self,
-        chain: &Chain,
+        chain: &Network,
         index: u32,
     ) -> anyhow::Result<Vec<SubsquareVoteCall>> {
         let url = format!(

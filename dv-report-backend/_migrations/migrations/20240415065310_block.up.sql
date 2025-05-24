@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS block
 (
     network_id  INTEGER                     NOT NULL,
-    hash        VARCHAR(64),
+    hash        VARCHAR(64)                 NOT NULL,
     number      BIGINT                      NOT NULL,
     timestamp   BIGINT                      NOT NULL,
     parent_hash VARCHAR(64)                 NOT NULL,

@@ -6,7 +6,6 @@ pub struct Block {
     pub number: u64,
     pub hash: String,
     pub parent_hash: String,
-    pub author_address: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

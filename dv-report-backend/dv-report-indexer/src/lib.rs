@@ -1,16 +1,12 @@
 use async_trait::async_trait;
 use dv_report_config::Config;
-use dv_report_persistence::postgres::PostgreSQLStorage;
+use dv_report_repository::Repository;
 use dv_report_service::Service;
-use dv_report_subsquare_client::SubsquareClient;
-use dv_report_substrate_client::ReferendumInfo;
-use dv_report_substrate_client::SubstrateClient;
-use dv_report_types::dv::cohort::Cohort;
-use dv_report_types::dv::delegate::Delegate;
-use dv_report_types::governance::referendum::{Referendum, ReferendumStatus};
-use dv_report_types::substrate::chain::Chain;
-use dv_report_types::substrate::track::Track;
+use dv_report_types::substrate::event::ReferendumEvent;
+use dv_report_types::substrate::network::Network;
 use lazy_static::lazy_static;
+use std::cmp::max;
+use std::time::Duration;
 
 mod metrics;
 
@@ -19,92 +15,51 @@ lazy_static! {
 }
 
 pub struct Indexer {
-    postgres: PostgreSQLStorage,
-    subsquare_client: SubsquareClient,
-    substrate_client: SubstrateClient,
+    repository: Repository,
 }
 
 impl Indexer {
     pub async fn new() -> anyhow::Result<Self> {
         Ok(Self {
-            postgres: PostgreSQLStorage::new(&CONFIG).await?,
-            subsquare_client: SubsquareClient::new(&CONFIG)?,
-            substrate_client: SubstrateClient::new(
-                CONFIG.substrate.rpc_url.as_str(),
-                CONFIG.substrate.connection_timeout_seconds,
-                CONFIG.substrate.request_timeout_seconds,
-            )
-            .await?,
+            repository: Repository::new(&CONFIG).await?,
         })
     }
 
-    async fn init_cohort(
-        &self,
-        network: &Chain,
-        cohort: &Cohort,
-        delegates: &[Delegate],
-    ) -> anyhow::Result<()> {
-        if self.postgres.get_referendum_count().await? > 0 {
-            log::info!("Cohort had been initialized.");
-            return Ok(());
-        }
-        log::info!("Initialize {} cohort #{}.", network.display, cohort.number);
-        let start_block_hash = self
-            .substrate_client
-            .get_block_hash(cohort.start_block_number)
+    pub async fn process_block(&self, network_id: u32, block_number: u64) -> anyhow::Result<()> {
+        log::info!("Process block {}.", block_number);
+        let block = self.repository.get_block_by_number(block_number).await?;
+        let block_vote_calls = self
+            .repository
+            .get_vote_calls_in_block(network_id, block_number)
             .await?;
-        log::info!("{} :: {start_block_hash}", cohort.start_block_number);
-        let referendum_count = self
-            .substrate_client
-            .get_referendum_count(start_block_hash.as_str())
+        let block_referendum_events = self
+            .repository
+            .get_referendum_events_in_block(block_number)
             .await?;
-        log::info!("{referendum_count} referenda.");
-        let mut tx = self.postgres.begin_tx().await?;
-        for index in 1490..referendum_count {
-            if let Some(referendum_info) = self
-                .substrate_client
-                .get_referendum_info(index, start_block_hash.as_str())
-                .await?
+        let mut new_referenda = Vec::new();
+        for block_referendum_event in block_referendum_events.iter() {
+            if let ReferendumEvent::Submitted {
+                referendum_index,
+                track_id: _,
+            } = block_referendum_event
             {
-                match referendum_info {
-                    ReferendumInfo::Ongoing(status) => {
-                        let referendum = Referendum {
-                            id: 0,
-                            network_id: network.id,
-                            index,
-                            track: Track::from_id(status.track),
-                            submission_block_number: status.submitted as u64,
-                            status: ReferendumStatus::Ongoing,
-                        };
-                        log::info!(
-                            "Save ongoing referendum #{index} on track {}.",
-                            referendum.track.name()
-                        );
-                        self.postgres.save_referendum(&referendum, &mut tx).await?;
-                        let vote_calls = self
-                            .subsquare_client
-                            .fetch_vote_calls(network, index)
-                            .await?;
-                        for delegate in delegates.iter() {
-                            if let Some(delegate_vote_call) = vote_calls
-                                .iter()
-                                .find(|v| v.voter == delegate.delegation.delegate_account_id)
-                            {
-                                if delegate_vote_call.extrinsic.block_number
-                                    < cohort.start_block_number
-                                {
-                                    log::info!("{} pre-voted on {}.", delegate.name, index);
-                                } else {
-                                    log::info!("{} post-voted on {}.", delegate.name, index);
-                                }
-                            }
-                        }
-                    }
-                    _ => log::info!("Skip referendum #{index}."),
-                }
+                log::info!("New referendum {}.", referendum_index);
+                let new_referendum = self
+                    .repository
+                    .get_ongoing_referendum(network_id, *referendum_index, block.hash.as_str())
+                    .await?;
+                new_referenda.push(new_referendum);
             }
         }
-        self.postgres.commit_tx(tx).await?;
+        self.repository
+            .save_block_with_details(
+                network_id,
+                &block,
+                &new_referenda,
+                &block_referendum_events,
+                &block_vote_calls,
+            )
+            .await?;
         Ok(())
     }
 }
@@ -116,53 +71,39 @@ impl Service for Indexer {
     }
 
     async fn run(&'static self) -> anyhow::Result<()> {
-        let chain = Chain::from_id(CONFIG.substrate.chain_id);
-        log::info!("{} indexer started.", chain.display);
+        let network = Network::from_id(CONFIG.substrate.network_id);
         let cohort = self
-            .postgres
-            .get_cohort(CONFIG.indexer.cohort_number, chain.id)
+            .repository
+            .get_cohort(network.id, CONFIG.indexer.cohort_number)
             .await?;
+        log::info!(
+            "{} indexer started for DV Cohort #{}.",
+            network.display,
+            cohort.number,
+        );
         let delegates = self
-            .postgres
-            .get_all_delegates(CONFIG.indexer.cohort_number, chain.id)
+            .repository
+            .get_cohort_delegates(network.id, cohort.number)
             .await?;
-        log::info!("Found {} delegates.", delegates.len());
-        self.init_cohort(&chain, &cohort, delegates.as_slice())
+        self.repository
+            .init_cohort(&network, &cohort, delegates.as_slice())
             .await?;
-        let header = self.substrate_client.get_finalized_block_header().await?;
-        for block_number in 26088680..header.get_number()? {
-            log::info!("Process block {}.", block_number);
-            let hash = self.substrate_client.get_block_hash(block_number).await?;
-            let vote_calls = self.substrate_client.get_vote_calls_in_block(&hash).await?;
+        let delay_seconds = CONFIG.common.recovery_retry_seconds;
+        loop {
+            let finalized_block = self.repository.get_finalized_block().await?;
+            let max_block_number = self.repository.get_max_block_number(network.id).await?;
+            let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
+            for block_number in start_block_number..=finalized_block.number {
+                self.process_block(network.id, block_number).await?;
+                metrics::indexed_finalized_block_number().set(block_number as i64);
+                log::info!("Indexed block {}.", block_number);
+            }
             log::info!(
-                "Got {} vote calls and {} remove vote calls for block {}.",
-                vote_calls.vote_calls.len(),
-                vote_calls.remove_vote_calls.len(),
-                block_number
+                "Reached finalized head {}. Will check again in {} seconds.",
+                finalized_block.number,
+                delay_seconds
             );
-            for vote_call in vote_calls.vote_calls.iter() {
-                let voter = vote_call.voter;
-                if let Some(delegate) = delegates
-                    .iter()
-                    .find(|delegate| delegate.delegation.delegate_account_id == voter)
-                {
-                    log::info!(
-                        "{} voted on {} #{}.",
-                        delegate.name,
-                        chain.display,
-                        vote_call.referendum_index
-                    );
-                }
-            }
-            let referendum_events = self
-                .substrate_client
-                .get_referendum_events_in_block(&hash)
-                .await?;
-            if !referendum_events.is_empty() {
-                log::error!("Found {} referendum_events.", referendum_events.len());
-            }
+            tokio::time::sleep(Duration::from_secs(delay_seconds)).await;
         }
-        // tokio::spawn(async move {});
-        Ok(())
     }
 }

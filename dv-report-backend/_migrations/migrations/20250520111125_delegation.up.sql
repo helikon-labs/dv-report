@@ -1,19 +1,18 @@
 CREATE TABLE IF NOT EXISTS delegation
 (
-    id                               SERIAL PRIMARY KEY,
-    cohort_number                    INTEGER                     NOT NULL,
-    network_id                       INTEGER                     NOT NULL,
-    delegator_account_id             VARCHAR(64)                 NOT NULL,
-    delegate_id                      VARCHAR(64)                 NOT NULL,
-    delegate_account_id              VARCHAR(64)                 NOT NULL,
-    delegation_start_block_hash      VARCHAR(64)                 NOT NULL,
-    delegation_start_extrinsic_hash  VARCHAR(64)                 NOT NULL,
-    delegation_start_extrinsic_index INTEGER                     NOT NULL,
-    delegation_end_block_hash        VARCHAR(64),
-    delegation_end_extrinsic_hash    VARCHAR(64),
-    delegation_end_extrinsic_index   INTEGER,
-    created_at                       TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at                       TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
+    id                    SERIAL PRIMARY KEY          NOT NULL,
+    cohort_number         INTEGER                     NOT NULL,
+    network_id            INTEGER                     NOT NULL,
+    delegator_account_id  VARCHAR(64)                 NOT NULL,
+    delegate_id           VARCHAR(64)                 NOT NULL,
+    delegate_account_id   VARCHAR(64)                 NOT NULL,
+    start_block_hash      VARCHAR(64)                 NOT NULL,
+    start_extrinsic_hash  VARCHAR(64)                 NOT NULL,
+    start_extrinsic_index INTEGER                     NOT NULL,
+    end_block_hash        VARCHAR(64),
+    end_extrinsic_hash    VARCHAR(64),
+    end_extrinsic_index   INTEGER,
+    created_at            TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT delegation_u_cohort_network_delegator UNIQUE (cohort_number, network_id, delegator_account_id),
     CONSTRAINT delegation_u_cohort_network_delegate UNIQUE (cohort_number, network_id, delegate_id),
     CONSTRAINT delegation_fk_network
@@ -27,12 +26,12 @@ CREATE TABLE IF NOT EXISTS delegation
             ON DELETE RESTRICT
             ON UPDATE CASCADE,
     CONSTRAINT delegation_fk_start_block
-        FOREIGN KEY (network_id, delegation_start_block_hash)
+        FOREIGN KEY (network_id, start_block_hash)
             REFERENCES block (network_id, hash)
             ON DELETE RESTRICT
             ON UPDATE CASCADE,
     CONSTRAINT delegation_fk_end_block
-        FOREIGN KEY (network_id, delegation_end_block_hash)
+        FOREIGN KEY (network_id, end_block_hash)
             REFERENCES block (network_id, hash)
             ON DELETE RESTRICT
             ON UPDATE CASCADE
@@ -43,8 +42,8 @@ VALUES (1, 'f08e99db347e207c0539d1c7c8dc4ab4b443c3fb74c5d8bef8722f71e5b43edb', 2
         '0dd1c16f0c999a5501bf34a395eab60849749a04d590f7a15c3c86142af53cc0');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         'd10577dd7d364b294d2e9a0768363ac885efb8b1c469da6c4f2141d4f6560c1f',
@@ -59,8 +58,8 @@ VALUES (1, '2417a7735f1858b3a55691dfb3b31374bf814670fd96410e53a9412f887bd818', 2
         '040c9695cf2e37816804fd678fbca436979d29e62ae15ad5cfae17b8999b5fd3');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         '6c1b752375304917c15af9c2e7a4426b3af513054d89f6c7bb26cd7e30e4413e',
@@ -75,8 +74,8 @@ VALUES (1, '8c528920987e5a80b17f08c82466b63da45154e0cb98f48dc4d795b091f38500', 2
         '7da12d33619b0422dbf2e19c2bd4cd78cae612a8cde2016e1640598a2f6c2e21');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         '9561809d76c46eaad3f19d2d392e0a4962086ce116a8739fe7d458bdc3bd4f1d',
@@ -87,8 +86,8 @@ VALUES (4,
         2);
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         'e8e2262e16583379847ad70b7f77ca559d5c17aa69062230f8a0dbd1bf5da5d4',
@@ -103,8 +102,8 @@ VALUES (1, 'e59ba818d2c54c02fcc93775b95e46a9619df16c59b2c64908dbc71d8384dd7c', 2
         'ada98c364f3ff84fda4f6a7cd40a060ebdfc04388e0ee54d98a0372c835d2be1');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         '83bf40ac1231b8b9b539abead87569ae512edd874c710cd249afecab1093cf03',
@@ -115,8 +114,8 @@ VALUES (4,
         2);
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         1,
         '429b067ff314c1fed75e57fcf00a6a4ff8611268e75917b5744ac8c4e1810d17',
@@ -133,8 +132,8 @@ VALUES (2, '6f85590ce2718574ece8b9468944c9888f724ff21fab7c0a4c3e4ff29b9870ef', 2
         '6762df1ede09aba402d0c4d1245aa4e93705b8ffa2cad7b735632dd894c9fe8e');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         '560e6196f4ed72438184f7be3657c7df91d0374f9e39a5be53b0b86c2d80b979',
@@ -149,8 +148,8 @@ VALUES (2, '7d4a53db9774813285a5fd2656fdc08daefcce0d8e3f2888facf2fc180605c8d', 2
         'e876039340df06fc46a42ee87d70a124b2c847fd10f064d21902a5df30742481');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         '982f5263679b39960e3b787a0330f8d35c26a9bd2f2caa2f21712c5e36235ceb',
@@ -165,8 +164,8 @@ VALUES (2, 'e3bf8cc4fc8f403485464e39e243f039de91200b534b0cfeae8721dddefebd53', 2
         '49177671a64798d879305470c1258d9e7b2a35903496998cb283ea584f601fa4');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         '1a33bc5ddf8e989a9413b9c1ed4df64b9f2479d3bb8b2e40a419b7f2dd3470e4',
@@ -177,8 +176,8 @@ VALUES (4,
         2);
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         '90fcc36da703c17c329100a8303dc0c3f30adc1c53885abeafd8d02264131005',
@@ -193,8 +192,8 @@ VALUES (2, '9660ed2ee20297170b1e61e59a33e447c65db3632cf0d6d459880548630c71d9', 2
         '5389aca2e2bb492d1fb1fd4a3d5b167f0e8247fcc0d9e409f76bc224152b84d7');
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         'feaaab56ff00794a89916eadd949f9d76ee42de59554b5435ba4b8163a962610',
@@ -205,8 +204,8 @@ VALUES (4,
         2);
 
 INSERT INTO delegation (cohort_number, network_id, delegator_account_id, delegate_id, delegate_account_id,
-                        delegation_start_block_hash,
-                        delegation_start_extrinsic_hash, delegation_start_extrinsic_index)
+                        start_block_hash,
+                        start_extrinsic_hash, start_extrinsic_index)
 VALUES (4,
         2,
         'e1dccec9bfccbc19f26e7ba8c78ae87663a713b80d8c63a2c18a1b5823777488',

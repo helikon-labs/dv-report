@@ -2,10 +2,13 @@ use dv_report_config::Config;
 use sqlx::{Pool, Postgres, Transaction};
 use std::time::Duration;
 
+mod block;
 mod cohort;
 mod delegate;
 mod delegation;
 mod referendum;
+mod referendum_event;
+mod vote;
 
 pub struct PostgreSQLStorage {
     connection_pool: Pool<Postgres>,

@@ -17,6 +17,7 @@ pub fn init(config: &Config) {
     builder.filter(Some("dv_report_metrics"), log_level);
     builder.filter(Some("dv_report_metrics_server"), log_level);
     builder.filter(Some("dv_report_persistence"), log_level);
+    builder.filter(Some("dv_report_repository"), log_level);
     builder.filter(Some("dv_report_service"), log_level);
     builder.filter(Some("dv_report_substrate_client"), log_level);
     builder.filter(Some("dv_report_types"), log_level);

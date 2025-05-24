@@ -1,9 +1,8 @@
-CREATE TABLE IF NOT EXISTS vote
+CREATE TABLE IF NOT EXISTS remove_vote
 (
-    id                SERIAL PRIMARY KEY,
+    id                SERIAL PRIMARY KEY          NOT NULL,
     network_id        INTEGER                     NOT NULL,
     referendum_index  INTEGER                     NOT NULL,
-    track             INTEGER                     NOT NULL,
     block_hash        VARCHAR(64)                 NOT NULL,
     extrinsic_index   INTEGER                     NOT NULL,
     extrinsic_hash    VARCHAR(64)                 NOT NULL,
@@ -14,8 +13,13 @@ CREATE TABLE IF NOT EXISTS vote
     signer_account_id VARCHAR(64)                 NOT NULL,
     voter_account_id  VARCHAR(64)                 NOT NULL,
     created_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at        TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    CONSTRAINT vote_fk_referendum
+    CONSTRAINT remove_vote_u_vote UNIQUE (network_id, referendum_index, block_hash, extrinsic_index),
+    CONSTRAINT remove_vote_fk_network
+        FOREIGN KEY (network_id)
+            REFERENCES network (id)
+            ON DELETE RESTRICT
+            ON UPDATE CASCADE,
+    CONSTRAINT remove_vote_fk_referendum
         FOREIGN KEY (network_id, referendum_index)
             REFERENCES referendum (network_id, index)
             ON DELETE RESTRICT

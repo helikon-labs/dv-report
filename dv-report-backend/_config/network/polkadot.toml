@@ -1,5 +1,5 @@
 [substrate]
-chain_id = 1
+network_id = 1
 chain = "polkadot"
 chain_display = "Polkadot"
 rpc_url = "wss://rpc.helikon.io:443/polkadot"

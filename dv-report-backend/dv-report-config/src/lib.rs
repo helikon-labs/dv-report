@@ -45,7 +45,7 @@ pub struct HTTPConfig {
 
 #[derive(Clone, Debug, Deserialize)]
 pub struct SubstrateConfig {
-    pub chain_id: u32,
+    pub network_id: u32,
     pub chain: String,
     pub chain_display: String,
     pub rpc_url: String,

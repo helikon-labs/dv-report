@@ -1,3 +1,6 @@
+use crate::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::{
+    AccountVote, Vote,
+};
 use crate::substrate::account_id::AccountId;
 use crate::util::string_or_number_to_string;
 use serde::{self, Deserialize, Serialize};
@@ -245,5 +248,27 @@ impl SubsquareVoteCall {
             SubsquareVote::SplitAbstain(serde_json::from_value(self.vote.clone())?)
         };
         Ok(vote)
+    }
+
+    pub fn get_account_vote(&self) -> anyhow::Result<AccountVote<u128>> {
+        let vote = self.get_vote()?;
+        let account_vote = match vote {
+            SubsquareVote::Standard(standard_vote) => AccountVote::Standard {
+                vote: Vote(
+                    if standard_vote.vote.is_aye { 80 } else { 0 } + standard_vote.vote.conviction,
+                ),
+                balance: standard_vote.balance.parse::<u128>()?,
+            },
+            SubsquareVote::Split(split_vote) => AccountVote::Split {
+                aye: split_vote.aye.parse::<u128>()?,
+                nay: split_vote.nay.parse::<u128>()?,
+            },
+            SubsquareVote::SplitAbstain(split_abstain_vote) => AccountVote::SplitAbstain {
+                aye: split_abstain_vote.aye.parse::<u128>()?,
+                nay: split_abstain_vote.nay.parse::<u128>()?,
+                abstain: split_abstain_vote.abstain.parse::<u128>()?,
+            },
+        };
+        Ok(account_vote)
     }
 }
