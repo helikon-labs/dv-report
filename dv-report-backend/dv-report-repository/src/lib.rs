@@ -290,7 +290,7 @@ impl Repository {
                 self.postgres.save_vote_call(vote_call, &mut tx).await?;
             } else {
                 log::warn!(
-                    "Referendum {} does not exist in the databse. Skip vote call.",
+                    "Referendum {} does not exist in the database. Skip vote call.",
                     vote_call.referendum_index,
                 );
             }
@@ -307,7 +307,7 @@ impl Repository {
                     .await?;
             } else {
                 log::warn!(
-                    "Referendum {} does not exist in the databse. Skip vote call.",
+                    "Referendum {} does not exist in the database. Skip vote call.",
                     remove_vote_call.referendum_index,
                 );
             }
@@ -370,14 +370,6 @@ impl Repository {
                     amount,
                     who,
                 } => {
-                    let referendum = self
-                        .get_ongoing_referendum(network_id, *referendum_index, block.hash.as_str())
-                        .await?;
-                    self.postgres
-                        .save_block(network_id, &referendum.submission_block, &mut tx)
-                        .await?;
-                    self.postgres.save_referendum(&referendum, &mut tx).await?;
-
                     if !self
                         .postgres
                         .referendum_exists(network_id, *referendum_index, &mut tx)
