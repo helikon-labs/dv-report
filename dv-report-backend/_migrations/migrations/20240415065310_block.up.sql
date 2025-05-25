@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS block
     CONSTRAINT block_pk PRIMARY KEY (network_id, hash)
 );
 
+CREATE INDEX IF NOT EXISTS block_idx_hash
+    ON block (hash);
 CREATE INDEX IF NOT EXISTS block_idx_number
     ON block (number);
 CREATE INDEX IF NOT EXISTS block_idx_timestamp

@@ -1,5 +1,5 @@
 use crate::postgres::PostgreSQLStorage;
-use dv_report_types::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
+use dv_report_types::runtime::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 use dv_report_types::substrate::vote::{RemoveVoteCall, VoteCall};
 use sqlx::{Postgres, Transaction};
 

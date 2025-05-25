@@ -13,7 +13,7 @@ impl PostgreSQLStorage {
             r#"
             INSERT INTO block (network_id, hash, number, timestamp, parent_hash)
             VALUES ($1, $2, $3, $4, $5)
-            ON CONFLICT(network_id, hash) DO NOTHING
+            ON CONFLICT (network_id, hash) DO NOTHING
             "#,
         )
         .bind(network_id as i32)
@@ -28,7 +28,7 @@ impl PostgreSQLStorage {
 
     pub async fn get_max_block_number(&self, network_id: u32) -> anyhow::Result<i64> {
         let row: (i64,) =
-            sqlx::query_as("SELECT COALESCE(MAX(number), 0) FROM block WHERE network_id = $1")
+            sqlx::query_as("SELECT COALESCE(MAX(number), -1) FROM block WHERE network_id = $1")
                 .bind(network_id as i32)
                 .fetch_one(&self.connection_pool)
                 .await?;

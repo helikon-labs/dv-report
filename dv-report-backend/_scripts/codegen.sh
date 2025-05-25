@@ -6,6 +6,6 @@ subxt codegen --file ./polkadot.scale --no-docs | rustfmt --edition=2021 --emit=
 rm ./polkadot.scale
 
 # kusama
-#subxt metadata --url "wss://rpc.helikon.io/kusama" --pallets Referenda,ConvictionVoting,Utility,Multisig,Proxy -o ./kusama.scale
-#subxt codegen --file ./kusama.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-types/src/metadata/kusama.rs
-#rm ./kusama.scale
+subxt metadata --url "wss://rpc.helikon.io/kusama" --pallets Referenda,ConvictionVoting,Utility,Multisig,Proxy -o ./kusama.scale
+subxt codegen --file ./kusama.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-types/src/metadata/kusama.rs
+rm ./kusama.scale

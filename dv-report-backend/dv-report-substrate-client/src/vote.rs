@@ -1,4 +1,4 @@
-use dv_report_types::metadata::polkadot::api::{
+use dv_report_types::runtime::api::{
     conviction_voting::calls::types::RemoveVote as RemoveVoteExtrinsic,
     conviction_voting::calls::types::Vote as VoteExtrinsic,
     multisig::calls::types::AsMulti as AsMultiExtrinsic,

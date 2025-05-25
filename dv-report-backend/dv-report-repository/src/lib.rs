@@ -307,7 +307,7 @@ impl Repository {
                     .await?;
             } else {
                 log::warn!(
-                    "Referendum {} does not exist in the database. Skip vote call.",
+                    "Referendum {} does not exist in the database. Skip remove vote call.",
                     remove_vote_call.referendum_index,
                 );
             }
