@@ -27,9 +27,7 @@ pub(crate) type SubstrateBlock = subxt::blocks::Block<PolkadotConfig, OnlineClie
 fn extrinsic_is_successful(events: ExtrinsicEvents<PolkadotConfig>) -> anyhow::Result<bool> {
     let mut is_successful = false;
     for event in events.iter() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         if event.variant_name() == "ExtrinsicSuccess" {
             is_successful = true;
             break;

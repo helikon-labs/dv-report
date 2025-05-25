@@ -14,6 +14,8 @@ use jsonrpsee_core::rpc_params;
 use std::str::FromStr;
 use std::time::Duration;
 use subxt::backend::rpc::reconnecting_rpc_client::{ExponentialBackoff, RpcClient};
+use subxt::ext::codec::Decode;
+use subxt::metadata::Metadata;
 use subxt::utils::H256;
 use subxt::{OnlineClient, PolkadotConfig};
 
@@ -32,6 +34,7 @@ impl SubstrateClient {
         rpc_url: &str,
         connection_timeout: u64,
         request_timeout: u64,
+        metadata_file_path: &Option<String>,
     ) -> anyhow::Result<Self> {
         log::info!("Constructing Substrate client.");
         let connection_timeout = Duration::from_secs(connection_timeout);
@@ -58,6 +61,13 @@ impl SubstrateClient {
             .build(rpc_url)
             .await?;
         let api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client).await?;
+        if let Some(metadata_file_path) = metadata_file_path {
+            let metadata = {
+                let bytes = std::fs::read(metadata_file_path)?;
+                Metadata::decode(&mut &*bytes)?
+            };
+            api.set_metadata(metadata);
+        }
         log::info!("SubXT {} API ready.", chain.display);
         Ok(SubstrateClient {
             network: chain,

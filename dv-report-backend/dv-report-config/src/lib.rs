@@ -61,6 +61,8 @@ pub struct SubstrateConfig {
 #[derive(Clone, Debug, Deserialize)]
 pub struct IndexerConfig {
     pub cohort_number: u32,
+    pub metadata_file_path: Option<String>,
+    pub end_block_number: Option<u64>,
 }
 
 #[derive(Clone, Debug, Deserialize)]

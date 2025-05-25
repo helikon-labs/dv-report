@@ -89,6 +89,16 @@ impl Service for Indexer {
             .init_cohort(&network, &cohort, delegates.as_slice())
             .await?;
         let delay_seconds = CONFIG.common.recovery_retry_seconds;
+        if let Some(end_block_number) = CONFIG.indexer.end_block_number {
+            let max_block_number = self.repository.get_max_block_number(network.id).await?;
+            let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
+            for block_number in start_block_number..=end_block_number {
+                self.process_block(network.id, block_number).await?;
+                metrics::indexed_finalized_block_number().set(block_number as i64);
+                log::info!("Indexed block {block_number}.");
+            }
+            return Ok(());
+        }
         loop {
             let finalized_block = self.repository.get_finalized_block().await?;
             let max_block_number = self.repository.get_max_block_number(network.id).await?;

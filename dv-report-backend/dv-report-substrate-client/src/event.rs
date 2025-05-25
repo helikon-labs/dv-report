@@ -13,18 +13,14 @@ pub(super) async fn get_referendum_events_in_block(
     let mut referendum_events = Vec::new();
     let block_events = block.events().await?;
     for event in block_events.find::<Submitted>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Submitted {
             referendum_index: event.index,
             track_id: event.track,
         });
     }
     for event in block_events.find::<DecisionDepositPlaced>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::DecisionDepositPlaced {
             referendum_index: event.index,
             amount: event.amount,
@@ -32,9 +28,7 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<DecisionDepositRefunded>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::DecisionDepositRefunded {
             referendum_index: event.index,
             amount: event.amount,
@@ -42,18 +36,14 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<DepositSlashed>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::DepositSlashed {
             amount: event.amount,
             who: AccountId::from(event.who.0),
         });
     }
     for event in block_events.find::<DecisionStarted>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::DecisionStarted {
             referendum_index: event.index,
             track_id: event.track,
@@ -65,25 +55,19 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<ConfirmStarted>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::ConfirmStarted {
             referendum_index: event.index,
         });
     }
     for event in block_events.find::<ConfirmAborted>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::ConfirmAborted {
             referendum_index: event.index,
         });
     }
     for event in block_events.find::<Confirmed>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Confirmed {
             referendum_index: event.index,
             tally: Tally {
@@ -94,17 +78,13 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<Approved>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Approved {
             referendum_index: event.index,
         });
     }
     for event in block_events.find::<Rejected>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Rejected {
             referendum_index: event.index,
             tally: Tally {
@@ -115,9 +95,7 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<Cancelled>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Cancelled {
             referendum_index: event.index,
             tally: Tally {
@@ -128,9 +106,7 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<TimedOut>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::TimedOut {
             referendum_index: event.index,
             tally: Tally {
@@ -141,9 +117,7 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<Killed>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::Killed {
             referendum_index: event.index,
             tally: Tally {
@@ -154,9 +128,7 @@ pub(super) async fn get_referendum_events_in_block(
         });
     }
     for event in block_events.find::<SubmissionDepositRefunded>() {
-        let Ok(event) = event else {
-            continue;
-        };
+        let event = event?;
         referendum_events.push(ReferendumEvent::SubmissionDepositRefunded {
             referendum_index: event.index,
             amount: event.amount,

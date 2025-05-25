@@ -27,6 +27,7 @@ impl Repository {
                 config.substrate.rpc_url.as_str(),
                 config.substrate.connection_timeout_seconds,
                 config.substrate.request_timeout_seconds,
+                &config.indexer.metadata_file_path,
             )
             .await?,
         })
