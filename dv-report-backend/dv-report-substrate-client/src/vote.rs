@@ -9,13 +9,14 @@ use dv_report_types::runtime::api::{
     runtime_types::pallet_multisig::pallet::Call as MultisigCall,
     runtime_types::pallet_proxy::pallet::Call as ProxyCall,
     runtime_types::pallet_utility::pallet::Call as UtilityCall,
-    runtime_types::polkadot_runtime::RuntimeCall, utility::calls::types::Batch as BatchExtrinsic,
+    utility::calls::types::Batch as BatchExtrinsic,
     utility::calls::types::BatchAll as BatchAllExtrinsic,
     utility::calls::types::ForceBatch as ForceBatchExtrinsic,
 };
 use dv_report_types::substrate::account_id::AccountId;
 use dv_report_types::substrate::block::Block;
 use dv_report_types::substrate::vote::{BlockVoteCalls, RemoveVoteCall, VoteCall};
+use dv_report_types::RuntimeCall;
 use parity_scale_codec::{Decode, Encode};
 use subxt::blocks::ExtrinsicEvents;
 use subxt::utils::{AccountId32, MultiAddress};
@@ -52,7 +53,7 @@ fn get_vote_call_in_conviction_voting_call(
     log::trace!("Inspect conviction voting call for a vote call.");
     let maybe_vote_call = match call {
         ConvictionVotingCall::vote { poll_index, vote } => {
-            log::trace!("Vote call found : {poll_index}, vote: {:?}", vote);
+            log::trace!("Vote call found : {poll_index}, vote: {vote:?}");
             let encoded_vote = vote.encode();
             Some(VoteCall {
                 network_id,
@@ -444,6 +445,7 @@ fn get_account_id_from_multi(
     Ok(signer)
 }
 
+#[allow(clippy::cognitive_complexity)]
 pub(super) async fn get_vote_calls_in_block(
     network_id: u32,
     block: &Block,

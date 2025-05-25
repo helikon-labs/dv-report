@@ -82,6 +82,7 @@ impl Repository {
         Ok(delegates)
     }
 
+    #[allow(clippy::cognitive_complexity)]
     pub async fn init_cohort(
         &self,
         network: &Network,
@@ -232,8 +233,7 @@ impl Repository {
             .await?
         else {
             return Err(anyhow::Error::msg(format!(
-                "Referendum {} not found in Substrate storage.",
-                referendum_index
+                "Referendum {referendum_index} not found in Substrate storage."
             )));
         };
         let referendum = match referendum_info {
@@ -257,14 +257,14 @@ impl Repository {
             }
             _ => {
                 return Err(anyhow::Error::msg(format!(
-                    "Referendum {} is not ongoing.",
-                    referendum_index
+                    "Referendum {referendum_index} is not ongoing."
                 )))
             }
         };
         Ok(referendum)
     }
 
+    #[allow(clippy::cognitive_complexity)]
     pub async fn save_block_with_details(
         &self,
         network_id: u32,
@@ -329,11 +329,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} submitted event. Event database id: #{}",
-                        referendum_index,
-                        id
-                    );
+                    log::info!("Saved referendum {referendum_index} submitted event. Event database id: #{id}");
                 }
                 ReferendumEvent::DecisionDepositPlaced {
                     referendum_index,
@@ -359,11 +355,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} decision deposit placed event. Event database id: #{}",
-                        referendum_index,
-                        id
-                    );
+                    log::info!("Saved referendum {referendum_index} decision deposit placed event. Event database id: #{id}");
                 }
                 ReferendumEvent::DecisionDepositRefunded {
                     referendum_index,
@@ -389,11 +381,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} decision deposit refunded event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} decision deposit refunded event. Event database id: #{id}");
                 }
                 ReferendumEvent::DepositSlashed { amount, who } => {
                     let id = self
@@ -406,10 +394,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum deposit slashed event. Event database id: #{}",
-                        id,
-                    );
+                    log::info!("Saved referendum deposit slashed event. Event database id: #{id}");
                 }
                 ReferendumEvent::DecisionStarted {
                     referendum_index,
@@ -435,11 +420,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} decision started event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} decision started event. Event database id: #{id}");
                 }
                 ReferendumEvent::ConfirmStarted { referendum_index } => {
                     if !self
@@ -459,11 +440,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} confirm started event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} confirm started event. Event database id: #{id}");
                 }
                 ReferendumEvent::ConfirmAborted { referendum_index } => {
                     if !self
@@ -483,11 +460,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} confirm aborted event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} confirm aborted event. Event database id: #{id}");
                 }
                 ReferendumEvent::Confirmed {
                     referendum_index,
@@ -511,11 +484,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} confirmed event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} confirmed event. Event database id: #{id}");
                 }
                 ReferendumEvent::Approved { referendum_index } => {
                     if !self
@@ -542,11 +511,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} approved event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} approved event. Event database id: #{id}");
                 }
                 ReferendumEvent::Rejected {
                     referendum_index,
@@ -577,11 +542,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} rejected event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} rejected event. Event database id: #{id}");
                 }
                 ReferendumEvent::Cancelled {
                     referendum_index,
@@ -612,11 +573,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} cancelled event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} cancelled event. Event database id: #{id}");
                 }
                 ReferendumEvent::TimedOut {
                     referendum_index,
@@ -647,11 +604,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} timed out event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} timed out event. Event database id: #{id}");
                 }
                 ReferendumEvent::Killed {
                     referendum_index,
@@ -682,11 +635,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} killed event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} killed event. Event database id: #{id}");
                 }
                 ReferendumEvent::SubmissionDepositRefunded {
                     referendum_index,
@@ -712,11 +661,7 @@ impl Repository {
                             &mut tx,
                         )
                         .await?;
-                    log::info!(
-                        "Saved referendum {} submission deposit refunded event. Event database id: #{}",
-                        referendum_index,
-                        id,
-                    );
+                    log::info!("Saved referendum {referendum_index} submission deposit refunded event. Event database id: #{id}");
                 }
             }
         }

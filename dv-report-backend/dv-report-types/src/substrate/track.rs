@@ -91,7 +91,7 @@ impl Track {
             32 => Track::SmallSpender,
             33 => Track::MediumSpender,
             34 => Track::BigSpender,
-            _ => panic!("Unknown track id: {}", id),
+            _ => panic!("Unknown track id: {id}"),
         }
     }
 

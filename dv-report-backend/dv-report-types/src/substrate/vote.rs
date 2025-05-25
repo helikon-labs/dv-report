@@ -1,4 +1,4 @@
-use crate::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
+use crate::runtime::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 use crate::substrate::account_id::AccountId;
 use crate::substrate::block::Block;
 use frame_support::{Deserialize, Serialize};

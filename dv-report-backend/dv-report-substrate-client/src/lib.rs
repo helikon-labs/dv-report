@@ -43,7 +43,7 @@ impl SubstrateClient {
             .await?;
         let chain: String = ws_client.request("system_chain", rpc_params!()).await?;
         let chain = Network::from_str(chain.as_str())?;
-        log::info!("{} Substrate connection successful.", chain);
+        log::info!("{chain} Substrate connection successful.");
 
         log::info!("Constructing {} SubXT API.", chain.display);
         let rpc_client = RpcClient::builder()

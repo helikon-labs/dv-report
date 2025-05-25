@@ -26,7 +26,7 @@ impl Indexer {
     }
 
     pub async fn process_block(&self, network_id: u32, block_number: u64) -> anyhow::Result<()> {
-        log::info!("Process block {}.", block_number);
+        log::info!("Process block {block_number}.");
         let block = self.repository.get_block_by_number(block_number).await?;
         let block_vote_calls = self
             .repository
@@ -43,7 +43,7 @@ impl Indexer {
                 track_id: _,
             } = block_referendum_event
             {
-                log::info!("New referendum {}.", referendum_index);
+                log::info!("New referendum {referendum_index}.");
                 let new_referendum = self
                     .repository
                     .get_ongoing_referendum(network_id, *referendum_index, block.hash.as_str())
@@ -96,12 +96,11 @@ impl Service for Indexer {
             for block_number in start_block_number..=finalized_block.number {
                 self.process_block(network.id, block_number).await?;
                 metrics::indexed_finalized_block_number().set(block_number as i64);
-                log::info!("Indexed block {}.", block_number);
+                log::info!("Indexed block {block_number}.");
             }
             log::info!(
-                "Reached finalized head {}. Will check again in {} seconds.",
+                "Reached finalized head {}. Will check again in {delay_seconds} seconds.",
                 finalized_block.number,
-                delay_seconds
             );
             tokio::time::sleep(Duration::from_secs(delay_seconds)).await;
         }

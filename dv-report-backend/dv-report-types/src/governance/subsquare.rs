@@ -1,6 +1,4 @@
-use crate::metadata::polkadot::api::runtime_types::pallet_conviction_voting::vote::{
-    AccountVote, Vote,
-};
+use crate::runtime::api::runtime_types::pallet_conviction_voting::vote::{AccountVote, Vote};
 use crate::substrate::account_id::AccountId;
 use crate::util::string_or_number_to_string;
 use serde::{self, Deserialize, Serialize};
