@@ -475,6 +475,13 @@ impl Repository {
                         log::info!("Referendum {referendum_index} does not exist in the database. Skip confirmed event.");
                         continue;
                     }
+                    self.postgres
+                        .update_referendum_status(
+                            network_id,
+                            *referendum_index,
+                            ReferendumStatus::Approved,
+                        )
+                        .await?;
                     let id = self
                         .postgres
                         .save_referendum_confirmed_event(
