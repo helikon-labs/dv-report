@@ -92,6 +92,7 @@ pub struct APIConfig {
 #[derive(Clone, Debug, Deserialize)]
 pub struct MetricsConfig {
     pub host: String,
+    pub api_service_port: u16,
     pub indexer_port: u16,
 }
 

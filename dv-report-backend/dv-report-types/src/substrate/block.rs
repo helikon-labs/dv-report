@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use sqlx::FromRow;
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Block {
@@ -6,6 +7,26 @@ pub struct Block {
     pub number: u64,
     pub hash: String,
     pub parent_hash: String,
+}
+
+#[derive(Debug, FromRow)]
+pub struct BlockRow {
+    pub network_id: i32,
+    pub hash: String,
+    pub number: i64,
+    pub timestamp: i64,
+    pub parent_hash: String,
+}
+
+impl From<BlockRow> for Block {
+    fn from(row: BlockRow) -> Self {
+        Self {
+            timestamp: row.timestamp as u64,
+            number: row.number as u64,
+            hash: row.hash.clone(),
+            parent_hash: row.parent_hash.clone(),
+        }
+    }
 }
 
 #[derive(Serialize, Deserialize, Debug)]

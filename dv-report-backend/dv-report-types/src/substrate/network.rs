@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use sp_core::crypto::Ss58AddressFormat;
+use sqlx::FromRow;
 use std::fmt::{Display, Formatter};
 use std::str::FromStr;
 
@@ -84,4 +85,15 @@ impl Network {
     pub fn sp_core_set_default_ss58_version(&self) {
         sp_core::crypto::set_default_ss58_version(Ss58AddressFormat::from(self.ss58_prefix));
     }
+}
+
+#[derive(Debug, FromRow)]
+pub struct NetworkRow {
+    pub id: i32,
+    pub hash: String,
+    pub chain: String,
+    pub display: String,
+    pub ss58_prefix: i32,
+    pub token_ticker: String,
+    pub token_decimal_count: i32,
 }

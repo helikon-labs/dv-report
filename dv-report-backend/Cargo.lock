@@ -1660,6 +1660,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 
 [[package]]
+name = "dv-report-api-service"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "anyhow",
+ "async-trait",
+ "dv-report-config",
+ "dv-report-metrics",
+ "dv-report-persistence",
+ "dv-report-service",
+ "dv-report-types",
+ "futures-util",
+ "lazy_static",
+ "log",
+ "once_cell",
+ "tokio",
+]
+
+[[package]]
 name = "dv-report-config"
 version = "0.1.0"
 dependencies = [
@@ -1783,7 +1802,6 @@ dependencies = [
  "frame-system",
  "hex",
  "pallet-balances",
- "pallet-identity",
  "parity-scale-codec",
  "serde",
  "serde_json",
@@ -1958,26 +1976,6 @@ name = "enum-ordinalize-derive"
 version = "4.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0d28318a75d4aead5c4db25382e8ef717932d0346600cacae6357eb5941bc5ff"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.101",
-]
-
-[[package]]
-name = "enumflags2"
-version = "0.7.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba2f4b465f5318854c6f8dd686ede6c0a9dc67d4b1ac241cf0eb51521a309147"
-dependencies = [
- "enumflags2_derive",
-]
-
-[[package]]
-name = "enumflags2_derive"
-version = "0.7.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fc4caf64a58d7a6d65ab00639b046ff54399a39f5f2554728895ace4b297cd79"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4171,23 +4169,6 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-core",
- "sp-runtime",
-]
-
-[[package]]
-name = "pallet-identity"
-version = "40.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9c97dbd01716801ca490a21a4b525f5149b7c2350f3e56b1c6332bb2d471bdb"
-dependencies = [
- "enumflags2",
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "log",
- "parity-scale-codec",
- "scale-info",
- "sp-io",
  "sp-runtime",
 ]
 

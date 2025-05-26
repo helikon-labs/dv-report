@@ -1,5 +1,5 @@
 use crate::postgres::PostgreSQLStorage;
-use dv_report_types::substrate::block::Block;
+use dv_report_types::substrate::block::{Block, BlockRow};
 use sqlx::{Postgres, Transaction};
 
 impl PostgreSQLStorage {
@@ -33,5 +33,19 @@ impl PostgreSQLStorage {
                 .fetch_one(&self.connection_pool)
                 .await?;
         Ok(row.0)
+    }
+
+    pub async fn get_block(&self, network_id: u32, hash: &str) -> anyhow::Result<Block> {
+        let row: BlockRow = sqlx::query_as::<_, BlockRow>(
+            r#"
+            SELECT network_id, hash, number, timestamp, parent_hash FROM BLOCK
+            WHERE network_id = $1 and hash = $2
+            "#,
+        )
+        .bind(network_id as i32)
+        .bind(hash)
+        .fetch_one(&self.connection_pool)
+        .await?;
+        Ok(row.into())
     }
 }

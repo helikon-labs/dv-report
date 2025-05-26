@@ -15,7 +15,7 @@ pub struct Cohort {
     pub start_block: Block,
 }
 
-#[derive(Debug, FromRow)]
+#[derive(Clone, Debug, FromRow)]
 pub struct CohortRow {
     pub number: i32,
     pub network_id: i32,

@@ -6,6 +6,7 @@ mod block;
 mod cohort;
 mod delegate;
 mod delegation;
+mod network;
 mod referendum;
 mod referendum_event;
 mod vote;
