@@ -208,10 +208,9 @@ pub mod api {
                         "version",
                         types::Version {},
                         [
-                            76u8, 202u8, 17u8, 117u8, 189u8, 237u8, 239u8, 237u8, 151u8, 17u8,
-                            125u8, 159u8, 218u8, 92u8, 57u8, 238u8, 64u8, 147u8, 40u8, 72u8, 157u8,
-                            116u8, 37u8, 195u8, 156u8, 27u8, 123u8, 173u8, 178u8, 102u8, 136u8,
-                            6u8,
+                            79u8, 22u8, 137u8, 4u8, 40u8, 64u8, 30u8, 180u8, 49u8, 222u8, 114u8,
+                            125u8, 44u8, 25u8, 33u8, 152u8, 98u8, 42u8, 72u8, 178u8, 240u8, 103u8,
+                            34u8, 187u8, 81u8, 161u8, 183u8, 6u8, 120u8, 2u8, 146u8, 0u8,
                         ],
                     )
                 }
@@ -487,9 +486,9 @@ pub mod api {
                         "apply_extrinsic",
                         types::ApplyExtrinsic { extrinsic },
                         [
-                            72u8, 54u8, 139u8, 3u8, 118u8, 136u8, 65u8, 47u8, 6u8, 105u8, 125u8,
-                            223u8, 160u8, 29u8, 103u8, 74u8, 79u8, 149u8, 48u8, 90u8, 237u8, 2u8,
-                            97u8, 201u8, 123u8, 34u8, 167u8, 37u8, 187u8, 35u8, 176u8, 97u8,
+                            192u8, 184u8, 199u8, 4u8, 85u8, 136u8, 214u8, 205u8, 29u8, 29u8, 98u8,
+                            145u8, 172u8, 92u8, 168u8, 161u8, 150u8, 133u8, 100u8, 243u8, 100u8,
+                            100u8, 118u8, 28u8, 104u8, 82u8, 93u8, 63u8, 79u8, 36u8, 149u8, 144u8,
                         ],
                     )
                 }
@@ -835,6 +834,25 @@ pub mod api {
                         ],
                     )
                 }
+                pub fn pool_accounts(
+                    &self,
+                    pool_id: types::pool_accounts::PoolId,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::PoolAccounts,
+                    types::pool_accounts::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "NominationPoolsApi",
+                        "pool_accounts",
+                        types::PoolAccounts { pool_id },
+                        [
+                            16u8, 74u8, 97u8, 220u8, 122u8, 51u8, 224u8, 162u8, 141u8, 89u8, 100u8,
+                            118u8, 151u8, 153u8, 92u8, 241u8, 73u8, 98u8, 119u8, 189u8, 226u8,
+                            242u8, 166u8, 172u8, 241u8, 70u8, 149u8, 48u8, 165u8, 155u8, 182u8,
+                            132u8,
+                        ],
+                    )
+                }
             }
             pub mod types {
                 use super::runtime_types;
@@ -1076,6 +1094,35 @@ pub mod api {
                 pub struct PoolBalance {
                     pub pool_id: pool_balance::PoolId,
                 }
+                pub mod pool_accounts {
+                    use super::runtime_types;
+                    pub type PoolId = ::core::primitive::u32;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output = (
+                            ::subxt::ext::subxt_core::utils::AccountId32,
+                            ::subxt::ext::subxt_core::utils::AccountId32,
+                        );
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct PoolAccounts {
+                    pub pool_id: pool_accounts::PoolId,
+                }
             }
         }
         pub mod staking_api {
@@ -1250,9 +1297,10 @@ pub mod api {
                             block_hash,
                         },
                         [
-                            196u8, 50u8, 90u8, 49u8, 109u8, 251u8, 200u8, 35u8, 23u8, 150u8, 140u8,
-                            143u8, 232u8, 164u8, 133u8, 89u8, 32u8, 240u8, 115u8, 39u8, 95u8, 70u8,
-                            162u8, 76u8, 122u8, 73u8, 151u8, 144u8, 234u8, 120u8, 100u8, 29u8,
+                            19u8, 53u8, 170u8, 115u8, 75u8, 121u8, 231u8, 50u8, 199u8, 181u8,
+                            243u8, 170u8, 163u8, 224u8, 213u8, 134u8, 206u8, 207u8, 88u8, 242u8,
+                            80u8, 139u8, 233u8, 87u8, 175u8, 249u8, 178u8, 169u8, 255u8, 171u8,
+                            4u8, 125u8,
                         ],
                     )
                 }
@@ -1399,9 +1447,9 @@ pub mod api {
                         "availability_cores",
                         types::AvailabilityCores {},
                         [
-                            237u8, 214u8, 4u8, 255u8, 105u8, 58u8, 207u8, 5u8, 161u8, 200u8, 229u8,
-                            237u8, 83u8, 29u8, 131u8, 64u8, 244u8, 255u8, 15u8, 4u8, 224u8, 242u8,
-                            16u8, 182u8, 134u8, 20u8, 111u8, 114u8, 242u8, 218u8, 138u8, 144u8,
+                            248u8, 76u8, 100u8, 121u8, 84u8, 19u8, 48u8, 44u8, 98u8, 25u8, 99u8,
+                            197u8, 237u8, 132u8, 142u8, 115u8, 99u8, 129u8, 87u8, 142u8, 86u8,
+                            80u8, 60u8, 236u8, 150u8, 128u8, 212u8, 14u8, 221u8, 75u8, 179u8, 79u8,
                         ],
                     )
                 }
@@ -1521,9 +1569,10 @@ pub mod api {
                         "candidate_pending_availability",
                         types::CandidatePendingAvailability { para_id },
                         [
-                            244u8, 247u8, 40u8, 151u8, 56u8, 125u8, 160u8, 14u8, 133u8, 36u8, 95u8,
-                            142u8, 195u8, 41u8, 58u8, 243u8, 51u8, 140u8, 131u8, 63u8, 3u8, 143u8,
-                            104u8, 164u8, 193u8, 39u8, 220u8, 141u8, 141u8, 17u8, 182u8, 168u8,
+                            5u8, 222u8, 210u8, 254u8, 202u8, 124u8, 140u8, 134u8, 200u8, 175u8,
+                            238u8, 166u8, 204u8, 234u8, 13u8, 223u8, 41u8, 239u8, 249u8, 251u8,
+                            82u8, 224u8, 167u8, 58u8, 47u8, 65u8, 238u8, 165u8, 152u8, 229u8,
+                            193u8, 64u8,
                         ],
                     )
                 }
@@ -1538,9 +1587,9 @@ pub mod api {
                         "candidate_events",
                         types::CandidateEvents {},
                         [
-                            75u8, 75u8, 47u8, 107u8, 25u8, 45u8, 177u8, 137u8, 39u8, 157u8, 170u8,
-                            247u8, 55u8, 83u8, 48u8, 240u8, 120u8, 227u8, 107u8, 42u8, 84u8, 78u8,
-                            79u8, 170u8, 249u8, 233u8, 249u8, 121u8, 105u8, 119u8, 7u8, 248u8,
+                            59u8, 132u8, 90u8, 69u8, 245u8, 2u8, 251u8, 196u8, 129u8, 37u8, 96u8,
+                            108u8, 1u8, 123u8, 31u8, 198u8, 17u8, 34u8, 215u8, 205u8, 211u8, 69u8,
+                            203u8, 49u8, 74u8, 228u8, 78u8, 195u8, 112u8, 199u8, 236u8, 108u8,
                         ],
                     )
                 }
@@ -1610,9 +1659,9 @@ pub mod api {
                         "on_chain_votes",
                         types::OnChainVotes {},
                         [
-                            92u8, 45u8, 100u8, 230u8, 156u8, 157u8, 244u8, 49u8, 130u8, 181u8,
-                            20u8, 225u8, 159u8, 38u8, 33u8, 32u8, 147u8, 149u8, 41u8, 20u8, 158u8,
-                            61u8, 134u8, 225u8, 140u8, 5u8, 160u8, 223u8, 8u8, 11u8, 244u8, 236u8,
+                            99u8, 230u8, 154u8, 62u8, 250u8, 68u8, 207u8, 243u8, 195u8, 239u8,
+                            46u8, 7u8, 56u8, 222u8, 74u8, 95u8, 14u8, 199u8, 0u8, 200u8, 162u8,
+                            206u8, 88u8, 68u8, 39u8, 132u8, 39u8, 150u8, 90u8, 86u8, 22u8, 80u8,
                         ],
                     )
                 }
@@ -1805,7 +1854,7 @@ pub mod api {
                 }
                 pub fn para_backing_state(
                     &self,
-                    _0: types::para_backing_state::Param0,
+                    runtime_api_generated_name_0__ : types :: para_backing_state :: RuntimeApiGeneratedName0,
                 ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
                     types::ParaBackingState,
                     types::para_backing_state::output::Output,
@@ -1813,12 +1862,13 @@ pub mod api {
                     ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
                         "ParachainHost",
                         "para_backing_state",
-                        types::ParaBackingState { _0 },
+                        types::ParaBackingState {
+                            runtime_api_generated_name_0__,
+                        },
                         [
-                            207u8, 6u8, 220u8, 174u8, 230u8, 61u8, 153u8, 23u8, 219u8, 185u8,
-                            118u8, 139u8, 184u8, 122u8, 192u8, 47u8, 166u8, 165u8, 171u8, 69u8,
-                            119u8, 198u8, 51u8, 56u8, 141u8, 191u8, 148u8, 32u8, 104u8, 183u8, 7u8,
-                            51u8,
+                            118u8, 78u8, 30u8, 85u8, 237u8, 217u8, 251u8, 179u8, 159u8, 134u8,
+                            30u8, 119u8, 6u8, 51u8, 69u8, 45u8, 182u8, 151u8, 179u8, 145u8, 140u8,
+                            42u8, 38u8, 226u8, 136u8, 99u8, 68u8, 178u8, 52u8, 61u8, 241u8, 107u8,
                         ],
                     )
                 }
@@ -1923,9 +1973,27 @@ pub mod api {
                         "candidates_pending_availability",
                         types::CandidatesPendingAvailability { para_id },
                         [
-                            214u8, 41u8, 247u8, 245u8, 26u8, 171u8, 246u8, 174u8, 66u8, 162u8, 3u8,
-                            18u8, 234u8, 184u8, 2u8, 12u8, 137u8, 186u8, 106u8, 64u8, 125u8, 64u8,
-                            199u8, 201u8, 19u8, 82u8, 177u8, 198u8, 134u8, 238u8, 115u8, 51u8,
+                            46u8, 67u8, 45u8, 132u8, 116u8, 96u8, 3u8, 211u8, 116u8, 4u8, 64u8,
+                            158u8, 227u8, 134u8, 205u8, 127u8, 139u8, 111u8, 54u8, 141u8, 44u8,
+                            234u8, 140u8, 157u8, 91u8, 6u8, 55u8, 134u8, 176u8, 20u8, 198u8, 47u8,
+                        ],
+                    )
+                }
+                pub fn validation_code_bomb_limit(
+                    &self,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::ValidationCodeBombLimit,
+                    types::validation_code_bomb_limit::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "ParachainHost",
+                        "validation_code_bomb_limit",
+                        types::ValidationCodeBombLimit {},
+                        [
+                            87u8, 223u8, 184u8, 180u8, 216u8, 213u8, 191u8, 201u8, 250u8, 22u8,
+                            169u8, 184u8, 114u8, 220u8, 151u8, 57u8, 105u8, 160u8, 19u8, 105u8,
+                            0u8, 70u8, 177u8, 91u8, 128u8, 112u8, 61u8, 1u8, 202u8, 74u8, 165u8,
+                            244u8,
                         ],
                     )
                 }
@@ -1994,7 +2062,7 @@ pub mod api {
                     pub mod output {
                         use super::runtime_types;
                         pub type Output = ::subxt::ext::subxt_core::alloc::vec::Vec<
-                            runtime_types::polkadot_primitives::v8::CoreState<
+                            runtime_types::polkadot_primitives::vstaging::CoreState<
                                 ::subxt::ext::subxt_core::utils::H256,
                                 ::core::primitive::u32,
                             >,
@@ -2168,11 +2236,7 @@ pub mod api {
                     pub type ParaId = runtime_types::polkadot_parachain_primitives::primitives::Id;
                     pub mod output {
                         use super::runtime_types;
-                        pub type Output = ::core::option::Option<
-                            runtime_types::polkadot_primitives::v8::CommittedCandidateReceipt<
-                                ::subxt::ext::subxt_core::utils::H256,
-                            >,
-                        >;
+                        pub type Output = :: core :: option :: Option < runtime_types :: polkadot_primitives :: vstaging :: CommittedCandidateReceiptV2 < :: subxt :: ext :: subxt_core :: utils :: H256 > > ;
                     }
                 }
                 #[derive(
@@ -2198,7 +2262,7 @@ pub mod api {
                     pub mod output {
                         use super::runtime_types;
                         pub type Output = ::subxt::ext::subxt_core::alloc::vec::Vec<
-                            runtime_types::polkadot_primitives::v8::CandidateEvent<
+                            runtime_types::polkadot_primitives::vstaging::CandidateEvent<
                                 ::subxt::ext::subxt_core::utils::H256,
                             >,
                         >;
@@ -2316,7 +2380,7 @@ pub mod api {
                     pub mod output {
                         use super::runtime_types;
                         pub type Output = ::core::option::Option<
-                            runtime_types::polkadot_primitives::v8::ScrapedOnChainVotes<
+                            runtime_types::polkadot_primitives::vstaging::ScrapedOnChainVotes<
                                 ::subxt::ext::subxt_core::utils::H256,
                             >,
                         >;
@@ -2613,15 +2677,11 @@ pub mod api {
                 pub struct MinimumBackingVotes {}
                 pub mod para_backing_state {
                     use super::runtime_types;
-                    pub type Param0 = runtime_types::polkadot_parachain_primitives::primitives::Id;
+                    pub type RuntimeApiGeneratedName0 =
+                        runtime_types::polkadot_parachain_primitives::primitives::Id;
                     pub mod output {
                         use super::runtime_types;
-                        pub type Output = ::core::option::Option<
-                            runtime_types::polkadot_primitives::v8::async_backing::BackingState<
-                                ::subxt::ext::subxt_core::utils::H256,
-                                ::core::primitive::u32,
-                            >,
-                        >;
+                        pub type Output = :: core :: option :: Option < runtime_types :: polkadot_primitives :: vstaging :: async_backing :: BackingState < :: subxt :: ext :: subxt_core :: utils :: H256 , :: core :: primitive :: u32 > > ;
                     }
                 }
                 #[derive(
@@ -2640,7 +2700,8 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub struct ParaBackingState {
-                    pub _0: para_backing_state::Param0,
+                    pub runtime_api_generated_name_0__:
+                        para_backing_state::RuntimeApiGeneratedName0,
                 }
                 pub mod async_backing_params {
                     use super::runtime_types;
@@ -2773,11 +2834,7 @@ pub mod api {
                     pub type ParaId = runtime_types::polkadot_parachain_primitives::primitives::Id;
                     pub mod output {
                         use super::runtime_types;
-                        pub type Output = ::subxt::ext::subxt_core::alloc::vec::Vec<
-                            runtime_types::polkadot_primitives::v8::CommittedCandidateReceipt<
-                                ::subxt::ext::subxt_core::utils::H256,
-                            >,
-                        >;
+                        pub type Output = :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: polkadot_primitives :: vstaging :: CommittedCandidateReceiptV2 < :: subxt :: ext :: subxt_core :: utils :: H256 > > ;
                     }
                 }
                 #[derive(
@@ -2798,6 +2855,29 @@ pub mod api {
                 pub struct CandidatesPendingAvailability {
                     pub para_id: candidates_pending_availability::ParaId,
                 }
+                pub mod validation_code_bomb_limit {
+                    use super::runtime_types;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output = ::core::primitive::u32;
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ValidationCodeBombLimit {}
             }
         }
         pub mod beefy_api {
@@ -4451,9 +4531,10 @@ pub mod api {
                         "query_call_info",
                         types::QueryCallInfo { call, len },
                         [
-                            232u8, 5u8, 74u8, 193u8, 118u8, 34u8, 104u8, 182u8, 3u8, 40u8, 5u8,
-                            24u8, 168u8, 65u8, 164u8, 50u8, 55u8, 91u8, 192u8, 130u8, 162u8, 123u8,
-                            39u8, 47u8, 65u8, 140u8, 60u8, 115u8, 155u8, 198u8, 78u8, 214u8,
+                            237u8, 233u8, 225u8, 171u8, 251u8, 203u8, 204u8, 238u8, 64u8, 181u8,
+                            200u8, 76u8, 97u8, 71u8, 253u8, 235u8, 1u8, 15u8, 116u8, 41u8, 129u8,
+                            22u8, 165u8, 253u8, 166u8, 175u8, 225u8, 215u8, 28u8, 114u8, 204u8,
+                            160u8,
                         ],
                     )
                 }
@@ -4470,9 +4551,9 @@ pub mod api {
                         "query_call_fee_details",
                         types::QueryCallFeeDetails { call, len },
                         [
-                            150u8, 67u8, 148u8, 196u8, 206u8, 120u8, 63u8, 57u8, 227u8, 182u8,
-                            236u8, 188u8, 147u8, 39u8, 151u8, 10u8, 189u8, 48u8, 182u8, 189u8, 7u8,
-                            77u8, 140u8, 117u8, 109u8, 34u8, 35u8, 30u8, 174u8, 233u8, 95u8, 142u8,
+                            240u8, 144u8, 207u8, 33u8, 252u8, 87u8, 148u8, 57u8, 244u8, 95u8, 2u8,
+                            14u8, 183u8, 205u8, 70u8, 201u8, 162u8, 33u8, 101u8, 94u8, 143u8, 45u8,
+                            232u8, 93u8, 222u8, 148u8, 52u8, 113u8, 48u8, 154u8, 250u8, 179u8,
                         ],
                     )
                 }
@@ -4649,10 +4730,9 @@ pub mod api {
                         "query_acceptable_payment_assets",
                         types::QueryAcceptablePaymentAssets { xcm_version },
                         [
-                            232u8, 67u8, 173u8, 246u8, 152u8, 193u8, 90u8, 68u8, 49u8, 200u8,
-                            118u8, 68u8, 139u8, 225u8, 161u8, 38u8, 177u8, 158u8, 83u8, 135u8,
-                            180u8, 97u8, 4u8, 94u8, 0u8, 232u8, 114u8, 119u8, 77u8, 5u8, 8u8,
-                            236u8,
+                            29u8, 81u8, 159u8, 80u8, 29u8, 95u8, 91u8, 180u8, 135u8, 23u8, 106u8,
+                            224u8, 21u8, 102u8, 89u8, 89u8, 23u8, 72u8, 125u8, 136u8, 144u8, 136u8,
+                            96u8, 224u8, 207u8, 197u8, 111u8, 238u8, 3u8, 46u8, 162u8, 78u8,
                         ],
                     )
                 }
@@ -4668,10 +4748,10 @@ pub mod api {
                         "query_xcm_weight",
                         types::QueryXcmWeight { message },
                         [
-                            58u8, 118u8, 149u8, 47u8, 144u8, 85u8, 10u8, 89u8, 29u8, 123u8, 249u8,
-                            209u8, 165u8, 160u8, 43u8, 246u8, 12u8, 106u8, 89u8, 20u8, 219u8,
-                            133u8, 189u8, 58u8, 14u8, 136u8, 189u8, 142u8, 123u8, 145u8, 77u8,
-                            68u8,
+                            210u8, 246u8, 6u8, 74u8, 134u8, 215u8, 196u8, 176u8, 38u8, 218u8,
+                            239u8, 142u8, 11u8, 235u8, 204u8, 218u8, 123u8, 66u8, 106u8, 60u8,
+                            110u8, 100u8, 28u8, 124u8, 48u8, 26u8, 115u8, 68u8, 86u8, 117u8, 10u8,
+                            73u8,
                         ],
                     )
                 }
@@ -4688,9 +4768,9 @@ pub mod api {
                         "query_weight_to_asset_fee",
                         types::QueryWeightToAssetFee { weight, asset },
                         [
-                            86u8, 75u8, 169u8, 75u8, 0u8, 231u8, 241u8, 122u8, 197u8, 232u8, 188u8,
-                            66u8, 247u8, 240u8, 170u8, 39u8, 199u8, 82u8, 104u8, 16u8, 28u8, 40u8,
-                            214u8, 232u8, 177u8, 212u8, 117u8, 16u8, 181u8, 240u8, 33u8, 126u8,
+                            170u8, 180u8, 252u8, 70u8, 130u8, 183u8, 254u8, 104u8, 112u8, 235u8,
+                            227u8, 117u8, 29u8, 40u8, 30u8, 158u8, 149u8, 222u8, 126u8, 30u8, 2u8,
+                            107u8, 177u8, 35u8, 13u8, 203u8, 148u8, 83u8, 83u8, 74u8, 242u8, 210u8,
                         ],
                     )
                 }
@@ -4710,10 +4790,10 @@ pub mod api {
                             message,
                         },
                         [
-                            248u8, 169u8, 153u8, 16u8, 58u8, 94u8, 83u8, 239u8, 80u8, 12u8, 183u8,
-                            141u8, 169u8, 8u8, 137u8, 178u8, 241u8, 228u8, 241u8, 66u8, 89u8,
-                            202u8, 78u8, 125u8, 240u8, 248u8, 109u8, 41u8, 189u8, 119u8, 20u8,
-                            149u8,
+                            102u8, 222u8, 158u8, 11u8, 13u8, 250u8, 188u8, 33u8, 75u8, 84u8, 128u8,
+                            20u8, 186u8, 211u8, 253u8, 108u8, 133u8, 71u8, 236u8, 158u8, 147u8,
+                            77u8, 227u8, 213u8, 167u8, 23u8, 152u8, 144u8, 48u8, 17u8, 105u8,
+                            183u8,
                         ],
                     )
                 }
@@ -4853,6 +4933,7 @@ pub mod api {
                     &self,
                     origin: types::dry_run_call::Origin,
                     call: types::dry_run_call::Call,
+                    result_xcms_version: types::dry_run_call::ResultXcmsVersion,
                 ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
                     types::DryRunCall,
                     types::dry_run_call::output::Output,
@@ -4860,12 +4941,16 @@ pub mod api {
                     ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
                         "DryRunApi",
                         "dry_run_call",
-                        types::DryRunCall { origin, call },
+                        types::DryRunCall {
+                            origin,
+                            call,
+                            result_xcms_version,
+                        },
                         [
-                            12u8, 98u8, 19u8, 54u8, 17u8, 130u8, 83u8, 205u8, 47u8, 77u8, 70u8,
-                            120u8, 99u8, 64u8, 87u8, 124u8, 102u8, 233u8, 31u8, 142u8, 129u8,
-                            147u8, 70u8, 172u8, 167u8, 179u8, 220u8, 181u8, 253u8, 177u8, 42u8,
-                            53u8,
+                            22u8, 95u8, 100u8, 227u8, 182u8, 219u8, 139u8, 200u8, 199u8, 244u8,
+                            102u8, 101u8, 46u8, 129u8, 190u8, 94u8, 112u8, 217u8, 80u8, 9u8, 176u8,
+                            135u8, 97u8, 19u8, 64u8, 144u8, 163u8, 19u8, 156u8, 237u8, 244u8,
+                            202u8,
                         ],
                     )
                 }
@@ -4885,10 +4970,10 @@ pub mod api {
                             xcm,
                         },
                         [
-                            117u8, 41u8, 88u8, 109u8, 95u8, 65u8, 140u8, 65u8, 109u8, 133u8, 183u8,
-                            50u8, 105u8, 249u8, 246u8, 79u8, 26u8, 10u8, 112u8, 236u8, 132u8,
-                            144u8, 159u8, 161u8, 79u8, 243u8, 106u8, 115u8, 205u8, 193u8, 142u8,
-                            94u8,
+                            137u8, 6u8, 126u8, 81u8, 140u8, 169u8, 88u8, 118u8, 250u8, 94u8, 48u8,
+                            27u8, 147u8, 152u8, 183u8, 215u8, 109u8, 5u8, 178u8, 148u8, 142u8,
+                            245u8, 38u8, 16u8, 230u8, 59u8, 245u8, 138u8, 133u8, 206u8, 159u8,
+                            13u8,
                         ],
                     )
                 }
@@ -4899,6 +4984,7 @@ pub mod api {
                     use super::runtime_types;
                     pub type Origin = runtime_types::polkadot_runtime::OriginCaller;
                     pub type Call = runtime_types::polkadot_runtime::RuntimeCall;
+                    pub type ResultXcmsVersion = ::core::primitive::u32;
                     pub mod output {
                         use super::runtime_types;
                         pub type Output = ::core::result::Result<
@@ -4927,6 +5013,7 @@ pub mod api {
                 pub struct DryRunCall {
                     pub origin: dry_run_call::Origin,
                     pub call: dry_run_call::Call,
+                    pub result_xcms_version: dry_run_call::ResultXcmsVersion,
                 }
                 pub mod dry_run_xcm {
                     use super::runtime_types;
@@ -4980,10 +5067,10 @@ pub mod api {
                         "convert_location",
                         types::ConvertLocation { location },
                         [
-                            177u8, 18u8, 51u8, 215u8, 92u8, 244u8, 76u8, 112u8, 17u8, 169u8, 178u8,
-                            211u8, 218u8, 62u8, 162u8, 208u8, 204u8, 179u8, 209u8, 196u8, 53u8,
-                            73u8, 63u8, 14u8, 120u8, 142u8, 185u8, 141u8, 140u8, 111u8, 124u8,
-                            254u8,
+                            179u8, 162u8, 1u8, 26u8, 111u8, 211u8, 90u8, 95u8, 137u8, 123u8, 87u8,
+                            117u8, 40u8, 105u8, 246u8, 228u8, 103u8, 128u8, 236u8, 197u8, 187u8,
+                            234u8, 126u8, 122u8, 89u8, 135u8, 132u8, 148u8, 136u8, 31u8, 129u8,
+                            230u8,
                         ],
                     )
                 }
@@ -5236,9 +5323,9 @@ pub mod api {
             .hash();
         runtime_metadata_hash
             == [
-                72u8, 123u8, 247u8, 234u8, 25u8, 46u8, 19u8, 217u8, 127u8, 209u8, 210u8, 82u8,
-                101u8, 92u8, 84u8, 16u8, 213u8, 84u8, 220u8, 11u8, 59u8, 226u8, 66u8, 65u8, 110u8,
-                85u8, 18u8, 2u8, 199u8, 68u8, 41u8, 88u8,
+                187u8, 51u8, 179u8, 197u8, 187u8, 40u8, 68u8, 20u8, 175u8, 198u8, 239u8, 236u8,
+                181u8, 255u8, 243u8, 246u8, 84u8, 215u8, 55u8, 47u8, 180u8, 5u8, 95u8, 161u8, 49u8,
+                104u8, 157u8, 237u8, 223u8, 191u8, 200u8, 131u8,
             ]
     }
     pub mod conviction_voting {
@@ -6130,10 +6217,10 @@ pub mod api {
                             enactment_moment,
                         },
                         [
-                            223u8, 128u8, 124u8, 218u8, 77u8, 214u8, 226u8, 135u8, 128u8, 59u8,
-                            8u8, 155u8, 182u8, 57u8, 92u8, 150u8, 54u8, 55u8, 184u8, 237u8, 53u8,
-                            156u8, 202u8, 112u8, 39u8, 122u8, 165u8, 90u8, 253u8, 221u8, 239u8,
-                            98u8,
+                            132u8, 106u8, 95u8, 20u8, 178u8, 189u8, 168u8, 153u8, 245u8, 25u8,
+                            199u8, 236u8, 9u8, 147u8, 155u8, 20u8, 73u8, 248u8, 3u8, 240u8, 112u8,
+                            158u8, 122u8, 18u8, 95u8, 118u8, 46u8, 177u8, 111u8, 198u8, 164u8,
+                            20u8,
                         ],
                     )
                 }
@@ -6766,10 +6853,9 @@ pub mod api {
                         "ReferendumInfoFor",
                         (),
                         [
-                            253u8, 63u8, 98u8, 86u8, 146u8, 99u8, 51u8, 101u8, 133u8, 123u8, 106u8,
-                            204u8, 65u8, 142u8, 113u8, 79u8, 205u8, 209u8, 115u8, 162u8, 4u8,
-                            108u8, 235u8, 255u8, 125u8, 58u8, 112u8, 89u8, 60u8, 252u8, 119u8,
-                            60u8,
+                            55u8, 165u8, 17u8, 15u8, 97u8, 193u8, 18u8, 120u8, 21u8, 43u8, 23u8,
+                            168u8, 174u8, 176u8, 89u8, 40u8, 212u8, 58u8, 46u8, 158u8, 95u8, 191u8,
+                            17u8, 123u8, 139u8, 70u8, 29u8, 71u8, 208u8, 68u8, 202u8, 178u8,
                         ],
                     )
                 }
@@ -6792,10 +6878,9 @@ pub mod api {
                             _0.borrow(),
                         ),
                         [
-                            253u8, 63u8, 98u8, 86u8, 146u8, 99u8, 51u8, 101u8, 133u8, 123u8, 106u8,
-                            204u8, 65u8, 142u8, 113u8, 79u8, 205u8, 209u8, 115u8, 162u8, 4u8,
-                            108u8, 235u8, 255u8, 125u8, 58u8, 112u8, 89u8, 60u8, 252u8, 119u8,
-                            60u8,
+                            55u8, 165u8, 17u8, 15u8, 97u8, 193u8, 18u8, 120u8, 21u8, 43u8, 23u8,
+                            168u8, 174u8, 176u8, 89u8, 40u8, 212u8, 58u8, 46u8, 158u8, 95u8, 191u8,
+                            17u8, 123u8, 139u8, 70u8, 29u8, 71u8, 208u8, 68u8, 202u8, 178u8,
                         ],
                     )
                 }
@@ -7225,10 +7310,9 @@ pub mod api {
                         "batch",
                         types::Batch { calls },
                         [
-                            117u8, 79u8, 190u8, 160u8, 113u8, 169u8, 223u8, 178u8, 115u8, 37u8,
-                            77u8, 15u8, 176u8, 155u8, 167u8, 225u8, 181u8, 55u8, 223u8, 38u8, 16u8,
-                            234u8, 252u8, 115u8, 179u8, 146u8, 204u8, 101u8, 170u8, 6u8, 208u8,
-                            223u8,
+                            196u8, 92u8, 71u8, 168u8, 148u8, 24u8, 94u8, 243u8, 85u8, 92u8, 185u8,
+                            19u8, 233u8, 180u8, 187u8, 147u8, 85u8, 28u8, 251u8, 93u8, 89u8, 97u8,
+                            46u8, 25u8, 20u8, 216u8, 63u8, 71u8, 246u8, 223u8, 11u8, 84u8,
                         ],
                     )
                 }
@@ -7246,10 +7330,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            231u8, 152u8, 250u8, 223u8, 170u8, 26u8, 25u8, 60u8, 185u8, 135u8,
-                            185u8, 114u8, 12u8, 229u8, 8u8, 141u8, 247u8, 73u8, 134u8, 162u8,
-                            204u8, 29u8, 240u8, 28u8, 162u8, 80u8, 27u8, 92u8, 229u8, 194u8, 189u8,
-                            147u8,
+                            175u8, 171u8, 157u8, 79u8, 24u8, 204u8, 208u8, 229u8, 124u8, 198u8,
+                            137u8, 160u8, 75u8, 48u8, 252u8, 161u8, 249u8, 226u8, 93u8, 204u8,
+                            94u8, 117u8, 40u8, 196u8, 222u8, 236u8, 132u8, 100u8, 146u8, 52u8,
+                            227u8, 167u8,
                         ],
                     )
                 }
@@ -7263,9 +7347,10 @@ pub mod api {
                         "batch_all",
                         types::BatchAll { calls },
                         [
-                            226u8, 87u8, 188u8, 249u8, 16u8, 49u8, 215u8, 70u8, 178u8, 211u8, 40u8,
-                            63u8, 1u8, 113u8, 198u8, 111u8, 72u8, 191u8, 100u8, 133u8, 205u8,
-                            231u8, 107u8, 89u8, 80u8, 195u8, 6u8, 222u8, 214u8, 50u8, 213u8, 213u8,
+                            227u8, 182u8, 219u8, 14u8, 20u8, 212u8, 193u8, 255u8, 3u8, 172u8,
+                            226u8, 189u8, 102u8, 33u8, 46u8, 74u8, 180u8, 82u8, 75u8, 231u8, 199u8,
+                            80u8, 19u8, 148u8, 65u8, 105u8, 25u8, 227u8, 235u8, 102u8, 249u8,
+                            130u8,
                         ],
                     )
                 }
@@ -7283,9 +7368,9 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            75u8, 81u8, 118u8, 217u8, 230u8, 196u8, 220u8, 167u8, 255u8, 58u8,
-                            182u8, 73u8, 69u8, 218u8, 13u8, 71u8, 223u8, 240u8, 215u8, 66u8, 239u8,
-                            41u8, 132u8, 179u8, 196u8, 238u8, 85u8, 144u8, 252u8, 5u8, 243u8, 35u8,
+                            105u8, 109u8, 235u8, 26u8, 231u8, 72u8, 68u8, 234u8, 68u8, 69u8, 46u8,
+                            13u8, 165u8, 240u8, 201u8, 25u8, 96u8, 3u8, 246u8, 165u8, 26u8, 70u8,
+                            135u8, 120u8, 160u8, 9u8, 181u8, 94u8, 16u8, 45u8, 7u8, 61u8,
                         ],
                     )
                 }
@@ -7299,10 +7384,9 @@ pub mod api {
                         "force_batch",
                         types::ForceBatch { calls },
                         [
-                            74u8, 135u8, 156u8, 130u8, 30u8, 96u8, 106u8, 78u8, 208u8, 222u8,
-                            186u8, 114u8, 115u8, 165u8, 186u8, 103u8, 29u8, 237u8, 247u8, 172u8,
-                            227u8, 179u8, 169u8, 218u8, 118u8, 118u8, 102u8, 176u8, 245u8, 135u8,
-                            27u8, 217u8,
+                            68u8, 165u8, 60u8, 70u8, 56u8, 134u8, 221u8, 114u8, 214u8, 50u8, 10u8,
+                            181u8, 38u8, 132u8, 216u8, 251u8, 62u8, 119u8, 32u8, 6u8, 5u8, 57u8,
+                            26u8, 144u8, 178u8, 18u8, 162u8, 152u8, 49u8, 203u8, 135u8, 171u8,
                         ],
                     )
                 }
@@ -7320,10 +7404,10 @@ pub mod api {
                             weight,
                         },
                         [
-                            198u8, 156u8, 241u8, 229u8, 107u8, 82u8, 196u8, 21u8, 86u8, 31u8, 65u8,
-                            229u8, 113u8, 211u8, 146u8, 15u8, 74u8, 67u8, 93u8, 141u8, 127u8,
-                            213u8, 246u8, 185u8, 140u8, 98u8, 139u8, 119u8, 186u8, 127u8, 3u8,
-                            239u8,
+                            66u8, 169u8, 110u8, 198u8, 2u8, 101u8, 100u8, 70u8, 101u8, 121u8,
+                            118u8, 58u8, 202u8, 116u8, 113u8, 41u8, 59u8, 214u8, 81u8, 197u8,
+                            194u8, 37u8, 19u8, 141u8, 228u8, 62u8, 23u8, 118u8, 4u8, 124u8, 188u8,
+                            125u8,
                         ],
                     )
                 }
@@ -7510,8 +7594,9 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::AccountId32,
                         (),
                     >;
-                    pub type ForceProxyType =
-                        ::core::option::Option<runtime_types::polkadot_runtime::ProxyType>;
+                    pub type ForceProxyType = ::core::option::Option<
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType,
+                    >;
                     pub type Call = runtime_types::polkadot_runtime::RuntimeCall;
                 }
                 impl ::subxt::ext::subxt_core::blocks::StaticExtrinsic for Proxy {
@@ -7544,7 +7629,8 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::AccountId32,
                         (),
                     >;
-                    pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                    pub type ProxyType =
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                     pub type Delay = ::core::primitive::u32;
                 }
                 impl ::subxt::ext::subxt_core::blocks::StaticExtrinsic for AddProxy {
@@ -7577,7 +7663,8 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::AccountId32,
                         (),
                     >;
-                    pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                    pub type ProxyType =
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                     pub type Delay = ::core::primitive::u32;
                 }
                 impl ::subxt::ext::subxt_core::blocks::StaticExtrinsic for RemoveProxy {
@@ -7626,7 +7713,8 @@ pub mod api {
                 }
                 pub mod create_pure {
                     use super::runtime_types;
-                    pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                    pub type ProxyType =
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                     pub type Delay = ::core::primitive::u32;
                     pub type Index = ::core::primitive::u16;
                 }
@@ -7664,7 +7752,8 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::AccountId32,
                         (),
                     >;
-                    pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                    pub type ProxyType =
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                     pub type Index = ::core::primitive::u16;
                     pub type Height = ::core::primitive::u32;
                     pub type ExtIndex = ::core::primitive::u32;
@@ -7797,8 +7886,9 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::AccountId32,
                         (),
                     >;
-                    pub type ForceProxyType =
-                        ::core::option::Option<runtime_types::polkadot_runtime::ProxyType>;
+                    pub type ForceProxyType = ::core::option::Option<
+                        runtime_types::polkadot_runtime_constants::proxy::ProxyType,
+                    >;
                     pub type Call = runtime_types::polkadot_runtime::RuntimeCall;
                 }
                 impl ::subxt::ext::subxt_core::blocks::StaticExtrinsic for ProxyAnnounced {
@@ -7824,10 +7914,9 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            140u8, 168u8, 237u8, 188u8, 50u8, 53u8, 250u8, 49u8, 239u8, 169u8,
-                            226u8, 248u8, 28u8, 203u8, 95u8, 226u8, 24u8, 139u8, 157u8, 2u8, 87u8,
-                            25u8, 45u8, 128u8, 247u8, 122u8, 203u8, 72u8, 42u8, 215u8, 217u8,
-                            231u8,
+                            167u8, 139u8, 2u8, 48u8, 87u8, 67u8, 246u8, 0u8, 245u8, 58u8, 85u8,
+                            138u8, 87u8, 26u8, 160u8, 117u8, 71u8, 80u8, 77u8, 61u8, 234u8, 236u8,
+                            151u8, 67u8, 36u8, 27u8, 93u8, 143u8, 202u8, 117u8, 148u8, 189u8,
                         ],
                     )
                 }
@@ -8013,9 +8102,9 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            56u8, 53u8, 129u8, 246u8, 171u8, 164u8, 187u8, 38u8, 218u8, 174u8,
-                            237u8, 228u8, 33u8, 252u8, 79u8, 197u8, 132u8, 136u8, 96u8, 25u8, 40u8,
-                            129u8, 5u8, 170u8, 27u8, 67u8, 106u8, 111u8, 16u8, 162u8, 9u8, 27u8,
+                            16u8, 115u8, 40u8, 3u8, 126u8, 76u8, 14u8, 24u8, 143u8, 137u8, 89u8,
+                            8u8, 97u8, 177u8, 182u8, 185u8, 57u8, 241u8, 140u8, 122u8, 17u8, 26u8,
+                            34u8, 218u8, 173u8, 67u8, 215u8, 2u8, 82u8, 7u8, 38u8, 93u8,
                         ],
                     )
                 }
@@ -8068,7 +8157,7 @@ pub mod api {
                 use super::runtime_types;
                 pub type Pure = ::subxt::ext::subxt_core::utils::AccountId32;
                 pub type Who = ::subxt::ext::subxt_core::utils::AccountId32;
-                pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                pub type ProxyType = runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                 pub type DisambiguationIndex = ::core::primitive::u16;
             }
             impl ::subxt::ext::subxt_core::events::StaticEvent for PureCreated {
@@ -8122,7 +8211,7 @@ pub mod api {
                 use super::runtime_types;
                 pub type Delegator = ::subxt::ext::subxt_core::utils::AccountId32;
                 pub type Delegatee = ::subxt::ext::subxt_core::utils::AccountId32;
-                pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                pub type ProxyType = runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                 pub type Delay = ::core::primitive::u32;
             }
             impl ::subxt::ext::subxt_core::events::StaticEvent for ProxyAdded {
@@ -8150,7 +8239,7 @@ pub mod api {
                 use super::runtime_types;
                 pub type Delegator = ::subxt::ext::subxt_core::utils::AccountId32;
                 pub type Delegatee = ::subxt::ext::subxt_core::utils::AccountId32;
-                pub type ProxyType = runtime_types::polkadot_runtime::ProxyType;
+                pub type ProxyType = runtime_types::polkadot_runtime_constants::proxy::ProxyType;
                 pub type Delay = ::core::primitive::u32;
             }
             impl ::subxt::ext::subxt_core::events::StaticEvent for ProxyRemoved {
@@ -8168,7 +8257,7 @@ pub mod api {
                         runtime_types::bounded_collections::bounded_vec::BoundedVec<
                             runtime_types::pallet_proxy::ProxyDefinition<
                                 ::subxt::ext::subxt_core::utils::AccountId32,
-                                runtime_types::polkadot_runtime::ProxyType,
+                                runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                                 ::core::primitive::u32,
                             >,
                         >,
@@ -8558,9 +8647,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            44u8, 113u8, 222u8, 2u8, 70u8, 211u8, 150u8, 251u8, 175u8, 9u8, 13u8,
-                            165u8, 194u8, 129u8, 221u8, 157u8, 12u8, 160u8, 126u8, 33u8, 81u8,
-                            116u8, 36u8, 162u8, 253u8, 93u8, 82u8, 107u8, 11u8, 43u8, 77u8, 77u8,
+                            250u8, 122u8, 38u8, 153u8, 148u8, 179u8, 113u8, 2u8, 138u8, 239u8,
+                            216u8, 216u8, 64u8, 200u8, 203u8, 5u8, 187u8, 162u8, 252u8, 219u8,
+                            73u8, 129u8, 60u8, 59u8, 90u8, 12u8, 144u8, 191u8, 120u8, 145u8, 20u8,
+                            252u8,
                         ],
                     )
                 }
@@ -8584,9 +8674,10 @@ pub mod api {
                             max_weight,
                         },
                         [
-                            87u8, 145u8, 138u8, 74u8, 133u8, 43u8, 72u8, 106u8, 250u8, 6u8, 147u8,
-                            97u8, 57u8, 219u8, 144u8, 83u8, 16u8, 135u8, 14u8, 107u8, 116u8, 0u8,
-                            77u8, 250u8, 98u8, 188u8, 62u8, 247u8, 128u8, 14u8, 23u8, 246u8,
+                            237u8, 126u8, 105u8, 156u8, 55u8, 133u8, 66u8, 206u8, 175u8, 173u8,
+                            244u8, 75u8, 60u8, 218u8, 19u8, 191u8, 253u8, 2u8, 86u8, 107u8, 221u8,
+                            147u8, 146u8, 139u8, 31u8, 213u8, 143u8, 247u8, 235u8, 183u8, 1u8,
+                            37u8,
                         ],
                     )
                 }
@@ -8938,25 +9029,6 @@ pub mod api {
                 )]
                 pub struct BoundedVec<_0>(pub ::subxt::ext::subxt_core::alloc::vec::Vec<_0>);
             }
-            pub mod weak_bounded_vec {
-                use super::runtime_types;
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct WeakBoundedVec<_0>(pub ::subxt::ext::subxt_core::alloc::vec::Vec<_0>);
-            }
         }
         pub mod finality_grandpa {
             use super::runtime_types;
@@ -9068,26 +9140,6 @@ pub mod api {
                     Operational,
                     #[codec(index = 2)]
                     Mandatory,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct DispatchInfo {
-                    pub weight: runtime_types::sp_weights::weight_v2::Weight,
-                    pub class: runtime_types::frame_support::dispatch::DispatchClass,
-                    pub pays_fee: runtime_types::frame_support::dispatch::Pays,
                 }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -9500,12 +9552,12 @@ pub mod api {
                 pub enum Event {
                     #[codec(index = 0)]
                     ExtrinsicSuccess {
-                        dispatch_info: runtime_types::frame_support::dispatch::DispatchInfo,
+                        dispatch_info: runtime_types::frame_system::DispatchEventInfo,
                     },
                     #[codec(index = 1)]
                     ExtrinsicFailed {
                         dispatch_error: runtime_types::sp_runtime::DispatchError,
-                        dispatch_info: runtime_types::frame_support::dispatch::DispatchInfo,
+                        dispatch_info: runtime_types::frame_system::DispatchEventInfo,
                     },
                     #[codec(index = 2)]
                     CodeUpdated,
@@ -9528,6 +9580,22 @@ pub mod api {
                         check_version: ::core::primitive::bool,
                     },
                 }
+            }
+            #[derive(
+                :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                Debug,
+            )]
+            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+            #[codec(dumb_trait_bound)]
+            #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
+            #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
+            pub struct DispatchEventInfo {
+                pub weight: runtime_types::sp_weights::weight_v2::Weight,
+                pub class: runtime_types::frame_support::dispatch::DispatchClass,
+                pub pays_fee: runtime_types::frame_support::dispatch::Pays,
             }
         }
         pub mod pallet_asset_rate {
@@ -10156,6 +10224,17 @@ pub mod api {
                         #[codec(compact)]
                         bounty_id: ::core::primitive::u32,
                         remark: ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                    },
+                    #[codec(index = 9)]
+                    approve_bounty_with_curator {
+                        #[codec(compact)]
+                        bounty_id: ::core::primitive::u32,
+                        curator: ::subxt::ext::subxt_core::utils::MultiAddress<
+                            ::subxt::ext::subxt_core::utils::AccountId32,
+                            (),
+                        >,
+                        #[codec(compact)]
+                        fee: ::core::primitive::u128,
                     },
                 }
                 #[derive(
@@ -11951,8 +12030,9 @@ pub mod api {
                             ::subxt::ext::subxt_core::utils::AccountId32,
                             (),
                         >,
-                        force_proxy_type:
-                            ::core::option::Option<runtime_types::polkadot_runtime::ProxyType>,
+                        force_proxy_type: ::core::option::Option<
+                            runtime_types::polkadot_runtime_constants::proxy::ProxyType,
+                        >,
                         call: ::subxt::ext::subxt_core::alloc::boxed::Box<
                             runtime_types::polkadot_runtime::RuntimeCall,
                         >,
@@ -11963,7 +12043,7 @@ pub mod api {
                             ::subxt::ext::subxt_core::utils::AccountId32,
                             (),
                         >,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         delay: ::core::primitive::u32,
                     },
                     #[codec(index = 2)]
@@ -11972,14 +12052,14 @@ pub mod api {
                             ::subxt::ext::subxt_core::utils::AccountId32,
                             (),
                         >,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         delay: ::core::primitive::u32,
                     },
                     #[codec(index = 3)]
                     remove_proxies,
                     #[codec(index = 4)]
                     create_pure {
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         delay: ::core::primitive::u32,
                         index: ::core::primitive::u16,
                     },
@@ -11989,7 +12069,7 @@ pub mod api {
                             ::subxt::ext::subxt_core::utils::AccountId32,
                             (),
                         >,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         index: ::core::primitive::u16,
                         #[codec(compact)]
                         height: ::core::primitive::u32,
@@ -12030,8 +12110,9 @@ pub mod api {
                             ::subxt::ext::subxt_core::utils::AccountId32,
                             (),
                         >,
-                        force_proxy_type:
-                            ::core::option::Option<runtime_types::polkadot_runtime::ProxyType>,
+                        force_proxy_type: ::core::option::Option<
+                            runtime_types::polkadot_runtime_constants::proxy::ProxyType,
+                        >,
                         call: ::subxt::ext::subxt_core::alloc::boxed::Box<
                             runtime_types::polkadot_runtime::RuntimeCall,
                         >,
@@ -12095,7 +12176,7 @@ pub mod api {
                     PureCreated {
                         pure: ::subxt::ext::subxt_core::utils::AccountId32,
                         who: ::subxt::ext::subxt_core::utils::AccountId32,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         disambiguation_index: ::core::primitive::u16,
                     },
                     #[codec(index = 2)]
@@ -12108,14 +12189,14 @@ pub mod api {
                     ProxyAdded {
                         delegator: ::subxt::ext::subxt_core::utils::AccountId32,
                         delegatee: ::subxt::ext::subxt_core::utils::AccountId32,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         delay: ::core::primitive::u32,
                     },
                     #[codec(index = 4)]
                     ProxyRemoved {
                         delegator: ::subxt::ext::subxt_core::utils::AccountId32,
                         delegatee: ::subxt::ext::subxt_core::utils::AccountId32,
-                        proxy_type: runtime_types::polkadot_runtime::ProxyType,
+                        proxy_type: runtime_types::polkadot_runtime_constants::proxy::ProxyType,
                         delay: ::core::primitive::u32,
                     },
                 }
@@ -13099,6 +13180,8 @@ pub mod api {
                         PayoutStarted {
                             era_index: ::core::primitive::u32,
                             validator_stash: ::subxt::ext::subxt_core::utils::AccountId32,
+                            page: ::core::primitive::u32,
+                            next: ::core::option::Option<::core::primitive::u32>,
                         },
                         #[codec(index = 13)]
                         ValidatorPrefsSet {
@@ -14009,7 +14092,7 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub enum Call {
-                    # [codec (index = 0)] send { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , } , # [codec (index = 1)] teleport_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , } , # [codec (index = 2)] reserve_transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , } , # [codec (index = 3)] execute { message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , max_weight : runtime_types :: sp_weights :: weight_v2 :: Weight , } , # [codec (index = 4)] force_xcm_version { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm :: v4 :: location :: Location > , version : :: core :: primitive :: u32 , } , # [codec (index = 5)] force_default_xcm_version { maybe_xcm_version : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 6)] force_subscribe_version_notify { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 7)] force_unsubscribe_version_notify { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 8)] limited_reserve_transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 9)] limited_teleport_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 10)] force_suspension { suspended : :: core :: primitive :: bool , } , # [codec (index = 11)] transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 12)] claim_assets { assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 13)] transfer_assets_using_type_and_then { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , assets_transfer_type : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm_executor :: traits :: asset_transfer :: TransferType > , remote_fees_id : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssetId > , fees_transfer_type : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm_executor :: traits :: asset_transfer :: TransferType > , custom_xcm_on_dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , }
+                    # [codec (index = 0)] send { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , } , # [codec (index = 1)] teleport_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , } , # [codec (index = 2)] reserve_transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , } , # [codec (index = 3)] execute { message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , max_weight : runtime_types :: sp_weights :: weight_v2 :: Weight , } , # [codec (index = 4)] force_xcm_version { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm :: v5 :: location :: Location > , version : :: core :: primitive :: u32 , } , # [codec (index = 5)] force_default_xcm_version { maybe_xcm_version : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 6)] force_subscribe_version_notify { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 7)] force_unsubscribe_version_notify { location : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 8)] limited_reserve_transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 9)] limited_teleport_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 10)] force_suspension { suspended : :: core :: primitive :: bool , } , # [codec (index = 11)] transfer_assets { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , fee_asset_item : :: core :: primitive :: u32 , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , # [codec (index = 12)] claim_assets { assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , beneficiary : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , } , # [codec (index = 13)] transfer_assets_using_type_and_then { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , assets : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssets > , assets_transfer_type : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm_executor :: traits :: asset_transfer :: TransferType > , remote_fees_id : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedAssetId > , fees_transfer_type : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: staging_xcm_executor :: traits :: asset_transfer :: TransferType > , custom_xcm_on_dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , weight_limit : runtime_types :: xcm :: v3 :: WeightLimit , } , }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -14028,24 +14111,24 @@ pub mod api {
                 pub enum Event {
                     #[codec(index = 0)]
                     Attempted {
-                        outcome: runtime_types::staging_xcm::v4::traits::Outcome,
+                        outcome: runtime_types::staging_xcm::v5::traits::Outcome,
                     },
                     #[codec(index = 1)]
                     Sent {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
-                        destination: runtime_types::staging_xcm::v4::location::Location,
-                        message: runtime_types::staging_xcm::v4::Xcm,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
+                        destination: runtime_types::staging_xcm::v5::location::Location,
+                        message: runtime_types::staging_xcm::v5::Xcm,
                         message_id: [::core::primitive::u8; 32usize],
                     },
                     #[codec(index = 2)]
                     UnexpectedResponse {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
                     },
                     #[codec(index = 3)]
                     ResponseReady {
                         query_id: ::core::primitive::u64,
-                        response: runtime_types::staging_xcm::v4::Response,
+                        response: runtime_types::staging_xcm::v5::Response,
                     },
                     #[codec(index = 4)]
                     Notified {
@@ -14075,15 +14158,15 @@ pub mod api {
                     },
                     #[codec(index = 8)]
                     InvalidResponder {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
                         expected_location: ::core::option::Option<
-                            runtime_types::staging_xcm::v4::location::Location,
+                            runtime_types::staging_xcm::v5::location::Location,
                         >,
                     },
                     #[codec(index = 9)]
                     InvalidResponderVersion {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
                     },
                     #[codec(index = 10)]
@@ -14091,26 +14174,26 @@ pub mod api {
                     #[codec(index = 11)]
                     AssetsTrapped {
                         hash: ::subxt::ext::subxt_core::utils::H256,
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         assets: runtime_types::xcm::VersionedAssets,
                     },
                     #[codec(index = 12)]
                     VersionChangeNotified {
-                        destination: runtime_types::staging_xcm::v4::location::Location,
+                        destination: runtime_types::staging_xcm::v5::location::Location,
                         result: ::core::primitive::u32,
-                        cost: runtime_types::staging_xcm::v4::asset::Assets,
+                        cost: runtime_types::staging_xcm::v5::asset::Assets,
                         message_id: [::core::primitive::u8; 32usize],
                     },
                     #[codec(index = 13)]
                     SupportedVersionChanged {
-                        location: runtime_types::staging_xcm::v4::location::Location,
+                        location: runtime_types::staging_xcm::v5::location::Location,
                         version: ::core::primitive::u32,
                     },
                     #[codec(index = 14)]
                     NotifyTargetSendFail {
-                        location: runtime_types::staging_xcm::v4::location::Location,
+                        location: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
-                        error: runtime_types::xcm::v3::traits::Error,
+                        error: runtime_types::xcm::v5::traits::Error,
                     },
                     #[codec(index = 15)]
                     NotifyTargetMigrationFail {
@@ -14119,45 +14202,45 @@ pub mod api {
                     },
                     #[codec(index = 16)]
                     InvalidQuerierVersion {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
                     },
                     #[codec(index = 17)]
                     InvalidQuerier {
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         query_id: ::core::primitive::u64,
-                        expected_querier: runtime_types::staging_xcm::v4::location::Location,
+                        expected_querier: runtime_types::staging_xcm::v5::location::Location,
                         maybe_actual_querier: ::core::option::Option<
-                            runtime_types::staging_xcm::v4::location::Location,
+                            runtime_types::staging_xcm::v5::location::Location,
                         >,
                     },
                     #[codec(index = 18)]
                     VersionNotifyStarted {
-                        destination: runtime_types::staging_xcm::v4::location::Location,
-                        cost: runtime_types::staging_xcm::v4::asset::Assets,
+                        destination: runtime_types::staging_xcm::v5::location::Location,
+                        cost: runtime_types::staging_xcm::v5::asset::Assets,
                         message_id: [::core::primitive::u8; 32usize],
                     },
                     #[codec(index = 19)]
                     VersionNotifyRequested {
-                        destination: runtime_types::staging_xcm::v4::location::Location,
-                        cost: runtime_types::staging_xcm::v4::asset::Assets,
+                        destination: runtime_types::staging_xcm::v5::location::Location,
+                        cost: runtime_types::staging_xcm::v5::asset::Assets,
                         message_id: [::core::primitive::u8; 32usize],
                     },
                     #[codec(index = 20)]
                     VersionNotifyUnrequested {
-                        destination: runtime_types::staging_xcm::v4::location::Location,
-                        cost: runtime_types::staging_xcm::v4::asset::Assets,
+                        destination: runtime_types::staging_xcm::v5::location::Location,
+                        cost: runtime_types::staging_xcm::v5::asset::Assets,
                         message_id: [::core::primitive::u8; 32usize],
                     },
                     #[codec(index = 21)]
                     FeesPaid {
-                        paying: runtime_types::staging_xcm::v4::location::Location,
-                        fees: runtime_types::staging_xcm::v4::asset::Assets,
+                        paying: runtime_types::staging_xcm::v5::location::Location,
+                        fees: runtime_types::staging_xcm::v5::asset::Assets,
                     },
                     #[codec(index = 22)]
                     AssetsClaimed {
                         hash: ::subxt::ext::subxt_core::utils::H256,
-                        origin: runtime_types::staging_xcm::v4::location::Location,
+                        origin: runtime_types::staging_xcm::v5::location::Location,
                         assets: runtime_types::xcm::VersionedAssets,
                     },
                     #[codec(index = 23)]
@@ -14180,9 +14263,9 @@ pub mod api {
                 )]
                 pub enum Origin {
                     #[codec(index = 0)]
-                    Xcm(runtime_types::staging_xcm::v4::location::Location),
+                    Xcm(runtime_types::staging_xcm::v5::location::Location),
                     #[codec(index = 1)]
-                    Response(runtime_types::staging_xcm::v4::location::Location),
+                    Response(runtime_types::staging_xcm::v5::location::Location),
                 }
             }
         }
@@ -14399,46 +14482,6 @@ pub mod api {
                     #[encode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                     )]
-                    pub struct BackingState < _0 , _1 > { pub constraints : runtime_types :: polkadot_primitives :: v8 :: async_backing :: Constraints < _1 > , pub pending_availability : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: polkadot_primitives :: v8 :: async_backing :: CandidatePendingAvailability < _0 , _1 > > , }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub struct CandidatePendingAvailability<_0, _1> {
-                        pub candidate_hash: runtime_types::polkadot_core_primitives::CandidateHash,
-                        pub descriptor:
-                            runtime_types::polkadot_primitives::v8::CandidateDescriptor<_0>,
-                        pub commitments:
-                            runtime_types::polkadot_primitives::v8::CandidateCommitments<_1>,
-                        pub relay_parent_number: _1,
-                        pub max_pov_size: ::core::primitive::u32,
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
                     pub struct Constraints < _0 > { pub min_relay_parent_number : _0 , pub max_pov_size : :: core :: primitive :: u32 , pub max_code_size : :: core :: primitive :: u32 , pub ump_remaining : :: core :: primitive :: u32 , pub ump_remaining_bytes : :: core :: primitive :: u32 , pub max_ump_num_per_candidate : :: core :: primitive :: u32 , pub dmp_remaining_messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < _0 > , pub hrmp_inbound : runtime_types :: polkadot_primitives :: v8 :: async_backing :: InboundHrmpLimitations < _0 > , pub hrmp_channels_out : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (runtime_types :: polkadot_parachain_primitives :: primitives :: Id , runtime_types :: polkadot_primitives :: v8 :: async_backing :: OutboundHrmpChannelLimitations ,) > , pub max_hrmp_num_per_candidate : :: core :: primitive :: u32 , pub required_parent : runtime_types :: polkadot_parachain_primitives :: primitives :: HeadData , pub validation_code_hash : runtime_types :: polkadot_parachain_primitives :: primitives :: ValidationCodeHash , pub upgrade_restriction : :: core :: option :: Option < runtime_types :: polkadot_primitives :: v8 :: UpgradeRestriction > , pub future_validation_code : :: core :: option :: Option < (_0 , runtime_types :: polkadot_parachain_primitives :: primitives :: ValidationCodeHash ,) > , }
                     #[derive(
                         :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -14496,22 +14539,6 @@ pub mod api {
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                     )]
                     pub struct Public(pub [::core::primitive::u8; 32usize]);
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub struct Signature(pub [::core::primitive::u8; 64usize]);
                 }
                 pub mod executor_params {
                     use super::runtime_types;
@@ -14797,32 +14824,6 @@ pub mod api {
                 #[encode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
-                pub struct BackedCandidate<_0> {
-                    pub candidate:
-                        runtime_types::polkadot_primitives::v8::CommittedCandidateReceipt<_0>,
-                    pub validity_votes: ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::polkadot_primitives::v8::ValidityAttestation,
-                    >,
-                    pub validator_indices: ::subxt::ext::subxt_core::utils::bits::DecodedBits<
-                        ::core::primitive::u8,
-                        ::subxt::ext::subxt_core::utils::bits::Lsb0,
-                    >,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
                 pub struct CandidateCommitments<_0> {
                     pub upward_messages:
                         runtime_types::bounded_collections::bounded_vec::BoundedVec<
@@ -14843,99 +14844,6 @@ pub mod api {
                     pub hrmp_watermark: _0,
                 }
                 #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct CandidateDescriptor < _0 > { pub para_id : runtime_types :: polkadot_parachain_primitives :: primitives :: Id , pub relay_parent : _0 , pub collator : runtime_types :: polkadot_primitives :: v8 :: collator_app :: Public , pub persisted_validation_data_hash : :: subxt :: ext :: subxt_core :: utils :: H256 , pub pov_hash : :: subxt :: ext :: subxt_core :: utils :: H256 , pub erasure_root : :: subxt :: ext :: subxt_core :: utils :: H256 , pub signature : runtime_types :: polkadot_primitives :: v8 :: collator_app :: Signature , pub para_head : :: subxt :: ext :: subxt_core :: utils :: H256 , pub validation_code_hash : runtime_types :: polkadot_parachain_primitives :: primitives :: ValidationCodeHash , }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum CandidateEvent<_0> {
-                    #[codec(index = 0)]
-                    CandidateBacked(
-                        runtime_types::polkadot_primitives::v8::CandidateReceipt<_0>,
-                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
-                        runtime_types::polkadot_primitives::v8::CoreIndex,
-                        runtime_types::polkadot_primitives::v8::GroupIndex,
-                    ),
-                    #[codec(index = 1)]
-                    CandidateIncluded(
-                        runtime_types::polkadot_primitives::v8::CandidateReceipt<_0>,
-                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
-                        runtime_types::polkadot_primitives::v8::CoreIndex,
-                        runtime_types::polkadot_primitives::v8::GroupIndex,
-                    ),
-                    #[codec(index = 2)]
-                    CandidateTimedOut(
-                        runtime_types::polkadot_primitives::v8::CandidateReceipt<_0>,
-                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
-                        runtime_types::polkadot_primitives::v8::CoreIndex,
-                    ),
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct CandidateReceipt<_0> {
-                    pub descriptor: runtime_types::polkadot_primitives::v8::CandidateDescriptor<_0>,
-                    pub commitments_hash: ::subxt::ext::subxt_core::utils::H256,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct CommittedCandidateReceipt<_0> {
-                    pub descriptor: runtime_types::polkadot_primitives::v8::CandidateDescriptor<_0>,
-                    pub commitments: runtime_types::polkadot_primitives::v8::CandidateCommitments<
-                        ::core::primitive::u32,
-                    >,
-                }
-                #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: CompactAs,
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -14952,29 +14860,6 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub struct CoreIndex(pub ::core::primitive::u32);
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum CoreState<_0, _1> {
-                    #[codec(index = 0)]
-                    Occupied(runtime_types::polkadot_primitives::v8::OccupiedCore<_0, _1>),
-                    #[codec(index = 1)]
-                    Scheduled(runtime_types::polkadot_primitives::v8::ScheduledCore),
-                    #[codec(index = 2)]
-                    Free,
-                }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -15118,74 +15003,9 @@ pub mod api {
                 #[encode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
-                pub struct InherentData<_0> {
-                    pub bitfields: ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::polkadot_primitives::v8::signed::UncheckedSigned<
-                            runtime_types::polkadot_primitives::v8::AvailabilityBitfield,
-                            runtime_types::polkadot_primitives::v8::AvailabilityBitfield,
-                        >,
-                    >,
-                    pub backed_candidates: ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::polkadot_primitives::v8::BackedCandidate<
-                            ::subxt::ext::subxt_core::utils::H256,
-                        >,
-                    >,
-                    pub disputes: ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::polkadot_primitives::v8::DisputeStatementSet,
-                    >,
-                    pub parent_header: _0,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
                 pub enum InvalidDisputeStatementKind {
                     #[codec(index = 0)]
                     Explicit,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct OccupiedCore<_0, _1> {
-                    pub next_up_on_available: ::core::option::Option<
-                        runtime_types::polkadot_primitives::v8::ScheduledCore,
-                    >,
-                    pub occupied_since: _1,
-                    pub time_out_at: _1,
-                    pub next_up_on_time_out: ::core::option::Option<
-                        runtime_types::polkadot_primitives::v8::ScheduledCore,
-                    >,
-                    pub availability: ::subxt::ext::subxt_core::utils::bits::DecodedBits<
-                        ::core::primitive::u8,
-                        ::subxt::ext::subxt_core::utils::bits::Lsb0,
-                    >,
-                    pub group_responsible: runtime_types::polkadot_primitives::v8::GroupIndex,
-                    pub candidate_hash: runtime_types::polkadot_core_primitives::CandidateHash,
-                    pub candidate_descriptor:
-                        runtime_types::polkadot_primitives::v8::CandidateDescriptor<_0>,
                 }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -15356,35 +15176,6 @@ pub mod api {
                 #[encode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
-                pub struct ScrapedOnChainVotes<_0> {
-                    pub session: ::core::primitive::u32,
-                    pub backing_validators_per_candidate:
-                        ::subxt::ext::subxt_core::alloc::vec::Vec<(
-                            runtime_types::polkadot_primitives::v8::CandidateReceipt<_0>,
-                            ::subxt::ext::subxt_core::alloc::vec::Vec<(
-                                runtime_types::polkadot_primitives::v8::ValidatorIndex,
-                                runtime_types::polkadot_primitives::v8::ValidityAttestation,
-                            )>,
-                        )>,
-                    pub disputes: ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::polkadot_primitives::v8::DisputeStatementSet,
-                    >,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
                 pub struct SessionInfo {
                     pub active_validator_indices: ::subxt::ext::subxt_core::alloc::vec::Vec<
                         runtime_types::polkadot_primitives::v8::ValidatorIndex,
@@ -15501,6 +15292,309 @@ pub mod api {
                     Implicit(runtime_types::polkadot_primitives::v8::validator_app::Signature),
                     #[codec(index = 2)]
                     Explicit(runtime_types::polkadot_primitives::v8::validator_app::Signature),
+                }
+            }
+            pub mod vstaging {
+                use super::runtime_types;
+                pub mod async_backing {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct BackingState < _0 , _1 > { pub constraints : runtime_types :: polkadot_primitives :: v8 :: async_backing :: Constraints < _1 > , pub pending_availability : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: polkadot_primitives :: vstaging :: async_backing :: CandidatePendingAvailability < _0 , _1 > > , }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct CandidatePendingAvailability<_0, _1> {
+                        pub candidate_hash: runtime_types::polkadot_core_primitives::CandidateHash,
+                        pub descriptor:
+                            runtime_types::polkadot_primitives::vstaging::CandidateDescriptorV2<_0>,
+                        pub commitments:
+                            runtime_types::polkadot_primitives::v8::CandidateCommitments<_1>,
+                        pub relay_parent_number: _1,
+                        pub max_pov_size: ::core::primitive::u32,
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct BackedCandidate<_0> {
+                    pub candidate:
+                        runtime_types::polkadot_primitives::vstaging::CommittedCandidateReceiptV2<
+                            _0,
+                        >,
+                    pub validity_votes: ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::polkadot_primitives::v8::ValidityAttestation,
+                    >,
+                    pub validator_indices: ::subxt::ext::subxt_core::utils::bits::DecodedBits<
+                        ::core::primitive::u8,
+                        ::subxt::ext::subxt_core::utils::bits::Lsb0,
+                    >,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct CandidateDescriptorV2 < _0 > { pub para_id : runtime_types :: polkadot_parachain_primitives :: primitives :: Id , pub relay_parent : _0 , pub version : runtime_types :: polkadot_primitives :: vstaging :: InternalVersion , pub core_index : :: core :: primitive :: u16 , pub session_index : :: core :: primitive :: u32 , pub reserved1 : [:: core :: primitive :: u8 ; 25usize] , pub persisted_validation_data_hash : :: subxt :: ext :: subxt_core :: utils :: H256 , pub pov_hash : :: subxt :: ext :: subxt_core :: utils :: H256 , pub erasure_root : :: subxt :: ext :: subxt_core :: utils :: H256 , pub reserved2 : [:: core :: primitive :: u8 ; 64usize] , pub para_head : :: subxt :: ext :: subxt_core :: utils :: H256 , pub validation_code_hash : runtime_types :: polkadot_parachain_primitives :: primitives :: ValidationCodeHash , }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum CandidateEvent<_0> {
+                    #[codec(index = 0)]
+                    CandidateBacked(
+                        runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<_0>,
+                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
+                        runtime_types::polkadot_primitives::v8::CoreIndex,
+                        runtime_types::polkadot_primitives::v8::GroupIndex,
+                    ),
+                    #[codec(index = 1)]
+                    CandidateIncluded(
+                        runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<_0>,
+                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
+                        runtime_types::polkadot_primitives::v8::CoreIndex,
+                        runtime_types::polkadot_primitives::v8::GroupIndex,
+                    ),
+                    #[codec(index = 2)]
+                    CandidateTimedOut(
+                        runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<_0>,
+                        runtime_types::polkadot_parachain_primitives::primitives::HeadData,
+                        runtime_types::polkadot_primitives::v8::CoreIndex,
+                    ),
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct CandidateReceiptV2<_0> {
+                    pub descriptor:
+                        runtime_types::polkadot_primitives::vstaging::CandidateDescriptorV2<_0>,
+                    pub commitments_hash: ::subxt::ext::subxt_core::utils::H256,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct CommittedCandidateReceiptV2<_0> {
+                    pub descriptor:
+                        runtime_types::polkadot_primitives::vstaging::CandidateDescriptorV2<_0>,
+                    pub commitments: runtime_types::polkadot_primitives::v8::CandidateCommitments<
+                        ::core::primitive::u32,
+                    >,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum CoreState<_0, _1> {
+                    #[codec(index = 0)]
+                    Occupied(runtime_types::polkadot_primitives::vstaging::OccupiedCore<_0, _1>),
+                    #[codec(index = 1)]
+                    Scheduled(runtime_types::polkadot_primitives::v8::ScheduledCore),
+                    #[codec(index = 2)]
+                    Free,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct InherentData<_0> {
+                    pub bitfields: ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::polkadot_primitives::v8::signed::UncheckedSigned<
+                            runtime_types::polkadot_primitives::v8::AvailabilityBitfield,
+                            runtime_types::polkadot_primitives::v8::AvailabilityBitfield,
+                        >,
+                    >,
+                    pub backed_candidates: ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::polkadot_primitives::vstaging::BackedCandidate<
+                            ::subxt::ext::subxt_core::utils::H256,
+                        >,
+                    >,
+                    pub disputes: ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::polkadot_primitives::v8::DisputeStatementSet,
+                    >,
+                    pub parent_header: _0,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: CompactAs,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct InternalVersion(pub ::core::primitive::u8);
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct OccupiedCore<_0, _1> {
+                    pub next_up_on_available: ::core::option::Option<
+                        runtime_types::polkadot_primitives::v8::ScheduledCore,
+                    >,
+                    pub occupied_since: _1,
+                    pub time_out_at: _1,
+                    pub next_up_on_time_out: ::core::option::Option<
+                        runtime_types::polkadot_primitives::v8::ScheduledCore,
+                    >,
+                    pub availability: ::subxt::ext::subxt_core::utils::bits::DecodedBits<
+                        ::core::primitive::u8,
+                        ::subxt::ext::subxt_core::utils::bits::Lsb0,
+                    >,
+                    pub group_responsible: runtime_types::polkadot_primitives::v8::GroupIndex,
+                    pub candidate_hash: runtime_types::polkadot_core_primitives::CandidateHash,
+                    pub candidate_descriptor:
+                        runtime_types::polkadot_primitives::vstaging::CandidateDescriptorV2<_0>,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ScrapedOnChainVotes<_0> {
+                    pub session: ::core::primitive::u32,
+                    pub backing_validators_per_candidate:
+                        ::subxt::ext::subxt_core::alloc::vec::Vec<(
+                            runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<_0>,
+                            ::subxt::ext::subxt_core::alloc::vec::Vec<(
+                                runtime_types::polkadot_primitives::v8::ValidatorIndex,
+                                runtime_types::polkadot_primitives::v8::ValidityAttestation,
+                            )>,
+                        )>,
+                    pub disputes: ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::polkadot_primitives::v8::DisputeStatementSet,
+                    >,
                 }
             }
         }
@@ -15741,36 +15835,7 @@ pub mod api {
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum OriginCaller {
-                # [codec (index = 0)] system (runtime_types :: frame_support :: dispatch :: RawOrigin < :: subxt :: ext :: subxt_core :: utils :: AccountId32 > ,) , # [codec (index = 22)] Origins (runtime_types :: polkadot_runtime :: governance :: origins :: pallet_custom_origins :: Origin ,) , # [codec (index = 50)] ParachainsOrigin (runtime_types :: polkadot_runtime_parachains :: origin :: pallet :: Origin ,) , # [codec (index = 99)] XcmPallet (runtime_types :: pallet_xcm :: pallet :: Origin ,) , # [codec (index = 4)] Void (runtime_types :: sp_core :: Void ,) , }
-            #[derive(
-                :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                Debug,
-            )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
-            #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
-            #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
-            pub enum ProxyType {
-                #[codec(index = 0)]
-                Any,
-                #[codec(index = 1)]
-                NonTransfer,
-                #[codec(index = 2)]
-                Governance,
-                #[codec(index = 3)]
-                Staking,
-                #[codec(index = 6)]
-                CancelProxy,
-                #[codec(index = 7)]
-                Auction,
-                #[codec(index = 8)]
-                NominationPools,
-                #[codec(index = 9)]
-                ParaRegistration,
-            }
+                # [codec (index = 0)] system (runtime_types :: frame_support :: dispatch :: RawOrigin < :: subxt :: ext :: subxt_core :: utils :: AccountId32 > ,) , # [codec (index = 22)] Origins (runtime_types :: polkadot_runtime :: governance :: origins :: pallet_custom_origins :: Origin ,) , # [codec (index = 50)] ParachainsOrigin (runtime_types :: polkadot_runtime_parachains :: origin :: pallet :: Origin ,) , # [codec (index = 99)] XcmPallet (runtime_types :: pallet_xcm :: pallet :: Origin ,) , }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -16483,6 +16548,11 @@ pub mod api {
                         location: runtime_types::staging_xcm::v4::location::Location,
                         asset_id: runtime_types::staging_xcm::v4::asset::AssetId,
                     },
+                    #[codec(index = 5)]
+                    V5 {
+                        location: runtime_types::staging_xcm::v5::location::Location,
+                        asset_id: runtime_types::staging_xcm::v5::asset::AssetId,
+                    },
                 }
             }
             pub mod paras_registrar {
@@ -16614,6 +16684,45 @@ pub mod api {
                 }
             }
         }
+        pub mod polkadot_runtime_constants {
+            use super::runtime_types;
+            pub mod proxy {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum ProxyType {
+                    #[codec(index = 0)]
+                    Any,
+                    #[codec(index = 1)]
+                    NonTransfer,
+                    #[codec(index = 2)]
+                    Governance,
+                    #[codec(index = 3)]
+                    Staking,
+                    #[codec(index = 6)]
+                    CancelProxy,
+                    #[codec(index = 7)]
+                    Auction,
+                    #[codec(index = 8)]
+                    NominationPools,
+                    #[codec(index = 9)]
+                    ParaRegistration,
+                }
+            }
+        }
         pub mod polkadot_runtime_parachains {
             use super::runtime_types;
             pub mod assigner_coretime {
@@ -16656,7 +16765,7 @@ pub mod api {
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                     )]
                     pub enum Call {
-                        # [codec (index = 0)] set_validation_upgrade_cooldown { new : :: core :: primitive :: u32 , } , # [codec (index = 1)] set_validation_upgrade_delay { new : :: core :: primitive :: u32 , } , # [codec (index = 2)] set_code_retention_period { new : :: core :: primitive :: u32 , } , # [codec (index = 3)] set_max_code_size { new : :: core :: primitive :: u32 , } , # [codec (index = 4)] set_max_pov_size { new : :: core :: primitive :: u32 , } , # [codec (index = 5)] set_max_head_data_size { new : :: core :: primitive :: u32 , } , # [codec (index = 6)] set_coretime_cores { new : :: core :: primitive :: u32 , } , # [codec (index = 7)] set_max_availability_timeouts { new : :: core :: primitive :: u32 , } , # [codec (index = 8)] set_group_rotation_frequency { new : :: core :: primitive :: u32 , } , # [codec (index = 9)] set_paras_availability_period { new : :: core :: primitive :: u32 , } , # [codec (index = 11)] set_scheduling_lookahead { new : :: core :: primitive :: u32 , } , # [codec (index = 12)] set_max_validators_per_core { new : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 13)] set_max_validators { new : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 14)] set_dispute_period { new : :: core :: primitive :: u32 , } , # [codec (index = 15)] set_dispute_post_conclusion_acceptance_period { new : :: core :: primitive :: u32 , } , # [codec (index = 18)] set_no_show_slots { new : :: core :: primitive :: u32 , } , # [codec (index = 19)] set_n_delay_tranches { new : :: core :: primitive :: u32 , } , # [codec (index = 20)] set_zeroth_delay_tranche_width { new : :: core :: primitive :: u32 , } , # [codec (index = 21)] set_needed_approvals { new : :: core :: primitive :: u32 , } , # [codec (index = 22)] set_relay_vrf_modulo_samples { new : :: core :: primitive :: u32 , } , # [codec (index = 23)] set_max_upward_queue_count { new : :: core :: primitive :: u32 , } , # [codec (index = 24)] set_max_upward_queue_size { new : :: core :: primitive :: u32 , } , # [codec (index = 25)] set_max_downward_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 27)] set_max_upward_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 28)] set_max_upward_message_num_per_candidate { new : :: core :: primitive :: u32 , } , # [codec (index = 29)] set_hrmp_open_request_ttl { new : :: core :: primitive :: u32 , } , # [codec (index = 30)] set_hrmp_sender_deposit { new : :: core :: primitive :: u128 , } , # [codec (index = 31)] set_hrmp_recipient_deposit { new : :: core :: primitive :: u128 , } , # [codec (index = 32)] set_hrmp_channel_max_capacity { new : :: core :: primitive :: u32 , } , # [codec (index = 33)] set_hrmp_channel_max_total_size { new : :: core :: primitive :: u32 , } , # [codec (index = 34)] set_hrmp_max_parachain_inbound_channels { new : :: core :: primitive :: u32 , } , # [codec (index = 36)] set_hrmp_channel_max_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 37)] set_hrmp_max_parachain_outbound_channels { new : :: core :: primitive :: u32 , } , # [codec (index = 39)] set_hrmp_max_message_num_per_candidate { new : :: core :: primitive :: u32 , } , # [codec (index = 42)] set_pvf_voting_ttl { new : :: core :: primitive :: u32 , } , # [codec (index = 43)] set_minimum_validation_upgrade_delay { new : :: core :: primitive :: u32 , } , # [codec (index = 44)] set_bypass_consistency_check { new : :: core :: primitive :: bool , } , # [codec (index = 45)] set_async_backing_params { new : runtime_types :: polkadot_primitives :: v8 :: async_backing :: AsyncBackingParams , } , # [codec (index = 46)] set_executor_params { new : runtime_types :: polkadot_primitives :: v8 :: executor_params :: ExecutorParams , } , # [codec (index = 47)] set_on_demand_base_fee { new : :: core :: primitive :: u128 , } , # [codec (index = 48)] set_on_demand_fee_variability { new : runtime_types :: sp_arithmetic :: per_things :: Perbill , } , # [codec (index = 49)] set_on_demand_queue_max_size { new : :: core :: primitive :: u32 , } , # [codec (index = 50)] set_on_demand_target_queue_utilization { new : runtime_types :: sp_arithmetic :: per_things :: Perbill , } , # [codec (index = 51)] set_on_demand_ttl { new : :: core :: primitive :: u32 , } , # [codec (index = 52)] set_minimum_backing_votes { new : :: core :: primitive :: u32 , } , # [codec (index = 53)] set_node_feature { index : :: core :: primitive :: u8 , value : :: core :: primitive :: bool , } , # [codec (index = 54)] set_approval_voting_params { new : runtime_types :: polkadot_primitives :: v8 :: ApprovalVotingParams , } , # [codec (index = 55)] set_scheduler_params { new : runtime_types :: polkadot_primitives :: v8 :: SchedulerParams < :: core :: primitive :: u32 > , } , }
+                        # [codec (index = 0)] set_validation_upgrade_cooldown { new : :: core :: primitive :: u32 , } , # [codec (index = 1)] set_validation_upgrade_delay { new : :: core :: primitive :: u32 , } , # [codec (index = 2)] set_code_retention_period { new : :: core :: primitive :: u32 , } , # [codec (index = 3)] set_max_code_size { new : :: core :: primitive :: u32 , } , # [codec (index = 4)] set_max_pov_size { new : :: core :: primitive :: u32 , } , # [codec (index = 5)] set_max_head_data_size { new : :: core :: primitive :: u32 , } , # [codec (index = 6)] set_coretime_cores { new : :: core :: primitive :: u32 , } , # [codec (index = 8)] set_group_rotation_frequency { new : :: core :: primitive :: u32 , } , # [codec (index = 9)] set_paras_availability_period { new : :: core :: primitive :: u32 , } , # [codec (index = 11)] set_scheduling_lookahead { new : :: core :: primitive :: u32 , } , # [codec (index = 12)] set_max_validators_per_core { new : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 13)] set_max_validators { new : :: core :: option :: Option < :: core :: primitive :: u32 > , } , # [codec (index = 14)] set_dispute_period { new : :: core :: primitive :: u32 , } , # [codec (index = 15)] set_dispute_post_conclusion_acceptance_period { new : :: core :: primitive :: u32 , } , # [codec (index = 18)] set_no_show_slots { new : :: core :: primitive :: u32 , } , # [codec (index = 19)] set_n_delay_tranches { new : :: core :: primitive :: u32 , } , # [codec (index = 20)] set_zeroth_delay_tranche_width { new : :: core :: primitive :: u32 , } , # [codec (index = 21)] set_needed_approvals { new : :: core :: primitive :: u32 , } , # [codec (index = 22)] set_relay_vrf_modulo_samples { new : :: core :: primitive :: u32 , } , # [codec (index = 23)] set_max_upward_queue_count { new : :: core :: primitive :: u32 , } , # [codec (index = 24)] set_max_upward_queue_size { new : :: core :: primitive :: u32 , } , # [codec (index = 25)] set_max_downward_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 27)] set_max_upward_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 28)] set_max_upward_message_num_per_candidate { new : :: core :: primitive :: u32 , } , # [codec (index = 29)] set_hrmp_open_request_ttl { new : :: core :: primitive :: u32 , } , # [codec (index = 30)] set_hrmp_sender_deposit { new : :: core :: primitive :: u128 , } , # [codec (index = 31)] set_hrmp_recipient_deposit { new : :: core :: primitive :: u128 , } , # [codec (index = 32)] set_hrmp_channel_max_capacity { new : :: core :: primitive :: u32 , } , # [codec (index = 33)] set_hrmp_channel_max_total_size { new : :: core :: primitive :: u32 , } , # [codec (index = 34)] set_hrmp_max_parachain_inbound_channels { new : :: core :: primitive :: u32 , } , # [codec (index = 36)] set_hrmp_channel_max_message_size { new : :: core :: primitive :: u32 , } , # [codec (index = 37)] set_hrmp_max_parachain_outbound_channels { new : :: core :: primitive :: u32 , } , # [codec (index = 39)] set_hrmp_max_message_num_per_candidate { new : :: core :: primitive :: u32 , } , # [codec (index = 42)] set_pvf_voting_ttl { new : :: core :: primitive :: u32 , } , # [codec (index = 43)] set_minimum_validation_upgrade_delay { new : :: core :: primitive :: u32 , } , # [codec (index = 44)] set_bypass_consistency_check { new : :: core :: primitive :: bool , } , # [codec (index = 45)] set_async_backing_params { new : runtime_types :: polkadot_primitives :: v8 :: async_backing :: AsyncBackingParams , } , # [codec (index = 46)] set_executor_params { new : runtime_types :: polkadot_primitives :: v8 :: executor_params :: ExecutorParams , } , # [codec (index = 47)] set_on_demand_base_fee { new : :: core :: primitive :: u128 , } , # [codec (index = 48)] set_on_demand_fee_variability { new : runtime_types :: sp_arithmetic :: per_things :: Perbill , } , # [codec (index = 49)] set_on_demand_queue_max_size { new : :: core :: primitive :: u32 , } , # [codec (index = 50)] set_on_demand_target_queue_utilization { new : runtime_types :: sp_arithmetic :: per_things :: Perbill , } , # [codec (index = 52)] set_minimum_backing_votes { new : :: core :: primitive :: u32 , } , # [codec (index = 53)] set_node_feature { index : :: core :: primitive :: u8 , value : :: core :: primitive :: bool , } , # [codec (index = 54)] set_approval_voting_params { new : runtime_types :: polkadot_primitives :: v8 :: ApprovalVotingParams , } , # [codec (index = 55)] set_scheduler_params { new : runtime_types :: polkadot_primitives :: v8 :: SchedulerParams < :: core :: primitive :: u32 > , } , }
                 }
             }
             pub mod coretime {
@@ -16909,7 +17018,7 @@ pub mod api {
                     pub enum Event {
                         #[codec(index = 0)]
                         CandidateBacked(
-                            runtime_types::polkadot_primitives::v8::CandidateReceipt<
+                            runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<
                                 ::subxt::ext::subxt_core::utils::H256,
                             >,
                             runtime_types::polkadot_parachain_primitives::primitives::HeadData,
@@ -16918,7 +17027,7 @@ pub mod api {
                         ),
                         #[codec(index = 1)]
                         CandidateIncluded(
-                            runtime_types::polkadot_primitives::v8::CandidateReceipt<
+                            runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<
                                 ::subxt::ext::subxt_core::utils::H256,
                             >,
                             runtime_types::polkadot_parachain_primitives::primitives::HeadData,
@@ -16927,7 +17036,7 @@ pub mod api {
                         ),
                         #[codec(index = 2)]
                         CandidateTimedOut(
-                            runtime_types::polkadot_primitives::v8::CandidateReceipt<
+                            runtime_types::polkadot_primitives::vstaging::CandidateReceiptV2<
                                 ::subxt::ext::subxt_core::utils::H256,
                             >,
                             runtime_types::polkadot_parachain_primitives::primitives::HeadData,
@@ -17149,7 +17258,7 @@ pub mod api {
                     pub enum Call {
                         #[codec(index = 0)]
                         enter {
-                            data: runtime_types::polkadot_primitives::v8::InherentData<
+                            data: runtime_types::polkadot_primitives::vstaging::InherentData<
                                 runtime_types::sp_runtime::generic::header::Header<
                                     ::core::primitive::u32,
                                 >,
@@ -17838,18 +17947,6 @@ pub mod api {
             pub struct OpaqueMetadata(
                 pub ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
             );
-            #[derive(
-                :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                Debug,
-            )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
-            #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
-            #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
-            pub enum Void {}
         }
         pub mod sp_inherents {
             use super::runtime_types;
@@ -18649,6 +18746,54 @@ pub mod api {
                     }
                 }
             }
+            pub mod proving_trie {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum TrieError {
+                    #[codec(index = 0)]
+                    InvalidStateRoot,
+                    #[codec(index = 1)]
+                    IncompleteDatabase,
+                    #[codec(index = 2)]
+                    ValueAtIncompleteKey,
+                    #[codec(index = 3)]
+                    DecoderError,
+                    #[codec(index = 4)]
+                    InvalidHash,
+                    #[codec(index = 5)]
+                    DuplicateKey,
+                    #[codec(index = 6)]
+                    ExtraneousNode,
+                    #[codec(index = 7)]
+                    ExtraneousValue,
+                    #[codec(index = 8)]
+                    ExtraneousHashReference,
+                    #[codec(index = 9)]
+                    InvalidChildReference,
+                    #[codec(index = 10)]
+                    ValueMismatch,
+                    #[codec(index = 11)]
+                    IncompleteProof,
+                    #[codec(index = 12)]
+                    RootMismatch,
+                    #[codec(index = 13)]
+                    DecodeError,
+                }
+            }
             pub mod traits {
                 use super::runtime_types;
                 #[derive(
@@ -18708,6 +18853,10 @@ pub mod api {
                     MandatoryValidation,
                     #[codec(index = 10)]
                     BadSigner,
+                    #[codec(index = 11)]
+                    IndeterminateImplicit,
+                    #[codec(index = 12)]
+                    UnknownOrigin,
                 }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -18843,6 +18992,8 @@ pub mod api {
                 Unavailable,
                 #[codec(index = 13)]
                 RootNotAllowed,
+                #[codec(index = 14)]
+                Trie(runtime_types::sp_runtime::proving_trie::TrieError),
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -19039,7 +19190,7 @@ pub mod api {
                     ::core::primitive::u32,
                 )>,
                 pub transaction_version: ::core::primitive::u32,
-                pub state_version: ::core::primitive::u8,
+                pub system_version: ::core::primitive::u8,
             }
         }
         pub mod sp_weights {
@@ -19448,39 +19599,6 @@ pub mod api {
                         pub interior: runtime_types::staging_xcm::v4::junctions::Junctions,
                     }
                 }
-                pub mod traits {
-                    use super::runtime_types;
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum Outcome {
-                        #[codec(index = 0)]
-                        Complete {
-                            used: runtime_types::sp_weights::weight_v2::Weight,
-                        },
-                        #[codec(index = 1)]
-                        Incomplete {
-                            used: runtime_types::sp_weights::weight_v2::Weight,
-                            error: runtime_types::xcm::v3::traits::Error,
-                        },
-                        #[codec(index = 2)]
-                        Error {
-                            error: runtime_types::xcm::v3::traits::Error,
-                        },
-                    }
-                }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                     :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -19817,6 +19935,795 @@ pub mod api {
                     >,
                 );
             }
+            pub mod v5 {
+                use super::runtime_types;
+                pub mod asset {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct Asset {
+                        pub id: runtime_types::staging_xcm::v5::asset::AssetId,
+                        pub fun: runtime_types::staging_xcm::v5::asset::Fungibility,
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum AssetFilter {
+                        #[codec(index = 0)]
+                        Definite(runtime_types::staging_xcm::v5::asset::Assets),
+                        #[codec(index = 1)]
+                        Wild(runtime_types::staging_xcm::v5::asset::WildAsset),
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct AssetId(pub runtime_types::staging_xcm::v5::location::Location);
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum AssetInstance {
+                        #[codec(index = 0)]
+                        Undefined,
+                        #[codec(index = 1)]
+                        Index(#[codec(compact)] ::core::primitive::u128),
+                        #[codec(index = 2)]
+                        Array4([::core::primitive::u8; 4usize]),
+                        #[codec(index = 3)]
+                        Array8([::core::primitive::u8; 8usize]),
+                        #[codec(index = 4)]
+                        Array16([::core::primitive::u8; 16usize]),
+                        #[codec(index = 5)]
+                        Array32([::core::primitive::u8; 32usize]),
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum AssetTransferFilter {
+                        #[codec(index = 0)]
+                        Teleport(runtime_types::staging_xcm::v5::asset::AssetFilter),
+                        #[codec(index = 1)]
+                        ReserveDeposit(runtime_types::staging_xcm::v5::asset::AssetFilter),
+                        #[codec(index = 2)]
+                        ReserveWithdraw(runtime_types::staging_xcm::v5::asset::AssetFilter),
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct Assets(
+                        pub  ::subxt::ext::subxt_core::alloc::vec::Vec<
+                            runtime_types::staging_xcm::v5::asset::Asset,
+                        >,
+                    );
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum Fungibility {
+                        #[codec(index = 0)]
+                        Fungible(#[codec(compact)] ::core::primitive::u128),
+                        #[codec(index = 1)]
+                        NonFungible(runtime_types::staging_xcm::v5::asset::AssetInstance),
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum WildAsset {
+                        #[codec(index = 0)]
+                        All,
+                        #[codec(index = 1)]
+                        AllOf {
+                            id: runtime_types::staging_xcm::v5::asset::AssetId,
+                            fun: runtime_types::staging_xcm::v5::asset::WildFungibility,
+                        },
+                        #[codec(index = 2)]
+                        AllCounted(#[codec(compact)] ::core::primitive::u32),
+                        #[codec(index = 3)]
+                        AllOfCounted {
+                            id: runtime_types::staging_xcm::v5::asset::AssetId,
+                            fun: runtime_types::staging_xcm::v5::asset::WildFungibility,
+                            #[codec(compact)]
+                            count: ::core::primitive::u32,
+                        },
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum WildFungibility {
+                        #[codec(index = 0)]
+                        Fungible,
+                        #[codec(index = 1)]
+                        NonFungible,
+                    }
+                }
+                pub mod junction {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum Junction {
+                        #[codec(index = 0)]
+                        Parachain(#[codec(compact)] ::core::primitive::u32),
+                        #[codec(index = 1)]
+                        AccountId32 {
+                            network: ::core::option::Option<
+                                runtime_types::staging_xcm::v5::junction::NetworkId,
+                            >,
+                            id: [::core::primitive::u8; 32usize],
+                        },
+                        #[codec(index = 2)]
+                        AccountIndex64 {
+                            network: ::core::option::Option<
+                                runtime_types::staging_xcm::v5::junction::NetworkId,
+                            >,
+                            #[codec(compact)]
+                            index: ::core::primitive::u64,
+                        },
+                        #[codec(index = 3)]
+                        AccountKey20 {
+                            network: ::core::option::Option<
+                                runtime_types::staging_xcm::v5::junction::NetworkId,
+                            >,
+                            key: [::core::primitive::u8; 20usize],
+                        },
+                        #[codec(index = 4)]
+                        PalletInstance(::core::primitive::u8),
+                        #[codec(index = 5)]
+                        GeneralIndex(#[codec(compact)] ::core::primitive::u128),
+                        #[codec(index = 6)]
+                        GeneralKey {
+                            length: ::core::primitive::u8,
+                            data: [::core::primitive::u8; 32usize],
+                        },
+                        #[codec(index = 7)]
+                        OnlyChild,
+                        #[codec(index = 8)]
+                        Plurality {
+                            id: runtime_types::xcm::v3::junction::BodyId,
+                            part: runtime_types::xcm::v3::junction::BodyPart,
+                        },
+                        #[codec(index = 9)]
+                        GlobalConsensus(runtime_types::staging_xcm::v5::junction::NetworkId),
+                    }
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum NetworkId {
+                        #[codec(index = 0)]
+                        ByGenesis([::core::primitive::u8; 32usize]),
+                        #[codec(index = 1)]
+                        ByFork {
+                            block_number: ::core::primitive::u64,
+                            block_hash: [::core::primitive::u8; 32usize],
+                        },
+                        #[codec(index = 2)]
+                        Polkadot,
+                        #[codec(index = 3)]
+                        Kusama,
+                        #[codec(index = 7)]
+                        Ethereum {
+                            #[codec(compact)]
+                            chain_id: ::core::primitive::u64,
+                        },
+                        #[codec(index = 8)]
+                        BitcoinCore,
+                        #[codec(index = 9)]
+                        BitcoinCash,
+                        #[codec(index = 10)]
+                        PolkadotBulletin,
+                    }
+                }
+                pub mod junctions {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum Junctions {
+                        #[codec(index = 0)]
+                        Here,
+                        #[codec(index = 1)]
+                        X1([runtime_types::staging_xcm::v5::junction::Junction; 1usize]),
+                        #[codec(index = 2)]
+                        X2([runtime_types::staging_xcm::v5::junction::Junction; 2usize]),
+                        #[codec(index = 3)]
+                        X3([runtime_types::staging_xcm::v5::junction::Junction; 3usize]),
+                        #[codec(index = 4)]
+                        X4([runtime_types::staging_xcm::v5::junction::Junction; 4usize]),
+                        #[codec(index = 5)]
+                        X5([runtime_types::staging_xcm::v5::junction::Junction; 5usize]),
+                        #[codec(index = 6)]
+                        X6([runtime_types::staging_xcm::v5::junction::Junction; 6usize]),
+                        #[codec(index = 7)]
+                        X7([runtime_types::staging_xcm::v5::junction::Junction; 7usize]),
+                        #[codec(index = 8)]
+                        X8([runtime_types::staging_xcm::v5::junction::Junction; 8usize]),
+                    }
+                }
+                pub mod location {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub struct Location {
+                        pub parents: ::core::primitive::u8,
+                        pub interior: runtime_types::staging_xcm::v5::junctions::Junctions,
+                    }
+                }
+                pub mod traits {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum Outcome {
+                        #[codec(index = 0)]
+                        Complete {
+                            used: runtime_types::sp_weights::weight_v2::Weight,
+                        },
+                        #[codec(index = 1)]
+                        Incomplete {
+                            used: runtime_types::sp_weights::weight_v2::Weight,
+                            error: runtime_types::xcm::v5::traits::Error,
+                        },
+                        #[codec(index = 2)]
+                        Error {
+                            error: runtime_types::xcm::v5::traits::Error,
+                        },
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum Hint {
+                    #[codec(index = 0)]
+                    AssetClaimer {
+                        location: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum Instruction {
+                    #[codec(index = 0)]
+                    WithdrawAsset(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 1)]
+                    ReserveAssetDeposited(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 2)]
+                    ReceiveTeleportedAsset(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 3)]
+                    QueryResponse {
+                        #[codec(compact)]
+                        query_id: ::core::primitive::u64,
+                        response: runtime_types::staging_xcm::v5::Response,
+                        max_weight: runtime_types::sp_weights::weight_v2::Weight,
+                        querier: ::core::option::Option<
+                            runtime_types::staging_xcm::v5::location::Location,
+                        >,
+                    },
+                    #[codec(index = 4)]
+                    TransferAsset {
+                        assets: runtime_types::staging_xcm::v5::asset::Assets,
+                        beneficiary: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 5)]
+                    TransferReserveAsset {
+                        assets: runtime_types::staging_xcm::v5::asset::Assets,
+                        dest: runtime_types::staging_xcm::v5::location::Location,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 6)]
+                    Transact {
+                        origin_kind: runtime_types::xcm::v3::OriginKind,
+                        fallback_max_weight:
+                            ::core::option::Option<runtime_types::sp_weights::weight_v2::Weight>,
+                        call: runtime_types::xcm::double_encoded::DoubleEncoded,
+                    },
+                    #[codec(index = 7)]
+                    HrmpNewChannelOpenRequest {
+                        #[codec(compact)]
+                        sender: ::core::primitive::u32,
+                        #[codec(compact)]
+                        max_message_size: ::core::primitive::u32,
+                        #[codec(compact)]
+                        max_capacity: ::core::primitive::u32,
+                    },
+                    #[codec(index = 8)]
+                    HrmpChannelAccepted {
+                        #[codec(compact)]
+                        recipient: ::core::primitive::u32,
+                    },
+                    #[codec(index = 9)]
+                    HrmpChannelClosing {
+                        #[codec(compact)]
+                        initiator: ::core::primitive::u32,
+                        #[codec(compact)]
+                        sender: ::core::primitive::u32,
+                        #[codec(compact)]
+                        recipient: ::core::primitive::u32,
+                    },
+                    #[codec(index = 10)]
+                    ClearOrigin,
+                    #[codec(index = 11)]
+                    DescendOrigin(runtime_types::staging_xcm::v5::junctions::Junctions),
+                    #[codec(index = 12)]
+                    ReportError(runtime_types::staging_xcm::v5::QueryResponseInfo),
+                    #[codec(index = 13)]
+                    DepositAsset {
+                        assets: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                        beneficiary: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 14)]
+                    DepositReserveAsset {
+                        assets: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                        dest: runtime_types::staging_xcm::v5::location::Location,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 15)]
+                    ExchangeAsset {
+                        give: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                        want: runtime_types::staging_xcm::v5::asset::Assets,
+                        maximal: ::core::primitive::bool,
+                    },
+                    #[codec(index = 16)]
+                    InitiateReserveWithdraw {
+                        assets: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                        reserve: runtime_types::staging_xcm::v5::location::Location,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 17)]
+                    InitiateTeleport {
+                        assets: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                        dest: runtime_types::staging_xcm::v5::location::Location,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 18)]
+                    ReportHolding {
+                        response_info: runtime_types::staging_xcm::v5::QueryResponseInfo,
+                        assets: runtime_types::staging_xcm::v5::asset::AssetFilter,
+                    },
+                    #[codec(index = 19)]
+                    BuyExecution {
+                        fees: runtime_types::staging_xcm::v5::asset::Asset,
+                        weight_limit: runtime_types::xcm::v3::WeightLimit,
+                    },
+                    #[codec(index = 20)]
+                    RefundSurplus,
+                    #[codec(index = 21)]
+                    SetErrorHandler(runtime_types::staging_xcm::v5::Xcm),
+                    #[codec(index = 22)]
+                    SetAppendix(runtime_types::staging_xcm::v5::Xcm),
+                    #[codec(index = 23)]
+                    ClearError,
+                    #[codec(index = 24)]
+                    ClaimAsset {
+                        assets: runtime_types::staging_xcm::v5::asset::Assets,
+                        ticket: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 25)]
+                    Trap(#[codec(compact)] ::core::primitive::u64),
+                    #[codec(index = 26)]
+                    SubscribeVersion {
+                        #[codec(compact)]
+                        query_id: ::core::primitive::u64,
+                        max_response_weight: runtime_types::sp_weights::weight_v2::Weight,
+                    },
+                    #[codec(index = 27)]
+                    UnsubscribeVersion,
+                    #[codec(index = 28)]
+                    BurnAsset(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 29)]
+                    ExpectAsset(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 30)]
+                    ExpectOrigin(
+                        ::core::option::Option<runtime_types::staging_xcm::v5::location::Location>,
+                    ),
+                    #[codec(index = 31)]
+                    ExpectError(
+                        ::core::option::Option<(
+                            ::core::primitive::u32,
+                            runtime_types::xcm::v5::traits::Error,
+                        )>,
+                    ),
+                    #[codec(index = 32)]
+                    ExpectTransactStatus(runtime_types::xcm::v3::MaybeErrorCode),
+                    #[codec(index = 33)]
+                    QueryPallet {
+                        module_name:
+                            ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                        response_info: runtime_types::staging_xcm::v5::QueryResponseInfo,
+                    },
+                    #[codec(index = 34)]
+                    ExpectPallet {
+                        #[codec(compact)]
+                        index: ::core::primitive::u32,
+                        name: ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                        module_name:
+                            ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                        #[codec(compact)]
+                        crate_major: ::core::primitive::u32,
+                        #[codec(compact)]
+                        min_crate_minor: ::core::primitive::u32,
+                    },
+                    #[codec(index = 35)]
+                    ReportTransactStatus(runtime_types::staging_xcm::v5::QueryResponseInfo),
+                    #[codec(index = 36)]
+                    ClearTransactStatus,
+                    #[codec(index = 37)]
+                    UniversalOrigin(runtime_types::staging_xcm::v5::junction::Junction),
+                    #[codec(index = 38)]
+                    ExportMessage {
+                        network: runtime_types::staging_xcm::v5::junction::NetworkId,
+                        destination: runtime_types::staging_xcm::v5::junctions::Junctions,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 39)]
+                    LockAsset {
+                        asset: runtime_types::staging_xcm::v5::asset::Asset,
+                        unlocker: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 40)]
+                    UnlockAsset {
+                        asset: runtime_types::staging_xcm::v5::asset::Asset,
+                        target: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 41)]
+                    NoteUnlockable {
+                        asset: runtime_types::staging_xcm::v5::asset::Asset,
+                        owner: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 42)]
+                    RequestUnlock {
+                        asset: runtime_types::staging_xcm::v5::asset::Asset,
+                        locker: runtime_types::staging_xcm::v5::location::Location,
+                    },
+                    #[codec(index = 43)]
+                    SetFeesMode {
+                        jit_withdraw: ::core::primitive::bool,
+                    },
+                    #[codec(index = 44)]
+                    SetTopic([::core::primitive::u8; 32usize]),
+                    #[codec(index = 45)]
+                    ClearTopic,
+                    #[codec(index = 46)]
+                    AliasOrigin(runtime_types::staging_xcm::v5::location::Location),
+                    #[codec(index = 47)]
+                    UnpaidExecution {
+                        weight_limit: runtime_types::xcm::v3::WeightLimit,
+                        check_origin: ::core::option::Option<
+                            runtime_types::staging_xcm::v5::location::Location,
+                        >,
+                    },
+                    #[codec(index = 48)]
+                    PayFees {
+                        asset: runtime_types::staging_xcm::v5::asset::Asset,
+                    },
+                    #[codec(index = 49)]
+                    InitiateTransfer {
+                        destination: runtime_types::staging_xcm::v5::location::Location,
+                        remote_fees: ::core::option::Option<
+                            runtime_types::staging_xcm::v5::asset::AssetTransferFilter,
+                        >,
+                        preserve_origin: ::core::primitive::bool,
+                        assets: runtime_types::bounded_collections::bounded_vec::BoundedVec<
+                            runtime_types::staging_xcm::v5::asset::AssetTransferFilter,
+                        >,
+                        remote_xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 50)]
+                    ExecuteWithOrigin {
+                        descendant_origin: ::core::option::Option<
+                            runtime_types::staging_xcm::v5::junctions::Junctions,
+                        >,
+                        xcm: runtime_types::staging_xcm::v5::Xcm,
+                    },
+                    #[codec(index = 51)]
+                    SetHints {
+                        hints: runtime_types::bounded_collections::bounded_vec::BoundedVec<
+                            runtime_types::staging_xcm::v5::Hint,
+                        >,
+                    },
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct PalletInfo {
+                    #[codec(compact)]
+                    pub index: ::core::primitive::u32,
+                    pub name: runtime_types::bounded_collections::bounded_vec::BoundedVec<
+                        ::core::primitive::u8,
+                    >,
+                    pub module_name: runtime_types::bounded_collections::bounded_vec::BoundedVec<
+                        ::core::primitive::u8,
+                    >,
+                    #[codec(compact)]
+                    pub major: ::core::primitive::u32,
+                    #[codec(compact)]
+                    pub minor: ::core::primitive::u32,
+                    #[codec(compact)]
+                    pub patch: ::core::primitive::u32,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct QueryResponseInfo {
+                    pub destination: runtime_types::staging_xcm::v5::location::Location,
+                    #[codec(compact)]
+                    pub query_id: ::core::primitive::u64,
+                    pub max_weight: runtime_types::sp_weights::weight_v2::Weight,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum Response {
+                    #[codec(index = 0)]
+                    Null,
+                    #[codec(index = 1)]
+                    Assets(runtime_types::staging_xcm::v5::asset::Assets),
+                    #[codec(index = 2)]
+                    ExecutionResult(
+                        ::core::option::Option<(
+                            ::core::primitive::u32,
+                            runtime_types::xcm::v5::traits::Error,
+                        )>,
+                    ),
+                    #[codec(index = 3)]
+                    Version(::core::primitive::u32),
+                    #[codec(index = 4)]
+                    PalletsInfo(
+                        runtime_types::bounded_collections::bounded_vec::BoundedVec<
+                            runtime_types::staging_xcm::v5::PalletInfo,
+                        >,
+                    ),
+                    #[codec(index = 5)]
+                    DispatchResult(runtime_types::xcm::v3::MaybeErrorCode),
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                #[codec(dumb_trait_bound)]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct Xcm(
+                    pub  ::subxt::ext::subxt_core::alloc::vec::Vec<
+                        runtime_types::staging_xcm::v5::Instruction,
+                    >,
+                );
+            }
         }
         pub mod staging_xcm_executor {
             use super::runtime_types;
@@ -19874,781 +20781,6 @@ pub mod api {
                 pub struct DoubleEncoded {
                     pub encoded: ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
                 }
-            }
-            pub mod v2 {
-                use super::runtime_types;
-                pub mod junction {
-                    use super::runtime_types;
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum Junction {
-                        #[codec(index = 0)]
-                        Parachain(#[codec(compact)] ::core::primitive::u32),
-                        #[codec(index = 1)]
-                        AccountId32 {
-                            network: runtime_types::xcm::v2::NetworkId,
-                            id: [::core::primitive::u8; 32usize],
-                        },
-                        #[codec(index = 2)]
-                        AccountIndex64 {
-                            network: runtime_types::xcm::v2::NetworkId,
-                            #[codec(compact)]
-                            index: ::core::primitive::u64,
-                        },
-                        #[codec(index = 3)]
-                        AccountKey20 {
-                            network: runtime_types::xcm::v2::NetworkId,
-                            key: [::core::primitive::u8; 20usize],
-                        },
-                        #[codec(index = 4)]
-                        PalletInstance(::core::primitive::u8),
-                        #[codec(index = 5)]
-                        GeneralIndex(#[codec(compact)] ::core::primitive::u128),
-                        #[codec(index = 6)]
-                        GeneralKey(
-                            runtime_types::bounded_collections::weak_bounded_vec::WeakBoundedVec<
-                                ::core::primitive::u8,
-                            >,
-                        ),
-                        #[codec(index = 7)]
-                        OnlyChild,
-                        #[codec(index = 8)]
-                        Plurality {
-                            id: runtime_types::xcm::v2::BodyId,
-                            part: runtime_types::xcm::v2::BodyPart,
-                        },
-                    }
-                }
-                pub mod multiasset {
-                    use super::runtime_types;
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum AssetId {
-                        #[codec(index = 0)]
-                        Concrete(runtime_types::xcm::v2::multilocation::MultiLocation),
-                        #[codec(index = 1)]
-                        Abstract(::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>),
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum AssetInstance {
-                        #[codec(index = 0)]
-                        Undefined,
-                        #[codec(index = 1)]
-                        Index(#[codec(compact)] ::core::primitive::u128),
-                        #[codec(index = 2)]
-                        Array4([::core::primitive::u8; 4usize]),
-                        #[codec(index = 3)]
-                        Array8([::core::primitive::u8; 8usize]),
-                        #[codec(index = 4)]
-                        Array16([::core::primitive::u8; 16usize]),
-                        #[codec(index = 5)]
-                        Array32([::core::primitive::u8; 32usize]),
-                        #[codec(index = 6)]
-                        Blob(::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>),
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum Fungibility {
-                        #[codec(index = 0)]
-                        Fungible(#[codec(compact)] ::core::primitive::u128),
-                        #[codec(index = 1)]
-                        NonFungible(runtime_types::xcm::v2::multiasset::AssetInstance),
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub struct MultiAsset {
-                        pub id: runtime_types::xcm::v2::multiasset::AssetId,
-                        pub fun: runtime_types::xcm::v2::multiasset::Fungibility,
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum MultiAssetFilter {
-                        #[codec(index = 0)]
-                        Definite(runtime_types::xcm::v2::multiasset::MultiAssets),
-                        #[codec(index = 1)]
-                        Wild(runtime_types::xcm::v2::multiasset::WildMultiAsset),
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub struct MultiAssets(
-                        pub  ::subxt::ext::subxt_core::alloc::vec::Vec<
-                            runtime_types::xcm::v2::multiasset::MultiAsset,
-                        >,
-                    );
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum WildFungibility {
-                        #[codec(index = 0)]
-                        Fungible,
-                        #[codec(index = 1)]
-                        NonFungible,
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum WildMultiAsset {
-                        #[codec(index = 0)]
-                        All,
-                        #[codec(index = 1)]
-                        AllOf {
-                            id: runtime_types::xcm::v2::multiasset::AssetId,
-                            fun: runtime_types::xcm::v2::multiasset::WildFungibility,
-                        },
-                    }
-                }
-                pub mod multilocation {
-                    use super::runtime_types;
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum Junctions {
-                        #[codec(index = 0)]
-                        Here,
-                        #[codec(index = 1)]
-                        X1(runtime_types::xcm::v2::junction::Junction),
-                        #[codec(index = 2)]
-                        X2(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 3)]
-                        X3(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 4)]
-                        X4(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 5)]
-                        X5(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 6)]
-                        X6(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 7)]
-                        X7(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                        #[codec(index = 8)]
-                        X8(
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                            runtime_types::xcm::v2::junction::Junction,
-                        ),
-                    }
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub struct MultiLocation {
-                        pub parents: ::core::primitive::u8,
-                        pub interior: runtime_types::xcm::v2::multilocation::Junctions,
-                    }
-                }
-                pub mod traits {
-                    use super::runtime_types;
-                    #[derive(
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                        Debug,
-                    )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
-                    #[decode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                    )]
-                    #[encode_as_type(
-                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                    )]
-                    pub enum Error {
-                        #[codec(index = 0)]
-                        Overflow,
-                        #[codec(index = 1)]
-                        Unimplemented,
-                        #[codec(index = 2)]
-                        UntrustedReserveLocation,
-                        #[codec(index = 3)]
-                        UntrustedTeleportLocation,
-                        #[codec(index = 4)]
-                        MultiLocationFull,
-                        #[codec(index = 5)]
-                        MultiLocationNotInvertible,
-                        #[codec(index = 6)]
-                        BadOrigin,
-                        #[codec(index = 7)]
-                        InvalidLocation,
-                        #[codec(index = 8)]
-                        AssetNotFound,
-                        #[codec(index = 9)]
-                        FailedToTransactAsset,
-                        #[codec(index = 10)]
-                        NotWithdrawable,
-                        #[codec(index = 11)]
-                        LocationCannotHold,
-                        #[codec(index = 12)]
-                        ExceedsMaxMessageSize,
-                        #[codec(index = 13)]
-                        DestinationUnsupported,
-                        #[codec(index = 14)]
-                        Transport,
-                        #[codec(index = 15)]
-                        Unroutable,
-                        #[codec(index = 16)]
-                        UnknownClaim,
-                        #[codec(index = 17)]
-                        FailedToDecode,
-                        #[codec(index = 18)]
-                        MaxWeightInvalid,
-                        #[codec(index = 19)]
-                        NotHoldingFees,
-                        #[codec(index = 20)]
-                        TooExpensive,
-                        #[codec(index = 21)]
-                        Trap(::core::primitive::u64),
-                        #[codec(index = 22)]
-                        UnhandledXcmVersion,
-                        #[codec(index = 23)]
-                        WeightLimitReached(::core::primitive::u64),
-                        #[codec(index = 24)]
-                        Barrier,
-                        #[codec(index = 25)]
-                        WeightNotComputable,
-                    }
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum BodyId {
-                    #[codec(index = 0)]
-                    Unit,
-                    #[codec(index = 1)]
-                    Named(
-                        runtime_types::bounded_collections::weak_bounded_vec::WeakBoundedVec<
-                            ::core::primitive::u8,
-                        >,
-                    ),
-                    #[codec(index = 2)]
-                    Index(#[codec(compact)] ::core::primitive::u32),
-                    #[codec(index = 3)]
-                    Executive,
-                    #[codec(index = 4)]
-                    Technical,
-                    #[codec(index = 5)]
-                    Legislative,
-                    #[codec(index = 6)]
-                    Judicial,
-                    #[codec(index = 7)]
-                    Defense,
-                    #[codec(index = 8)]
-                    Administration,
-                    #[codec(index = 9)]
-                    Treasury,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum BodyPart {
-                    #[codec(index = 0)]
-                    Voice,
-                    #[codec(index = 1)]
-                    Members {
-                        #[codec(compact)]
-                        count: ::core::primitive::u32,
-                    },
-                    #[codec(index = 2)]
-                    Fraction {
-                        #[codec(compact)]
-                        nom: ::core::primitive::u32,
-                        #[codec(compact)]
-                        denom: ::core::primitive::u32,
-                    },
-                    #[codec(index = 3)]
-                    AtLeastProportion {
-                        #[codec(compact)]
-                        nom: ::core::primitive::u32,
-                        #[codec(compact)]
-                        denom: ::core::primitive::u32,
-                    },
-                    #[codec(index = 4)]
-                    MoreThanProportion {
-                        #[codec(compact)]
-                        nom: ::core::primitive::u32,
-                        #[codec(compact)]
-                        denom: ::core::primitive::u32,
-                    },
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum Instruction {
-                    #[codec(index = 0)]
-                    WithdrawAsset(runtime_types::xcm::v2::multiasset::MultiAssets),
-                    #[codec(index = 1)]
-                    ReserveAssetDeposited(runtime_types::xcm::v2::multiasset::MultiAssets),
-                    #[codec(index = 2)]
-                    ReceiveTeleportedAsset(runtime_types::xcm::v2::multiasset::MultiAssets),
-                    #[codec(index = 3)]
-                    QueryResponse {
-                        #[codec(compact)]
-                        query_id: ::core::primitive::u64,
-                        response: runtime_types::xcm::v2::Response,
-                        #[codec(compact)]
-                        max_weight: ::core::primitive::u64,
-                    },
-                    #[codec(index = 4)]
-                    TransferAsset {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssets,
-                        beneficiary: runtime_types::xcm::v2::multilocation::MultiLocation,
-                    },
-                    #[codec(index = 5)]
-                    TransferReserveAsset {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssets,
-                        dest: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        xcm: runtime_types::xcm::v2::Xcm,
-                    },
-                    #[codec(index = 6)]
-                    Transact {
-                        origin_type: runtime_types::xcm::v2::OriginKind,
-                        #[codec(compact)]
-                        require_weight_at_most: ::core::primitive::u64,
-                        call: runtime_types::xcm::double_encoded::DoubleEncoded,
-                    },
-                    #[codec(index = 7)]
-                    HrmpNewChannelOpenRequest {
-                        #[codec(compact)]
-                        sender: ::core::primitive::u32,
-                        #[codec(compact)]
-                        max_message_size: ::core::primitive::u32,
-                        #[codec(compact)]
-                        max_capacity: ::core::primitive::u32,
-                    },
-                    #[codec(index = 8)]
-                    HrmpChannelAccepted {
-                        #[codec(compact)]
-                        recipient: ::core::primitive::u32,
-                    },
-                    #[codec(index = 9)]
-                    HrmpChannelClosing {
-                        #[codec(compact)]
-                        initiator: ::core::primitive::u32,
-                        #[codec(compact)]
-                        sender: ::core::primitive::u32,
-                        #[codec(compact)]
-                        recipient: ::core::primitive::u32,
-                    },
-                    #[codec(index = 10)]
-                    ClearOrigin,
-                    #[codec(index = 11)]
-                    DescendOrigin(runtime_types::xcm::v2::multilocation::Junctions),
-                    #[codec(index = 12)]
-                    ReportError {
-                        #[codec(compact)]
-                        query_id: ::core::primitive::u64,
-                        dest: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        #[codec(compact)]
-                        max_response_weight: ::core::primitive::u64,
-                    },
-                    #[codec(index = 13)]
-                    DepositAsset {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        #[codec(compact)]
-                        max_assets: ::core::primitive::u32,
-                        beneficiary: runtime_types::xcm::v2::multilocation::MultiLocation,
-                    },
-                    #[codec(index = 14)]
-                    DepositReserveAsset {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        #[codec(compact)]
-                        max_assets: ::core::primitive::u32,
-                        dest: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        xcm: runtime_types::xcm::v2::Xcm,
-                    },
-                    #[codec(index = 15)]
-                    ExchangeAsset {
-                        give: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        receive: runtime_types::xcm::v2::multiasset::MultiAssets,
-                    },
-                    #[codec(index = 16)]
-                    InitiateReserveWithdraw {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        reserve: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        xcm: runtime_types::xcm::v2::Xcm,
-                    },
-                    #[codec(index = 17)]
-                    InitiateTeleport {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        dest: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        xcm: runtime_types::xcm::v2::Xcm,
-                    },
-                    #[codec(index = 18)]
-                    QueryHolding {
-                        #[codec(compact)]
-                        query_id: ::core::primitive::u64,
-                        dest: runtime_types::xcm::v2::multilocation::MultiLocation,
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssetFilter,
-                        #[codec(compact)]
-                        max_response_weight: ::core::primitive::u64,
-                    },
-                    #[codec(index = 19)]
-                    BuyExecution {
-                        fees: runtime_types::xcm::v2::multiasset::MultiAsset,
-                        weight_limit: runtime_types::xcm::v2::WeightLimit,
-                    },
-                    #[codec(index = 20)]
-                    RefundSurplus,
-                    #[codec(index = 21)]
-                    SetErrorHandler(runtime_types::xcm::v2::Xcm),
-                    #[codec(index = 22)]
-                    SetAppendix(runtime_types::xcm::v2::Xcm),
-                    #[codec(index = 23)]
-                    ClearError,
-                    #[codec(index = 24)]
-                    ClaimAsset {
-                        assets: runtime_types::xcm::v2::multiasset::MultiAssets,
-                        ticket: runtime_types::xcm::v2::multilocation::MultiLocation,
-                    },
-                    #[codec(index = 25)]
-                    Trap(#[codec(compact)] ::core::primitive::u64),
-                    #[codec(index = 26)]
-                    SubscribeVersion {
-                        #[codec(compact)]
-                        query_id: ::core::primitive::u64,
-                        #[codec(compact)]
-                        max_response_weight: ::core::primitive::u64,
-                    },
-                    #[codec(index = 27)]
-                    UnsubscribeVersion,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum NetworkId {
-                    #[codec(index = 0)]
-                    Any,
-                    #[codec(index = 1)]
-                    Named(
-                        runtime_types::bounded_collections::weak_bounded_vec::WeakBoundedVec<
-                            ::core::primitive::u8,
-                        >,
-                    ),
-                    #[codec(index = 2)]
-                    Polkadot,
-                    #[codec(index = 3)]
-                    Kusama,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum OriginKind {
-                    #[codec(index = 0)]
-                    Native,
-                    #[codec(index = 1)]
-                    SovereignAccount,
-                    #[codec(index = 2)]
-                    Superuser,
-                    #[codec(index = 3)]
-                    Xcm,
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum Response {
-                    #[codec(index = 0)]
-                    Null,
-                    #[codec(index = 1)]
-                    Assets(runtime_types::xcm::v2::multiasset::MultiAssets),
-                    #[codec(index = 2)]
-                    ExecutionResult(
-                        ::core::option::Option<(
-                            ::core::primitive::u32,
-                            runtime_types::xcm::v2::traits::Error,
-                        )>,
-                    ),
-                    #[codec(index = 3)]
-                    Version(::core::primitive::u32),
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub enum WeightLimit {
-                    #[codec(index = 0)]
-                    Unlimited,
-                    #[codec(index = 1)]
-                    Limited(#[codec(compact)] ::core::primitive::u64),
-                }
-                #[derive(
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
-                    :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
-                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
-                    Debug,
-                )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
-                #[decode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
-                )]
-                #[encode_as_type(
-                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
-                )]
-                pub struct Xcm(
-                    pub  ::subxt::ext::subxt_core::alloc::vec::Vec<
-                        runtime_types::xcm::v2::Instruction,
-                    >,
-                );
             }
             pub mod v3 {
                 use super::runtime_types;
@@ -21621,6 +21753,111 @@ pub mod api {
                     >,
                 );
             }
+            pub mod v5 {
+                use super::runtime_types;
+                pub mod traits {
+                    use super::runtime_types;
+                    #[derive(
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
+                        :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                        :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                        Debug,
+                    )]
+                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
+                    #[codec(dumb_trait_bound)]
+                    #[decode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                    )]
+                    #[encode_as_type(
+                        crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                    )]
+                    pub enum Error {
+                        #[codec(index = 0)]
+                        Overflow,
+                        #[codec(index = 1)]
+                        Unimplemented,
+                        #[codec(index = 2)]
+                        UntrustedReserveLocation,
+                        #[codec(index = 3)]
+                        UntrustedTeleportLocation,
+                        #[codec(index = 4)]
+                        LocationFull,
+                        #[codec(index = 5)]
+                        LocationNotInvertible,
+                        #[codec(index = 6)]
+                        BadOrigin,
+                        #[codec(index = 7)]
+                        InvalidLocation,
+                        #[codec(index = 8)]
+                        AssetNotFound,
+                        #[codec(index = 9)]
+                        FailedToTransactAsset,
+                        #[codec(index = 10)]
+                        NotWithdrawable,
+                        #[codec(index = 11)]
+                        LocationCannotHold,
+                        #[codec(index = 12)]
+                        ExceedsMaxMessageSize,
+                        #[codec(index = 13)]
+                        DestinationUnsupported,
+                        #[codec(index = 14)]
+                        Transport,
+                        #[codec(index = 15)]
+                        Unroutable,
+                        #[codec(index = 16)]
+                        UnknownClaim,
+                        #[codec(index = 17)]
+                        FailedToDecode,
+                        #[codec(index = 18)]
+                        MaxWeightInvalid,
+                        #[codec(index = 19)]
+                        NotHoldingFees,
+                        #[codec(index = 20)]
+                        TooExpensive,
+                        #[codec(index = 21)]
+                        Trap(::core::primitive::u64),
+                        #[codec(index = 22)]
+                        ExpectationFalse,
+                        #[codec(index = 23)]
+                        PalletNotFound,
+                        #[codec(index = 24)]
+                        NameMismatch,
+                        #[codec(index = 25)]
+                        VersionIncompatible,
+                        #[codec(index = 26)]
+                        HoldingWouldOverflow,
+                        #[codec(index = 27)]
+                        ExportError,
+                        #[codec(index = 28)]
+                        ReanchorFailed,
+                        #[codec(index = 29)]
+                        NoDeal,
+                        #[codec(index = 30)]
+                        FeesNotMet,
+                        #[codec(index = 31)]
+                        LockError,
+                        #[codec(index = 32)]
+                        NoPermission,
+                        #[codec(index = 33)]
+                        Unanchored,
+                        #[codec(index = 34)]
+                        NotDepositable,
+                        #[codec(index = 35)]
+                        TooManyAssets,
+                        #[codec(index = 36)]
+                        UnhandledXcmVersion,
+                        #[codec(index = 37)]
+                        WeightLimitReached(runtime_types::sp_weights::weight_v2::Weight),
+                        #[codec(index = 38)]
+                        Barrier,
+                        #[codec(index = 39)]
+                        WeightNotComputable,
+                        #[codec(index = 40)]
+                        ExceedsStackLimit,
+                    }
+                }
+            }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Encode,
@@ -21637,6 +21874,8 @@ pub mod api {
                 V3(runtime_types::xcm::v3::multiasset::AssetId),
                 #[codec(index = 4)]
                 V4(runtime_types::staging_xcm::v4::asset::AssetId),
+                #[codec(index = 5)]
+                V5(runtime_types::staging_xcm::v5::asset::AssetId),
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -21650,12 +21889,12 @@ pub mod api {
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedAssets {
-                #[codec(index = 1)]
-                V2(runtime_types::xcm::v2::multiasset::MultiAssets),
                 #[codec(index = 3)]
                 V3(runtime_types::xcm::v3::multiasset::MultiAssets),
                 #[codec(index = 4)]
                 V4(runtime_types::staging_xcm::v4::asset::Assets),
+                #[codec(index = 5)]
+                V5(runtime_types::staging_xcm::v5::asset::Assets),
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -21669,12 +21908,12 @@ pub mod api {
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedLocation {
-                #[codec(index = 1)]
-                V2(runtime_types::xcm::v2::multilocation::MultiLocation),
                 #[codec(index = 3)]
                 V3(runtime_types::staging_xcm::v3::multilocation::MultiLocation),
                 #[codec(index = 4)]
                 V4(runtime_types::staging_xcm::v4::location::Location),
+                #[codec(index = 5)]
+                V5(runtime_types::staging_xcm::v5::location::Location),
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: codec :: Decode,
@@ -21688,12 +21927,12 @@ pub mod api {
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedXcm {
-                #[codec(index = 2)]
-                V2(runtime_types::xcm::v2::Xcm),
                 #[codec(index = 3)]
                 V3(runtime_types::xcm::v3::Xcm),
                 #[codec(index = 4)]
                 V4(runtime_types::staging_xcm::v4::Xcm),
+                #[codec(index = 5)]
+                V5(runtime_types::staging_xcm::v5::Xcm),
             }
         }
         pub mod xcm_runtime_apis {
@@ -21790,7 +22029,7 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub struct XcmDryRunEffects<_0> {
-                    pub execution_result: runtime_types::staging_xcm::v4::traits::Outcome,
+                    pub execution_result: runtime_types::staging_xcm::v5::traits::Outcome,
                     pub emitted_events: ::subxt::ext::subxt_core::alloc::vec::Vec<_0>,
                     pub forwarded_xcms: ::subxt::ext::subxt_core::alloc::vec::Vec<(
                         runtime_types::xcm::VersionedLocation,
