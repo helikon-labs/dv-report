@@ -1670,7 +1670,6 @@ dependencies = [
  "dv-report-metrics",
  "dv-report-persistence",
  "dv-report-service",
- "dv-report-types",
  "futures-util",
  "lazy_static",
  "log",
