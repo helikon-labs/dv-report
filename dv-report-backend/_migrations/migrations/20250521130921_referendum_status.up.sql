@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS referendum_status
 INSERT INTO referendum_status (id, status)
 VALUES (1, 'Ongoing');
 INSERT INTO referendum_status (id, status)
-VALUES (2, 'Approved');
+VALUES (2, 'Confirmed');
 INSERT INTO referendum_status (id, status)
 VALUES (3, 'Rejected');
 INSERT INTO referendum_status (id, status)

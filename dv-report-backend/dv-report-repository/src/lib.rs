@@ -479,7 +479,7 @@ impl Repository {
                         .update_referendum_status(
                             network_id,
                             *referendum_index,
-                            ReferendumStatus::Approved,
+                            ReferendumStatus::Confirmed,
                         )
                         .await?;
                     let id = self
@@ -507,7 +507,7 @@ impl Repository {
                         .update_referendum_status(
                             network_id,
                             *referendum_index,
-                            ReferendumStatus::Approved,
+                            ReferendumStatus::Confirmed,
                         )
                         .await?;
                     let id = self
