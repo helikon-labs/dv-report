@@ -7,12 +7,16 @@ pub use runtime::kusama as metadata;
 pub use runtime::kusama::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 #[cfg(feature = "kusama")]
 pub use runtime::kusama::api::runtime_types::staging_kusama_runtime::RuntimeCall;
+#[cfg(feature = "kusama")]
+pub use runtime::kusama_current as metadata_current;
 #[cfg(feature = "polkadot")]
 pub use runtime::polkadot as metadata;
 #[cfg(feature = "polkadot")]
 pub use runtime::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 #[cfg(feature = "polkadot")]
 pub use runtime::polkadot::api::runtime_types::polkadot_runtime::RuntimeCall;
+#[cfg(feature = "polkadot")]
+pub use runtime::polkadot_current as metadata_current;
 use subxt::ext::jsonrpsee::core::Serialize;
 
 use dv_report_types::governance::vote::AccountVote as NativeAccountVote;

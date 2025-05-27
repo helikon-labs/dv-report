@@ -2,10 +2,10 @@
 set -e
 # polkadot
 subxt metadata --url "wss://rpc.helikon.io/polkadot" --pallets Referenda,ConvictionVoting,Utility,Multisig,Proxy -o ./polkadot.scale
-subxt codegen --file ./polkadot.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/polkadot.rs
+subxt codegen --file ./polkadot.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/polkadot_current.rs
 rm ./polkadot.scale
 
 # kusama
 subxt metadata --url "wss://rpc.helikon.io/kusama" --pallets Referenda,ConvictionVoting,Utility,Multisig,Proxy -o ./kusama.scale
-subxt codegen --file ./kusama.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama.rs
+subxt codegen --file ./kusama.scale --no-docs | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama_current.rs
 rm ./kusama.scale

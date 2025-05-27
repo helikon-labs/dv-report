@@ -1,7 +1,8 @@
 use crate::event::get_referendum_events_in_block;
 use crate::storage_utility::{decode_hex_string, get_rpc_storage_plain_params};
 use crate::vote::get_vote_calls_in_block;
-pub use dv_report_metadata::metadata::{
+pub use dv_report_metadata::metadata;
+pub use dv_report_metadata::metadata_current::{
     self, api::referenda::storage::types::referendum_info_for::ReferendumInfoFor as ReferendumInfo,
 };
 use dv_report_types::substrate::block::{Block, BlockHeader};
@@ -75,7 +76,6 @@ impl SubstrateClient {
         let current_api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client_1).await?;
         let api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client_2).await?;
         if let Some(metadata_file_path) = metadata_file_path {
-            log::error!("SET METADATA");
             let metadata = {
                 let bytes = std::fs::read(metadata_file_path)?;
                 Metadata::decode(&mut &*bytes)?
@@ -176,7 +176,7 @@ impl SubstrateClient {
         index: u32,
         at: &str,
     ) -> anyhow::Result<Option<ReferendumInfo>> {
-        let storage_query = metadata::api::storage()
+        let storage_query = metadata_current::api::storage()
             .referenda()
             .referendum_info_for(index);
         let block_hash = H256::from_str(at)?;
