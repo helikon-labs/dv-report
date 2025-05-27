@@ -38,7 +38,7 @@ api_service_port = 7900
 [indexer]
 cohort_number = 4
 # optional - will be used the current runtime metadata if left blank
-# metadata_file_path = "/path/to/metadata/file.scale"
+metadata_file_path = "/Users/kukabi/Documents/development/dv-report/dv-report-backend/_metadata/polkadot-1004001.scale"
 # optional - the indexer uses the finalized block if left blank
 # end_block_number = 0
 
