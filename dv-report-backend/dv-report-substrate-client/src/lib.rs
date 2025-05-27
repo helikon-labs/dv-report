@@ -25,6 +25,7 @@ mod vote;
 
 pub struct SubstrateClient {
     pub network: Network,
+    current_api: OnlineClient<PolkadotConfig>,
     api: OnlineClient<PolkadotConfig>,
     ws_client: Client,
 }
@@ -49,7 +50,7 @@ impl SubstrateClient {
         log::info!("{chain} Substrate connection successful.");
 
         log::info!("Constructing {} SubXT API.", chain.display);
-        let rpc_client = RpcClient::builder()
+        let rpc_client_1 = RpcClient::builder()
             .retry_policy(
                 ExponentialBackoff::from_millis(100)
                     .max_delay(Duration::from_secs(10))
@@ -60,7 +61,19 @@ impl SubstrateClient {
             .connection_timeout(connection_timeout)
             .build(rpc_url)
             .await?;
-        let api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client).await?;
+        let rpc_client_2 = RpcClient::builder()
+            .retry_policy(
+                ExponentialBackoff::from_millis(100)
+                    .max_delay(Duration::from_secs(10))
+                    .take(3),
+            )
+            // There are other configurations as well that can be found at [`reconnecting_rpc_client::ClientBuilder`].
+            .request_timeout(request_timeout)
+            .connection_timeout(connection_timeout)
+            .build(rpc_url)
+            .await?;
+        let current_api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client_1).await?;
+        let api = OnlineClient::<PolkadotConfig>::from_rpc_client(rpc_client_2).await?;
         if let Some(metadata_file_path) = metadata_file_path {
             let metadata = {
                 let bytes = std::fs::read(metadata_file_path)?;
@@ -71,6 +84,7 @@ impl SubstrateClient {
         log::info!("SubXT {} API ready.", chain.display);
         Ok(SubstrateClient {
             network: chain,
+            current_api,
             api,
             ws_client,
         })
@@ -166,7 +180,7 @@ impl SubstrateClient {
             .referendum_info_for(index);
         let block_hash = H256::from_str(at)?;
         let maybe_referendum_info = self
-            .api
+            .current_api
             .storage()
             .at(block_hash)
             .fetch(&storage_query)
