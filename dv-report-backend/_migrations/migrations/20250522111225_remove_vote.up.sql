@@ -29,3 +29,9 @@ CREATE TABLE IF NOT EXISTS remove_vote
             ON DELETE RESTRICT
             ON UPDATE CASCADE
 );
+
+CREATE INDEX IF NOT EXISTS remove_vote_idx_network_voter
+    ON remove_vote (network_id, voter_account_id);
+
+CREATE INDEX remove_vote_idx_network_voter_referendum
+    ON remove_vote (network_id, voter_account_id, referendum_index);

@@ -1,8 +1,11 @@
 use crate::substrate::block::Block;
 use crate::substrate::track::Track;
-use serde::{Deserialize, Serialize};
+use serde::Serialize;
+use sqlx::FromRow;
+use strum::IntoEnumIterator;
+use strum_macros::EnumIter;
 
-#[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
+#[derive(Clone, Debug, PartialEq, Serialize, EnumIter)]
 pub enum ReferendumStatus {
     Ongoing,
     Confirmed,
@@ -35,10 +38,20 @@ impl ReferendumStatus {
             _ => panic!("Unknown referendum status id: {id}"),
         }
     }
+
+    pub fn all() -> Vec<Self> {
+        Self::iter().collect()
+    }
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, FromRow, Serialize)]
 #[serde(rename_all = "camelCase")]
+pub struct ReferendumStatusRow {
+    pub id: i32,
+    pub status: String,
+}
+
+#[derive(Clone, Debug)]
 pub struct Referendum {
     pub id: u32,
     pub network_id: u32,
@@ -46,4 +59,14 @@ pub struct Referendum {
     pub track: Track,
     pub submission_block: Block,
     pub status: ReferendumStatus,
+}
+
+#[derive(Clone, Debug, FromRow, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ReferendumRow {
+    pub network_id: i32,
+    pub index: i32,
+    pub track_id: i32,
+    pub submission_block_hash: String,
+    pub status_id: i32,
 }

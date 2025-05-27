@@ -1,5 +1,7 @@
 use crate::postgres::PostgreSQLStorage;
-use dv_report_types::governance::referendum::{Referendum, ReferendumStatus};
+use dv_report_types::governance::referendum::{
+    Referendum, ReferendumRow, ReferendumStatus, ReferendumStatusRow,
+};
 use sqlx::{Postgres, Transaction};
 
 impl PostgreSQLStorage {
@@ -81,5 +83,34 @@ impl PostgreSQLStorage {
         .fetch_one(&mut **tx)
         .await?;
         Ok(record_count.0 > 0)
+    }
+
+    pub async fn get_all_referendum_statuses(&self) -> anyhow::Result<Vec<ReferendumStatusRow>> {
+        let rows: Vec<ReferendumStatusRow> = sqlx::query_as::<_, ReferendumStatusRow>(
+            "
+            SELECT id, status
+            FROM referendum_status
+            ORDER BY id ASC
+            ",
+        )
+        .fetch_all(&self.connection_pool)
+        .await?;
+        Ok(rows)
+    }
+
+    pub async fn get_network_referenda(
+        &self,
+        network_id: u32,
+    ) -> anyhow::Result<Vec<ReferendumRow>> {
+        let rows: Vec<ReferendumRow> = sqlx::query_as::<_, ReferendumRow>(
+            "SELECT network_id, index, track_id, submission_block_hash, status_id
+            FROM referendum
+            WHERE network_id = $1
+            ORDER BY index ASC",
+        )
+        .bind(network_id as i32)
+        .fetch_all(&self.connection_pool)
+        .await?;
+        Ok(rows)
     }
 }

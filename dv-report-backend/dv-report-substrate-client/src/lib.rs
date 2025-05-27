@@ -1,7 +1,7 @@
 use crate::event::get_referendum_events_in_block;
 use crate::storage_utility::{decode_hex_string, get_rpc_storage_plain_params};
 use crate::vote::get_vote_calls_in_block;
-pub use dv_report_types::runtime::{
+pub use dv_report_metadata::metadata::{
     self, api::referenda::storage::types::referendum_info_for::ReferendumInfoFor as ReferendumInfo,
 };
 use dv_report_types::substrate::block::{Block, BlockHeader};
@@ -144,7 +144,7 @@ impl SubstrateClient {
     }
 
     pub async fn get_referendum_count(&self, at: &str) -> anyhow::Result<u32> {
-        let storage_query = runtime::api::storage().referenda().referendum_count();
+        let storage_query = metadata::api::storage().referenda().referendum_count();
         let block_hash = H256::from_str(at)?;
         let referendum_count = self
             .api
@@ -161,7 +161,7 @@ impl SubstrateClient {
         index: u32,
         at: &str,
     ) -> anyhow::Result<Option<ReferendumInfo>> {
-        let storage_query = runtime::api::storage()
+        let storage_query = metadata::api::storage()
             .referenda()
             .referendum_info_for(index);
         let block_hash = H256::from_str(at)?;
@@ -208,5 +208,14 @@ impl SubstrateClient {
             }
         }
         Err(anyhow::Error::msg("Extrinsic not found."))
+    }
+
+    pub fn set_metadata(&self, path: &str) -> anyhow::Result<()> {
+        let metadata = {
+            let bytes = std::fs::read(path)?;
+            Metadata::decode(&mut &*bytes)?
+        };
+        self.api.set_metadata(metadata);
+        Ok(())
     }
 }

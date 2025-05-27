@@ -7,6 +7,10 @@ authors.workspace = true
 repository.workspace = true
 license.workspace = true
 
+[features]
+kusama = ["dv-report-substrate-client/kusama"]
+polkadot = ["dv-report-substrate-client/polkadot"]
+
 [dependencies]
 anyhow = { workspace = true }
 dv-report-config = { path = "../dv-report-config" }

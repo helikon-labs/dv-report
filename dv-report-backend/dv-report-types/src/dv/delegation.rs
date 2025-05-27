@@ -1,6 +1,5 @@
 use crate::substrate::account_id::AccountId;
 use crate::substrate::block::Block;
-use crate::substrate::network::Network;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use std::str::FromStr;
@@ -10,7 +9,7 @@ use std::str::FromStr;
 pub struct Delegation {
     pub id: u32,
     pub cohort_number: u32,
-    pub network: Network,
+    pub network_id: u32,
     pub delegator_account_id: AccountId,
     pub delegate_id: String,
     pub delegate_account_id: AccountId,
@@ -22,7 +21,7 @@ pub struct Delegation {
     pub end_extrinsic_index: Option<u32>,
 }
 
-#[derive(Debug, FromRow)]
+#[derive(Clone, Debug, FromRow)]
 pub struct DelegationRow {
     pub id: i32,
     pub cohort_number: i32,
@@ -47,7 +46,7 @@ impl DelegationRow {
         Ok(Delegation {
             id: self.id as u32,
             cohort_number: self.cohort_number as u32,
-            network: Network::from_id(self.network_id as u32),
+            network_id: self.network_id as u32,
             delegator_account_id: AccountId::from_str(&self.delegator_account_id)?,
             delegate_id: self.delegate_id.clone(),
             delegate_account_id: AccountId::from_str(&self.delegate_account_id)?,

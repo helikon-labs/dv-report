@@ -30,6 +30,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "actix-cors"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "daa239b93927be1ff123eebada5a3ff23e89f0124ccb8609234e5103d5a5ae6d"
+dependencies = [
+ "actix-utils",
+ "actix-web",
+ "derive_more 2.0.1",
+ "futures-util",
+ "log",
+ "once_cell",
+ "smallvec",
+]
+
+[[package]]
 name = "actix-http"
 version = "3.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1663,6 +1678,7 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 name = "dv-report-api-service"
 version = "0.1.0"
 dependencies = [
+ "actix-cors",
  "actix-web",
  "anyhow",
  "async-trait",
@@ -1670,10 +1686,12 @@ dependencies = [
  "dv-report-metrics",
  "dv-report-persistence",
  "dv-report-service",
+ "dv-report-types",
  "futures-util",
  "lazy_static",
  "log",
  "once_cell",
+ "serde",
  "tokio",
 ]
 
@@ -1709,6 +1727,14 @@ dependencies = [
  "dv-report-config",
  "env_logger",
  "log",
+]
+
+[[package]]
+name = "dv-report-metadata"
+version = "0.1.0"
+dependencies = [
+ "dv-report-types",
+ "subxt",
 ]
 
 [[package]]
@@ -1779,6 +1805,7 @@ name = "dv-report-substrate-client"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "dv-report-metadata",
  "dv-report-types",
  "frame-metadata 23.0.0",
  "hex",
@@ -1806,7 +1833,8 @@ dependencies = [
  "serde_json",
  "sp-core",
  "sqlx",
- "subxt",
+ "strum",
+ "strum_macros",
  "thiserror 2.0.12",
 ]
 
@@ -6422,6 +6450,25 @@ name = "strsim"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
+
+[[package]]
+name = "strum"
+version = "0.27.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f64def088c51c9510a8579e3c5d67c65349dcf755e5479ad3d010aa6454e2c32"
+
+[[package]]
+name = "strum_macros"
+version = "0.27.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c77a8c5abcaf0f9ce05d62342b7d298c346515365c36b673df4ebe3ced01fde8"
+dependencies = [
+ "heck",
+ "proc-macro2",
+ "quote",
+ "rustversion",
+ "syn 2.0.101",
+]
 
 [[package]]
 name = "substrate-bip39"

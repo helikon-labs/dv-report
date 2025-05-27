@@ -9,10 +9,10 @@ pub struct Delegate {
     pub name: String,
     pub url: Option<String>,
     pub twitter: Option<String>,
-    pub delegation: Delegation,
+    pub delegations: Vec<Delegation>,
 }
 
-#[derive(Debug, FromRow)]
+#[derive(Clone, Debug, FromRow)]
 pub struct DelegateRow {
     pub id: String,
     pub name: String,
@@ -21,13 +21,13 @@ pub struct DelegateRow {
 }
 
 impl DelegateRow {
-    pub fn into_delegate(self, delegation: Delegation) -> Delegate {
+    pub fn into_delegate(self, delegations: Vec<Delegation>) -> Delegate {
         Delegate {
             id: self.id.clone(),
             name: self.name.clone(),
             url: self.url.clone(),
             twitter: self.twitter,
-            delegation,
+            delegations,
         }
     }
 }

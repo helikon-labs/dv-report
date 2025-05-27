@@ -21,24 +21,41 @@
         <script src="./bundle.js"></script>
         <div class="page-header-container">
             <div class="page-header">
-                <img class="submerge-logo" src="./img/submerge-logo.svg" alt="Submerge">
+                <img class="submerge-logo" src="./img/submerge-logo.svg" alt="Submerge" />
                 <!--img class="helikon-logo-full" src="./img/helikon-logo-full.svg" alt="Helikon"-->
-                <img class="helikon-logo" src="./img/helikon-logo.svg" alt="Helikon">
+                <img class="helikon-logo" src="./img/helikon-logo.svg" alt="Helikon" />
             </div>
             <hr />
         </div>
+        <div class="filter-container">
+            <span>Network:</span>
+            <select>
+                <option>All</option>
+                <option selected>Polkadot</option>
+                <option>Kusama</option>
+            </select>
+            <span>Track:</span>
+            <select>
+                <option>All</option>
+                <option selected>DV Tracks</option>
+                <option>Small Spender (31)</option>
+            </select>
+            <span>Status:</span>
+            <select>
+                <option>All</option>
+                <option selected>Ongoing</option>
+                <option>Confirmed</option>
+            </select>
+        </div>
         <div class="content-container">
-            <div class="content">
+            <div class="content" id="content">
                 <div class="header-1 medium">W3F Decentralized Voices Cohort IV Report</div>
-                <!-- background -->
-                <div class="section">
-                    <div class="section-header">Background</div>
-                    <div class="section-body">Asd.</div>
-                </div>
                 <!-- activity -->
                 <div class="section">
                     <div class="section-header">Activity</div>
-                    <div class="section-body">Asd.</div>
+                    <div class="section-body">
+                        <svg id="chart" style="width: 100%"></svg>
+                    </div>
                 </div>
                 <!-- breakdown -->
                 <div class="section">
@@ -65,6 +82,10 @@
                     <div class="section-header">Consistency</div>
                     <div class="section-body">Asd.</div>
                 </div>
+            </div>
+            <div class="loading-container no-display" id="loading-container">
+                <div class="loading-animation"></div>
+                <div class="loading-description" id="loading-description"></div>
             </div>
         </div>
     </body>

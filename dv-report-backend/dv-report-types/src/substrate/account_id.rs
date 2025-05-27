@@ -5,7 +5,7 @@ use sp_core::crypto::{Ss58AddressFormat, Ss58Codec};
 use std::fmt::{Display, Formatter};
 use std::str::FromStr;
 
-#[derive(Clone, Copy, Debug, Encode, Default, Decode, Eq, Hash, PartialEq)]
+#[derive(Clone, Copy, Debug, Encode, Default, Decode, Eq, Hash, PartialEq, Ord, PartialOrd)]
 pub struct AccountId([u8; 32]);
 
 impl Display for AccountId {
@@ -44,6 +44,7 @@ impl AccountId {
         for other_signatory in other_signatories {
             account_ids.push(other_signatory);
         }
+        account_ids.sort();
         let entropy =
             (b"modlpy/utilisuba", account_ids, threshold).using_encoded(sp_core::blake2_256);
         AccountId::from(entropy)

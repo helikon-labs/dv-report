@@ -1,6 +1,7 @@
 use crate::postgres::PostgreSQLStorage;
-use dv_report_types::runtime::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
-use dv_report_types::substrate::vote::{RemoveVoteCall, VoteCall};
+use dv_report_types::governance::vote::AccountVote;
+use dv_report_types::substrate::account_id::AccountId;
+use dv_report_types::substrate::vote::{RemoveVoteCall, VoteCall, VoteCallRow};
 use sqlx::{Postgres, Transaction};
 
 impl PostgreSQLStorage {
@@ -86,5 +87,25 @@ impl PostgreSQLStorage {
             .fetch_one(&mut **tx)
             .await?;
         Ok(result.0)
+    }
+
+    pub async fn get_network_voter_votes(
+        &self,
+        network_id: u32,
+        voter_account_id: &AccountId,
+    ) -> anyhow::Result<Vec<VoteCallRow>> {
+        let rows: Vec<VoteCallRow> = sqlx::query_as::<_, VoteCallRow>(
+            "
+            SELECT id, network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain
+            FROM vote
+            WHERE network_id= $1 AND voter_account_id = $2
+            ORDER BY network_id ASC, referendum_index ASC
+            ",
+        )
+            .bind(network_id as i32)
+            .bind(voter_account_id.to_string())
+            .fetch_all(&self.connection_pool)
+            .await?;
+        Ok(rows)
     }
 }

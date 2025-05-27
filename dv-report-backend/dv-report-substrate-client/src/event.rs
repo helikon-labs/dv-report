@@ -1,4 +1,4 @@
-use dv_report_types::runtime::api::referenda::events::{
+use dv_report_metadata::metadata::api::referenda::events::{
     Approved, Cancelled, ConfirmAborted, ConfirmStarted, Confirmed, DecisionDepositPlaced,
     DecisionDepositRefunded, DecisionStarted, DepositSlashed, Killed, Rejected,
     SubmissionDepositRefunded, Submitted, TimedOut,

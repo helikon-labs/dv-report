@@ -4,6 +4,7 @@ members = [
     "dv-report-config",
     "dv-report-indexer",
     "dv-report-logging",
+    "dv-report-metadata",
     "dv-report-metrics",
     "dv-report-persistence",
     "dv-report-repository",
@@ -25,6 +26,7 @@ license = "GPL-3"
 
 [workspace.dependencies]
 actix-web = "4.11"
+actix-cors = "0.7"
 anyhow = "1"
 async-trait = "0.1"
 chrono = { version = "0.4", default-features = true, features = ["serde"] }

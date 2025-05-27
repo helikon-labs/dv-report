@@ -1,0 +1,103 @@
+interface Block {
+    timestamp: number;
+    number: number;
+    hash: string;
+    parentHash: string;
+}
+
+interface Track {
+    networkId: number;
+    id: number;
+    name: string;
+}
+
+interface Network {
+    id: number;
+    chain: string;
+    display: string;
+    rpcUrl: string;
+    tokenTicker: string;
+    tokenDecimals: number;
+    tokenFormatDecimalPoints: number;
+    ss58Prefix: number;
+    tracks: Track[];
+}
+
+interface Cohort {
+    number: number;
+    network: Network;
+    announcementDate: Date;
+    announcementUrl?: string;
+    delegationDate: Date;
+    startBlock: Block;
+    tracks: Track[];
+}
+
+interface ReferendumStatus {
+    id: number;
+    status: string;
+}
+
+interface Delegation {
+    id: number;
+    cohortNumber: number;
+    networkId: number;
+    delegatorAccountId: string;
+    delegateId: string;
+    delegateAccountId: string;
+    startBlock: Block;
+    startExtrinsicHash: string;
+    startExtrinsicIndex: number;
+    endBlock?: Block;
+    endExtrinsicHash?: string;
+    endExtrinsicIndex?: number;
+}
+
+interface Delegate {
+    id: string;
+    name: string;
+    url?: string;
+    twitter?: string;
+    delegations: Delegation[];
+    votes: VoteCall[];
+}
+
+interface Referendum {
+    network_id: number;
+    index: number;
+    trackId: number;
+    submissionBlockHash: string;
+    status_id: number;
+}
+
+interface VoteCall {
+    id: number;
+    networkId: number;
+    referendumIndex: number;
+    block: Block;
+    extrinsicIndex: number;
+    extrinsicHash: string;
+    isBatch: boolean;
+    isMultisig: boolean;
+    isProxy: boolean;
+    isSuccessful: boolean;
+    signerAccountId: string;
+    voterAccountId: string;
+    voteType: string;
+    isAye?: boolean;
+    conviction?: number;
+    balance?: string;
+    aye?: string;
+    nay?: string;
+    abstain?: string;
+}
+
+type DelegateVoteCount = {
+    delegateId: string,
+    delegateName: string;
+    nayCount: number;
+    abstainCount: number;
+    ayeCount: number;
+};
+
+export { Block, Cohort, Delegate, Network, Referendum, ReferendumStatus, Track, VoteCall, DelegateVoteCount };

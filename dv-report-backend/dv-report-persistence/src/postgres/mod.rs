@@ -9,6 +9,7 @@ mod delegation;
 mod network;
 mod referendum;
 mod referendum_event;
+mod track;
 mod vote;
 
 pub struct PostgreSQLStorage {

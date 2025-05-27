@@ -36,3 +36,9 @@ CREATE TABLE IF NOT EXISTS vote
             ON DELETE RESTRICT
             ON UPDATE CASCADE
 );
+
+CREATE INDEX IF NOT EXISTS vote_idx_network_voter
+    ON vote (network_id, voter_account_id);
+
+CREATE INDEX vote_idx_network_voter_referendum
+    ON vote (network_id, voter_account_id, referendum_index);

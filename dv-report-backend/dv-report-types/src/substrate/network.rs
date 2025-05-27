@@ -5,6 +5,7 @@ use std::fmt::{Display, Formatter};
 use std::str::FromStr;
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Network {
     pub id: u32,
     pub chain: String,

@@ -28,4 +28,8 @@ impl Repository {
             .await?,
         })
     }
+
+    pub fn set_metadata(&self, path: &str) -> anyhow::Result<()> {
+        self.substrate_client.set_metadata(path)
+    }
 }

@@ -1,7 +1,8 @@
-use crate::runtime::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
+use crate::governance::vote::AccountVote;
 use crate::substrate::account_id::AccountId;
 use crate::substrate::block::Block;
 use frame_support::{Deserialize, Serialize};
+use sqlx::FromRow;
 
 #[derive(Debug, Default)]
 pub struct BlockVoteCalls {
@@ -17,7 +18,7 @@ impl BlockVoteCalls {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct VoteCall {
     pub network_id: u32,
     pub block: Block,
@@ -31,6 +32,29 @@ pub struct VoteCall {
     pub voter: AccountId,
     pub referendum_index: u32,
     pub vote: AccountVote<u128>,
+}
+
+#[derive(Debug, FromRow, Serialize)]
+pub struct VoteCallRow {
+    pub id: i32,
+    pub network_id: i32,
+    pub referendum_index: i32,
+    pub block_hash: String,
+    pub extrinsic_index: i32,
+    pub extrinsic_hash: String,
+    pub is_batch: bool,
+    pub is_multisig: bool,
+    pub is_proxy: bool,
+    pub is_successful: bool,
+    pub signer_account_id: String,
+    pub voter_account_id: String,
+    pub vote_type: String,
+    pub is_aye: Option<bool>,
+    pub conviction: Option<i32>,
+    pub balance: Option<String>,
+    pub aye: Option<String>,
+    pub nay: Option<String>,
+    pub abstain: Option<String>,
 }
 
 #[derive(Debug)]

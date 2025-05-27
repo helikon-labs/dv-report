@@ -1,7 +1,10 @@
 use enum_iterator::Sequence;
 use serde::{Deserialize, Serialize};
+use sqlx::FromRow;
+use strum::IntoEnumIterator;
+use strum_macros::EnumIter;
 
-#[derive(Copy, Clone, Debug, PartialEq, Sequence, Serialize, Deserialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Sequence, Serialize, Deserialize, EnumIter)]
 pub enum Track {
     Root,
     WhitelistedCaller,
@@ -130,4 +133,16 @@ impl Track {
         }
         dv_tracks
     }
+
+    pub fn all() -> Vec<Track> {
+        Self::iter().collect()
+    }
+}
+
+#[derive(Clone, Debug, FromRow, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct TrackRow {
+    pub network_id: i32,
+    pub id: i32,
+    pub name: String,
 }

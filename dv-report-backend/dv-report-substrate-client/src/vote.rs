@@ -1,4 +1,4 @@
-use dv_report_types::runtime::api::{
+use dv_report_metadata::metadata::api::{
     conviction_voting::calls::types::RemoveVote as RemoveVoteExtrinsic,
     conviction_voting::calls::types::Vote as VoteExtrinsic,
     multisig::calls::types::AsMulti as AsMultiExtrinsic,
@@ -13,11 +13,11 @@ use dv_report_types::runtime::api::{
     utility::calls::types::BatchAll as BatchAllExtrinsic,
     utility::calls::types::ForceBatch as ForceBatchExtrinsic,
 };
+use dv_report_metadata::RuntimeCall;
 use dv_report_types::substrate::account_id::AccountId;
 use dv_report_types::substrate::block::Block;
 use dv_report_types::substrate::vote::{BlockVoteCalls, RemoveVoteCall, VoteCall};
-use dv_report_types::RuntimeCall;
-use parity_scale_codec::{Decode, Encode};
+use parity_scale_codec::Decode;
 use subxt::blocks::ExtrinsicEvents;
 use subxt::utils::{AccountId32, MultiAddress};
 use subxt::{OnlineClient, PolkadotConfig};
@@ -54,7 +54,6 @@ fn get_vote_call_in_conviction_voting_call(
     let maybe_vote_call = match call {
         ConvictionVotingCall::vote { poll_index, vote } => {
             log::trace!("Vote call found : {poll_index}, vote: {vote:?}");
-            let encoded_vote = vote.encode();
             Some(VoteCall {
                 network_id,
                 block: block.clone(),
@@ -67,7 +66,7 @@ fn get_vote_call_in_conviction_voting_call(
                 signer: *signer,
                 voter: *voter,
                 referendum_index: *poll_index,
-                vote: Decode::decode(&mut &*encoded_vote)?,
+                vote: vote.into(),
             })
         }
         _ => None,
@@ -707,7 +706,6 @@ pub(super) async fn get_vote_calls_in_block(
             continue;
         };
         log::trace!("Vote extrinsic found. Is successful: {is_successful}");
-        let encoded_vote = vote_extrinsic.value.vote.encode();
         block_vote_calls.vote_calls.push(VoteCall {
             network_id,
             block: block.clone(),
@@ -720,7 +718,7 @@ pub(super) async fn get_vote_calls_in_block(
             signer,
             voter: signer,
             referendum_index: vote_extrinsic.value.poll_index,
-            vote: Decode::decode(&mut &*encoded_vote)?,
+            vote: vote_extrinsic.value.vote.into(),
         });
     }
     Ok(block_vote_calls)

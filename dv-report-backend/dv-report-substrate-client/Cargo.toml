@@ -7,9 +7,14 @@ authors.workspace = true
 repository.workspace = true
 license.workspace = true
 
+[features]
+kusama = ["dv-report-metadata/kusama"]
+polkadot = ["dv-report-metadata/polkadot"]
+
 [dependencies]
 anyhow = { workspace = true }
 frame-metadata = { workspace = true, features = ["default"] }
+dv-report-metadata = { path = "../dv-report-metadata" }
 dv-report-types = { path = "../dv-report-types" }
 hex = { workspace = true }
 jsonrpsee = { workspace = true, features = ["full"] }
