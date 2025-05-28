@@ -83,90 +83,90 @@ impl Repository {
             .await?;
         log::info!("{referendum_count} ongoing referenda.");
         let mut tx = self.postgres.begin_tx().await?;
-        let mut vec = Vec::new();
-        for referendum_index in 0..referendum_count {
+        for referendum_index in 1450..referendum_count {
             if let Some(referendum_info) = self
                 .substrate_client
                 .get_referendum_info(referendum_index, cohort.start_block.hash.as_str())
                 .await?
             {
-                log::info!("Get refendum {referendum_index} info.");
-                vec.push((referendum_index, referendum_info));
-            }
-        }
-        for (referendum_index, referendum_info) in vec.iter() {
-            match referendum_info {
-                ReferendumInfo::Ongoing(status) => {
-                    let submission_block_hash = self
-                        .substrate_client
-                        .get_block_hash(status.submitted as u64)
-                        .await?;
-                    let submission_block = self
-                        .substrate_client
-                        .get_block(submission_block_hash.as_str())
-                        .await?;
-                    self.postgres
-                        .save_block(network.id, &submission_block, &mut tx)
-                        .await?;
-                    let referendum = Referendum {
-                        id: 0,
-                        network_id: network.id,
-                        index: *referendum_index,
-                        track: Track::from_id(status.track),
-                        submission_block,
-                        status: ReferendumStatus::Ongoing,
-                    };
-                    log::info!(
-                        "Save ongoing referendum #{referendum_index} on track {}.",
-                        referendum.track.name()
-                    );
-                    self.postgres.save_referendum(&referendum, &mut tx).await?;
-                    let mut vote_calls = self
-                        .subsquare_client
-                        .fetch_vote_calls(network, *referendum_index)
-                        .await?;
-                    vote_calls.sort_by_key(|c| Reverse(c.extrinsic.block_number));
-                    for delegate in delegates.iter() {
-                        let Some(delegation) = delegate
-                            .delegations
-                            .iter()
-                            .find(|d| d.network_id == network.id)
-                        else {
-                            continue;
+                match referendum_info {
+                    ReferendumInfo::Ongoing(status) => {
+                        let submission_block_hash = self
+                            .substrate_client
+                            .get_block_hash(status.submitted as u64)
+                            .await?;
+                        let submission_block = self
+                            .substrate_client
+                            .get_block(submission_block_hash.as_str())
+                            .await?;
+                        self.postgres
+                            .save_block(network.id, &submission_block, &mut tx)
+                            .await?;
+                        let referendum = Referendum {
+                            id: 0,
+                            network_id: network.id,
+                            index: referendum_index,
+                            track: Track::from_id(status.track),
+                            submission_block,
+                            status: ReferendumStatus::Ongoing,
                         };
-                        if let Some(delegate_vote_call) = vote_calls
-                            .iter()
-                            .find(|v| v.voter == delegation.delegate_account_id)
-                        {
-                            if delegate_vote_call.extrinsic.block_number < cohort.start_block.number
+                        log::info!(
+                            "Save ongoing referendum #{referendum_index} on track {}.",
+                            referendum.track.name()
+                        );
+                        self.postgres.save_referendum(&referendum, &mut tx).await?;
+                        let mut vote_calls = self
+                            .subsquare_client
+                            .fetch_vote_calls(network, referendum_index)
+                            .await?;
+                        vote_calls.sort_by_key(|c| Reverse(c.extrinsic.block_number));
+                        for delegate in delegates.iter() {
+                            let Some(delegation) = delegate
+                                .delegations
+                                .iter()
+                                .find(|d| d.network_id == network.id)
+                            else {
+                                continue;
+                            };
+                            if let Some(delegate_vote_call) = vote_calls
+                                .iter()
+                                .find(|v| v.voter == delegation.delegate_account_id)
                             {
-                                log::info!("{} pre-voted on {}.", delegate.name, referendum_index);
-                                let block = self
-                                    .substrate_client
-                                    .get_block(delegate_vote_call.extrinsic.block_hash.as_str())
-                                    .await?;
-                                self.postgres
-                                    .save_block(network.id, &block, &mut tx)
-                                    .await?;
-                                self.postgres.save_referendum(&referendum, &mut tx).await?;
-                                let block_vote_calls = self
-                                    .substrate_client
-                                    .get_vote_calls_in_block(network.id, block.hash.as_str())
-                                    .await?;
-                                let vote_call = block_vote_calls
-                                    .vote_calls
-                                    .iter()
-                                    .find(|v| {
-                                        v.voter == delegation.delegate_account_id
-                                            && v.referendum_index == *referendum_index
-                                    })
-                                    .unwrap();
-                                self.postgres.save_vote_call(vote_call, &mut tx).await?;
+                                if delegate_vote_call.extrinsic.block_number
+                                    < cohort.start_block.number
+                                {
+                                    log::info!(
+                                        "{} pre-voted on {}.",
+                                        delegate.name,
+                                        referendum_index
+                                    );
+                                    let block = self
+                                        .substrate_client
+                                        .get_block(delegate_vote_call.extrinsic.block_hash.as_str())
+                                        .await?;
+                                    self.postgres
+                                        .save_block(network.id, &block, &mut tx)
+                                        .await?;
+                                    self.postgres.save_referendum(&referendum, &mut tx).await?;
+                                    let block_vote_calls = self
+                                        .substrate_client
+                                        .get_vote_calls_in_block(network.id, block.hash.as_str())
+                                        .await?;
+                                    let vote_call = block_vote_calls
+                                        .vote_calls
+                                        .iter()
+                                        .find(|v| {
+                                            v.voter == delegation.delegate_account_id
+                                                && v.referendum_index == referendum_index
+                                        })
+                                        .unwrap();
+                                    self.postgres.save_vote_call(vote_call, &mut tx).await?;
+                                }
                             }
                         }
                     }
+                    _ => log::info!("Skip referendum #{referendum_index}."),
                 }
-                _ => log::info!("Skip referendum #{referendum_index}."),
             }
         }
         self.postgres.commit_tx(tx).await?;

@@ -24,11 +24,23 @@ use subxt::{OnlineClient, PolkadotConfig};
 
 pub(crate) type SubstrateBlock = subxt::blocks::Block<PolkadotConfig, OnlineClient<PolkadotConfig>>;
 
-fn extrinsic_is_successful(events: ExtrinsicEvents<PolkadotConfig>) -> anyhow::Result<bool> {
+fn has_extrinsic_success_event(events: &ExtrinsicEvents<PolkadotConfig>) -> anyhow::Result<bool> {
     let mut is_successful = false;
     for event in events.iter() {
         let event = event?;
         if event.variant_name() == "ExtrinsicSuccess" {
+            is_successful = true;
+            break;
+        }
+    }
+    Ok(is_successful)
+}
+
+fn has_multisig_executed_event(events: &ExtrinsicEvents<PolkadotConfig>) -> anyhow::Result<bool> {
+    let mut is_successful = false;
+    for event in events.iter() {
+        let event = event?;
+        if event.variant_name() == "MultisigExecuted" {
             is_successful = true;
             break;
         }
@@ -119,6 +131,7 @@ fn get_vote_calls_in_proxy_call(
     is_multisig: bool,
     _is_proxy: bool,
     is_successful: bool,
+    has_multisig_executed: bool,
     signer: &AccountId,
     _voter: &AccountId,
     call: &ProxyCall,
@@ -143,6 +156,7 @@ fn get_vote_calls_in_proxy_call(
                 is_multisig,
                 true,
                 is_successful,
+                has_multisig_executed,
                 signer,
                 &real,
                 call,
@@ -167,6 +181,7 @@ fn get_vote_calls_in_proxy_call(
                 is_multisig,
                 true,
                 is_successful,
+                has_multisig_executed,
                 signer,
                 &real,
                 call,
@@ -187,6 +202,7 @@ fn get_vote_calls_in_utility_call(
     is_multisig: bool,
     is_proxy: bool,
     is_successful: bool,
+    has_multisig_executed: bool,
     signer: &AccountId,
     voter: &AccountId,
     call: &UtilityCall,
@@ -205,6 +221,7 @@ fn get_vote_calls_in_utility_call(
                     is_multisig,
                     is_proxy,
                     is_successful,
+                    has_multisig_executed,
                     signer,
                     voter,
                     call,
@@ -223,6 +240,7 @@ fn get_vote_calls_in_utility_call(
                     is_multisig,
                     is_proxy,
                     is_successful,
+                    has_multisig_executed,
                     signer,
                     voter,
                     call,
@@ -241,6 +259,7 @@ fn get_vote_calls_in_utility_call(
                     is_multisig,
                     is_proxy,
                     is_successful,
+                    has_multisig_executed,
                     signer,
                     voter,
                     call,
@@ -263,11 +282,15 @@ fn get_vote_calls_in_multisig_call(
     _is_multisig: bool,
     is_proxy: bool,
     is_successful: bool,
+    has_multisig_executed: bool,
     signer: &AccountId,
     _voter: &AccountId,
     call: &MultisigCall,
 ) -> anyhow::Result<BlockVoteCalls> {
     log::trace!("Inspect multisig call.");
+    if !has_multisig_executed {
+        log::info!("Multisig call does not have MultisigExecuted. Skip.");
+    }
     let vote_calls = match call {
         MultisigCall::as_multi_threshold_1 {
             other_signatories,
@@ -290,6 +313,7 @@ fn get_vote_calls_in_multisig_call(
                 true,
                 is_proxy,
                 is_successful,
+                has_multisig_executed,
                 signer,
                 &voter,
                 call,
@@ -319,6 +343,7 @@ fn get_vote_calls_in_multisig_call(
                 true,
                 is_proxy,
                 is_successful,
+                has_multisig_executed,
                 signer,
                 &voter,
                 call,
@@ -339,6 +364,7 @@ fn get_vote_calls_in_call(
     is_multisig: bool,
     is_proxy: bool,
     is_successful: bool,
+    has_multisig_executed: bool,
     signer: &AccountId,
     voter: &AccountId,
     call: &RuntimeCall,
@@ -353,6 +379,7 @@ fn get_vote_calls_in_call(
             is_multisig,
             is_proxy,
             is_successful,
+            has_multisig_executed,
             signer,
             voter,
             utility_call,
@@ -366,6 +393,7 @@ fn get_vote_calls_in_call(
             is_multisig,
             is_proxy,
             is_successful,
+            has_multisig_executed,
             signer,
             voter,
             proxy_call,
@@ -379,6 +407,7 @@ fn get_vote_calls_in_call(
             is_multisig,
             is_proxy,
             is_successful,
+            has_multisig_executed,
             signer,
             voter,
             multisig_call,
@@ -457,7 +486,8 @@ pub(super) async fn get_vote_calls_in_block(
         let proxy_extrinsic = proxy_extrinsic?;
         let tx_hash = hex::encode(proxy_extrinsic.details.hash());
         let events = proxy_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(proxy_extrinsic.details.address_bytes())? else {
             log::warn!("Proxy extrinsic is not signed. Skip.");
             continue;
@@ -476,6 +506,7 @@ pub(super) async fn get_vote_calls_in_block(
             false,
             true,
             is_successful,
+            has_multisig_executed,
             &signer,
             &voter,
             &(*proxy_extrinsic.value.call as RuntimeCall),
@@ -487,7 +518,8 @@ pub(super) async fn get_vote_calls_in_block(
         let proxy_announced_extrinsic = proxy_announced_extrinsic?;
         let tx_hash = hex::encode(proxy_announced_extrinsic.details.hash());
         let events = proxy_announced_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(proxy_announced_extrinsic.details.address_bytes())?
         else {
             log::warn!("ProxyAnnounced extrinsic is not signed. Skip.");
@@ -507,6 +539,7 @@ pub(super) async fn get_vote_calls_in_block(
             false,
             true,
             is_successful,
+            has_multisig_executed,
             &signer,
             &voter,
             &(*proxy_announced_extrinsic.value.call as RuntimeCall),
@@ -518,7 +551,8 @@ pub(super) async fn get_vote_calls_in_block(
         let force_batch_extrinsic = force_batch_extrinsic?;
         let tx_hash = hex::encode(force_batch_extrinsic.details.hash());
         let events = force_batch_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(force_batch_extrinsic.details.address_bytes())?
         else {
             log::warn!("ForceBatch extrinsic is not signed. Skip.");
@@ -535,6 +569,7 @@ pub(super) async fn get_vote_calls_in_block(
                 false,
                 false,
                 is_successful,
+                has_multisig_executed,
                 &signer,
                 &signer,
                 call,
@@ -546,7 +581,8 @@ pub(super) async fn get_vote_calls_in_block(
         let batch_all_extrinsic = batch_all_extrinsic?;
         let tx_hash = hex::encode(batch_all_extrinsic.details.hash());
         let events = batch_all_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(batch_all_extrinsic.details.address_bytes())?
         else {
             log::warn!("BatchAll extrinsic is not signed. Skip.");
@@ -563,6 +599,7 @@ pub(super) async fn get_vote_calls_in_block(
                 false,
                 false,
                 is_successful,
+                has_multisig_executed,
                 &signer,
                 &signer,
                 call,
@@ -574,7 +611,8 @@ pub(super) async fn get_vote_calls_in_block(
         let batch_extrinsic = batch_extrinsic?;
         let tx_hash = hex::encode(batch_extrinsic.details.hash());
         let events = batch_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(batch_extrinsic.details.address_bytes())? else {
             log::warn!("Batch extrinsic is not signed. Skip.");
             continue;
@@ -590,6 +628,7 @@ pub(super) async fn get_vote_calls_in_block(
                 false,
                 false,
                 is_successful,
+                has_multisig_executed,
                 &signer,
                 &signer,
                 call,
@@ -602,11 +641,16 @@ pub(super) async fn get_vote_calls_in_block(
         let as_multi_extrinsic = as_multi_extrinsic?;
         let tx_hash = hex::encode(as_multi_extrinsic.details.hash());
         let events = as_multi_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) = get_extrinsic_signer(as_multi_extrinsic.details.address_bytes())? else {
             log::warn!("AsMulti extrinsic is not signed. Skip.");
             continue;
         };
+        if !has_multisig_executed {
+            log::info!("Multisig not executed. Skip.");
+            continue;
+        }
         let voter = AccountId::multisig_account_id(
             &signer,
             &as_multi_extrinsic
@@ -627,6 +671,7 @@ pub(super) async fn get_vote_calls_in_block(
             true,
             false,
             is_successful,
+            has_multisig_executed,
             &signer,
             &voter,
             &(*as_multi_extrinsic.value.call as RuntimeCall),
@@ -637,13 +682,18 @@ pub(super) async fn get_vote_calls_in_block(
         let as_multi_threshold_1_extrinsic = as_multi_threshold_1_extrinsic?;
         let tx_hash = hex::encode(as_multi_threshold_1_extrinsic.details.hash());
         let events = as_multi_threshold_1_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
+        let has_multisig_executed = has_multisig_executed_event(&events)?;
         let Some(signer) =
             get_extrinsic_signer(as_multi_threshold_1_extrinsic.details.address_bytes())?
         else {
             log::warn!("AsMultiThreshold1 extrinsic is not signed. Skip.");
             continue;
         };
+        if !has_multisig_executed {
+            log::info!("Multisig not executed. Skip.");
+            continue;
+        }
         let voter = AccountId::multisig_account_id(
             &signer,
             &as_multi_threshold_1_extrinsic
@@ -664,6 +714,7 @@ pub(super) async fn get_vote_calls_in_block(
             false,
             false,
             is_successful,
+            has_multisig_executed,
             &signer,
             &voter,
             &(*as_multi_threshold_1_extrinsic.value.call as RuntimeCall),
@@ -675,7 +726,7 @@ pub(super) async fn get_vote_calls_in_block(
         let remove_vote_extrinsic = remove_vote_extrinsic?;
         let tx_hash = hex::encode(remove_vote_extrinsic.details.hash());
         let events = remove_vote_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
         let Some(signer) = get_extrinsic_signer(remove_vote_extrinsic.details.address_bytes())?
         else {
             log::warn!("RemoveVote extrinsic is not signed. Skip.");
@@ -700,7 +751,7 @@ pub(super) async fn get_vote_calls_in_block(
         let vote_extrinsic = vote_extrinsic?;
         let tx_hash = hex::encode(vote_extrinsic.details.hash());
         let events = vote_extrinsic.details.events().await?;
-        let is_successful = extrinsic_is_successful(events)?;
+        let is_successful = has_extrinsic_success_event(&events)?;
         let Some(signer) = get_extrinsic_signer(vote_extrinsic.details.address_bytes())? else {
             log::warn!("Vote extrinsic is not signed. Skip.");
             continue;
