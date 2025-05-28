@@ -72,7 +72,7 @@ impl PostgreSQLStorage {
         let result: (i32,) = sqlx::query_as(
             r#"
             INSERT INTO remove_vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_multisig_executed, is_proxy, is_successful, signer_account_id, voter_account_id)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
             RETURNING id
             "#,
         )
