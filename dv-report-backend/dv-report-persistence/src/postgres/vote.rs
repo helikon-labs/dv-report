@@ -35,8 +35,8 @@ impl PostgreSQLStorage {
         };
         let result: (i32,) = sqlx::query_as(
             r#"
-            INSERT INTO vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+            INSERT INTO vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_multisig_executed, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
             RETURNING id
             "#,
         )
@@ -47,6 +47,7 @@ impl PostgreSQLStorage {
             .bind(vote_call.extrinsic_hash.as_str())
             .bind(vote_call.is_batch)
             .bind(vote_call.is_multisig)
+            .bind(vote_call.is_multisig_executed)
             .bind(vote_call.is_proxy)
             .bind(vote_call.is_successful)
             .bind(vote_call.signer.to_string())
@@ -70,7 +71,7 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<i32> {
         let result: (i32,) = sqlx::query_as(
             r#"
-            INSERT INTO remove_vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, is_successful, signer_account_id, voter_account_id)
+            INSERT INTO remove_vote (network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_multisig_executed, is_proxy, is_successful, signer_account_id, voter_account_id)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
             RETURNING id
             "#,
@@ -82,6 +83,7 @@ impl PostgreSQLStorage {
             .bind(remove_vote_call.extrinsic_hash.as_str())
             .bind(remove_vote_call.is_batch)
             .bind(remove_vote_call.is_multisig)
+            .bind(remove_vote_call.is_multisig_executed)
             .bind(remove_vote_call.is_proxy)
             .bind(remove_vote_call.is_successful)
             .bind(remove_vote_call.signer.to_string())
@@ -98,7 +100,7 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<Vec<VoteCallRow>> {
         let rows: Vec<VoteCallRow> = sqlx::query_as::<_, VoteCallRow>(
             "
-            SELECT id, network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain
+            SELECT id, network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_multisig_executed, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain
             FROM vote
             WHERE network_id= $1 AND voter_account_id = $2
             ORDER BY network_id ASC, referendum_index ASC

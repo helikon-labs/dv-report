@@ -23,4 +23,4 @@ INSERT INTO delegate(id, name, url, twitter)
 VALUES ('jid', 'JAM Implementers DAO', NULL, NULL);
 
 INSERT INTO delegate(id, name, url, twitter)
-VALUES ('hungary', 'Polkadot Hundary DAO', 'https://polkadothungary.net', 'PolkadotHungary');
+VALUES ('hungary', 'Polkadot Hungary DAO', 'https://polkadothungary.net', 'PolkadotHungary');
