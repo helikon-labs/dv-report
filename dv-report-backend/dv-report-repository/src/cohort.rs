@@ -83,7 +83,7 @@ impl Repository {
             .await?;
         log::info!("{referendum_count} ongoing referenda.");
         let mut tx = self.postgres.begin_tx().await?;
-        for referendum_index in 1450..referendum_count {
+        for referendum_index in 0..referendum_count {
             if let Some(referendum_info) = self
                 .substrate_client
                 .get_referendum_info(referendum_index, cohort.start_block.hash.as_str())
