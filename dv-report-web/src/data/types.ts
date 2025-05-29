@@ -21,6 +21,7 @@ interface Network {
     tokenFormatDecimalPoints: number;
     ss58Prefix: number;
     tracks: Track[];
+    cohorts: Cohort[];
 }
 
 interface Cohort {
@@ -56,6 +57,7 @@ interface Delegation {
 interface Delegate {
     id: string;
     name: string;
+    shortName: string;
     url?: string;
     twitter?: string;
     delegations: Delegation[];
@@ -63,11 +65,11 @@ interface Delegate {
 }
 
 interface Referendum {
-    network_id: number;
+    networkId: number;
     index: number;
     trackId: number;
     submissionBlockHash: string;
-    status_id: number;
+    statusId: number;
 }
 
 interface VoteCall {
@@ -79,6 +81,7 @@ interface VoteCall {
     extrinsicHash: string;
     isBatch: boolean;
     isMultisig: boolean;
+    isMultisigExecuted: boolean;
     isProxy: boolean;
     isSuccessful: boolean;
     signerAccountId: string;
@@ -93,11 +96,28 @@ interface VoteCall {
 }
 
 type DelegateVoteCount = {
-    delegateId: string,
+    delegateId: string;
     delegateName: string;
     nayCount: number;
     abstainCount: number;
     ayeCount: number;
 };
 
-export { Block, Cohort, Delegate, Network, Referendum, ReferendumStatus, Track, VoteCall, DelegateVoteCount };
+type DelegateSimilarity = {
+    aId: string;
+    bId: string;
+    value: number;
+};
+
+export {
+    Block,
+    Cohort,
+    Delegate,
+    Network,
+    Referendum,
+    ReferendumStatus,
+    Track,
+    VoteCall,
+    DelegateVoteCount,
+    DelegateSimilarity,
+};

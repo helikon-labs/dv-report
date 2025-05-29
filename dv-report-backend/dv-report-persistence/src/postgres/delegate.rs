@@ -5,7 +5,7 @@ impl PostgreSQLStorage {
     pub async fn get_delegate_by_id(&self, id: &str) -> anyhow::Result<Option<DelegateRow>> {
         let maybe_row: Option<DelegateRow> = sqlx::query_as::<_, DelegateRow>(
             r#"
-            SELECT id, name, url, twitter
+            SELECT id, name, short_name, url, twitter
             FROM delegate
             WHERE id = $1
             "#,
@@ -19,7 +19,7 @@ impl PostgreSQLStorage {
     pub async fn get_all_delegates(&self) -> anyhow::Result<Vec<DelegateRow>> {
         let rows: Vec<DelegateRow> = sqlx::query_as::<_, DelegateRow>(
             "
-            SELECT id, name, url, twitter
+            SELECT id, name, short_name, url, twitter
             FROM delegate
             ORDER BY name ASC
             ",

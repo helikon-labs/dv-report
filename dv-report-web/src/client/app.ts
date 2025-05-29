@@ -5,7 +5,43 @@ import { Constants } from '../util/constants';
 
 class App {
     private readonly ui: UI;
-    private readonly uiDelegate = <UIDelegate>{};
+    private readonly uiDelegate: UIDelegate = {
+        onNetworkSelectChanged: (value) => {
+            if (value == 'all') {
+                this.dataStore.selectNetworks(this.dataStore.getNetworks());
+            } else {
+                const network = this.dataStore.getNetworks().find((n) => n.id.toString() == value);
+                if (network) {
+                    this.dataStore.selectNetworks([network]);
+                }
+            }
+            this.updateVoteCounts();
+        },
+        onTrackSelectChanged: (value) => {
+            if (value == 'all') {
+                this.dataStore.selectTracks(this.dataStore.getTracks());
+            } else if (value == 'dv') {
+                const tracks = this.dataStore.getNetworks()[0].cohorts[0].tracks;
+                this.dataStore.selectTracks(tracks);
+            } else {
+                const track = this.dataStore.getTracks().find((t) => t.id.toString() == value)!;
+                this.dataStore.selectTracks([track]);
+            }
+            this.updateVoteCounts();
+        },
+        onStatusSelectChanged: (value) => {
+            if (value == 'all') {
+                this.dataStore.selectStatuses(this.dataStore.getReferendumStatuses());
+            } else {
+                const status = this.dataStore
+                    .getReferendumStatuses()
+                    .find((s) => s.id.toString() == value)!;
+                this.dataStore.selectStatuses([status]);
+            }
+            this.updateVoteCounts();
+        },
+    };
+
     private readonly dataStore: DataStore;
     private readonly dataStoreDelegate = <DataStoreDelegate>{};
 
@@ -18,13 +54,26 @@ class App {
         this.ui.lock();
         try {
             await this.initData();
-            let delegateVoteCounts = this.dataStore.getDelegateVoteCounts();
-            this.ui.barChart(delegateVoteCounts);
+            this.ui.initFilters(
+                this.dataStore.getNetworks(),
+                this.dataStore.getTracks(),
+                this.dataStore.getReferendumStatuses(),
+            );
+            this.updateVoteCounts();
         } catch (error) {
             alert(`Error while fetching initial data: ${error}. Please reload the page.`);
             return;
         }
         this.ui.unlock();
+    }
+
+    private updateVoteCounts() {
+        const voteCountData = this.dataStore.getDelegateVoteCounts();
+        this.ui.displayVoteCountChart(voteCountData);
+        this.ui.displayPolicyDirectionChart(voteCountData);
+        const similarities = this.dataStore.getDelegateSimilarities();
+        console.log(similarities);
+        this.ui.displaySimilarityMatrixChart(this.dataStore.getDelegates(), similarities);
     }
 
     private async initData() {
@@ -61,7 +110,7 @@ class App {
             sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
         ]);
 
-        for (let network of this.dataStore.getNetworks()) {
+        for (const network of this.dataStore.getNetworks()) {
             this.ui.setLoadingDescription(`loading ${network.display} referenda`);
             await Promise.all([
                 this.dataStore.fetchNetworkReferenda(network.id),
@@ -69,10 +118,10 @@ class App {
             ]);
         }
 
-        for (let delegate of this.dataStore.getDelegates()) {
+        for (const delegate of this.dataStore.getDelegates()) {
             delegate.votes = [];
-            for (let delegation of delegate.delegations) {
-                let network = this.dataStore
+            for (const delegation of delegate.delegations) {
+                const network = this.dataStore
                     .getNetworks()
                     .find((network) => network.id == delegation.networkId)!;
                 this.ui.setLoadingDescription(

@@ -7,6 +7,7 @@ use sqlx::FromRow;
 pub struct Delegate {
     pub id: String,
     pub name: String,
+    pub short_name: String,
     pub url: Option<String>,
     pub twitter: Option<String>,
     pub delegations: Vec<Delegation>,
@@ -16,6 +17,7 @@ pub struct Delegate {
 pub struct DelegateRow {
     pub id: String,
     pub name: String,
+    pub short_name: String,
     pub url: Option<String>,
     pub twitter: Option<String>,
 }
@@ -25,6 +27,7 @@ impl DelegateRow {
         Delegate {
             id: self.id.clone(),
             name: self.name.clone(),
+            short_name: self.short_name.clone(),
             url: self.url.clone(),
             twitter: self.twitter,
             delegations,

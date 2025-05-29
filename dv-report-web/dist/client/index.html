@@ -21,66 +21,65 @@
         <script src="./bundle.js"></script>
         <div class="page-header-container">
             <div class="page-header">
-                <img class="submerge-logo" src="./img/submerge-logo.svg" alt="Submerge" />
+                <div class="logo-container-left">
+                    <span>developed by</span>
+                    <img class="helikon-logo" src="./img/helikon-logo.svg" alt="Helikon" />
+                </div>
                 <!--img class="helikon-logo-full" src="./img/helikon-logo-full.svg" alt="Helikon"-->
-                <img class="helikon-logo" src="./img/helikon-logo.svg" alt="Helikon" />
+                <div class="logo-container-right">
+                    <span>powered by</span>
+                    <img class="submerge-logo" src="./img/submerge-logo.svg" alt="Submerge" />
+                </div>
             </div>
             <hr />
         </div>
-        <div class="filter-container">
-            <span>Network:</span>
-            <select>
-                <option>All</option>
-                <option selected>Polkadot</option>
-                <option>Kusama</option>
-            </select>
-            <span>Track:</span>
-            <select>
-                <option>All</option>
-                <option selected>DV Tracks</option>
-                <option>Small Spender (31)</option>
-            </select>
-            <span>Status:</span>
-            <select>
-                <option>All</option>
-                <option selected>Ongoing</option>
-                <option>Confirmed</option>
-            </select>
+        <div class="filter-container" id="filter-container">
+            <div class="filter-item">
+                <span>Network:</span>
+                <select id="network-select"></select>
+            </div>
+            <div class="filter-item">
+                <span>Track:</span>
+                <select id="track-select"></select>
+            </div>
+            <div class="filter-item">
+                <span>Status:</span>
+                <select id="status-select"></select>
+            </div>
         </div>
         <div class="content-container">
             <div class="content" id="content">
                 <div class="header-1 medium">W3F Decentralized Voices Cohort IV Report</div>
                 <!-- activity -->
                 <div class="section">
-                    <div class="section-header">Activity</div>
+                    <div class="section-header">Vote Counts</div>
                     <div class="section-body">
-                        <svg id="chart" style="width: 100%"></svg>
+                        <svg id="vote-count-chart"></svg>
                     </div>
                 </div>
                 <!-- breakdown -->
                 <div class="section">
-                    <div class="section-header">Breakdown</div>
-                    <div class="section-body">Asd.</div>
+                    <div class="section-header">Policy Direction</div>
+                    <div class="section-body">
+                        <svg id="policy-direction-chart"></svg>
+                    </div>
                 </div>
                 <!-- policy -->
                 <div class="section">
-                    <div class="section-header">Policy</div>
-                    <div class="section-body">Asd.</div>
+                    <div class="section-header">Similarity Matrix</div>
+                    <div class="section-body">
+                        <svg id="similarity-matrix-chart"></svg>
+                    </div>
                 </div>
                 <!-- similarity -->
                 <div class="section">
-                    <div class="section-header">Similarity</div>
-                    <div class="section-body">Asd.</div>
+                    <div class="section-header">Time to First Vote</div>
+                    <div class="section-body"></div>
                 </div>
                 <!-- speed -->
                 <div class="section">
-                    <div class="section-header">Speed</div>
-                    <div class="section-body">Asd.</div>
-                </div>
-                <!-- consistency -->
-                <div class="section">
-                    <div class="section-header">Consistency</div>
-                    <div class="section-body">Asd.</div>
+                    <div class="section-header">Vote Changes</div>
+                    <div class="section-body"></div>
                 </div>
             </div>
             <div class="loading-container no-display" id="loading-container">
