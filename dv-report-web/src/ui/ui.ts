@@ -727,7 +727,7 @@ class UI {
         const uniqueNetworkCount = new Set(referenda.map((r) => r.networkId)).size;
         let delegateColumnHTML = '<div class="item delegate">&nbsp;</div>';
         for (const delegate of delegates) {
-            delegateColumnHTML += `<div class="item delegate bold">${delegate.name}</div>`;
+            delegateColumnHTML += `<div class="item delegate bold">${delegate.shortName}</div>`;
         }
         this.voteListDelegateColumn.innerHTML = delegateColumnHTML;
         let voteListHTML = '';

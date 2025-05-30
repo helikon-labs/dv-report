@@ -172,9 +172,18 @@ hr {
     animation: loading-animation-frames 0.5s infinite;
 }
 
+.loading-description-container {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .loading-description {
-    text-align: center;
     line-height: 18px;
+    text-align: center;
 }
 
 @keyframes loading-animation-frames {
@@ -247,7 +256,7 @@ hr {
 }
 
 .section {
-    margin-top: 16px;
+    margin-top: 36px;
 }
 
 .section-header {
@@ -269,6 +278,70 @@ hr {
 
     .page-header {
         width: 86%;
+    }
+
+    .header-1 {
+        font-size: 28px;
+        margin-top: 14px;
+        line-height: 42px;
+        letter-spacing: 0.2px;
+        line-height: 36px;
+    }
+
+    .section {
+        margin-top: 22px;
+    }
+
+    .section-header {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-header {
+        font-size: 8px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page-header .submerge-logo {
+        height: 16px;
+    }
+
+    .page-header .helikon-logo {
+        height: 12px;
+        margin-top: 2px;
+    }
+
+    .filter-container {
+        width: 86%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-item-title {
+        width: 64px;
+    }
+
+    .filter-item-select {
+        width: 160px;
+    }
+
+    .header-1 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .filter-item-title {
+        width: 48px;
+    }
+
+    .filter-item-select {
+        width: 120px;
     }
 }
 
@@ -303,7 +376,7 @@ rect:hover {
 .vote-list-container div.delegate {
     flex-direction: column;
     align-items: flex-start;
-    width: 160px;
+    width: 116px;
     padding: 0px 4px;
     background-color: #eeeeee;
 }

@@ -115,7 +115,8 @@ class App {
         ]);
 
         for (const network of this.dataStore.getNetworks()) {
-            this.ui.setLoadingDescription(`loading ${network.display} referenda`);
+            this.ui.setLoadingDescription(`loading<br>${network.display} referenda`);
+            console.log(network.display);
             await Promise.all([
                 this.dataStore.fetchNetworkReferenda(network.id),
                 sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),

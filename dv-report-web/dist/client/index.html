@@ -35,16 +35,16 @@
         </div>
         <div class="filter-container" id="filter-container">
             <div class="filter-item">
-                <span>Network:</span>
-                <select id="network-select"></select>
+                <div class="filter-item-title">Network:</div>
+                <select class="filter-item-select" id="network-select"></select>
             </div>
             <div class="filter-item">
-                <span>Track:</span>
-                <select id="track-select"></select>
+                <div class="filter-item-title">Track:</div>
+                <select class="filter-item-select" id="track-select"></select>
             </div>
             <div class="filter-item">
-                <span>Status:</span>
-                <select id="status-select"></select>
+                <div class="filter-item-title">Status:</div>
+                <select class="filter-item-select" id="status-select"></select>
             </div>
         </div>
         <div class="content-container">
@@ -79,10 +79,10 @@
                     </div>
                 </div>
                 <!-- vote changes -->
-                <div class="section">
+                <!--div class="section">
                     <div class="section-header">Vote Changes</div>
                     <div class="section-body"></div>
-                </div>
+                </div-->
                 <!-- vote list -->
                 <div class="section">
                     <div class="section-header">Votes</div>
@@ -98,7 +98,9 @@
             </div>
             <div class="loading-container no-display" id="loading-container">
                 <div class="loading-animation"></div>
-                <div class="loading-description" id="loading-description"></div>
+                <div class="loading-description-container">
+                    <span class="loading-description" id="loading-description"></span>
+                </div>
             </div>
         </div>
     </body>
