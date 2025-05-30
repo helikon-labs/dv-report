@@ -86,7 +86,7 @@ class UI {
         };
 
         let trackSelectHTML = '<option value="all">All</option>';
-        trackSelectHTML += '<option value="dv" selected>DV</option>';
+        trackSelectHTML += '<option value="dv" selected>DV Tracks</option>';
         for (const track of tracks) {
             trackSelectHTML += `<option value="${track.id}">${track.name}</option>`;
         }
@@ -750,8 +750,8 @@ class UI {
                     } else {
                         voteIndicator = `<div class="vote-indicator nay"></div>`;
                     }
-                    let extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
-                    let extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
+                    const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
+                    const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
                     referendumColumnHTML += `<div class="item">${voteIndicator}<a href="${extrinsicURL}" target="_blank">${extrinsicDisplay}</a></div>`;
                 } else {
                     referendumColumnHTML += `<div class="item">-</div>`;

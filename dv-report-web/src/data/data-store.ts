@@ -351,7 +351,7 @@ class DataStore {
     }
 
     getFilteredReferenda(): Referendum[] {
-        let referenda: Referendum[] = [];
+        const referenda: Referendum[] = [];
         for (const referendum of this.referenda) {
             if (!this.selectedNetworkIds.has(referendum.networkId)) {
                 continue;
@@ -369,7 +369,7 @@ class DataStore {
     }
 
     getAllDelegatesLastVoteMaps(): Map<string, Map<string, VoteCall>> {
-        let map: Map<string, Map<string, VoteCall>> = new Map<string, Map<string, VoteCall>>();
+        const map: Map<string, Map<string, VoteCall>> = new Map<string, Map<string, VoteCall>>();
         for (const delegate of this.delegates) {
             map.set(delegate.id, this.getDelegateLastVoteMap(delegate));
         }
