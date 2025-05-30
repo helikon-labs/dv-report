@@ -274,6 +274,7 @@ hr {
 
     .content {
         width: 86%;
+        padding-bottom: 96px;
     }
 
     .page-header {
@@ -305,6 +306,10 @@ hr {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .content {
+        padding-bottom: 128px;
     }
 
     .page-header .submerge-logo {
