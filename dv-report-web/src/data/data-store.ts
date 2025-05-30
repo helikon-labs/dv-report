@@ -4,6 +4,7 @@ import {
     Delegate,
     DelegateSimilarity,
     DelegateVoteCount,
+    getVoteValue,
     Network,
     Referendum,
     ReferendumStatus,
@@ -112,6 +113,7 @@ class DataStore {
                 headers: {},
             })
         ).json();
+        this.delegates.sort((d1, d2) => d1.name.localeCompare(d2.name));
     }
 
     getDelegates(): Delegate[] {
@@ -163,7 +165,7 @@ class DataStore {
         statuses.forEach((s) => this.selectedStatusIds.add(s.id));
     }
 
-    private getDelegateVoteMap(delegate: Delegate): Map<string, VoteCall> {
+    private getDelegateFirstVoteMap(delegate: Delegate): Map<string, VoteCall> {
         const voteMap: Map<string, VoteCall> = new Map();
         for (const vote of delegate.votes) {
             if (!this.selectedNetworkIds.has(vote.networkId)) {
@@ -175,10 +177,48 @@ class DataStore {
             const referendum = this.referenda.find(
                 (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
             )!;
-            if (!this.selectedStatusIds.has(referendum.statusId)) {
+            if (!this.selectedStatusIds.has(referendum.status.id)) {
                 continue;
             }
-            if (!this.selectedTrackIds.has(referendum.trackId)) {
+            if (!this.selectedTrackIds.has(referendum.track.id)) {
+                continue;
+            }
+            if (vote.isMultisig && !vote.isMultisigExecuted) {
+                continue;
+            }
+            const key = `${vote.networkId}_${vote.referendumIndex}`;
+            const existingVote = voteMap.get(key);
+            if (existingVote) {
+                if (vote.block.number == existingVote.block.number) {
+                    if (vote.extrinsicIndex < existingVote.extrinsicIndex) {
+                        voteMap.set(key, vote);
+                    }
+                } else if (vote.block.number < existingVote.block.number) {
+                    voteMap.set(key, vote);
+                }
+            } else {
+                voteMap.set(key, vote);
+            }
+        }
+        return voteMap;
+    }
+
+    private getDelegateLastVoteMap(delegate: Delegate): Map<string, VoteCall> {
+        const voteMap: Map<string, VoteCall> = new Map();
+        for (const vote of delegate.votes) {
+            if (!this.selectedNetworkIds.has(vote.networkId)) {
+                continue;
+            }
+            if (!vote.isSuccessful) {
+                continue;
+            }
+            const referendum = this.referenda.find(
+                (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
+            )!;
+            if (!this.selectedStatusIds.has(referendum.status.id)) {
+                continue;
+            }
+            if (!this.selectedTrackIds.has(referendum.track.id)) {
                 continue;
             }
             if (vote.isMultisig && !vote.isMultisigExecuted) {
@@ -201,25 +241,10 @@ class DataStore {
         return voteMap;
     }
 
-    private getVoteValue(vote: VoteCall): number {
-        switch (vote.voteType) {
-            case 'standard': {
-                if (vote.isAye!) {
-                    return 1;
-                } else {
-                    return -1;
-                }
-            }
-            default: {
-                return 0;
-            }
-        }
-    }
-
     getDelegateVoteCounts(): DelegateVoteCount[] {
         const delegateVoteCounts: DelegateVoteCount[] = [];
         for (const delegate of this.delegates) {
-            const delegateVoteMap = this.getDelegateVoteMap(delegate);
+            const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
             const delegateVoteCount: DelegateVoteCount = {
                 delegateId: delegate.id,
                 delegateName: delegate.name,
@@ -228,7 +253,7 @@ class DataStore {
                 abstainCount: 0,
             };
             for (const vote of delegateVoteMap.values()) {
-                const voteValue = this.getVoteValue(vote);
+                const voteValue = getVoteValue(vote);
                 if (voteValue == 1) {
                     delegateVoteCount.ayeCount++;
                 } else if (voteValue == -1) {
@@ -255,9 +280,13 @@ class DataStore {
     getDelegateSimilarities(): DelegateSimilarity[] {
         const voteMap = new Map<string, Map<string, number>>();
         for (const delegate of this.delegates) {
-            const delegateVoteMap = this.getDelegateVoteMap(delegate);
+            const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
+            if (delegateVoteMap.size == 0) {
+                voteMap.set(delegate.id, new Map());
+                continue;
+            }
             for (const vote of delegateVoteMap.values()) {
-                const voteValue = this.getVoteValue(vote);
+                const voteValue = getVoteValue(vote);
                 if (!voteMap.has(delegate.id)) {
                     voteMap.set(delegate.id, new Map());
                 }
@@ -283,12 +312,14 @@ class DataStore {
                     if (a === 0 || b === 0) continue; // skip abstains
                     shared.push(ref);
                 }
-                if (shared.length === 0) continue;
+                if (shared.length === 0) {
+                    similarities.push({ aId: aId, bId: bId, value: 0 });
+                    continue;
+                }
                 // mean agreement: average of (a.vote === b.vote)
                 const scoreSum = shared.reduce((sum, ref) => {
                     const a = aVotes.get(ref)!;
                     const b = bVotes.get(ref)!;
-                    console.log(ref, aId, a, bId, b);
                     return sum + (a === b ? 1 : -1);
                 }, 0);
                 const similarity = scoreSum / shared.length;
@@ -296,6 +327,53 @@ class DataStore {
             }
         }
         return similarities;
+    }
+
+    getResponseTimes(): Map<Delegate, number> {
+        const responseTimeMap = new Map<Delegate, number>();
+        for (const delegate of this.delegates) {
+            const delegateVoteMap = this.getDelegateFirstVoteMap(delegate);
+            let responseTimeSum = 0;
+            for (const vote of delegateVoteMap.values()) {
+                const referendum = this.referenda.find(
+                    (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
+                )!;
+                responseTimeSum += vote.block.number - referendum.submissionBlock.number;
+            }
+            if (delegateVoteMap.size == 0) {
+                responseTimeMap.set(delegate, 0);
+            } else {
+                const averageResponseTime = responseTimeSum / delegateVoteMap.size;
+                responseTimeMap.set(delegate, Math.floor(averageResponseTime));
+            }
+        }
+        return responseTimeMap;
+    }
+
+    getFilteredReferenda(): Referendum[] {
+        let referenda: Referendum[] = [];
+        for (const referendum of this.referenda) {
+            if (!this.selectedNetworkIds.has(referendum.networkId)) {
+                continue;
+            }
+            if (!this.selectedStatusIds.has(referendum.status.id)) {
+                continue;
+            }
+            if (!this.selectedTrackIds.has(referendum.track.id)) {
+                continue;
+            }
+            referenda.push(referendum);
+        }
+        referenda.sort((r1, r2) => r1.index - r2.index);
+        return referenda;
+    }
+
+    getAllDelegatesLastVoteMaps(): Map<string, Map<string, VoteCall>> {
+        let map: Map<string, Map<string, VoteCall>> = new Map<string, Map<string, VoteCall>>();
+        for (const delegate of this.delegates) {
+            map.set(delegate.id, this.getDelegateLastVoteMap(delegate));
+        }
+        return map;
     }
 }
 

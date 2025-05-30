@@ -42,6 +42,18 @@ impl ReferendumStatus {
     pub fn all() -> Vec<Self> {
         Self::iter().collect()
     }
+
+    pub fn name(&self) -> String {
+        match self {
+            ReferendumStatus::Ongoing => "Ongoing",
+            ReferendumStatus::Confirmed => "Confirmed",
+            ReferendumStatus::Rejected => "Rejected",
+            ReferendumStatus::Cancelled => "Cancelled",
+            ReferendumStatus::TimedOut => "Timed Out",
+            ReferendumStatus::Killed => "Killed",
+        }
+        .to_string()
+    }
 }
 
 #[derive(Clone, Debug, FromRow, Serialize)]
@@ -53,7 +65,6 @@ pub struct ReferendumStatusRow {
 
 #[derive(Clone, Debug)]
 pub struct Referendum {
-    pub id: u32,
     pub network_id: u32,
     pub index: u32,
     pub track: Track,

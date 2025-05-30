@@ -12,6 +12,7 @@ use std::time::Instant;
 
 mod metrics;
 mod service;
+mod types;
 
 lazy_static! {
     static ref CONFIG: Config = Config::default();

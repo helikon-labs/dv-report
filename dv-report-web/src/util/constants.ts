@@ -8,6 +8,10 @@ export abstract class Constants {
     static readonly CONTENT_FADE_ANIM_DURATION_MS = 300;
     static readonly ARTIFICIAL_DELAY_MS = 1500;
     static readonly LOADING_STATE_TRANSITION_MIN_MS = 0;
+    static readonly CHART_TRANSITION_TIME_MS = 750;
+    static readonly NAY_COLOR = '#f44336';
+    static readonly ABSTAIN_COLOR = '#aaaaaa';
+    static readonly AYE_COLOR = '#4caf50';
     // format
     static readonly BALANCE_FORMAT_DECIMALS = 4;
     static readonly DECIMAL_SEPARATOR = '.';
@@ -16,5 +20,5 @@ export abstract class Constants {
     // networks
     static readonly POLKADOT_ID = 1;
     static readonly KUSAMA_ID = 2;
-    //
+    static readonly BLOCK_TIME_MS = 6000;
 }

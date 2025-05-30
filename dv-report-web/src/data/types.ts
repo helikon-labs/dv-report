@@ -67,9 +67,9 @@ interface Delegate {
 interface Referendum {
     networkId: number;
     index: number;
-    trackId: number;
-    submissionBlockHash: string;
-    statusId: number;
+    track: Track;
+    submissionBlock: Block;
+    status: ReferendumStatus;
 }
 
 interface VoteCall {
@@ -95,6 +95,21 @@ interface VoteCall {
     abstain?: string;
 }
 
+function getVoteValue(vote: VoteCall): number {
+    switch (vote.voteType) {
+        case 'standard': {
+            if (vote.isAye!) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+        default: {
+            return 0;
+        }
+    }
+}
+
 type DelegateVoteCount = {
     delegateId: string;
     delegateName: string;
@@ -118,6 +133,7 @@ export {
     ReferendumStatus,
     Track,
     VoteCall,
+    getVoteValue,
     DelegateVoteCount,
     DelegateSimilarity,
 };

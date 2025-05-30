@@ -103,7 +103,6 @@ impl Repository {
                             .save_block(network.id, &submission_block, &mut tx)
                             .await?;
                         let referendum = Referendum {
-                            id: 0,
                             network_id: network.id,
                             index: referendum_index,
                             track: Track::from_id(status.track),

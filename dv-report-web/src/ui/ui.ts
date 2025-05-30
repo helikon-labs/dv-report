@@ -4,10 +4,14 @@ import {
     Delegate,
     DelegateSimilarity,
     DelegateVoteCount,
+    getVoteValue,
     Network,
+    Referendum,
     ReferendumStatus,
     Track,
+    VoteCall,
 } from '../data/types';
+import { Constants } from '../util/constants';
 
 interface UIDelegate {
     onNetworkSelectChanged(value: string): void;
@@ -26,14 +30,16 @@ class UI {
     private readonly trackSelect: HTMLSelectElement;
     private readonly statusSelect: HTMLSelectElement;
 
+    private readonly voteListDelegateColumn: HTMLDivElement;
+    private readonly voteList: HTMLDivElement;
+
     private delegate: UIDelegate;
     private voteCountsMaxX = 0;
     private policyMaxX = 0;
+    private responseTimeMaxX = 0;
 
-    private readonly nayColor = '#f44336';
-    private readonly abstainColor = '#aaaaaa';
-    private readonly ayeColor = '#4caf50';
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
+    private responseTimeGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
 
     constructor(delegate: UIDelegate) {
         this.delegate = delegate;
@@ -46,6 +52,11 @@ class UI {
         this.networkSelect = <HTMLSelectElement>document.getElementById('network-select');
         this.trackSelect = <HTMLSelectElement>document.getElementById('track-select');
         this.statusSelect = <HTMLSelectElement>document.getElementById('status-select');
+
+        this.voteListDelegateColumn = <HTMLDivElement>(
+            document.getElementById('vote-list-delegate-column')
+        );
+        this.voteList = <HTMLDivElement>document.getElementById('vote-list');
     }
 
     lock() {
@@ -105,7 +116,7 @@ class UI {
         const color = d3
             .scaleOrdinal<string>()
             .domain(stackKeys)
-            .range([this.nayColor, this.abstainColor, this.ayeColor]);
+            .range([Constants.NAY_COLOR, Constants.ABSTAIN_COLOR, Constants.AYE_COLOR]);
 
         const width = 800;
         const height = 320;
@@ -159,7 +170,7 @@ class UI {
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('x', (d) => x(d[0]))
                         .attr('width', (d) => x(d[1]) - x(d[0]))
                         .attr('y', (d) => y(d.data.delegateName)!)
@@ -185,7 +196,9 @@ class UI {
                         .attr('dy', '0.35em')
                         .style('fill', 'white')
                         .style('font-size', '11px')
-                        .attr('x', (d) => x(d[0]) + (x(d[1]) - x(d[0])) / 2)
+                        .attr('x', (d) => {
+                            return x(d[0]) + (x(d[1]) - x(d[0])) / 2;
+                        })
                         .attr('y', (d) => y(d.data.delegateName)! + y.bandwidth() / 2)
                         .text((d) => {
                             const w = x(d[1]) - x(d[0]);
@@ -195,8 +208,10 @@ class UI {
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
-                        .attr('x', (d) => x(d[0]) + (x(d[1]) - x(d[0])) / 2)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', (d) => {
+                            return x(d[0]) + (x(d[1]) - x(d[0])) / 2;
+                        })
                         .attr('y', (d) => y(d.data.delegateName)! + y.bandwidth() / 2)
                         .text((d) => {
                             const w = x(d[1]) - x(d[0]);
@@ -223,13 +238,12 @@ class UI {
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('x', (d) => x(d.total) + 4)
                         .attr('y', (d) => y(d.delegateName)! + y.bandwidth() / 2)
                         .text((d) => d.total),
                 (exit) => exit.remove(),
             );
-
         // axes
         svg.selectAll('.x-axis')
             .data([null])
@@ -243,7 +257,7 @@ class UI {
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
                         // @ts-ignore
                         .call(d3.axisBottom(x)),
             );
@@ -259,7 +273,7 @@ class UI {
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
                         // @ts-ignore
                         .call(d3.axisLeft(y)),
             );
@@ -309,7 +323,11 @@ class UI {
                     .attr('class', 'x-axis')
                     .attr('transform', `translate(0,${height - margin.bottom})`)
                     .call(d3.axisBottom(x).ticks(5)),
-            (update) => update.transition().duration(750).call(d3.axisBottom(x).ticks(5)),
+            (update) =>
+                update
+                    .transition()
+                    .duration(Constants.CHART_TRANSITION_TIME_MS)
+                    .call(d3.axisBottom(x).ticks(5)),
         );
 
         const yAxis = svg.selectAll<SVGGElement, unknown>('.y-axis').data([null]);
@@ -321,7 +339,11 @@ class UI {
                     .attr('class', 'y-axis')
                     .attr('transform', `translate(${margin.left},0)`)
                     .call(d3.axisLeft(y).tickSize(0)),
-            (update) => update.transition().duration(750).call(d3.axisLeft(y).tickSize(0)),
+            (update) =>
+                update
+                    .transition()
+                    .duration(Constants.CHART_TRANSITION_TIME_MS)
+                    .call(d3.axisLeft(y).tickSize(0)),
         );
 
         // bars
@@ -343,26 +365,26 @@ class UI {
                     .attr('height', y.bandwidth())
                     .attr('fill', (d) =>
                         d.score > 0
-                            ? this.ayeColor
+                            ? Constants.AYE_COLOR
                             : d.score < 0
-                              ? this.nayColor
-                              : this.abstainColor,
+                              ? Constants.NAY_COLOR
+                              : Constants.ABSTAIN_COLOR,
                     ),
 
             (update) =>
                 update
                     .transition()
-                    .duration(750)
+                    .duration(Constants.CHART_TRANSITION_TIME_MS)
                     .attr('x', (d) => (d.score === 0 ? x(0) - 1 : x(Math.min(0, d.score))))
                     .attr('width', (d) => (d.score === 0 ? 2 : Math.abs(x(d.score) - x(0))))
                     .attr('y', (d) => y(d.delegateName)!)
                     .attr('height', y.bandwidth())
                     .attr('fill', (d) =>
                         d.score > 0
-                            ? this.ayeColor
+                            ? Constants.AYE_COLOR
                             : d.score < 0
-                              ? this.nayColor
-                              : this.abstainColor,
+                              ? Constants.NAY_COLOR
+                              : Constants.ABSTAIN_COLOR,
                     ),
 
             (exit) => exit.remove(),
@@ -397,7 +419,7 @@ class UI {
         // update selection (with transition)
         labels
             .transition()
-            .duration(750)
+            .duration(Constants.CHART_TRANSITION_TIME_MS)
             .attr('x', (d) => {
                 const barStart = x(Math.min(0, d.score));
                 const barEnd = x(Math.max(0, d.score));
@@ -428,7 +450,7 @@ class UI {
         const color = d3
             .scaleLinear<string>()
             .domain([-1, 0, 1])
-            .range([this.nayColor, this.abstainColor, this.ayeColor]);
+            .range([Constants.NAY_COLOR, Constants.ABSTAIN_COLOR, Constants.AYE_COLOR]);
 
         const radius = d3
             .scaleSqrt()
@@ -509,33 +531,235 @@ class UI {
                 const similarity = similarities.find(
                     (s) => (s.aId == a.id && s.bId == b.id) || (s.aId == b.id && s.bId == a.id),
                 )!;
-                const sim = similarity.value;
-                //pairs.push({ a, b, value: sim, row: i, col: j });
-                pairs.push({ a, b, value: sim, row: i, col: delegates.length - 1 - j });
+                pairs.push({ a, b, value: similarity.value, row: i, col: j });
             }
         }
 
-        // Animate similarity circles
+        // similarity circles
         this.similarityGroup!.selectAll<SVGCircleElement, (typeof pairs)[0]>('circle')
             .data(pairs, (d) => `${d.a.id}-${d.b.id}`)
             .join(
                 (enter) =>
                     enter
                         .append('circle')
-                        .attr('cx', (d) => d.col * cellWidth + cellWidth / 2)
+                        .attr(
+                            'cx',
+                            (d) => (delegates.length - 1 - d.col) * cellWidth + cellWidth / 2,
+                        )
                         .attr('cy', (d) => d.row * cellHeight + cellHeight / 2)
                         .attr('r', (d) => radius(Math.abs(d.value)))
                         .attr('fill', (d) => color(d.value)),
                 (update) =>
                     update
                         .transition()
-                        .duration(750)
-                        .attr('cx', (d) => d.col * cellWidth + cellWidth / 2)
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr(
+                            'cx',
+                            (d) => (delegates.length - 1 - d.col) * cellWidth + cellWidth / 2,
+                        )
                         .attr('cy', (d) => d.row * cellHeight + cellHeight / 2)
                         .attr('r', (d) => radius(Math.abs(d.value)))
                         .attr('fill', (d) => color(d.value)),
                 (exit) => exit.remove(),
             );
+    }
+
+    private blocksToTime(blocks: number): string {
+        const totalSeconds = blocks * 6;
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        const parts = [];
+        if (days > 0) parts.push(`${days}d`);
+        if (hours > 0) parts.push(`${hours}h`);
+        if (minutes > 0) parts.push(`${minutes}m`);
+        if (parts.length === 0 || (days === 0 && hours === 0)) {
+            parts.push(`${seconds}s`);
+        }
+
+        return parts.join(' ');
+    }
+
+    displayFirstVoteTimeChart(responseTimeMap: Map<Delegate, number>) {
+        const delegatesWithTimes = Array.from(responseTimeMap.entries())
+            .map(([delegate, blocks]) => ({ delegate, blocks }))
+            .sort((a, b) => a.blocks - b.blocks); // Fastest first
+
+        if (delegatesWithTimes.length === 0) {
+            console.warn('No data to display in response time chart.');
+            return;
+        }
+
+        const margin = { top: 12, right: 30, bottom: 32, left: 100 };
+        const barHeight = 38;
+        const width = 700;
+        const height = delegatesWithTimes.length * barHeight + margin.top + margin.bottom;
+
+        const svg = d3
+            .select<SVGSVGElement, unknown>('#first-vote-time-chart')
+            .attr('viewBox', `0 0 ${width} ${height}`);
+
+        const computedMaxTime = d3.max(delegatesWithTimes, (d) => d.blocks)! + 10 * 60 * 12;
+        if (this.responseTimeMaxX < computedMaxTime) {
+            this.responseTimeMaxX = computedMaxTime;
+        }
+
+        const x = d3
+            .scaleLinear()
+            .domain([0, this.responseTimeMaxX])
+            .range([0, width - margin.left - margin.right]);
+
+        // x-axis
+        if (svg.select('.x-axis').empty()) {
+            const xAxisGroup = svg
+                .append('g')
+                .attr('class', 'x-axis')
+                .attr('transform', `translate(${margin.left},${height - margin.bottom})`)
+                .call(d3.axisBottom(x).ticks(5));
+
+            xAxisGroup
+                .append('text')
+                .attr('class', 'x-axis-label')
+                .attr('x', (x.range()[0] + x.range()[1]) / 2)
+                .attr('y', 28)
+                .attr('fill', 'black')
+                .attr('text-anchor', 'end')
+                .style('font-size', '8px')
+                .style('font-family', 'Inter')
+                .text('blocks');
+        } else {
+            svg.select<SVGGElement>('.x-axis')
+                .transition()
+                .duration(Constants.CHART_TRANSITION_TIME_MS)
+                .call(d3.axisBottom(x).ticks(5));
+        }
+
+        // group container
+        if (!this.responseTimeGroup) {
+            this.responseTimeGroup = svg
+                .append('g')
+                .attr('class', 'response-time-group')
+                .attr('transform', `translate(${margin.left}, ${margin.top})`);
+        }
+
+        const group = this.responseTimeGroup;
+
+        // bars
+        group
+            .selectAll<SVGRectElement, (typeof delegatesWithTimes)[0]>('rect')
+            .data(delegatesWithTimes, (d) => d.delegate.id)
+            .join(
+                (enter) =>
+                    enter
+                        .append('rect')
+                        .attr('x', 0)
+                        .attr('y', (_, i) => i * barHeight)
+                        .attr('width', (d) => x(d.blocks ?? 0))
+                        .attr('height', barHeight - 6)
+                        .attr('fill', '#3b82f6'),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('width', (d) => x(d.blocks ?? 0))
+                        .attr('y', (_, i) => i * barHeight),
+            );
+
+        // bar labels (value inside bars)
+        group
+            .selectAll<SVGTextElement, (typeof delegatesWithTimes)[0]>('text.value')
+            .data(delegatesWithTimes, (d) => d.delegate.id)
+            .join(
+                (enter) =>
+                    enter
+                        .append('text')
+                        .attr('class', 'value')
+                        .attr('x', (d) => x(d.blocks ?? 0) / 2)
+                        .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
+                        .attr('dy', '0.35em')
+                        .attr('text-anchor', 'middle')
+                        .style('fill', 'white')
+                        .style('font-size', '8px')
+                        .style('font-family', 'Inter')
+                        .text((d) => this.blocksToTime(d.blocks ?? 0)),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', (d) => x(d.blocks ?? 0) / 2)
+                        .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
+                        .text((d) => this.blocksToTime(d.blocks ?? 0)),
+            );
+
+        // left-side labels
+        group
+            .selectAll<SVGTextElement, (typeof delegatesWithTimes)[0]>('text.label')
+            .data(delegatesWithTimes, (d) => d.delegate.id)
+            .join(
+                (enter) =>
+                    enter
+                        .append('text')
+                        .attr('class', 'label')
+                        .attr('x', -10)
+                        .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
+                        .attr('dy', '0.35em')
+                        .attr('text-anchor', 'end')
+                        .style('font-size', '8px')
+                        .style('font-family', 'Inter')
+                        .text((d) => d.delegate.name),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
+                        .text((d) => d.delegate.name),
+            );
+    }
+
+    displayVoteList(
+        networks: Network[],
+        delegates: Delegate[],
+        referenda: Referendum[],
+        lastVoteMaps: Map<string, Map<string, VoteCall>>,
+    ) {
+        const uniqueNetworkCount = new Set(referenda.map((r) => r.networkId)).size;
+        let delegateColumnHTML = '<div class="item delegate">&nbsp;</div>';
+        for (const delegate of delegates) {
+            delegateColumnHTML += `<div class="item delegate bold">${delegate.name}</div>`;
+        }
+        this.voteListDelegateColumn.innerHTML = delegateColumnHTML;
+        let voteListHTML = '';
+        for (const referendum of referenda) {
+            const network = networks.find((n) => n.id == referendum.networkId)!;
+            const referendumURL = `https://${network.chain}.subsquare.io/referenda/${referendum.index}`;
+            const referendumIndexDisplay = `${uniqueNetworkCount > 1 ? network.tokenTicker + '&nbsp;' : ''}${referendum.index}`;
+            let referendumColumnHTML = `<div class="item bold referendum-index"><a href="${referendumURL}" target="_blank">${referendumIndexDisplay}</a></div>`;
+            for (const delegate of delegates) {
+                const voteMap = lastVoteMaps.get(delegate.id)!;
+                const key = `${referendum.networkId}_${referendum.index}`;
+                if (voteMap.has(key)) {
+                    const voteCall = voteMap.get(key)!;
+                    const voteValue = getVoteValue(voteCall);
+                    let voteIndicator;
+                    if (voteValue > 0) {
+                        voteIndicator = `<div class="vote-indicator aye"></div>`;
+                    } else if (voteValue == 0) {
+                        voteIndicator = `<div class="vote-indicator abstain"></div>`;
+                    } else {
+                        voteIndicator = `<div class="vote-indicator nay"></div>`;
+                    }
+                    let extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
+                    let extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
+                    referendumColumnHTML += `<div class="item">${voteIndicator}<a href="${extrinsicURL}" target="_blank">${extrinsicDisplay}</a></div>`;
+                } else {
+                    referendumColumnHTML += `<div class="item">-</div>`;
+                }
+            }
+            voteListHTML += `<div class="referendum-column">${referendumColumnHTML}</div>`;
+        }
+        this.voteList.innerHTML = voteListHTML;
     }
 }
 

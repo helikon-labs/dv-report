@@ -57,29 +57,43 @@
                         <svg id="vote-count-chart"></svg>
                     </div>
                 </div>
-                <!-- breakdown -->
+                <!-- policy -->
                 <div class="section">
                     <div class="section-header">Policy Direction</div>
                     <div class="section-body">
                         <svg id="policy-direction-chart"></svg>
                     </div>
                 </div>
-                <!-- policy -->
+                <!-- similarity -->
                 <div class="section">
                     <div class="section-header">Similarity Matrix</div>
                     <div class="section-body">
                         <svg id="similarity-matrix-chart"></svg>
                     </div>
                 </div>
-                <!-- similarity -->
+                <!-- response time -->
                 <div class="section">
-                    <div class="section-header">Time to First Vote</div>
-                    <div class="section-body"></div>
+                    <div class="section-header">Average First Vote Time</div>
+                    <div class="section-body">
+                        <svg id="first-vote-time-chart"></svg>
+                    </div>
                 </div>
-                <!-- speed -->
+                <!-- vote changes -->
                 <div class="section">
                     <div class="section-header">Vote Changes</div>
                     <div class="section-body"></div>
+                </div>
+                <!-- vote list -->
+                <div class="section">
+                    <div class="section-header">Votes</div>
+                    <div class="section-body">
+                        <div id="vote-list-container" class="vote-list-container">
+                            <div id="vote-list-delegate-column" class="delegate-column"></div>
+                            <div class="vote-list-scroll-container">
+                                <div id="vote-list" class="vote-list"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="loading-container no-display" id="loading-container">

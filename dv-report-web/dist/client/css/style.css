@@ -88,6 +88,18 @@ hr {
     margin: 0px;
 }
 
+.aye {
+    background-color: #f44336;
+}
+
+.abstain {
+    background-color: #aaaaaa;
+}
+
+.nay {
+    background-color: #4caf50;
+}
+
 /** content**/
 .content-container {
     width: 100%;
@@ -264,4 +276,70 @@ rect:hover {
     opacity: 0.8;
     stroke: #444;
     stroke-width: 0px;
+}
+
+.vote-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    font-size: 12px;
+}
+
+.vote-list-container div.item {
+    display: flex;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    justify-content: center;
+}
+
+.vote-list-container .delegate-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.vote-list-container div.delegate {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 160px;
+    padding: 0px 4px;
+    background-color: #eeeeee;
+}
+
+.vote-list-container .vote-list-scroll-container {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.vote-list-container .vote-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.vote-list-container .vote-list div.referendum-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.vote-list-container .vote-list div.referendum-column div {
+    width: 108px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vote-list-container .vote-list div.referendum-column .referendum-index {
+    background-color: #eeeeee;
+}
+
+.vote-list-container .vote-list div.referendum-column div.vote-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 6px;
 }

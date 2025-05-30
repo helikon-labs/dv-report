@@ -71,9 +71,13 @@ class App {
         const voteCountData = this.dataStore.getDelegateVoteCounts();
         this.ui.displayVoteCountChart(voteCountData);
         this.ui.displayPolicyDirectionChart(voteCountData);
+        const delegates = this.dataStore.getDelegates();
         const similarities = this.dataStore.getDelegateSimilarities();
-        console.log(similarities);
-        this.ui.displaySimilarityMatrixChart(this.dataStore.getDelegates(), similarities);
+        this.ui.displaySimilarityMatrixChart(delegates, similarities);
+        this.ui.displayFirstVoteTimeChart(this.dataStore.getResponseTimes());
+        const referenda = this.dataStore.getFilteredReferenda();
+        const lastVotesMaps = this.dataStore.getAllDelegatesLastVoteMaps();
+        this.ui.displayVoteList(this.dataStore.getNetworks(), delegates, referenda, lastVotesMaps);
     }
 
     private async initData() {

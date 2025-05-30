@@ -1,8 +1,11 @@
+use crate::types::ReferendumDTO;
 use crate::{ResultResponse, ServiceState};
 use actix_web::{get, web, HttpResponse};
 use dv_report_types::err::ServiceError;
+use dv_report_types::governance::referendum::{ReferendumStatus, ReferendumStatusRow};
 use dv_report_types::substrate::account_id::AccountId;
 use dv_report_types::substrate::block::Block;
+use dv_report_types::substrate::track::{Track, TrackRow};
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
 
@@ -186,12 +189,34 @@ pub(crate) async fn get_network_referenda(
     path: web::Path<NetworkPathParameter>,
     state: web::Data<ServiceState>,
 ) -> ResultResponse {
-    Ok(HttpResponse::Ok().json(
-        state
+    let rows = state
+        .postgres
+        .get_network_referenda(path.network_id)
+        .await?;
+    let mut referenda = Vec::new();
+    for row in rows.iter() {
+        let submission_block = state
             .postgres
-            .get_network_referenda(path.network_id)
-            .await?,
-    ))
+            .get_block(row.network_id as u32, row.submission_block_hash.as_str())
+            .await?;
+        let track = Track::from_id(row.track_id as u16);
+        let status = ReferendumStatus::from_id(row.status_id as u32);
+        referenda.push(ReferendumDTO {
+            network_id: row.network_id as u32,
+            index: row.index as u32,
+            track: TrackRow {
+                network_id: row.network_id,
+                id: track.id() as i32,
+                name: track.name().to_string(),
+            },
+            submission_block,
+            status: ReferendumStatusRow {
+                id: status.id() as i32,
+                status: status.name(),
+            },
+        });
+    }
+    Ok(HttpResponse::Ok().json(referenda))
 }
 
 #[derive(Deserialize)]

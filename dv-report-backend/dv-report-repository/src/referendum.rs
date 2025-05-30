@@ -34,7 +34,6 @@ impl Repository {
                     .get_block(submission_block_hash.as_str())
                     .await?;
                 Referendum {
-                    id: 0,
                     network_id,
                     index: referendum_index,
                     track: Track::from_id(status.track),
