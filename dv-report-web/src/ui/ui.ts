@@ -768,7 +768,7 @@ class UI {
                         .attr('y', (d) => y(d.delegateShortName)!)
                         .attr('width', (d) => x(d.missedCount) - x(0))
                         .attr('height', y.bandwidth())
-                        .attr('fill', '#6b7280'),
+                        .attr('fill', '#aaaaaa'),
                 (update) =>
                     update
                         .transition()
@@ -890,7 +890,7 @@ class UI {
                         .attr('y', (d) => y(d.delegateShortName)!)
                         .attr('width', (d) => x(d.changedCount) - x(0))
                         .attr('height', y.bandwidth())
-                        .attr('fill', '#6b7280'),
+                        .attr('fill', '#aaaaaa'),
                 (update) =>
                     update
                         .transition()
