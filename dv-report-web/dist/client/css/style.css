@@ -89,7 +89,7 @@ hr {
 }
 
 .aye {
-    background-color: #f44336;
+    background-color: #4caf50;
 }
 
 .abstain {
@@ -97,7 +97,13 @@ hr {
 }
 
 .nay {
-    background-color: #4caf50;
+    background-color: #f44336;
+}
+
+.vote-legend {
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 /** content**/
@@ -143,6 +149,15 @@ hr {
     flex-direction: column;
     gap: 8px;
     padding-bottom: 64px;
+}
+
+p {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: justify;
 }
 
 /* loading */
@@ -256,11 +271,12 @@ hr {
 }
 
 .section {
-    margin-top: 36px;
+    margin-top: 28px;
 }
 
 .section-header {
     font-size: 24px;
+    font-weight: 500;
 }
 
 .section-body {
@@ -295,6 +311,11 @@ hr {
 
     .section-header {
         font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 20px;
     }
 }
 
@@ -337,6 +358,11 @@ hr {
 
     .header-1 {
         font-size: 22px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 20px;
     }
 }
 

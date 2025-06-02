@@ -248,6 +248,7 @@ class DataStore {
             const delegateVoteCount: DelegateVoteCount = {
                 delegateId: delegate.id,
                 delegateName: delegate.name,
+                delegateShortName: delegate.shortName,
                 ayeCount: 0,
                 nayCount: 0,
                 abstainCount: 0,

@@ -113,6 +113,7 @@ function getVoteValue(vote: VoteCall): number {
 type DelegateVoteCount = {
     delegateId: string;
     delegateName: string;
+    delegateShortName: string;
     nayCount: number;
     abstainCount: number;
     ayeCount: number;

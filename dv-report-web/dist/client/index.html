@@ -14,6 +14,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <link rel="icon" type="image/x-icon" href="./img/sigma_white.png" />
         <link rel="stylesheet" href="./css/style.css" />
         <script src="https://kit.fontawesome.com/ebf2cd1147.js" crossorigin="anonymous"></script>
         <script defer data-domain="dv.report" src="https://plausible.io/js/script.js"></script>
@@ -51,6 +52,23 @@
         <div class="content-container">
             <div class="content" id="content">
                 <div class="header-1 medium">W3F Decentralized Voices Cohort IV Report</div>
+                <p>
+                    The fourth cohort of the Decentralized Voices program by Web3 Foundation was
+                    <a
+                        href="https://medium.com/web3foundation/decentralized-voices-cohort-4-delegates-announced-a5a9c64927fd"
+                        target="_blank"
+                        >announced</a
+                    >
+                    on the 27th of March, 2025, and the on-chain delegations were dispatched on the
+                    14th of April, 2025. The
+                    <span class="bold"
+                        >delegates are Permanence DAO, The Kus DAO, PolkaWorld, Trustless Core, JAM
+                        Implementers DAO (JID), and Polkadot Hungary DAO</span
+                    >. The delegates are represented by their short names on the charts for
+                    convenience. Green represents <span class="vote-legend aye">aye</span> votes,
+                    gray represents <span class="vote-legend abstain">abstain</span>, and red
+                    represents <span class="vote-legend nay">nay</span>.
+                </p>
                 <!-- activity -->
                 <div class="section">
                     <div class="section-header">Vote Counts</div>
@@ -74,7 +92,7 @@
                 </div>
                 <!-- response time -->
                 <div class="section">
-                    <div class="section-header">Average First Vote Time</div>
+                    <div class="section-header">Average First Vote Time After Submission</div>
                     <div class="section-body">
                         <svg id="first-vote-time-chart"></svg>
                     </div>
@@ -82,7 +100,16 @@
                 <!-- vote changes -->
                 <!--div class="section">
                     <div class="section-header">Vote Changes</div>
-                    <div class="section-body"></div>
+                    <div class="section-body">
+                        <svg id="vote-changes-chart"></svg>
+                    </div>
+                </div-->
+                <!-- missed votes -->
+                <!--div class="section">
+                    <div class="section-header">Missed Votes</div>
+                    <div class="section-body">
+                        <svg id="missed-votes-chart"></svg>
+                    </div>
                 </div-->
                 <!-- vote list -->
                 <div class="section">

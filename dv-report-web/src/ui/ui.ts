@@ -108,8 +108,9 @@ class UI {
     displayVoteCountChart(data: DelegateVoteCount[]) {
         type StackedDatum = d3.SeriesPoint<DelegateVoteCount> & { key: keyof DelegateVoteCount };
         const totals = data.map((d) => ({
-            delegateName: d.delegateName,
             delegateId: d.delegateId,
+            delegateName: d.delegateName,
+            delegateShortName: d.delegateShortName,
             total: d.nayCount + d.abstainCount + d.ayeCount,
         }));
         const stackKeys = ['nayCount', 'abstainCount', 'ayeCount'] as const;
@@ -120,7 +121,7 @@ class UI {
 
         const width = 800;
         const height = 320;
-        const margin = { top: 12, right: 20, bottom: 16, left: 120 };
+        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#vote-count-chart')
@@ -136,7 +137,7 @@ class UI {
             .range([margin.left, width - margin.right]);
         const y = d3
             .scaleBand()
-            .domain(data.map((d) => d.delegateName))
+            .domain(data.map((d) => d.delegateShortName))
             .range([margin.top, height - margin.bottom])
             .padding(0.1);
         const stackedData = d3.stack<DelegateVoteCount>().keys(stackKeys)(data);
@@ -164,7 +165,7 @@ class UI {
                     enter
                         .append('rect')
                         .attr('x', (d) => x(d[0]))
-                        .attr('y', (d) => y(d.data.delegateName)!)
+                        .attr('y', (d) => y(d.data.delegateShortName)!)
                         .attr('width', (d) => x(d[1]) - x(d[0]))
                         .attr('height', y.bandwidth()),
                 (update) =>
@@ -173,7 +174,7 @@ class UI {
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('x', (d) => x(d[0]))
                         .attr('width', (d) => x(d[1]) - x(d[0]))
-                        .attr('y', (d) => y(d.data.delegateName)!)
+                        .attr('y', (d) => y(d.data.delegateShortName)!)
                         .attr('height', y.bandwidth()),
                 (exit) => exit.remove(),
             );
@@ -195,11 +196,11 @@ class UI {
                         .attr('text-anchor', 'middle')
                         .attr('dy', '0.35em')
                         .style('fill', 'white')
-                        .style('font-size', '11px')
+                        .style('font-size', '10px')
                         .attr('x', (d) => {
                             return x(d[0]) + (x(d[1]) - x(d[0])) / 2;
                         })
-                        .attr('y', (d) => y(d.data.delegateName)! + y.bandwidth() / 2)
+                        .attr('y', (d) => y(d.data.delegateShortName)! + y.bandwidth() / 2)
                         .text((d) => {
                             const w = x(d[1]) - x(d[0]);
                             return w > 10 ? String(d.data[d.key]) : '';
@@ -212,7 +213,7 @@ class UI {
                         .attr('x', (d) => {
                             return x(d[0]) + (x(d[1]) - x(d[0])) / 2;
                         })
-                        .attr('y', (d) => y(d.data.delegateName)! + y.bandwidth() / 2)
+                        .attr('y', (d) => y(d.data.delegateShortName)! + y.bandwidth() / 2)
                         .text((d) => {
                             const w = x(d[1]) - x(d[0]);
                             return w > 10 ? String(d.data[d.key]) : '';
@@ -229,18 +230,18 @@ class UI {
                         .append('text')
                         .attr('class', 'total-label')
                         .attr('x', (d) => x(d.total) + 4) // 4px padding after bar
-                        .attr('y', (d) => y(d.delegateName)! + y.bandwidth() / 2)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
                         .attr('dy', '0.35em')
                         .attr('text-anchor', 'start')
                         .style('fill', 'black')
-                        .style('font-size', '11px')
+                        .style('font-size', '10px')
                         .text((d) => d.total),
                 (update) =>
                     update
                         .transition()
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('x', (d) => x(d.total) + 4)
-                        .attr('y', (d) => y(d.delegateName)! + y.bandwidth() / 2)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
                         .text((d) => d.total),
                 (exit) => exit.remove(),
             );
@@ -269,13 +270,31 @@ class UI {
                         .append('g')
                         .attr('class', 'y-axis')
                         .attr('transform', `translate(${margin.left},0)`)
-                        .call(d3.axisLeft(y)),
+                        .call((g) => {
+                            g.call(d3.axisLeft(y));
+                            // remove axis line
+                            g.select('.domain').remove();
+                            // remove ticks
+                            g.selectAll('.tick line').remove();
+                            g.selectAll('text')
+                                .style('font-size', '11px')
+                                .style('font-family', 'Inter');
+                        }),
                 (update) =>
                     update
                         .transition()
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        // @ts-ignore
-                        .call(d3.axisLeft(y)),
+                        .call((g) => {
+                            // @ts-ignore
+                            g.call(d3.axisLeft(y));
+                            // remove axis line
+                            g.select('.domain').remove();
+                            // remove ticks
+                            g.selectAll('.tick line').remove();
+                            g.selectAll('text')
+                                .style('font-size', '11px')
+                                .style('font-family', 'Inter');
+                        }),
             );
         // cleanup exit
         barGroups.exit().remove();
@@ -284,7 +303,7 @@ class UI {
     displayPolicyDirectionChart(data: DelegateVoteCount[]) {
         const width = 800;
         const height = 320;
-        const margin = { top: 12, right: 20, bottom: 16, left: 120 };
+        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#policy-direction-chart')
@@ -309,7 +328,7 @@ class UI {
 
         const y = d3
             .scaleBand()
-            .domain(scoredData.map((d) => d.delegateName))
+            .domain(scoredData.map((d) => d.delegateShortName))
             .range([margin.top, height - margin.bottom])
             .padding(0.1);
 
@@ -338,12 +357,24 @@ class UI {
                     .append('g')
                     .attr('class', 'y-axis')
                     .attr('transform', `translate(${margin.left},0)`)
-                    .call(d3.axisLeft(y).tickSize(0)),
+                    .call((g) =>
+                        g
+                            .call(d3.axisLeft(y).tickSize(0))
+                            .selectAll('text')
+                            .style('font-size', '11px')
+                            .style('font-family', 'Inter'),
+                    ),
             (update) =>
                 update
                     .transition()
                     .duration(Constants.CHART_TRANSITION_TIME_MS)
-                    .call(d3.axisLeft(y).tickSize(0)),
+                    .call((g) =>
+                        g
+                            .call(d3.axisLeft(y).tickSize(0))
+                            .selectAll('text')
+                            .style('font-size', '11px')
+                            .style('font-family', 'Inter'),
+                    ),
         );
 
         // bars
@@ -360,7 +391,7 @@ class UI {
                             ? x(0) - 1 // small bar width, centered on 0
                             : x(Math.min(0, d.score)),
                     )
-                    .attr('y', (d) => y(d.delegateName)!)
+                    .attr('y', (d) => y(d.delegateShortName)!)
                     .attr('width', (d) => (d.score === 0 ? 2 : Math.abs(x(d.score) - x(0))))
                     .attr('height', y.bandwidth())
                     .attr('fill', (d) =>
@@ -377,7 +408,7 @@ class UI {
                     .duration(Constants.CHART_TRANSITION_TIME_MS)
                     .attr('x', (d) => (d.score === 0 ? x(0) - 1 : x(Math.min(0, d.score))))
                     .attr('width', (d) => (d.score === 0 ? 2 : Math.abs(x(d.score) - x(0))))
-                    .attr('y', (d) => y(d.delegateName)!)
+                    .attr('y', (d) => y(d.delegateShortName)!)
                     .attr('height', y.bandwidth())
                     .attr('fill', (d) =>
                         d.score > 0
@@ -408,7 +439,7 @@ class UI {
                 const barWidth = Math.abs(barEnd - barStart);
                 return barStart + barWidth / 2;
             })
-            .attr('y', (d) => y(d.delegateName)! + y.bandwidth() / 2)
+            .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
             .text((d) => {
                 const barStart = x(Math.min(0, d.score));
                 const barEnd = x(Math.max(0, d.score));
@@ -439,7 +470,7 @@ class UI {
     displaySimilarityMatrixChart(delegates: Delegate[], similarities: DelegateSimilarity[]) {
         const cellWidth = 112;
         const cellHeight = 42;
-        const margin = { top: 50, left: 90, bottom: 20, right: 20 };
+        const margin = { top: 50, left: 80, bottom: 20, right: 20 };
         const width = (delegates.length - 1) * cellWidth + margin.left + margin.right;
         const height = (delegates.length - 1) * cellHeight + margin.top + margin.bottom;
 
@@ -592,7 +623,7 @@ class UI {
             return;
         }
 
-        const margin = { top: 12, right: 30, bottom: 32, left: 100 };
+        const margin = { top: 12, right: 30, bottom: 32, left: 80 };
         const barHeight = 38;
         const width = 700;
         const height = delegatesWithTimes.length * barHeight + margin.top + margin.bottom;
@@ -706,15 +737,15 @@ class UI {
                         .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
                         .attr('dy', '0.35em')
                         .attr('text-anchor', 'end')
-                        .style('font-size', '8px')
+                        .style('font-size', '10px')
                         .style('font-family', 'Inter')
-                        .text((d) => d.delegate.name),
+                        .text((d) => d.delegate.shortName),
                 (update) =>
                     update
                         .transition()
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
-                        .text((d) => d.delegate.name),
+                        .text((d) => d.delegate.shortName),
             );
     }
 
