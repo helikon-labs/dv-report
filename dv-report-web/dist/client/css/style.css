@@ -129,7 +129,7 @@ hr {
 .filter-outer-container {
     background: transparent;
     width: 820px;
-    margin-top: 82px;
+    margin-top: 20px;
     position: fixed;
 }
 
@@ -246,7 +246,7 @@ p {
     gap: 0px;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    z-index: 11;
 }
 
 .page-header {
@@ -292,7 +292,7 @@ p {
     letter-spacing: 0.3px;
     font-family: 'unbounded';
     font-weight: 600;
-    margin-top: 156px;
+    margin-top: 90px;
 }
 
 .header-2 {
@@ -347,7 +347,7 @@ p {
     .header-1 {
         font-size: 24px;
         font-weight: 600;
-        margin-top: 156px;
+        margin-top: 90px;
     }
 
     .section {
@@ -395,7 +395,7 @@ p {
     .header-1 {
         font-size: 22px;
         font-weight: 500;
-        margin-top: 222px;
+        margin-top: 150px;
     }
 
     p {
