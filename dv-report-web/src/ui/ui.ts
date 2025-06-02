@@ -37,9 +37,11 @@ class UI {
     private voteCountsMaxX = 0;
     private policyMaxX = 0;
     private responseTimeMaxX = 0;
+    private changedVoteMaxX = 0;
 
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
     private responseTimeGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
+    private changedVoteGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
 
     constructor(delegate: UIDelegate) {
         this.delegate = delegate;
@@ -229,7 +231,7 @@ class UI {
                     enter
                         .append('text')
                         .attr('class', 'total-label')
-                        .attr('x', (d) => x(d.total) + 4) // 4px padding after bar
+                        .attr('x', (d) => x(d.total) + 4)
                         .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
                         .attr('dy', '0.35em')
                         .attr('text-anchor', 'start')
@@ -272,10 +274,6 @@ class UI {
                         .attr('transform', `translate(${margin.left},0)`)
                         .call((g) => {
                             g.call(d3.axisLeft(y));
-                            // remove axis line
-                            g.select('.domain').remove();
-                            // remove ticks
-                            g.selectAll('.tick line').remove();
                             g.selectAll('text')
                                 .style('font-size', '11px')
                                 .style('font-family', 'Inter');
@@ -287,10 +285,6 @@ class UI {
                         .call((g) => {
                             // @ts-ignore
                             g.call(d3.axisLeft(y));
-                            // remove axis line
-                            g.select('.domain').remove();
-                            // remove ticks
-                            g.selectAll('.tick line').remove();
                             g.selectAll('text')
                                 .style('font-size', '11px')
                                 .style('font-family', 'Inter');
@@ -309,12 +303,10 @@ class UI {
             .select<SVGSVGElement, unknown>('#policy-direction-chart')
             .attr('viewBox', `0 0 ${width} ${height}`);
 
-        // Compute and sort
         const scoredData = data.map((d) => ({
             ...d,
             score: d.ayeCount - d.nayCount,
         }));
-
         scoredData.sort((a, b) => b.score - a.score);
 
         // Cache max absolute score
@@ -332,9 +324,7 @@ class UI {
             .range([margin.top, height - margin.bottom])
             .padding(0.1);
 
-        // Update axes
         const xAxis = svg.selectAll<SVGGElement, unknown>('.x-axis').data([null]);
-
         xAxis.join(
             (enter) =>
                 enter
@@ -350,7 +340,6 @@ class UI {
         );
 
         const yAxis = svg.selectAll<SVGGElement, unknown>('.y-axis').data([null]);
-
         yAxis.join(
             (enter) =>
                 enter
@@ -359,7 +348,7 @@ class UI {
                     .attr('transform', `translate(${margin.left},0)`)
                     .call((g) =>
                         g
-                            .call(d3.axisLeft(y).tickSize(0))
+                            .call(d3.axisLeft(y))
                             .selectAll('text')
                             .style('font-size', '11px')
                             .style('font-family', 'Inter'),
@@ -370,7 +359,7 @@ class UI {
                     .duration(Constants.CHART_TRANSITION_TIME_MS)
                     .call((g) =>
                         g
-                            .call(d3.axisLeft(y).tickSize(0))
+                            .call(d3.axisLeft(y))
                             .selectAll('text')
                             .style('font-size', '11px')
                             .style('font-family', 'Inter'),
@@ -386,11 +375,7 @@ class UI {
                 enter
                     .append('rect')
                     .attr('class', 'bar')
-                    .attr('x', (d) =>
-                        d.score === 0
-                            ? x(0) - 1 // small bar width, centered on 0
-                            : x(Math.min(0, d.score)),
-                    )
+                    .attr('x', (d) => (d.score === 0 ? x(0) - 1 : x(Math.min(0, d.score))))
                     .attr('y', (d) => y(d.delegateShortName)!)
                     .attr('width', (d) => (d.score === 0 ? 2 : Math.abs(x(d.score) - x(0))))
                     .attr('height', y.bandwidth())
@@ -457,7 +442,7 @@ class UI {
                 const barWidth = Math.abs(barEnd - barStart);
                 return barStart + barWidth / 2;
             })
-            .attr('y', (d) => y(d.delegateName)! + y.bandwidth() / 2)
+            .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
             .text((d) => {
                 const barStart = x(Math.min(0, d.score));
                 const barEnd = x(Math.max(0, d.score));
@@ -470,7 +455,7 @@ class UI {
     displaySimilarityMatrixChart(delegates: Delegate[], similarities: DelegateSimilarity[]) {
         const cellWidth = 112;
         const cellHeight = 42;
-        const margin = { top: 50, left: 80, bottom: 20, right: 20 };
+        const margin = { top: 50, left: 70, bottom: 20, right: 20 };
         const width = (delegates.length - 1) * cellWidth + margin.left + margin.right;
         const height = (delegates.length - 1) * cellHeight + margin.top + margin.bottom;
 
@@ -746,6 +731,250 @@ class UI {
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
                         .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
                         .text((d) => d.delegate.shortName),
+            );
+    }
+
+    displayMissedVoteCountChart(data: DelegateVoteCount[]) {
+        const width = 800;
+        const height = 320;
+        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
+
+        const svg = d3
+            .select<SVGSVGElement, unknown>('#missed-vote-count-chart')
+            .attr('viewBox', `0 0 ${width} ${height}`);
+
+        const sortedData = [...data].sort((a, b) => a.missedCount - b.missedCount);
+        const maxMissed = d3.max(sortedData, (d) => d.missedCount)!;
+        const x = d3
+            .scaleLinear()
+            .domain([0, maxMissed + 5])
+            .range([margin.left, width - margin.right]);
+
+        const y = d3
+            .scaleBand()
+            .domain(sortedData.map((d) => d.delegateShortName))
+            .range([margin.top, height - margin.bottom])
+            .padding(0.1);
+
+        // bars
+        svg.selectAll<SVGRectElement, DelegateVoteCount>('.missed-bar')
+            .data(sortedData, (d) => d.delegateId)
+            .join(
+                (enter) =>
+                    enter
+                        .append('rect')
+                        .attr('class', 'missed-bar')
+                        .attr('x', x(0))
+                        .attr('y', (d) => y(d.delegateShortName)!)
+                        .attr('width', (d) => x(d.missedCount) - x(0))
+                        .attr('height', y.bandwidth())
+                        .attr('fill', '#6b7280'),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', x(0))
+                        .attr('y', (d) => y(d.delegateShortName)!)
+                        .attr('width', (d) => x(d.missedCount) - x(0))
+                        .attr('height', y.bandwidth()),
+                (exit) => exit.remove(),
+            );
+        // labels at the end of the bars
+        svg.selectAll<SVGTextElement, DelegateVoteCount>('.missed-label')
+            .data(sortedData, (d) => d.delegateId)
+            .join(
+                (enter) =>
+                    enter
+                        .append('text')
+                        .attr('class', 'missed-label')
+                        .attr('x', (d) => x(d.missedCount) + 4)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
+                        .attr('dy', '0.35em')
+                        .attr('text-anchor', 'start')
+                        .style('fill', 'black')
+                        .style('font-size', '10px')
+                        .text((d) => d.missedCount),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', (d) => x(d.missedCount) + 4)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
+                        .text((d) => d.missedCount),
+                (exit) => exit.remove(),
+            );
+        // x axis
+        svg.selectAll('.x-axis')
+            .data([null])
+            .join(
+                (enter) =>
+                    enter
+                        .append('g')
+                        .attr('class', 'x-axis')
+                        .attr('transform', `translate(0,${height - margin.bottom})`)
+                        .call(
+                            d3
+                                .axisBottom(x)
+                                .ticks(5)
+                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
+                        ),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .call(
+                            // @ts-ignore
+                            d3
+                                .axisBottom(x)
+                                .ticks(5)
+                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
+                        ),
+            );
+        // y axis
+        svg.selectAll('.y-axis')
+            .data([null])
+            .join(
+                (enter) =>
+                    enter
+                        .append('g')
+                        .attr('class', 'y-axis')
+                        .attr('transform', `translate(${margin.left},0)`)
+                        .call((g) => {
+                            g.call(d3.axisLeft(y));
+                            g.selectAll('text')
+                                .style('font-size', '11px')
+                                .style('font-family', 'Inter');
+                        }),
+                (update) =>
+                    update.attr('transform', `translate(${margin.left},0)`).call((g) => {
+                        // @ts-ignore
+                        g.call(d3.axisLeft(y));
+                        g.selectAll('text')
+                            .style('font-size', '11px')
+                            .style('font-family', 'Inter');
+                    }),
+            );
+    }
+
+    displayChangedVoteCountChart(data: DelegateVoteCount[]) {
+        const width = 800;
+        const height = 320;
+        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
+
+        const svg = d3
+            .select<SVGSVGElement, unknown>('#changed-vote-count-chart')
+            .attr('viewBox', `0 0 ${width} ${height}`);
+
+        const sortedData = [...data].sort((a, b) => a.changedCount - b.changedCount);
+        const maxMissed = d3.max(sortedData, (d) => d.changedCount)!;
+        const x = d3
+            .scaleLinear()
+            .domain([0, maxMissed + 5])
+            .range([margin.left, width - margin.right]);
+
+        const y = d3
+            .scaleBand()
+            .domain(sortedData.map((d) => d.delegateShortName))
+            .range([margin.top, height - margin.bottom])
+            .padding(0.1);
+
+        // bars
+        svg.selectAll<SVGRectElement, DelegateVoteCount>('.missed-bar')
+            .data(sortedData, (d) => d.delegateId)
+            .join(
+                (enter) =>
+                    enter
+                        .append('rect')
+                        .attr('class', 'missed-bar')
+                        .attr('x', x(0))
+                        .attr('y', (d) => y(d.delegateShortName)!)
+                        .attr('width', (d) => x(d.changedCount) - x(0))
+                        .attr('height', y.bandwidth())
+                        .attr('fill', '#6b7280'),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', x(0))
+                        .attr('y', (d) => y(d.delegateShortName)!)
+                        .attr('width', (d) => x(d.changedCount) - x(0))
+                        .attr('height', y.bandwidth()),
+                (exit) => exit.remove(),
+            );
+        // labels at the end of the bars
+        svg.selectAll<SVGTextElement, DelegateVoteCount>('.missed-label')
+            .data(sortedData, (d) => d.delegateId)
+            .join(
+                (enter) =>
+                    enter
+                        .append('text')
+                        .attr('class', 'missed-label')
+                        .attr('x', (d) => x(d.changedCount) + 4)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
+                        .attr('dy', '0.35em')
+                        .attr('text-anchor', 'start')
+                        .style('fill', 'black')
+                        .style('font-size', '10px')
+                        .text((d) => d.changedCount),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .attr('x', (d) => x(d.changedCount) + 4)
+                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
+                        .text((d) => d.changedCount),
+                (exit) => exit.remove(),
+            );
+        // x axis
+        svg.selectAll('.x-axis')
+            .data([null])
+            .join(
+                (enter) =>
+                    enter
+                        .append('g')
+                        .attr('class', 'x-axis')
+                        .attr('transform', `translate(0,${height - margin.bottom})`)
+                        .call(
+                            d3
+                                .axisBottom(x)
+                                .ticks(5)
+                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
+                        ),
+                (update) =>
+                    update
+                        .transition()
+                        .duration(Constants.CHART_TRANSITION_TIME_MS)
+                        .call(
+                            // @ts-ignore
+                            d3
+                                .axisBottom(x)
+                                .ticks(5)
+                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
+                        ),
+            );
+        // y axis
+        svg.selectAll('.y-axis')
+            .data([null])
+            .join(
+                (enter) =>
+                    enter
+                        .append('g')
+                        .attr('class', 'y-axis')
+                        .attr('transform', `translate(${margin.left},0)`)
+                        .call((g) => {
+                            g.call(d3.axisLeft(y));
+                            g.selectAll('text')
+                                .style('font-size', '11px')
+                                .style('font-family', 'Inter');
+                        }),
+                (update) =>
+                    update.attr('transform', `translate(${margin.left},0)`).call((g) => {
+                        // @ts-ignore
+                        g.call(d3.axisLeft(y));
+                        g.selectAll('text')
+                            .style('font-size', '11px')
+                            .style('font-family', 'Inter');
+                    }),
             );
     }
 

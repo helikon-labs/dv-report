@@ -241,8 +241,40 @@ class DataStore {
         return voteMap;
     }
 
+    getDelegateChangedVoteCount(delegate: Delegate): number {
+        const filteredReferenda = this.getFilteredReferenda();
+        let changedCount = 0;
+        for (const referendum of filteredReferenda) {
+            const referendumVotes = delegate.votes
+                .filter((v) => v.networkId == referendum.networkId)
+                .filter((v) => v.referendumIndex == referendum.index)
+                .filter((v) => v.isSuccessful)
+                .filter((v) => !v.isMultisig || v.isMultisigExecuted);
+            if (referendumVotes.length == 0) {
+                continue;
+            }
+            referendumVotes.sort((v1, v2) => {
+                if (v1.block.number == v2.block.number) {
+                    return v1.extrinsicIndex - v2.extrinsicIndex;
+                } else {
+                    return v1.block.number - v2.block.number;
+                }
+            });
+            let currentVote = getVoteValue(referendumVotes[0]);
+            for (let i = 1; i < referendumVotes.length; i++) {
+                const nextVote = getVoteValue(referendumVotes[i]);
+                if (currentVote != nextVote) {
+                    changedCount++;
+                }
+                currentVote = nextVote;
+            }
+        }
+        return changedCount;
+    }
+
     getDelegateVoteCounts(): DelegateVoteCount[] {
         const delegateVoteCounts: DelegateVoteCount[] = [];
+        const filteredReferenda = this.getFilteredReferenda();
         for (const delegate of this.delegates) {
             const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
             const delegateVoteCount: DelegateVoteCount = {
@@ -252,6 +284,8 @@ class DataStore {
                 ayeCount: 0,
                 nayCount: 0,
                 abstainCount: 0,
+                missedCount: 0,
+                changedCount: this.getDelegateChangedVoteCount(delegate),
             };
             for (const vote of delegateVoteMap.values()) {
                 const voteValue = getVoteValue(vote);
@@ -261,6 +295,12 @@ class DataStore {
                     delegateVoteCount.nayCount++;
                 } else {
                     delegateVoteCount.abstainCount++;
+                }
+            }
+            for (const filteredReferendum of filteredReferenda) {
+                const key = `${filteredReferendum.networkId}_${filteredReferendum.index}`;
+                if (!delegateVoteMap.has(key)) {
+                    delegateVoteCount.missedCount++;
                 }
             }
             delegateVoteCounts.push(delegateVoteCount);

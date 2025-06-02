@@ -117,6 +117,8 @@ type DelegateVoteCount = {
     nayCount: number;
     abstainCount: number;
     ayeCount: number;
+    missedCount: number;
+    changedCount: number;
 };
 
 type DelegateSimilarity = {

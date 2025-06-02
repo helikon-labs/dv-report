@@ -1,6 +1,6 @@
 export abstract class Constants {
-    //static readonly API_URL = 'http://localhost:7900';
-    static readonly API_URL = 'https://dv-report.api.submerge.io:13101';
+    static readonly API_URL = 'http://localhost:7900';
+    //static readonly API_URL = 'https://dv-report.api.submerge.io:13101';
     // connection
     static readonly CONNECTION_TIMEOUT_MS = 30000;
     static readonly CONNECTION_RETRY_MS = 5000;

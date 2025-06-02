@@ -75,6 +75,8 @@ class App {
         const similarities = this.dataStore.getDelegateSimilarities();
         this.ui.displaySimilarityMatrixChart(delegates, similarities);
         this.ui.displayFirstVoteTimeChart(this.dataStore.getResponseTimes());
+        this.ui.displayMissedVoteCountChart(voteCountData);
+        this.ui.displayChangedVoteCountChart(voteCountData);
         const referenda = this.dataStore.getFilteredReferenda();
         const lastVotesMaps = this.dataStore.getAllDelegatesLastVoteMaps();
         this.ui.displayVoteList(this.dataStore.getNetworks(), delegates, referenda, lastVotesMaps);
@@ -116,7 +118,6 @@ class App {
 
         for (const network of this.dataStore.getNetworks()) {
             this.ui.setLoadingDescription(`loading<br>${network.display} referenda`);
-            console.log(network.display);
             await Promise.all([
                 this.dataStore.fetchNetworkReferenda(network.id),
                 sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
