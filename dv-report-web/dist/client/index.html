@@ -15,12 +15,12 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <link rel="icon" type="image/x-icon" href="./img/sigma_white.png" />
-        <link rel="stylesheet" href="./css/style.css?v=13" />
+        <link rel="stylesheet" href="./css/style.css?v=14" />
         <script src="https://kit.fontawesome.com/ebf2cd1147.js" crossorigin="anonymous"></script>
         <script defer data-domain="dv.report" src="https://plausible.io/js/script.js"></script>
     </head>
     <body id="root" class="regular">
-        <script src="./bundle.js?v=13"></script>
+        <script src="./bundle.js?v=14"></script>
         <div class="page-header-container">
             <div class="page-header">
                 <div class="logo-container-left">
@@ -74,6 +74,13 @@
                 <div class="section">
                     <div class="section-header">Vote Counts</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            Displays the total number of votes by delegates after the selected
+                            filters are applied. This includes referenda that were either active at
+                            the time of delegation or submitted after the delegation date. For
+                            referenda with multiple votes by the same delegate, only the most recent
+                            vote is counted.
+                        </div>
                         <svg id="vote-count-chart"></svg>
                     </div>
                 </div>
@@ -81,6 +88,11 @@
                 <div class="section">
                     <div class="section-header">Policy Direction</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            The number of nay votes subtracted from the number of aye votes. A more
+                            positive value may indicate support for a more libertarian policy, while
+                            more negative values may reflect a more conservative policy.
+                        </div>
                         <svg id="policy-direction-chart"></svg>
                     </div>
                 </div>
@@ -88,6 +100,16 @@
                 <div class="section">
                     <div class="section-header">Similarity Matrix</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            While the colour of the circle represents agreement or disagreement
+                            between two delegates, the size of the circle reflects the magnitude of
+                            that (dis)agreement. A large green circle indicates strong
+                            <span class="vote-legend aye">agreement</span>, whereas a large red
+                            circle indicates strong
+                            <span class="vote-legend nay">disagreement</span>. Smaller circles
+                            represent more neutral relationships. Abstain votes and no-shows are
+                            ignored.
+                        </div>
                         <svg id="similarity-matrix-chart"></svg>
                     </div>
                 </div>
@@ -95,6 +117,10 @@
                 <div class="section">
                     <div class="section-header">Average First Vote Time After Submission</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            Displays the average time elapsed from the on-chain submission of
+                            referenda to the first on-chain vote by delegates.
+                        </div>
                         <svg id="first-vote-time-chart"></svg>
                     </div>
                 </div>
@@ -102,6 +128,10 @@
                 <div class="section">
                     <div class="section-header">Not Voted</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            The number of referenda that have not yet been voted on by delegates.
+                            For closed referenda, this represents the number of missed votes.
+                        </div>
                         <svg id="missed-vote-count-chart"></svg>
                     </div>
                 </div>
@@ -109,6 +139,10 @@
                 <div class="section">
                     <div class="section-header">Vote Changes</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            Displays the number of times each delegate has changed their vote
+                            between aye, nay, and abstain.
+                        </div>
                         <svg id="changed-vote-count-chart"></svg>
                     </div>
                 </div>
@@ -116,6 +150,11 @@
                 <div class="section">
                     <div class="section-header">Votes</div>
                     <div class="section-body">
+                        <div class="section-description">
+                            List of vote calls for all filtered referenda. Only the final call on
+                            each referendum is displayed. For multisig calls, only the call that
+                            triggered execution is included.
+                        </div>
                         <div id="vote-list-container" class="vote-list-container">
                             <div id="vote-list-delegate-column" class="delegate-column"></div>
                             <div class="vote-list-scroll-container">
