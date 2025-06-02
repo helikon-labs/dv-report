@@ -121,7 +121,7 @@ hr {
     background-color: #e6f1ff;
     display: flex;
     overflow-x: clip;
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-direction: column;
     align-items: center;
 }
@@ -461,7 +461,7 @@ rect:hover {
 
 .vote-list-container .vote-list-scroll-container {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .vote-list-container .vote-list {
