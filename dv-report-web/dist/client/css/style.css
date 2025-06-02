@@ -126,8 +126,16 @@ hr {
     z-index: 50;
 }
 
-.filter-container {
+.filter-outer-container {
+    background: transparent;
     width: 820px;
+    z-index: 100;
+    margin-top: 12px;
+    position: fixed;
+}
+
+.filter-container {
+    width: 100%;
     background-color: #f8faff;
     display: flex;
     flex-direction: row;
@@ -137,10 +145,8 @@ hr {
     padding: 12px;
     box-sizing: border-box;
     border-radius: 12px;
-    margin-top: 12px;
     font-size: 12px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 100;
 }
 
 .filter-container .filter-item {
@@ -166,6 +172,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    padding-bottom: 96px;
 }
 
 p {
@@ -215,6 +222,7 @@ p {
 .loading-description {
     line-height: 18px;
     text-align: center;
+    font-size: 12px;
 }
 
 @keyframes loading-animation-frames {
@@ -275,11 +283,10 @@ p {
 
 .header-1 {
     font-size: 26px;
-    margin-top: 18px;
-    line-height: 44px;
     letter-spacing: 0.3px;
     font-family: 'unbounded';
     font-weight: 600;
+    margin-top: 84px;
 }
 
 .header-2 {
@@ -309,13 +316,12 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-    .filter-container {
+    .filter-outer-container {
         width: 86%;
     }
 
     .content {
         width: 86%;
-        padding-bottom: 96px;
     }
 
     .page-header {
@@ -323,15 +329,13 @@ p {
     }
 
     .header-1 {
-        font-size: 28px;
-        margin-top: 14px;
-        line-height: 42px;
-        letter-spacing: 0.2px;
-        line-height: 36px;
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 72px;
     }
 
     .section {
-        margin-top: 22px;
+        margin-top: 20px;
     }
 
     .section-header {
@@ -354,10 +358,6 @@ p {
         justify-content: space-between;
     }
 
-    .content {
-        padding-bottom: 128px;
-    }
-
     .page-header .submerge-logo {
         height: 16px;
     }
@@ -368,7 +368,6 @@ p {
     }
 
     .filter-container {
-        width: 86%;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -384,6 +383,8 @@ p {
 
     .header-1 {
         font-size: 22px;
+        font-weight: 500;
+        margin-top: 148px;
     }
 
     p {

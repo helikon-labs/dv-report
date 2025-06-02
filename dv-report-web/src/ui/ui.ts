@@ -297,7 +297,7 @@ class UI {
     displayPolicyDirectionChart(data: DelegateVoteCount[]) {
         const width = 800;
         const height = 320;
-        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
+        const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#policy-direction-chart')
@@ -697,7 +697,7 @@ class UI {
                         .attr('dy', '0.35em')
                         .attr('text-anchor', 'middle')
                         .style('fill', 'white')
-                        .style('font-size', '8px')
+                        .style('font-size', '9.2px')
                         .style('font-family', 'Inter')
                         .text((d) => this.blocksToTime(d.blocks ?? 0)),
                 (update) =>
@@ -737,7 +737,7 @@ class UI {
     displayMissedVoteCountChart(data: DelegateVoteCount[]) {
         const width = 800;
         const height = 320;
-        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
+        const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#missed-vote-count-chart')
@@ -859,7 +859,7 @@ class UI {
     displayChangedVoteCountChart(data: DelegateVoteCount[]) {
         const width = 800;
         const height = 320;
-        const margin = { top: 12, right: 20, bottom: 16, left: 80 };
+        const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#changed-vote-count-chart')
