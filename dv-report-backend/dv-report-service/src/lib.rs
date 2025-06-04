@@ -22,7 +22,7 @@ pub trait Service {
         network.sp_core_set_default_ss58_version();
         log::info!("Starting service for {network}...");
 
-        let (host, port) = (config.metrics.host.clone(), config.metrics.api_service_port);
+        let (host, port) = self.get_metrics_server_addr();
         tokio::spawn(async move {
             dv_report_metrics::server::start((host, port)).await;
         });
