@@ -7,9 +7,9 @@ use std::str::FromStr;
 
 pub mod err;
 
-#[async_trait(?Send)]
+#[async_trait]
 pub trait Service {
-    fn get_metrics_server_addr() -> (&'static str, u16);
+    fn get_metrics_server_addr(&'static self) -> (&'static str, u16);
 
     async fn run(&'static self) -> anyhow::Result<()>;
 
@@ -21,7 +21,7 @@ pub trait Service {
             .sp_core_set_default_ss58_version();
         log::info!("Starting service...");
         tokio::spawn(dv_report_metrics::server::start(
-            Self::get_metrics_server_addr(),
+            self.get_metrics_server_addr(),
         ));
         let delay_seconds = config.common.recovery_retry_seconds;
         loop {

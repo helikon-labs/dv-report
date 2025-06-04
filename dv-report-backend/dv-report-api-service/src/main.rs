@@ -1,12 +1,17 @@
 use dv_report_api_service::APIService;
 use dv_report_service::Service;
-use lazy_static::lazy_static;
+use once_cell::sync::OnceCell;
 
-lazy_static! {
-    static ref SERVICE: APIService = APIService;
-}
+static SERVICE: OnceCell<APIService> = OnceCell::new();
 
 #[tokio::main]
 async fn main() {
-    SERVICE.start().await;
+    SERVICE
+        .set(APIService::default())
+        .expect("Failed to set the global service.");
+    SERVICE
+        .get()
+        .expect("Failed to initialize service.")
+        .start()
+        .await;
 }

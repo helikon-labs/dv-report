@@ -6,6 +6,12 @@ static SERVICE: OnceCell<Indexer> = OnceCell::new();
 
 #[tokio::main]
 async fn main() {
-    let _ = SERVICE.set(Indexer::new().await.unwrap());
-    SERVICE.get().unwrap().start().await;
+    SERVICE
+        .set(Indexer::default())
+        .expect("Failed to set the global service.");
+    SERVICE
+        .get()
+        .expect("Failed to initialize the service.")
+        .start()
+        .await;
 }

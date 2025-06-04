@@ -6,17 +6,12 @@ use dv_report_persistence::postgres::PostgreSQLStorage;
 use dv_report_service::err::InternalServerError;
 use dv_report_service::Service;
 use futures_util::future::FutureExt;
-use lazy_static::lazy_static;
 use std::sync::Arc;
 use std::time::Instant;
 
 mod metrics;
 mod service;
 mod types;
-
-lazy_static! {
-    static ref CONFIG: Config = Config::default();
-}
 
 pub(crate) type ResultResponse = Result<HttpResponse, InternalServerError>;
 
@@ -29,24 +24,26 @@ pub(crate) struct ServiceState {
     postgres: Arc<PostgreSQLStorage>,
 }
 
-#[derive(Default)]
-pub struct APIService;
+#[derive(Debug, Default)]
+pub struct APIService {
+    config: Config,
+}
 
-#[async_trait(?Send)]
+#[async_trait]
 impl Service for APIService {
-    fn get_metrics_server_addr() -> (&'static str, u16) {
+    fn get_metrics_server_addr(&'static self) -> (&'static str, u16) {
         (
-            CONFIG.metrics.host.as_str(),
-            CONFIG.metrics.api_service_port,
+            self.config.metrics.host.as_str(),
+            self.config.metrics.api_service_port,
         )
     }
 
     async fn run(&'static self) -> anyhow::Result<()> {
-        let postgres = Arc::new(PostgreSQLStorage::new(&CONFIG).await?);
+        let postgres = Arc::new(PostgreSQLStorage::new(&self.config).await?);
         log::info!(
             "Starting HTTP service @ {}:{}.",
-            CONFIG.api.service_host,
-            CONFIG.api.api_service_port
+            self.config.api.service_host,
+            self.config.api.api_service_port
         );
         let server = HttpServer::new(move || {
             let cors = Cors::default()
@@ -99,7 +96,7 @@ impl Service for APIService {
         .disable_signals()
         .bind(format!(
             "{}:{}",
-            CONFIG.api.service_host, CONFIG.api.api_service_port,
+            self.config.api.service_host, self.config.api.api_service_port,
         ))?
         .run();
         let (server_result, _) = tokio::join!(server, on_server_ready());
