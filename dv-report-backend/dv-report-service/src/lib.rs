@@ -9,32 +9,35 @@ pub mod err;
 
 #[async_trait]
 pub trait Service {
-    fn get_metrics_server_addr(&'static self) -> (&'static str, u16);
+    fn get_metrics_server_addr(&self) -> (String, u16);
 
-    async fn run(&'static self) -> anyhow::Result<()>;
+    async fn run(&self) -> anyhow::Result<()>;
 
-    async fn start(&'static self) {
+    async fn start(&self) -> anyhow::Result<()> {
         let config = Config::default();
         dv_report_logging::init(&config);
-        Network::from_str(&config.substrate.chain)
-            .unwrap()
-            .sp_core_set_default_ss58_version();
-        log::info!("Starting service...");
-        tokio::spawn(dv_report_metrics::server::start(
-            self.get_metrics_server_addr(),
-        ));
-        let delay_seconds = config.common.recovery_retry_seconds;
+        let network = Network::from_str(&config.substrate.chain)
+            .map_err(|e| anyhow::anyhow!("Invalid network config: {e}"))?;
+
+        network.sp_core_set_default_ss58_version();
+        log::info!("Starting service for {network}...");
+
+        let (host, port) = (config.metrics.host.clone(), config.metrics.api_service_port);
+        tokio::spawn(async move {
+            dv_report_metrics::server::start((host, port)).await;
+        });
+
+        let retry_delay = config.common.recovery_retry_seconds;
         loop {
-            let result = self.run().await;
-            if let Err(error) = result {
-                log::error!("{error:?}");
-                log::error!(
-                    "Process exited with error. Will try again in {delay_seconds} seconds."
-                );
-                tokio::time::sleep(std::time::Duration::from_secs(delay_seconds)).await;
-            } else {
-                log::info!("Process completed successfully.");
-                break;
+            match self.run().await {
+                Ok(()) => {
+                    log::info!("Service run completed successfully.");
+                    return Ok(());
+                }
+                Err(e) => {
+                    log::error!("Service run failed: {e:?}. Retrying in {retry_delay} seconds.");
+                    tokio::time::sleep(std::time::Duration::from_secs(retry_delay)).await;
+                }
             }
         }
     }

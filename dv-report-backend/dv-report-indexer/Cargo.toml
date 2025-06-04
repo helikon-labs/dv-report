@@ -19,7 +19,6 @@ dv-report-metrics = { path = "../dv-report-metrics" }
 dv-report-repository = { path = "../dv-report-repository" }
 dv-report-service = { path = "../dv-report-service" }
 dv-report-types = { path = "../dv-report-types" }
-lazy_static = { workspace = true }
 log = { workspace = true }
 once_cell = { workspace = true }
 tokio = { workspace = true, features = ["full"] }

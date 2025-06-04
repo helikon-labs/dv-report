@@ -55,14 +55,14 @@ async fn process_block(
 
 #[async_trait]
 impl Service for Indexer {
-    fn get_metrics_server_addr(&'static self) -> (&'static str, u16) {
+    fn get_metrics_server_addr(&self) -> (String, u16) {
         (
-            self.config.metrics.host.as_str(),
+            self.config.metrics.host.clone(),
             self.config.metrics.indexer_port,
         )
     }
 
-    async fn run(&'static self) -> anyhow::Result<()> {
+    async fn run(&self) -> anyhow::Result<()> {
         let repository = Repository::new(&self.config).await?;
         let network = Network::from_id(self.config.substrate.network_id);
         let cohort = repository

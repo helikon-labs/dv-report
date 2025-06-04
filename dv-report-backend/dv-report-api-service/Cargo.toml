@@ -18,7 +18,6 @@ dv-report-persistence = { path = "../dv-report-persistence" }
 dv-report-service = { path = "../dv-report-service" }
 dv-report-types = { path = "../dv-report-types" }
 futures-util = "0.3"
-lazy_static = { workspace = true }
 log = { workspace = true }
 once_cell = { workspace = true }
 tokio = { workspace = true, features = ["full"] }

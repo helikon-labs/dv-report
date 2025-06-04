@@ -31,14 +31,14 @@ pub struct APIService {
 
 #[async_trait]
 impl Service for APIService {
-    fn get_metrics_server_addr(&'static self) -> (&'static str, u16) {
+    fn get_metrics_server_addr(&self) -> (String, u16) {
         (
-            self.config.metrics.host.as_str(),
+            self.config.metrics.host.clone(),
             self.config.metrics.api_service_port,
         )
     }
 
-    async fn run(&'static self) -> anyhow::Result<()> {
+    async fn run(&self) -> anyhow::Result<()> {
         let postgres = Arc::new(PostgreSQLStorage::new(&self.config).await?);
         log::info!(
             "Starting HTTP service @ {}:{}.",
