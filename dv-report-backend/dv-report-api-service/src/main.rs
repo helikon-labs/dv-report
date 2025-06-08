@@ -5,7 +5,7 @@ use dv_report_service::Service;
 async fn main() {
     let service = APIService::default();
     if let Err(e) = service.start().await {
-        eprintln!("Startup failed: {e:?}");
+        log::error!("Startup failed: {e:?}");
         std::process::exit(1);
     }
 }
