@@ -29,8 +29,12 @@ pub struct APIService {
     config: Config,
 }
 
-#[async_trait]
+#[async_trait(?Send)]
 impl Service for APIService {
+    fn name(&self) -> String {
+        "API Service".to_string()
+    }
+
     fn get_metrics_server_addr(&self) -> (String, u16) {
         (
             self.config.metrics.host.clone(),
@@ -46,7 +50,7 @@ impl Service for APIService {
             self.config.api.api_service_port
         );
         let server = HttpServer::new(move || {
-            let cors = Cors::default()
+            let _cors = Cors::default()
                 .allowed_origin("http://localhost:8080")
                 .allowed_methods(vec!["GET", "POST", "OPTIONS"])
                 .allowed_headers(vec![
@@ -59,7 +63,7 @@ impl Service for APIService {
                 .app_data(web::Data::new(ServiceState {
                     postgres: postgres.clone(),
                 }))
-                .wrap(cors)
+                //.wrap(cors)
                 .wrap_fn(|request, service| {
                     metrics::request_counter().inc();
                     metrics::connection_count().inc();

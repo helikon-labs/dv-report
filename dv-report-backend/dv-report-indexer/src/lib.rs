@@ -6,6 +6,7 @@ use dv_report_types::substrate::event::ReferendumEvent;
 use dv_report_types::substrate::network::Network;
 use std::cmp::max;
 use std::time::Duration;
+use tokio::time::sleep;
 
 mod metrics;
 
@@ -53,8 +54,12 @@ async fn process_block(
     Ok(())
 }
 
-#[async_trait]
+#[async_trait(?Send)]
 impl Service for Indexer {
+    fn name(&self) -> String {
+        format!("{} Indexer", self.config.substrate.chain_display)
+    }
+
     fn get_metrics_server_addr(&self) -> (String, u16) {
         (
             self.config.metrics.host.clone(),
@@ -103,7 +108,7 @@ impl Service for Indexer {
                 "Reached finalized head {}. Will check again in {delay_seconds} seconds.",
                 finalized_block.number,
             );
-            tokio::time::sleep(Duration::from_secs(delay_seconds)).await;
+            sleep(Duration::from_secs(delay_seconds)).await;
         }
     }
 }

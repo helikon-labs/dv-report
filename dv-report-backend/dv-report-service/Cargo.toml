@@ -13,8 +13,6 @@ anyhow = { workspace = true }
 async-trait = { workspace = true }
 log = { workspace = true }
 serde_json = { workspace = true }
-dv-report-config = { path = "../dv-report-config" }
-dv-report-logging = { path = "../dv-report-logging" }
 dv-report-metrics = { path = "../dv-report-metrics" }
 dv-report-types = { path = "../dv-report-types" }
 tokio = { workspace = true, features = ["full"] }

@@ -1,43 +1,100 @@
 #![warn(clippy::disallowed_types)]
-
 use async_trait::async_trait;
-use dv_report_config::Config;
-use dv_report_types::substrate::network::Network;
-use std::str::FromStr;
+use std::sync::Arc;
+use std::time::Duration;
+use tokio::{select, signal, sync::Notify, time::sleep};
 
 pub mod err;
 
-#[async_trait]
+#[async_trait(?Send)]
 pub trait Service {
+    fn name(&self) -> String;
     fn get_metrics_server_addr(&self) -> (String, u16);
-
     async fn run(&self) -> anyhow::Result<()>;
+    async fn shutdown(&self) -> anyhow::Result<()> {
+        Ok(())
+    }
+}
 
-    async fn start(&self) -> anyhow::Result<()> {
-        let config = Config::default();
-        dv_report_logging::init(&config);
-        let network = Network::from_str(&config.substrate.chain)
-            .map_err(|e| anyhow::anyhow!("Invalid network config: {e}"))?;
+pub struct Supervisor<S: Service> {
+    service: Arc<S>,
+    retry_delay: Duration,
+    enable_metrics: bool,
+    shutdown_notify: Option<Arc<Notify>>,
+}
 
-        network.sp_core_set_default_ss58_version();
-        log::info!("Starting service for {network}...");
+impl<S: Service> Supervisor<S> {
+    pub fn new(service: S, retry_delay_secs: u64) -> Self {
+        Self {
+            service: Arc::new(service),
+            retry_delay: Duration::from_secs(retry_delay_secs),
+            enable_metrics: true,
+            shutdown_notify: None,
+        }
+    }
 
-        let (host, port) = self.get_metrics_server_addr();
-        tokio::spawn(async move {
-            dv_report_metrics::server::start((host, port)).await;
-        });
+    pub fn with_shutdown_notify(mut self, notify: Arc<Notify>) -> Self {
+        self.shutdown_notify = Some(notify);
+        self
+    }
 
-        let retry_delay = config.common.recovery_retry_seconds;
-        loop {
-            match self.run().await {
-                Ok(()) => {
-                    log::info!("Service run completed successfully.");
-                    return Ok(());
+    pub fn without_metrics(mut self) -> Self {
+        self.enable_metrics = false;
+        self
+    }
+
+    pub async fn start(self) -> anyhow::Result<()> {
+        if self.enable_metrics {
+            let (host, port) = self.service.get_metrics_server_addr();
+            tokio::spawn(async move {
+                dv_report_metrics::server::start((host, port)).await;
+            });
+        }
+        log::info!("Supervisor started for: {}", self.service.name());
+        let shutdown_notify = self.shutdown_notify.clone();
+        let service = self.service.clone();
+        let retry_delay = self.retry_delay;
+        let shutdown_signal = async {
+            select! {
+                _ = signal::ctrl_c() => {
+                    log::warn!("Received Ctrl+C.");
+                },
+                _ = async {
+                    if let Some(n) = &shutdown_notify {
+                        n.notified().await;
+                    } else {
+                        std::future::pending::<()>().await;
+                    }
+                } => {
+                    log::warn!("Received internal shutdown notification.");
                 }
-                Err(e) => {
-                    log::error!("Service run failed: {e:?}. Retrying in {retry_delay} seconds.");
-                    tokio::time::sleep(std::time::Duration::from_secs(retry_delay)).await;
+            }
+        };
+        let run_loop = async {
+            loop {
+                match service.run().await {
+                    Ok(_) => {
+                        log::info!("`{}` exited successfully.", service.name());
+                        break Ok(());
+                    }
+                    Err(e) => {
+                        log::error!("`{}` failed: {e:?}", service.name());
+                        log::warn!("Retrying `{}` after {:?}", service.name(), retry_delay);
+                        sleep(retry_delay).await;
+                    }
                 }
+            }
+        };
+
+        select! {
+            result = run_loop => {
+                service.shutdown().await?;
+                result
+            }
+            _ = shutdown_signal => {
+                log::info!("Shutting down service `{}`...", service.name());
+                service.shutdown().await?;
+                Ok(())
             }
         }
     }
