@@ -1,7 +1,5 @@
 import { DataStore, DataStoreDelegate } from '../data/data-store';
 import { UI, UIDelegate } from '../ui/ui';
-import { sleep } from '../util/async-util';
-import { Constants } from '../util/constants';
 
 class App {
     private readonly ui: UI;
@@ -84,44 +82,19 @@ class App {
 
     private async initData() {
         this.ui.setLoadingDescription('loading networks');
-        await Promise.all([
-            this.dataStore.fetchNetworks(),
-            sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-        ]);
-
+        await this.dataStore.fetchNetworks();
         this.ui.setLoadingDescription('loading tracks');
-        await Promise.all([
-            this.dataStore.fetchTracks(),
-            sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-        ]);
-        await sleep(500);
-
+        await this.dataStore.fetchTracks();
         this.ui.setLoadingDescription('loading cohorts');
-        await Promise.all([
-            this.dataStore.fetchCohorts(),
-            sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-        ]);
-        await sleep(500);
-
+        await this.dataStore.fetchCohorts();
         this.ui.setLoadingDescription('loading statuses');
-        await Promise.all([
-            this.dataStore.fetchReferendumStatuses(),
-            sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-        ]);
-        await sleep(500);
-
+        await this.dataStore.fetchReferendumStatuses();
         this.ui.setLoadingDescription('loading delegates');
-        await Promise.all([
-            this.dataStore.fetchDelegates(),
-            sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-        ]);
+        await this.dataStore.fetchDelegates();
 
         for (const network of this.dataStore.getNetworks()) {
             this.ui.setLoadingDescription(`loading<br>${network.display} referenda`);
-            await Promise.all([
-                this.dataStore.fetchNetworkReferenda(network.id),
-                sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-            ]);
+            await this.dataStore.fetchNetworkReferenda(network.id);
         }
 
         for (const delegate of this.dataStore.getDelegates()) {
@@ -133,13 +106,10 @@ class App {
                 this.ui.setLoadingDescription(
                     `loading<br>${delegate.name}<br>${network.display} votes`,
                 );
-                await Promise.all([
-                    this.dataStore.fetchNetworkDelegateVotes(
-                        delegation.networkId,
-                        delegation.delegateAccountId,
-                    ),
-                    sleep(Constants.LOADING_STATE_TRANSITION_MIN_MS),
-                ]);
+                await this.dataStore.fetchNetworkDelegateVotes(
+                    delegation.networkId,
+                    delegation.delegateAccountId,
+                );
             }
         }
     }

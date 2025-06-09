@@ -8,7 +8,7 @@ export abstract class Constants {
     static readonly HASH_TRIM_SIZE = 7;
     static readonly CONTENT_FADE_ANIM_DURATION_MS = 300;
     static readonly ARTIFICIAL_DELAY_MS = 1500;
-    static readonly LOADING_STATE_TRANSITION_MIN_MS = 250;
+    static readonly LOADING_STATE_TRANSITION_MIN_MS = 50;
     static readonly CHART_TRANSITION_TIME_MS = 750;
     static readonly NAY_COLOR = '#f44336';
     static readonly ABSTAIN_COLOR = '#aaaaaa';
