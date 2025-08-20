@@ -235,8 +235,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -321,8 +319,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -345,8 +341,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -372,8 +366,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -461,8 +453,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -486,8 +476,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -512,8 +500,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -620,8 +606,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -647,8 +631,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -671,8 +653,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -698,8 +678,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -925,8 +903,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -952,8 +928,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -980,8 +954,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1007,8 +979,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1033,8 +1003,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1059,8 +1027,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1085,8 +1051,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1111,8 +1075,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1137,8 +1099,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1166,8 +1126,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1259,8 +1217,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1286,8 +1242,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1314,8 +1268,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1379,8 +1331,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -1436,8 +1386,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2106,8 +2054,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2138,8 +2084,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2166,8 +2110,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2197,8 +2139,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2226,8 +2166,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2257,8 +2195,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2283,8 +2219,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2309,8 +2243,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2336,8 +2268,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2365,8 +2295,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2394,8 +2322,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2428,8 +2354,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2454,8 +2378,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2483,8 +2405,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2509,8 +2429,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2537,8 +2455,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2563,8 +2479,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2589,8 +2503,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2621,8 +2533,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2647,8 +2557,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2676,8 +2584,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2701,8 +2607,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2730,8 +2634,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2756,8 +2658,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2781,8 +2681,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2807,8 +2705,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2832,8 +2728,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2858,8 +2752,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2882,8 +2774,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2910,8 +2800,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2934,8 +2822,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2959,8 +2845,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -2983,8 +2867,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3008,8 +2890,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3189,8 +3069,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3216,8 +3094,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3246,8 +3122,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3280,8 +3154,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3314,8 +3186,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3345,8 +3215,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3374,8 +3242,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3515,8 +3381,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3541,8 +3405,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3577,8 +3439,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3610,8 +3470,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3644,8 +3502,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3718,8 +3574,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3743,8 +3597,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3858,8 +3710,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3887,8 +3737,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3918,8 +3766,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -3944,8 +3790,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4089,8 +3933,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4112,8 +3954,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4135,8 +3975,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4158,8 +3996,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4185,8 +4021,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4220,8 +4054,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4277,8 +4109,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4351,8 +4181,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4383,8 +4211,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4438,8 +4264,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4555,8 +4379,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4586,8 +4408,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4613,8 +4433,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4639,8 +4457,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4756,8 +4572,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4787,8 +4601,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4814,8 +4626,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4840,8 +4650,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4960,8 +4768,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -4989,8 +4795,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5019,8 +4823,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5050,8 +4852,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5141,8 +4941,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5175,8 +4973,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5234,8 +5030,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5329,8 +5123,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5358,8 +5150,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5385,8 +5175,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5861,8 +5649,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5888,8 +5674,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5914,8 +5698,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5941,8 +5723,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5968,8 +5748,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -5997,8 +5775,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6025,8 +5801,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6054,8 +5828,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6081,8 +5853,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6107,8 +5877,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6133,8 +5901,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -6355,8 +6121,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ExtrinsicSuccess {
@@ -6377,8 +6141,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ExtrinsicFailed {
@@ -6401,8 +6163,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CodeUpdated;
@@ -6417,8 +6177,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewAccount {
@@ -6439,8 +6197,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct KilledAccount {
@@ -6461,8 +6217,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Remarked {
@@ -6485,8 +6239,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UpgradeAuthorized {
@@ -6509,8 +6261,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RejectedInvalidAuthorizedUpgrade {
@@ -6653,7 +6403,7 @@ pub mod api {
                 }
                 pub fn account(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::account::Param0>,
+                    _0: types::account::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::account::Param0,
@@ -6666,9 +6416,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "System",
                         "Account",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             14u8, 233u8, 115u8, 214u8, 0u8, 109u8, 222u8, 121u8, 162u8, 65u8, 60u8,
                             175u8, 209u8, 79u8, 222u8, 124u8, 22u8, 235u8, 138u8, 176u8, 133u8,
@@ -6781,7 +6529,7 @@ pub mod api {
                 }
                 pub fn block_hash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::block_hash::Param0>,
+                    _0: types::block_hash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::block_hash::Param0,
@@ -6794,9 +6542,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "System",
                         "BlockHash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             217u8, 32u8, 215u8, 253u8, 24u8, 182u8, 207u8, 178u8, 157u8, 24u8,
                             103u8, 100u8, 195u8, 165u8, 69u8, 152u8, 112u8, 181u8, 56u8, 192u8,
@@ -6827,7 +6573,7 @@ pub mod api {
                 }
                 pub fn extrinsic_data(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::extrinsic_data::Param0>,
+                    _0: types::extrinsic_data::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::extrinsic_data::Param0,
@@ -6840,9 +6586,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "System",
                         "ExtrinsicData",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             160u8, 180u8, 122u8, 18u8, 196u8, 26u8, 2u8, 37u8, 115u8, 232u8, 133u8,
                             220u8, 106u8, 245u8, 4u8, 129u8, 42u8, 84u8, 241u8, 45u8, 199u8, 179u8,
@@ -6973,7 +6717,7 @@ pub mod api {
                 }
                 pub fn event_topics(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::event_topics::Param0>,
+                    _0: types::event_topics::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::event_topics::Param0,
@@ -6986,9 +6730,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "System",
                         "EventTopics",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             40u8, 225u8, 14u8, 75u8, 44u8, 176u8, 76u8, 34u8, 143u8, 107u8, 69u8,
                             133u8, 114u8, 13u8, 172u8, 250u8, 141u8, 73u8, 12u8, 65u8, 217u8, 63u8,
@@ -7238,8 +6980,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7271,8 +7011,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7299,8 +7037,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7334,8 +7070,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7360,8 +7094,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7393,8 +7125,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7429,8 +7159,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7459,8 +7187,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7489,8 +7215,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7515,8 +7239,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -7763,8 +7485,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Scheduled {
@@ -7787,8 +7507,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Canceled {
@@ -7811,8 +7529,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Dispatched {
@@ -7838,8 +7554,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RetrySet {
@@ -7866,8 +7580,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RetryCancelled {
@@ -7890,8 +7602,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CallUnavailable {
@@ -7914,8 +7624,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PeriodicFailed {
@@ -7938,8 +7646,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RetryFailed {
@@ -7962,8 +7668,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PermanentlyOverweight {
@@ -7986,8 +7690,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AgendaIncomplete {
@@ -8032,8 +7734,7 @@ pub mod api {
                     use super::runtime_types;
                     pub type Retries =
                         runtime_types::pallet_scheduler::RetryConfig<::core::primitive::u32>;
-                    pub type Param0 = ::core::primitive::u32;
-                    pub type Param1 = ::core::primitive::u32;
+                    pub type Param0 = (::core::primitive::u32, ::core::primitive::u32);
                 }
                 pub mod lookup {
                     use super::runtime_types;
@@ -8085,7 +7786,7 @@ pub mod api {
                 }
                 pub fn agenda(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::agenda::Param0>,
+                    _0: types::agenda::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::agenda::Param0,
@@ -8098,9 +7799,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Scheduler",
                         "Agenda",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             66u8, 183u8, 0u8, 101u8, 31u8, 106u8, 186u8, 111u8, 71u8, 154u8, 4u8,
                             121u8, 71u8, 25u8, 52u8, 249u8, 239u8, 0u8, 192u8, 14u8, 215u8, 207u8,
@@ -8129,46 +7828,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn retries_iter1(
+                pub fn retries(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::retries::Param0>,
+                    _0: types::retries::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::retries::Param0,
                     >,
                     types::retries::Retries,
-                    (),
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Scheduler",
-                        "Retries",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            164u8, 27u8, 208u8, 185u8, 19u8, 232u8, 190u8, 97u8, 137u8, 73u8,
-                            146u8, 10u8, 241u8, 176u8, 251u8, 140u8, 133u8, 65u8, 190u8, 162u8,
-                            59u8, 32u8, 77u8, 201u8, 27u8, 78u8, 183u8, 164u8, 74u8, 46u8, 139u8,
-                            145u8,
-                        ],
-                    )
-                }
-                pub fn retries(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::retries::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::retries::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::retries::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::retries::Param1,
-                        >,
-                    ),
-                    types::retries::Retries,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
                     (),
@@ -8176,14 +7843,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Scheduler",
                         "Retries",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             164u8, 27u8, 208u8, 185u8, 19u8, 232u8, 190u8, 97u8, 137u8, 73u8,
                             146u8, 10u8, 241u8, 176u8, 251u8, 140u8, 133u8, 65u8, 190u8, 162u8,
@@ -8214,7 +7874,7 @@ pub mod api {
                 }
                 pub fn lookup(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::lookup::Param0>,
+                    _0: types::lookup::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::lookup::Param0,
@@ -8227,9 +7887,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Scheduler",
                         "Lookup",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             24u8, 87u8, 96u8, 127u8, 136u8, 205u8, 238u8, 174u8, 71u8, 110u8, 65u8,
                             98u8, 228u8, 167u8, 99u8, 71u8, 171u8, 186u8, 12u8, 218u8, 137u8, 70u8,
@@ -8296,8 +7954,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8323,8 +7979,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8349,8 +8003,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8375,8 +8027,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8401,8 +8051,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8520,8 +8168,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Noted {
@@ -8542,8 +8188,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Requested {
@@ -8564,8 +8208,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Cleared {
@@ -8606,8 +8248,10 @@ pub mod api {
                         runtime_types::bounded_collections::bounded_vec::BoundedVec<
                             ::core::primitive::u8,
                         >;
-                    pub type Param0 = ::subxt::ext::subxt_core::utils::H256;
-                    pub type Param1 = ::core::primitive::u32;
+                    pub type Param0 = (
+                        ::subxt::ext::subxt_core::utils::H256,
+                        ::core::primitive::u32,
+                    );
                 }
             }
             pub struct StorageApi;
@@ -8635,7 +8279,7 @@ pub mod api {
                 }
                 pub fn status_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::status_for::Param0>,
+                    _0: types::status_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::status_for::Param0,
@@ -8648,9 +8292,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Preimage",
                         "StatusFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             187u8, 100u8, 54u8, 112u8, 96u8, 129u8, 36u8, 149u8, 127u8, 226u8,
                             126u8, 171u8, 72u8, 189u8, 59u8, 126u8, 204u8, 125u8, 67u8, 204u8,
@@ -8681,7 +8323,7 @@ pub mod api {
                 }
                 pub fn request_status_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::request_status_for::Param0>,
+                    _0: types::request_status_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::request_status_for::Param0,
@@ -8694,9 +8336,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Preimage",
                         "RequestStatusFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             72u8, 59u8, 254u8, 211u8, 96u8, 223u8, 10u8, 64u8, 6u8, 139u8, 213u8,
                             85u8, 14u8, 29u8, 166u8, 37u8, 140u8, 124u8, 186u8, 156u8, 172u8,
@@ -8725,46 +8365,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn preimage_for_iter1(
+                pub fn preimage_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::preimage_for::Param0>,
+                    _0: types::preimage_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::preimage_for::Param0,
                     >,
                     types::preimage_for::PreimageFor,
-                    (),
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Preimage",
-                        "PreimageFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            106u8, 5u8, 17u8, 46u8, 6u8, 184u8, 177u8, 113u8, 169u8, 34u8, 119u8,
-                            141u8, 117u8, 40u8, 30u8, 94u8, 187u8, 35u8, 206u8, 216u8, 143u8,
-                            208u8, 49u8, 156u8, 200u8, 255u8, 109u8, 200u8, 210u8, 134u8, 24u8,
-                            139u8,
-                        ],
-                    )
-                }
-                pub fn preimage_for(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::preimage_for::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::preimage_for::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::preimage_for::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::preimage_for::Param1,
-                        >,
-                    ),
-                    types::preimage_for::PreimageFor,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
                     (),
@@ -8772,14 +8380,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Preimage",
                         "PreimageFor",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             106u8, 5u8, 17u8, 46u8, 6u8, 184u8, 177u8, 113u8, 169u8, 34u8, 119u8,
                             141u8, 117u8, 40u8, 30u8, 94u8, 187u8, 35u8, 206u8, 216u8, 143u8,
@@ -8809,8 +8410,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8845,8 +8444,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -8881,8 +8478,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9273,7 +8868,7 @@ pub mod api {
                 }
                 pub fn under_construction(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::under_construction::Param0>,
+                    _0: types::under_construction::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::under_construction::Param0,
@@ -9286,9 +8881,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Babe",
                         "UnderConstruction",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             120u8, 120u8, 59u8, 247u8, 50u8, 6u8, 220u8, 14u8, 2u8, 76u8, 203u8,
                             244u8, 232u8, 144u8, 253u8, 191u8, 101u8, 35u8, 99u8, 85u8, 111u8,
@@ -9532,8 +9125,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9672,8 +9263,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9698,8 +9287,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9729,8 +9316,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9755,8 +9340,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9788,8 +9371,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9814,8 +9395,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -9952,8 +9531,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IndexAssigned {
@@ -9976,8 +9553,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IndexFreed {
@@ -9998,8 +9573,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IndexFrozen {
@@ -10022,8 +9595,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DepositPoked {
@@ -10083,7 +9654,7 @@ pub mod api {
                 }
                 pub fn accounts(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::accounts::Param0>,
+                    _0: types::accounts::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::accounts::Param0,
@@ -10096,9 +9667,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Indices",
                         "Accounts",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             48u8, 189u8, 43u8, 119u8, 32u8, 168u8, 28u8, 12u8, 245u8, 81u8, 119u8,
                             182u8, 23u8, 201u8, 33u8, 147u8, 128u8, 171u8, 155u8, 134u8, 71u8,
@@ -10149,8 +9718,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10181,8 +9748,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10218,8 +9783,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10250,8 +9813,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10281,8 +9842,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10312,8 +9871,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10340,8 +9897,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10372,8 +9927,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10401,8 +9954,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -10599,8 +10150,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Endowed {
@@ -10623,8 +10172,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DustLost {
@@ -10647,8 +10194,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Transfer {
@@ -10673,8 +10218,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BalanceSet {
@@ -10697,8 +10240,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Reserved {
@@ -10721,8 +10262,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unreserved {
@@ -10745,8 +10284,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ReserveRepatriated {
@@ -10774,8 +10311,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Deposit {
@@ -10798,8 +10333,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Withdraw {
@@ -10822,8 +10355,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -10846,8 +10377,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Minted {
@@ -10870,8 +10399,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Burned {
@@ -10894,8 +10421,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Suspended {
@@ -10918,8 +10443,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Restored {
@@ -10942,8 +10465,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Upgraded {
@@ -10964,8 +10485,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Issued {
@@ -10986,8 +10505,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rescinded {
@@ -11008,8 +10525,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Locked {
@@ -11032,8 +10547,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unlocked {
@@ -11056,8 +10569,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Frozen {
@@ -11080,8 +10591,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Thawed {
@@ -11104,8 +10613,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct TotalIssuanceForced {
@@ -11246,7 +10753,7 @@ pub mod api {
                 }
                 pub fn account(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::account::Param0>,
+                    _0: types::account::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::account::Param0,
@@ -11259,9 +10766,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Balances",
                         "Account",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             213u8, 38u8, 200u8, 69u8, 218u8, 0u8, 112u8, 181u8, 160u8, 23u8, 96u8,
                             90u8, 3u8, 88u8, 126u8, 22u8, 103u8, 74u8, 64u8, 69u8, 29u8, 247u8,
@@ -11291,7 +10796,7 @@ pub mod api {
                 }
                 pub fn locks(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::locks::Param0>,
+                    _0: types::locks::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::locks::Param0,
@@ -11304,9 +10809,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Balances",
                         "Locks",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             10u8, 223u8, 55u8, 0u8, 249u8, 69u8, 168u8, 41u8, 75u8, 35u8, 120u8,
                             167u8, 18u8, 132u8, 9u8, 20u8, 91u8, 51u8, 27u8, 69u8, 136u8, 187u8,
@@ -11336,7 +10839,7 @@ pub mod api {
                 }
                 pub fn reserves(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::reserves::Param0>,
+                    _0: types::reserves::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::reserves::Param0,
@@ -11349,9 +10852,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Balances",
                         "Reserves",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             112u8, 10u8, 241u8, 77u8, 64u8, 187u8, 106u8, 159u8, 13u8, 153u8,
                             140u8, 178u8, 182u8, 50u8, 1u8, 55u8, 149u8, 92u8, 196u8, 229u8, 170u8,
@@ -11381,7 +10882,7 @@ pub mod api {
                 }
                 pub fn holds(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::holds::Param0>,
+                    _0: types::holds::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::holds::Param0,
@@ -11394,9 +10895,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Balances",
                         "Holds",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             94u8, 85u8, 114u8, 245u8, 45u8, 82u8, 228u8, 76u8, 204u8, 59u8, 242u8,
                             121u8, 165u8, 20u8, 53u8, 228u8, 228u8, 180u8, 4u8, 170u8, 11u8, 171u8,
@@ -11426,7 +10925,7 @@ pub mod api {
                 }
                 pub fn freezes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::freezes::Param0>,
+                    _0: types::freezes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::freezes::Param0,
@@ -11439,9 +10938,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Balances",
                         "Freezes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             251u8, 45u8, 163u8, 52u8, 152u8, 182u8, 26u8, 38u8, 143u8, 138u8, 9u8,
                             249u8, 58u8, 31u8, 124u8, 3u8, 194u8, 161u8, 148u8, 250u8, 53u8, 166u8,
@@ -11534,8 +11031,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct TransactionFeePaid {
@@ -11693,8 +11188,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11724,8 +11217,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11751,8 +11242,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11778,8 +11267,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11804,8 +11291,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11830,8 +11315,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11861,8 +11344,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11881,8 +11362,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11909,8 +11388,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11929,8 +11406,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11956,8 +11431,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -11983,8 +11456,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12009,8 +11480,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12029,8 +11498,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12049,8 +11516,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12077,8 +11542,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12105,8 +11568,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12125,8 +11586,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12154,8 +11613,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12182,8 +11639,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12209,8 +11664,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12237,8 +11690,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12268,8 +11719,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12327,8 +11776,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12353,8 +11800,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12379,8 +11824,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12405,8 +11848,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12435,8 +11876,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12461,8 +11900,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12490,8 +11927,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12527,8 +11962,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -12553,8 +11986,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -13165,8 +12596,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EraPaid {
@@ -13191,8 +12620,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rewarded {
@@ -13219,8 +12646,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -13243,8 +12668,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SlashReported {
@@ -13269,8 +12692,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OldSlashingReportDiscarded {
@@ -13291,8 +12712,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct StakersElected;
@@ -13307,8 +12726,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Bonded {
@@ -13331,8 +12748,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unbonded {
@@ -13355,8 +12770,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Withdrawn {
@@ -13379,8 +12792,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Kicked {
@@ -13403,8 +12814,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct StakingElectionFailed;
@@ -13419,8 +12828,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Chilled {
@@ -13441,8 +12848,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PayoutStarted {
@@ -13469,8 +12874,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ValidatorPrefsSet {
@@ -13493,8 +12896,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SnapshotVotersSizeExceeded {
@@ -13515,8 +12916,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SnapshotTargetsSizeExceeded {
@@ -13537,8 +12936,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ForceEra {
@@ -13559,8 +12956,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ControllerBatchDeprecated {
@@ -13581,8 +12976,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CurrencyMigrated {
@@ -13822,8 +13215,10 @@ pub mod api {
                     pub type SpanSlash = runtime_types::pallet_staking::slashing::SpanRecord<
                         ::core::primitive::u128,
                     >;
-                    pub type Param0 = ::subxt::ext::subxt_core::utils::AccountId32;
-                    pub type Param1 = ::core::primitive::u32;
+                    pub type Param0 = (
+                        ::subxt::ext::subxt_core::utils::AccountId32,
+                        ::core::primitive::u32,
+                    );
                 }
                 pub mod current_planned_session {
                     use super::runtime_types;
@@ -13921,7 +13316,7 @@ pub mod api {
                 }
                 pub fn bonded(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::bonded::Param0>,
+                    _0: types::bonded::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::bonded::Param0,
@@ -13934,9 +13329,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "Bonded",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             99u8, 128u8, 108u8, 100u8, 235u8, 102u8, 243u8, 95u8, 61u8, 206u8,
                             220u8, 49u8, 155u8, 85u8, 236u8, 110u8, 99u8, 21u8, 117u8, 127u8,
@@ -14049,7 +13442,7 @@ pub mod api {
                 }
                 pub fn ledger(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::ledger::Param0>,
+                    _0: types::ledger::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::ledger::Param0,
@@ -14062,9 +13455,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "Ledger",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             109u8, 240u8, 70u8, 127u8, 227u8, 170u8, 76u8, 152u8, 52u8, 24u8, 90u8,
                             23u8, 56u8, 59u8, 16u8, 55u8, 68u8, 214u8, 235u8, 142u8, 189u8, 234u8,
@@ -14095,7 +13486,7 @@ pub mod api {
                 }
                 pub fn payee(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::payee::Param0>,
+                    _0: types::payee::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::payee::Param0,
@@ -14108,9 +13499,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "Payee",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             218u8, 38u8, 125u8, 139u8, 146u8, 230u8, 58u8, 61u8, 163u8, 36u8, 81u8,
                             175u8, 227u8, 148u8, 135u8, 196u8, 132u8, 198u8, 228u8, 137u8, 4u8,
@@ -14141,7 +13530,7 @@ pub mod api {
                 }
                 pub fn validators(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::validators::Param0>,
+                    _0: types::validators::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::validators::Param0,
@@ -14154,9 +13543,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "Validators",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             149u8, 207u8, 68u8, 38u8, 24u8, 220u8, 207u8, 84u8, 236u8, 33u8, 210u8,
                             124u8, 200u8, 99u8, 98u8, 29u8, 235u8, 46u8, 124u8, 4u8, 203u8, 6u8,
@@ -14228,7 +13615,7 @@ pub mod api {
                 }
                 pub fn nominators(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::nominators::Param0>,
+                    _0: types::nominators::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::nominators::Param0,
@@ -14241,9 +13628,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "Nominators",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             244u8, 174u8, 214u8, 105u8, 215u8, 218u8, 241u8, 145u8, 155u8, 54u8,
                             219u8, 34u8, 158u8, 224u8, 251u8, 17u8, 245u8, 9u8, 150u8, 36u8, 2u8,
@@ -14293,7 +13678,7 @@ pub mod api {
                 }
                 pub fn virtual_stakers(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::virtual_stakers::Param0>,
+                    _0: types::virtual_stakers::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::virtual_stakers::Param0,
@@ -14306,9 +13691,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "VirtualStakers",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             176u8, 114u8, 176u8, 164u8, 4u8, 33u8, 248u8, 152u8, 206u8, 8u8, 241u8,
                             209u8, 96u8, 131u8, 145u8, 120u8, 74u8, 141u8, 249u8, 208u8, 93u8,
@@ -14421,7 +13804,7 @@ pub mod api {
                 }
                 pub fn eras_start_session_index(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_start_session_index::Param0>,
+                    _0: types::eras_start_session_index::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_start_session_index::Param0,
@@ -14434,9 +13817,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasStartSessionIndex",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             104u8, 76u8, 102u8, 20u8, 9u8, 146u8, 55u8, 204u8, 12u8, 15u8, 117u8,
                             22u8, 54u8, 230u8, 98u8, 105u8, 191u8, 136u8, 140u8, 65u8, 48u8, 29u8,
@@ -14467,7 +13848,7 @@ pub mod api {
                 }
                 pub fn eras_stakers_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers::Param0>,
+                    _0: types::eras_stakers::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_stakers::Param0,
@@ -14480,9 +13861,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasStakers",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             120u8, 64u8, 232u8, 134u8, 109u8, 212u8, 242u8, 64u8, 68u8, 196u8,
                             108u8, 91u8, 255u8, 123u8, 245u8, 27u8, 55u8, 254u8, 60u8, 74u8, 183u8,
@@ -14493,8 +13872,8 @@ pub mod api {
                 }
                 pub fn eras_stakers(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_stakers::Param1>,
+                    _0: types::eras_stakers::Param0,
+                    _1: types::eras_stakers::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14513,12 +13892,8 @@ pub mod api {
                         "Staking",
                         "ErasStakers",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             120u8, 64u8, 232u8, 134u8, 109u8, 212u8, 242u8, 64u8, 68u8, 196u8,
@@ -14551,7 +13926,7 @@ pub mod api {
                 }
                 pub fn eras_stakers_overview_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_overview::Param0>,
+                    _0: types::eras_stakers_overview::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_stakers_overview::Param0,
@@ -14564,9 +13939,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasStakersOverview",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             235u8, 255u8, 39u8, 72u8, 235u8, 168u8, 98u8, 191u8, 30u8, 195u8,
                             141u8, 103u8, 167u8, 115u8, 74u8, 170u8, 117u8, 153u8, 151u8, 186u8,
@@ -14577,8 +13950,8 @@ pub mod api {
                 }
                 pub fn eras_stakers_overview(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_overview::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_stakers_overview::Param1>,
+                    _0: types::eras_stakers_overview::Param0,
+                    _1: types::eras_stakers_overview::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14597,12 +13970,8 @@ pub mod api {
                         "Staking",
                         "ErasStakersOverview",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             235u8, 255u8, 39u8, 72u8, 235u8, 168u8, 98u8, 191u8, 30u8, 195u8,
@@ -14635,7 +14004,7 @@ pub mod api {
                 }
                 pub fn eras_stakers_clipped_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_clipped::Param0>,
+                    _0: types::eras_stakers_clipped::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_stakers_clipped::Param0,
@@ -14648,9 +14017,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasStakersClipped",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             85u8, 192u8, 164u8, 53u8, 181u8, 61u8, 132u8, 255u8, 144u8, 41u8, 44u8,
                             199u8, 34u8, 11u8, 248u8, 81u8, 203u8, 204u8, 152u8, 138u8, 112u8,
@@ -14661,8 +14028,8 @@ pub mod api {
                 }
                 pub fn eras_stakers_clipped(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_clipped::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_stakers_clipped::Param1>,
+                    _0: types::eras_stakers_clipped::Param0,
+                    _1: types::eras_stakers_clipped::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14681,12 +14048,8 @@ pub mod api {
                         "Staking",
                         "ErasStakersClipped",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             85u8, 192u8, 164u8, 53u8, 181u8, 61u8, 132u8, 255u8, 144u8, 41u8, 44u8,
@@ -14719,7 +14082,7 @@ pub mod api {
                 }
                 pub fn eras_stakers_paged_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param0>,
+                    _0: types::eras_stakers_paged::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_stakers_paged::Param0,
@@ -14732,9 +14095,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasStakersPaged",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             111u8, 11u8, 84u8, 186u8, 98u8, 173u8, 68u8, 65u8, 58u8, 241u8, 211u8,
                             126u8, 10u8, 96u8, 40u8, 20u8, 233u8, 238u8, 116u8, 113u8, 215u8,
@@ -14745,8 +14106,8 @@ pub mod api {
                 }
                 pub fn eras_stakers_paged_iter2(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param1>,
+                    _0: types::eras_stakers_paged::Param0,
+                    _1: types::eras_stakers_paged::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14765,12 +14126,8 @@ pub mod api {
                         "Staking",
                         "ErasStakersPaged",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             111u8, 11u8, 84u8, 186u8, 98u8, 173u8, 68u8, 65u8, 58u8, 241u8, 211u8,
@@ -14782,9 +14139,9 @@ pub mod api {
                 }
                 pub fn eras_stakers_paged(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param1>,
-                    _2: impl ::core::borrow::Borrow<types::eras_stakers_paged::Param2>,
+                    _0: types::eras_stakers_paged::Param0,
+                    _1: types::eras_stakers_paged::Param1,
+                    _2: types::eras_stakers_paged::Param2,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14806,15 +14163,9 @@ pub mod api {
                         "Staking",
                         "ErasStakersPaged",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _2.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_2),
                         ),
                         [
                             111u8, 11u8, 84u8, 186u8, 98u8, 173u8, 68u8, 65u8, 58u8, 241u8, 211u8,
@@ -14846,7 +14197,7 @@ pub mod api {
                 }
                 pub fn claimed_rewards_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::claimed_rewards::Param0>,
+                    _0: types::claimed_rewards::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::claimed_rewards::Param0,
@@ -14859,9 +14210,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ClaimedRewards",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             44u8, 248u8, 79u8, 211u8, 69u8, 179u8, 60u8, 185u8, 3u8, 175u8, 51u8,
                             137u8, 222u8, 150u8, 73u8, 60u8, 178u8, 0u8, 179u8, 117u8, 37u8, 86u8,
@@ -14871,8 +14220,8 @@ pub mod api {
                 }
                 pub fn claimed_rewards(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::claimed_rewards::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::claimed_rewards::Param1>,
+                    _0: types::claimed_rewards::Param0,
+                    _1: types::claimed_rewards::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14891,12 +14240,8 @@ pub mod api {
                         "Staking",
                         "ClaimedRewards",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             44u8, 248u8, 79u8, 211u8, 69u8, 179u8, 60u8, 185u8, 3u8, 175u8, 51u8,
@@ -14927,7 +14272,7 @@ pub mod api {
                 }
                 pub fn eras_validator_prefs_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_validator_prefs::Param0>,
+                    _0: types::eras_validator_prefs::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_validator_prefs::Param0,
@@ -14940,9 +14285,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasValidatorPrefs",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             134u8, 250u8, 229u8, 21u8, 44u8, 119u8, 43u8, 99u8, 69u8, 94u8, 177u8,
                             180u8, 174u8, 134u8, 54u8, 25u8, 56u8, 144u8, 194u8, 149u8, 56u8,
@@ -14952,8 +14295,8 @@ pub mod api {
                 }
                 pub fn eras_validator_prefs(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_validator_prefs::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::eras_validator_prefs::Param1>,
+                    _0: types::eras_validator_prefs::Param0,
+                    _1: types::eras_validator_prefs::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -14972,12 +14315,8 @@ pub mod api {
                         "Staking",
                         "ErasValidatorPrefs",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             134u8, 250u8, 229u8, 21u8, 44u8, 119u8, 43u8, 99u8, 69u8, 94u8, 177u8,
@@ -15008,7 +14347,7 @@ pub mod api {
                 }
                 pub fn eras_validator_reward(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_validator_reward::Param0>,
+                    _0: types::eras_validator_reward::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_validator_reward::Param0,
@@ -15021,9 +14360,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasValidatorReward",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             185u8, 85u8, 179u8, 163u8, 178u8, 168u8, 141u8, 200u8, 59u8, 77u8, 2u8,
                             197u8, 36u8, 188u8, 133u8, 117u8, 2u8, 25u8, 105u8, 132u8, 44u8, 75u8,
@@ -15053,7 +14390,7 @@ pub mod api {
                 }
                 pub fn eras_reward_points(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_reward_points::Param0>,
+                    _0: types::eras_reward_points::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_reward_points::Param0,
@@ -15066,9 +14403,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasRewardPoints",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             135u8, 0u8, 85u8, 241u8, 213u8, 133u8, 30u8, 192u8, 251u8, 191u8, 41u8,
                             38u8, 233u8, 236u8, 218u8, 246u8, 166u8, 93u8, 46u8, 37u8, 48u8, 187u8,
@@ -15099,7 +14434,7 @@ pub mod api {
                 }
                 pub fn eras_total_stake(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::eras_total_stake::Param0>,
+                    _0: types::eras_total_stake::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::eras_total_stake::Param0,
@@ -15112,9 +14447,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ErasTotalStake",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             8u8, 78u8, 101u8, 62u8, 124u8, 126u8, 66u8, 26u8, 47u8, 126u8, 239u8,
                             204u8, 222u8, 104u8, 19u8, 108u8, 238u8, 160u8, 112u8, 242u8, 56u8,
@@ -15229,7 +14562,7 @@ pub mod api {
                 }
                 pub fn unapplied_slashes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::unapplied_slashes::Param0>,
+                    _0: types::unapplied_slashes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::unapplied_slashes::Param0,
@@ -15242,9 +14575,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "UnappliedSlashes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             158u8, 134u8, 7u8, 21u8, 200u8, 222u8, 197u8, 166u8, 199u8, 39u8, 1u8,
                             167u8, 164u8, 154u8, 165u8, 118u8, 92u8, 223u8, 219u8, 136u8, 196u8,
@@ -15296,7 +14627,7 @@ pub mod api {
                 }
                 pub fn validator_slash_in_era_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::validator_slash_in_era::Param0>,
+                    _0: types::validator_slash_in_era::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::validator_slash_in_era::Param0,
@@ -15309,9 +14640,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "ValidatorSlashInEra",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             245u8, 72u8, 52u8, 22u8, 10u8, 177u8, 127u8, 83u8, 180u8, 246u8, 17u8,
                             82u8, 6u8, 231u8, 131u8, 68u8, 73u8, 92u8, 241u8, 251u8, 32u8, 97u8,
@@ -15321,8 +14650,8 @@ pub mod api {
                 }
                 pub fn validator_slash_in_era(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::validator_slash_in_era::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::validator_slash_in_era::Param1>,
+                    _0: types::validator_slash_in_era::Param0,
+                    _1: types::validator_slash_in_era::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -15341,12 +14670,8 @@ pub mod api {
                         "Staking",
                         "ValidatorSlashInEra",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             245u8, 72u8, 52u8, 22u8, 10u8, 177u8, 127u8, 83u8, 180u8, 246u8, 17u8,
@@ -15377,7 +14702,7 @@ pub mod api {
                 }
                 pub fn nominator_slash_in_era_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::nominator_slash_in_era::Param0>,
+                    _0: types::nominator_slash_in_era::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::nominator_slash_in_era::Param0,
@@ -15390,9 +14715,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "NominatorSlashInEra",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             8u8, 89u8, 171u8, 183u8, 64u8, 29u8, 44u8, 185u8, 11u8, 204u8, 67u8,
                             60u8, 208u8, 132u8, 9u8, 214u8, 13u8, 148u8, 205u8, 26u8, 5u8, 7u8,
@@ -15402,8 +14725,8 @@ pub mod api {
                 }
                 pub fn nominator_slash_in_era(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::nominator_slash_in_era::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::nominator_slash_in_era::Param1>,
+                    _0: types::nominator_slash_in_era::Param0,
+                    _1: types::nominator_slash_in_era::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -15422,12 +14745,8 @@ pub mod api {
                         "Staking",
                         "NominatorSlashInEra",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             8u8, 89u8, 171u8, 183u8, 64u8, 29u8, 44u8, 185u8, 11u8, 204u8, 67u8,
@@ -15459,7 +14778,7 @@ pub mod api {
                 }
                 pub fn slashing_spans(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::slashing_spans::Param0>,
+                    _0: types::slashing_spans::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::slashing_spans::Param0,
@@ -15472,9 +14791,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "SlashingSpans",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             74u8, 169u8, 189u8, 252u8, 193u8, 191u8, 114u8, 107u8, 158u8, 125u8,
                             252u8, 35u8, 177u8, 129u8, 99u8, 24u8, 77u8, 223u8, 238u8, 24u8, 237u8,
@@ -15503,45 +14820,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn span_slash_iter1(
+                pub fn span_slash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::span_slash::Param0>,
+                    _0: types::span_slash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::span_slash::Param0,
                     >,
                     types::span_slash::SpanSlash,
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Staking",
-                        "SpanSlash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            158u8, 168u8, 151u8, 108u8, 4u8, 168u8, 253u8, 28u8, 69u8, 111u8, 99u8,
-                            235u8, 175u8, 72u8, 48u8, 238u8, 239u8, 142u8, 40u8, 142u8, 97u8, 77u8,
-                            72u8, 123u8, 210u8, 157u8, 119u8, 180u8, 205u8, 98u8, 110u8, 215u8,
-                        ],
-                    )
-                }
-                pub fn span_slash(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::span_slash::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::span_slash::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::span_slash::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::span_slash::Param1,
-                        >,
-                    ),
-                    types::span_slash::SpanSlash,
                     ::subxt::ext::subxt_core::utils::Yes,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
@@ -15549,14 +14835,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Staking",
                         "SpanSlash",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             158u8, 168u8, 151u8, 108u8, 4u8, 168u8, 253u8, 28u8, 69u8, 111u8, 99u8,
                             235u8, 175u8, 72u8, 48u8, 238u8, 239u8, 142u8, 40u8, 142u8, 97u8, 77u8,
@@ -15722,8 +15001,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Offence {
@@ -15765,7 +15042,8 @@ pub mod api {
                         ::subxt::ext::subxt_core::utils::H256,
                     >;
                     pub type Param0 = [::core::primitive::u8; 16usize];
-                    pub type Param1 = [::core::primitive::u8];
+                    pub type Param1 =
+                        ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>;
                 }
             }
             pub struct StorageApi;
@@ -15792,7 +15070,7 @@ pub mod api {
                 }
                 pub fn reports(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::reports::Param0>,
+                    _0: types::reports::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::reports::Param0,
@@ -15805,9 +15083,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Offences",
                         "Reports",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             140u8, 14u8, 199u8, 180u8, 83u8, 5u8, 23u8, 57u8, 241u8, 41u8, 240u8,
                             35u8, 80u8, 12u8, 115u8, 16u8, 2u8, 15u8, 22u8, 77u8, 25u8, 92u8,
@@ -15838,7 +15114,7 @@ pub mod api {
                 }
                 pub fn concurrent_reports_index_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::concurrent_reports_index::Param0>,
+                    _0: types::concurrent_reports_index::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::concurrent_reports_index::Param0,
@@ -15851,9 +15127,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Offences",
                         "ConcurrentReportsIndex",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             170u8, 186u8, 72u8, 29u8, 251u8, 38u8, 193u8, 195u8, 109u8, 86u8, 0u8,
                             241u8, 20u8, 235u8, 108u8, 126u8, 215u8, 82u8, 73u8, 113u8, 199u8,
@@ -15864,8 +15138,8 @@ pub mod api {
                 }
                 pub fn concurrent_reports_index(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::concurrent_reports_index::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::concurrent_reports_index::Param1>,
+                    _0: types::concurrent_reports_index::Param0,
+                    _1: types::concurrent_reports_index::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -15884,12 +15158,8 @@ pub mod api {
                         "Offences",
                         "ConcurrentReportsIndex",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             170u8, 186u8, 72u8, 29u8, 251u8, 38u8, 193u8, 195u8, 109u8, 86u8, 0u8,
@@ -15947,7 +15217,7 @@ pub mod api {
                 }
                 pub fn historical_sessions(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::historical_sessions::Param0>,
+                    _0: types::historical_sessions::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::historical_sessions::Param0,
@@ -15960,9 +15230,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Historical",
                         "HistoricalSessions",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             9u8, 138u8, 247u8, 141u8, 178u8, 146u8, 124u8, 81u8, 162u8, 211u8,
                             205u8, 149u8, 222u8, 254u8, 253u8, 188u8, 170u8, 242u8, 218u8, 41u8,
@@ -16012,8 +15280,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -16041,8 +15307,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -16102,8 +15366,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewSession {
@@ -16124,8 +15386,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ValidatorDisabled {
@@ -16146,8 +15406,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ValidatorReenabled {
@@ -16202,8 +15460,10 @@ pub mod api {
                 pub mod key_owner {
                     use super::runtime_types;
                     pub type KeyOwner = ::subxt::ext::subxt_core::utils::AccountId32;
-                    pub type Param0 = runtime_types::sp_core::crypto::KeyTypeId;
-                    pub type Param1 = [::core::primitive::u8];
+                    pub type Param0 = (
+                        runtime_types::sp_core::crypto::KeyTypeId,
+                        ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                    );
                 }
             }
             pub struct StorageApi;
@@ -16333,7 +15593,7 @@ pub mod api {
                 }
                 pub fn next_keys(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::next_keys::Param0>,
+                    _0: types::next_keys::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::next_keys::Param0,
@@ -16346,9 +15606,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Session",
                         "NextKeys",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             123u8, 233u8, 243u8, 13u8, 162u8, 60u8, 206u8, 97u8, 76u8, 43u8, 184u8,
                             99u8, 17u8, 23u8, 110u8, 108u8, 131u8, 195u8, 109u8, 24u8, 217u8, 93u8,
@@ -16377,46 +15635,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn key_owner_iter1(
+                pub fn key_owner(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::key_owner::Param0>,
+                    _0: types::key_owner::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::key_owner::Param0,
                     >,
                     types::key_owner::KeyOwner,
-                    (),
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Session",
-                        "KeyOwner",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            217u8, 204u8, 21u8, 114u8, 247u8, 129u8, 32u8, 242u8, 93u8, 91u8,
-                            253u8, 253u8, 248u8, 90u8, 12u8, 202u8, 195u8, 25u8, 18u8, 100u8,
-                            253u8, 109u8, 88u8, 77u8, 217u8, 140u8, 51u8, 40u8, 118u8, 35u8, 107u8,
-                            206u8,
-                        ],
-                    )
-                }
-                pub fn key_owner(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::key_owner::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::key_owner::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::key_owner::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::key_owner::Param1,
-                        >,
-                    ),
-                    types::key_owner::KeyOwner,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
                     (),
@@ -16424,14 +15650,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Session",
                         "KeyOwner",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             217u8, 204u8, 21u8, 114u8, 247u8, 129u8, 32u8, 242u8, 93u8, 91u8,
                             253u8, 253u8, 248u8, 90u8, 12u8, 202u8, 195u8, 25u8, 18u8, 100u8,
@@ -16461,8 +15680,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -16495,8 +15712,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -16529,8 +15744,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -16631,8 +15844,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewAuthorities {
@@ -16656,8 +15867,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Paused;
@@ -16672,8 +15881,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Resumed;
@@ -16848,7 +16055,7 @@ pub mod api {
                 }
                 pub fn set_id_session(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::set_id_session::Param0>,
+                    _0: types::set_id_session::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::set_id_session::Param0,
@@ -16861,9 +16068,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Grandpa",
                         "SetIdSession",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             47u8, 0u8, 239u8, 121u8, 187u8, 213u8, 254u8, 50u8, 238u8, 10u8, 162u8,
                             65u8, 189u8, 166u8, 37u8, 74u8, 82u8, 81u8, 160u8, 20u8, 180u8, 253u8,
@@ -17036,8 +16241,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17068,8 +16271,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17095,8 +16296,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17130,8 +16329,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17156,8 +16353,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17182,8 +16377,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -17330,8 +16523,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Spending {
@@ -17352,8 +16543,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Awarded {
@@ -17378,8 +16567,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Burnt {
@@ -17400,8 +16587,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rollover {
@@ -17422,8 +16607,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Deposit {
@@ -17444,8 +16627,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SpendApproved {
@@ -17470,8 +16651,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UpdatedInactive {
@@ -17494,8 +16673,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetSpendApproved {
@@ -17527,8 +16704,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetSpendVoided {
@@ -17549,8 +16724,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Paid {
@@ -17573,8 +16746,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PaymentFailed {
@@ -17597,8 +16768,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SpendProcessed {
@@ -17705,7 +16874,7 @@ pub mod api {
                 }
                 pub fn proposals(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::proposals::Param0>,
+                    _0: types::proposals::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::proposals::Param0,
@@ -17718,9 +16887,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Treasury",
                         "Proposals",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             207u8, 135u8, 145u8, 146u8, 48u8, 10u8, 252u8, 40u8, 20u8, 115u8,
                             205u8, 41u8, 173u8, 83u8, 115u8, 46u8, 106u8, 40u8, 130u8, 157u8,
@@ -17813,7 +16980,7 @@ pub mod api {
                 }
                 pub fn spends(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::spends::Param0>,
+                    _0: types::spends::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::spends::Param0,
@@ -17826,9 +16993,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Treasury",
                         "Spends",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             19u8, 242u8, 70u8, 81u8, 218u8, 158u8, 21u8, 93u8, 185u8, 202u8, 241u8,
                             52u8, 246u8, 236u8, 186u8, 250u8, 247u8, 166u8, 123u8, 45u8, 201u8,
@@ -17978,8 +17143,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18009,8 +17172,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18045,8 +17206,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18071,8 +17230,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18102,8 +17259,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18130,8 +17285,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18288,8 +17441,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Delegated(pub delegated::Field0, pub delegated::Field1);
@@ -18309,8 +17460,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Undelegated(pub undelegated::Field0);
@@ -18329,8 +17478,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Voted {
@@ -18355,8 +17502,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VoteRemoved {
@@ -18381,8 +17526,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VoteUnlocked {
@@ -18448,7 +17591,7 @@ pub mod api {
                 }
                 pub fn voting_for_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::voting_for::Param0>,
+                    _0: types::voting_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::voting_for::Param0,
@@ -18461,9 +17604,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ConvictionVoting",
                         "VotingFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             76u8, 63u8, 153u8, 193u8, 39u8, 137u8, 186u8, 29u8, 202u8, 56u8, 169u8,
                             56u8, 103u8, 138u8, 192u8, 18u8, 179u8, 114u8, 56u8, 121u8, 197u8,
@@ -18473,8 +17614,8 @@ pub mod api {
                 }
                 pub fn voting_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::voting_for::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::voting_for::Param1>,
+                    _0: types::voting_for::Param0,
+                    _1: types::voting_for::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -18493,12 +17634,8 @@ pub mod api {
                         "ConvictionVoting",
                         "VotingFor",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             76u8, 63u8, 153u8, 193u8, 39u8, 137u8, 186u8, 29u8, 202u8, 56u8, 169u8,
@@ -18529,7 +17666,7 @@ pub mod api {
                 }
                 pub fn class_locks_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::class_locks_for::Param0>,
+                    _0: types::class_locks_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::class_locks_for::Param0,
@@ -18542,9 +17679,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ConvictionVoting",
                         "ClassLocksFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             74u8, 74u8, 8u8, 82u8, 215u8, 61u8, 13u8, 9u8, 44u8, 222u8, 33u8,
                             245u8, 195u8, 124u8, 6u8, 174u8, 65u8, 245u8, 71u8, 42u8, 47u8, 46u8,
@@ -18611,8 +17746,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18648,8 +17781,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18674,8 +17805,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18700,8 +17829,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18726,8 +17853,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18752,8 +17877,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18778,8 +17901,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18804,8 +17925,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -18830,8 +17949,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -19028,8 +18145,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Submitted {
@@ -19057,8 +18172,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DecisionDepositPlaced {
@@ -19083,8 +18196,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DecisionDepositRefunded {
@@ -19109,8 +18220,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DepositSlashed {
@@ -19133,8 +18242,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DecisionStarted {
@@ -19165,8 +18272,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ConfirmStarted {
@@ -19187,8 +18292,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ConfirmAborted {
@@ -19209,8 +18312,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Confirmed {
@@ -19234,8 +18335,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Approved {
@@ -19256,8 +18355,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rejected {
@@ -19281,8 +18378,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct TimedOut {
@@ -19306,8 +18401,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Cancelled {
@@ -19331,8 +18424,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Killed {
@@ -19356,8 +18447,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SubmissionDepositRefunded {
@@ -19382,8 +18471,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MetadataSet {
@@ -19406,8 +18493,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MetadataCleared {
@@ -19517,7 +18602,7 @@ pub mod api {
                 }
                 pub fn referendum_info_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::referendum_info_for::Param0>,
+                    _0: types::referendum_info_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::referendum_info_for::Param0,
@@ -19530,9 +18615,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Referenda",
                         "ReferendumInfoFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             55u8, 165u8, 17u8, 15u8, 97u8, 193u8, 18u8, 120u8, 21u8, 43u8, 23u8,
                             168u8, 174u8, 176u8, 89u8, 40u8, 212u8, 58u8, 46u8, 158u8, 95u8, 191u8,
@@ -19562,7 +18645,7 @@ pub mod api {
                 }
                 pub fn track_queue(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::track_queue::Param0>,
+                    _0: types::track_queue::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::track_queue::Param0,
@@ -19575,9 +18658,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Referenda",
                         "TrackQueue",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             125u8, 59u8, 111u8, 68u8, 27u8, 236u8, 82u8, 55u8, 83u8, 159u8, 105u8,
                             20u8, 241u8, 118u8, 58u8, 141u8, 103u8, 60u8, 246u8, 49u8, 121u8,
@@ -19608,7 +18689,7 @@ pub mod api {
                 }
                 pub fn deciding_count(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::deciding_count::Param0>,
+                    _0: types::deciding_count::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::deciding_count::Param0,
@@ -19621,9 +18702,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Referenda",
                         "DecidingCount",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             203u8, 89u8, 158u8, 179u8, 194u8, 82u8, 248u8, 162u8, 93u8, 140u8,
                             146u8, 51u8, 110u8, 232u8, 51u8, 1u8, 128u8, 212u8, 199u8, 14u8, 182u8,
@@ -19655,7 +18734,7 @@ pub mod api {
                 }
                 pub fn metadata_of(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::metadata_of::Param0>,
+                    _0: types::metadata_of::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::metadata_of::Param0,
@@ -19668,9 +18747,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Referenda",
                         "MetadataOf",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             159u8, 250u8, 56u8, 189u8, 247u8, 165u8, 206u8, 166u8, 91u8, 139u8,
                             124u8, 164u8, 25u8, 246u8, 199u8, 36u8, 159u8, 56u8, 227u8, 136u8, 4u8,
@@ -19796,8 +18873,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -19822,8 +18897,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -19848,8 +18921,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -19878,8 +18949,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -19992,8 +19061,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CallWhitelisted {
@@ -20014,8 +19081,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct WhitelistedCallRemoved {
@@ -20036,8 +19101,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct WhitelistedCallDispatched {
@@ -20093,7 +19156,7 @@ pub mod api {
                 }
                 pub fn whitelisted_call(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::whitelisted_call::Param0>,
+                    _0: types::whitelisted_call::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::whitelisted_call::Param0,
@@ -20106,9 +19169,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Whitelist",
                         "WhitelistedCall",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             82u8, 208u8, 214u8, 72u8, 225u8, 35u8, 51u8, 212u8, 25u8, 138u8, 30u8,
                             87u8, 54u8, 232u8, 72u8, 132u8, 4u8, 9u8, 28u8, 143u8, 251u8, 106u8,
@@ -20137,8 +19198,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20166,8 +19225,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20204,8 +19261,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20236,8 +19291,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20263,8 +19316,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20409,8 +19460,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Claimed {
@@ -20493,7 +19542,7 @@ pub mod api {
                 }
                 pub fn claims(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::claims::Param0>,
+                    _0: types::claims::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::claims::Param0,
@@ -20506,9 +19555,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Claims",
                         "Claims",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             148u8, 115u8, 159u8, 169u8, 36u8, 116u8, 15u8, 108u8, 57u8, 195u8,
                             226u8, 180u8, 187u8, 112u8, 114u8, 63u8, 3u8, 205u8, 113u8, 141u8,
@@ -20561,7 +19608,7 @@ pub mod api {
                 }
                 pub fn vesting(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::vesting::Param0>,
+                    _0: types::vesting::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::vesting::Param0,
@@ -20574,9 +19621,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Claims",
                         "Vesting",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             206u8, 106u8, 195u8, 101u8, 55u8, 137u8, 50u8, 105u8, 137u8, 87u8,
                             230u8, 34u8, 255u8, 94u8, 210u8, 186u8, 179u8, 72u8, 24u8, 194u8,
@@ -20607,7 +19652,7 @@ pub mod api {
                 }
                 pub fn signing(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::signing::Param0>,
+                    _0: types::signing::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::signing::Param0,
@@ -20620,9 +19665,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Claims",
                         "Signing",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             111u8, 90u8, 178u8, 121u8, 241u8, 28u8, 169u8, 231u8, 61u8, 189u8,
                             113u8, 207u8, 26u8, 153u8, 189u8, 15u8, 192u8, 25u8, 22u8, 22u8, 124u8,
@@ -20653,7 +19696,7 @@ pub mod api {
                 }
                 pub fn preclaims(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::preclaims::Param0>,
+                    _0: types::preclaims::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::preclaims::Param0,
@@ -20666,9 +19709,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Claims",
                         "Preclaims",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             197u8, 114u8, 147u8, 235u8, 203u8, 255u8, 94u8, 113u8, 151u8, 119u8,
                             224u8, 147u8, 48u8, 246u8, 124u8, 38u8, 190u8, 237u8, 226u8, 65u8,
@@ -20720,8 +19761,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20740,8 +19779,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20769,8 +19806,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20803,8 +19838,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20842,8 +19875,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -20870,8 +19901,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21022,8 +20051,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VestingUpdated {
@@ -21046,8 +20073,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VestingCompleted {
@@ -21106,7 +20131,7 @@ pub mod api {
                 }
                 pub fn vesting(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::vesting::Param0>,
+                    _0: types::vesting::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::vesting::Param0,
@@ -21119,9 +20144,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Vesting",
                         "Vesting",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             95u8, 168u8, 217u8, 248u8, 149u8, 86u8, 195u8, 93u8, 73u8, 206u8,
                             105u8, 165u8, 33u8, 173u8, 232u8, 81u8, 147u8, 254u8, 50u8, 228u8,
@@ -21208,8 +20231,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21236,8 +20257,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21264,8 +20283,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21292,8 +20309,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21321,8 +20336,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21349,8 +20362,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21377,8 +20388,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21405,8 +20414,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21592,8 +20599,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BatchInterrupted {
@@ -21616,8 +20621,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BatchCompleted;
@@ -21632,8 +20635,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BatchCompletedWithErrors;
@@ -21648,8 +20649,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ItemCompleted;
@@ -21664,8 +20663,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ItemFailed {
@@ -21686,8 +20683,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DispatchedAs {
@@ -21709,8 +20704,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IfElseMainSuccess;
@@ -21725,8 +20718,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IfElseFallbackCalled {
@@ -21782,8 +20773,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21817,8 +20806,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21851,8 +20838,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21885,8 +20870,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21905,8 +20888,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21936,8 +20917,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -21976,8 +20955,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22007,8 +20984,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22038,8 +21013,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22069,8 +21042,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22109,8 +21080,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22363,8 +21332,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProxyExecuted {
@@ -22386,8 +21353,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PureCreated {
@@ -22414,8 +21379,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Announced {
@@ -22440,8 +21403,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProxyAdded {
@@ -22468,8 +21429,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProxyRemoved {
@@ -22496,8 +21455,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DepositPoked {
@@ -22576,7 +21533,7 @@ pub mod api {
                 }
                 pub fn proxies(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::proxies::Param0>,
+                    _0: types::proxies::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::proxies::Param0,
@@ -22589,9 +21546,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Proxy",
                         "Proxies",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             21u8, 41u8, 16u8, 252u8, 140u8, 171u8, 131u8, 1u8, 101u8, 42u8, 72u8,
                             233u8, 241u8, 186u8, 132u8, 64u8, 208u8, 94u8, 116u8, 148u8, 128u8,
@@ -22623,7 +21578,7 @@ pub mod api {
                 }
                 pub fn announcements(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::announcements::Param0>,
+                    _0: types::announcements::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::announcements::Param0,
@@ -22636,9 +21591,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Proxy",
                         "Announcements",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             129u8, 228u8, 198u8, 210u8, 90u8, 69u8, 151u8, 198u8, 206u8, 174u8,
                             148u8, 58u8, 134u8, 14u8, 53u8, 56u8, 234u8, 71u8, 84u8, 247u8, 246u8,
@@ -22766,8 +21719,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22797,8 +21748,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22835,8 +21784,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22873,8 +21820,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -22908,8 +21853,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23068,8 +22011,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewMultisig {
@@ -23094,8 +22035,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MultisigApproval {
@@ -23123,8 +22062,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MultisigExecuted {
@@ -23155,8 +22092,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MultisigCancelled {
@@ -23184,8 +22119,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DepositPoked {
@@ -23245,7 +22178,7 @@ pub mod api {
                 }
                 pub fn multisigs_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::multisigs::Param0>,
+                    _0: types::multisigs::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::multisigs::Param0,
@@ -23258,9 +22191,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Multisig",
                         "Multisigs",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             154u8, 109u8, 45u8, 18u8, 155u8, 151u8, 81u8, 28u8, 86u8, 127u8, 189u8,
                             151u8, 49u8, 61u8, 12u8, 149u8, 84u8, 61u8, 110u8, 197u8, 200u8, 140u8,
@@ -23270,8 +22201,8 @@ pub mod api {
                 }
                 pub fn multisigs(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::multisigs::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::multisigs::Param1>,
+                    _0: types::multisigs::Param0,
+                    _1: types::multisigs::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -23290,12 +22221,8 @@ pub mod api {
                         "Multisig",
                         "Multisigs",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             154u8, 109u8, 45u8, 18u8, 155u8, 151u8, 81u8, 28u8, 86u8, 127u8, 189u8,
@@ -23377,8 +22304,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23407,8 +22332,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23434,8 +22357,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23469,8 +22390,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23496,8 +22415,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23523,8 +22440,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23555,8 +22470,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23582,8 +22495,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23609,8 +22520,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23639,8 +22548,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -23867,8 +22774,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyProposed {
@@ -23889,8 +22794,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyRejected {
@@ -23913,8 +22816,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyBecameActive {
@@ -23935,8 +22836,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyAwarded {
@@ -23959,8 +22858,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyClaimed {
@@ -23985,8 +22882,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyCanceled {
@@ -24007,8 +22902,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyExtended {
@@ -24029,8 +22922,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BountyApproved {
@@ -24051,8 +22942,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CuratorProposed {
@@ -24075,8 +22964,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CuratorUnassigned {
@@ -24097,8 +22984,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CuratorAccepted {
@@ -24194,7 +23079,7 @@ pub mod api {
                 }
                 pub fn bounties(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::bounties::Param0>,
+                    _0: types::bounties::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::bounties::Param0,
@@ -24207,9 +23092,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Bounties",
                         "Bounties",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             69u8, 96u8, 25u8, 88u8, 96u8, 159u8, 96u8, 120u8, 90u8, 165u8, 177u8,
                             60u8, 61u8, 180u8, 13u8, 252u8, 154u8, 255u8, 249u8, 42u8, 179u8,
@@ -24240,7 +23123,7 @@ pub mod api {
                 }
                 pub fn bounty_descriptions(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::bounty_descriptions::Param0>,
+                    _0: types::bounty_descriptions::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::bounty_descriptions::Param0,
@@ -24253,9 +23136,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Bounties",
                         "BountyDescriptions",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             71u8, 40u8, 133u8, 84u8, 55u8, 207u8, 169u8, 189u8, 160u8, 51u8, 202u8,
                             144u8, 15u8, 226u8, 97u8, 114u8, 54u8, 247u8, 53u8, 26u8, 36u8, 54u8,
@@ -24450,8 +23331,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24483,8 +23362,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24521,8 +23398,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24551,8 +23426,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24581,8 +23454,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24616,8 +23487,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24646,8 +23515,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -24835,8 +23702,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Added {
@@ -24859,8 +23724,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Awarded {
@@ -24885,8 +23748,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Claimed {
@@ -24913,8 +23774,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Canceled {
@@ -25024,7 +23883,7 @@ pub mod api {
                 }
                 pub fn parent_child_bounties(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::parent_child_bounties::Param0>,
+                    _0: types::parent_child_bounties::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::parent_child_bounties::Param0,
@@ -25037,9 +23896,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "ParentChildBounties",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             52u8, 179u8, 242u8, 212u8, 91u8, 185u8, 176u8, 52u8, 100u8, 200u8, 1u8,
                             41u8, 184u8, 234u8, 234u8, 8u8, 123u8, 252u8, 131u8, 55u8, 109u8,
@@ -25069,7 +23926,7 @@ pub mod api {
                 }
                 pub fn parent_total_child_bounties(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::parent_total_child_bounties::Param0>,
+                    _0: types::parent_total_child_bounties::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::parent_total_child_bounties::Param0,
@@ -25082,9 +23939,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "ParentTotalChildBounties",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             219u8, 151u8, 60u8, 233u8, 115u8, 32u8, 180u8, 227u8, 121u8, 103u8,
                             197u8, 124u8, 86u8, 35u8, 140u8, 73u8, 158u8, 86u8, 240u8, 96u8, 49u8,
@@ -25115,7 +23970,7 @@ pub mod api {
                 }
                 pub fn child_bounties_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::child_bounties::Param0>,
+                    _0: types::child_bounties::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::child_bounties::Param0,
@@ -25128,9 +23983,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "ChildBounties",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             165u8, 240u8, 158u8, 204u8, 183u8, 190u8, 129u8, 65u8, 226u8, 8u8,
                             182u8, 103u8, 46u8, 162u8, 35u8, 155u8, 131u8, 45u8, 163u8, 64u8,
@@ -25141,8 +23994,8 @@ pub mod api {
                 }
                 pub fn child_bounties(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::child_bounties::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::child_bounties::Param1>,
+                    _0: types::child_bounties::Param0,
+                    _1: types::child_bounties::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -25161,12 +24014,8 @@ pub mod api {
                         "ChildBounties",
                         "ChildBounties",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             165u8, 240u8, 158u8, 204u8, 183u8, 190u8, 129u8, 65u8, 226u8, 8u8,
@@ -25198,7 +24047,7 @@ pub mod api {
                 }
                 pub fn child_bounty_descriptions_v1_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::child_bounty_descriptions_v1::Param0>,
+                    _0: types::child_bounty_descriptions_v1::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::child_bounty_descriptions_v1::Param0,
@@ -25211,9 +24060,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "ChildBountyDescriptionsV1",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             143u8, 206u8, 114u8, 60u8, 75u8, 87u8, 46u8, 170u8, 249u8, 59u8, 12u8,
                             6u8, 34u8, 16u8, 232u8, 251u8, 73u8, 132u8, 229u8, 77u8, 177u8, 57u8,
@@ -25223,8 +24070,8 @@ pub mod api {
                 }
                 pub fn child_bounty_descriptions_v1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::child_bounty_descriptions_v1::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::child_bounty_descriptions_v1::Param1>,
+                    _0: types::child_bounty_descriptions_v1::Param0,
+                    _1: types::child_bounty_descriptions_v1::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -25243,12 +24090,8 @@ pub mod api {
                         "ChildBounties",
                         "ChildBountyDescriptionsV1",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             143u8, 206u8, 114u8, 60u8, 75u8, 87u8, 46u8, 170u8, 249u8, 59u8, 12u8,
@@ -25280,7 +24123,7 @@ pub mod api {
                 }
                 pub fn v0_to_v1_child_bounty_ids(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::v0_to_v1_child_bounty_ids::Param0>,
+                    _0: types::v0_to_v1_child_bounty_ids::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::v0_to_v1_child_bounty_ids::Param0,
@@ -25293,9 +24136,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "V0ToV1ChildBountyIds",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             254u8, 251u8, 192u8, 11u8, 206u8, 216u8, 21u8, 48u8, 209u8, 242u8,
                             189u8, 46u8, 185u8, 122u8, 225u8, 237u8, 169u8, 99u8, 55u8, 245u8,
@@ -25326,7 +24167,7 @@ pub mod api {
                 }
                 pub fn children_curator_fees(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::children_curator_fees::Param0>,
+                    _0: types::children_curator_fees::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::children_curator_fees::Param0,
@@ -25339,9 +24180,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ChildBounties",
                         "ChildrenCuratorFees",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             32u8, 16u8, 190u8, 193u8, 6u8, 80u8, 163u8, 16u8, 85u8, 111u8, 39u8,
                             141u8, 209u8, 70u8, 213u8, 167u8, 22u8, 12u8, 93u8, 17u8, 104u8, 94u8,
@@ -25407,8 +24246,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -25440,8 +24277,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -25467,8 +24302,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -25498,8 +24331,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -25528,8 +24359,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -25662,8 +24491,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SolutionStored {
@@ -25690,8 +24517,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ElectionFinalized {
@@ -25715,8 +24540,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ElectionFailed;
@@ -25731,8 +24554,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rewarded {
@@ -25755,8 +24576,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -25779,8 +24598,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PhaseTransitioned {
@@ -26056,7 +24873,7 @@ pub mod api {
                 }
                 pub fn signed_submissions_map(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::signed_submissions_map::Param0>,
+                    _0: types::signed_submissions_map::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::signed_submissions_map::Param0,
@@ -26069,9 +24886,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ElectionProviderMultiPhase",
                         "SignedSubmissionsMap",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             118u8, 12u8, 234u8, 73u8, 238u8, 134u8, 20u8, 105u8, 248u8, 39u8, 23u8,
                             96u8, 157u8, 187u8, 14u8, 143u8, 135u8, 121u8, 77u8, 90u8, 154u8,
@@ -26346,8 +25161,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26375,8 +25188,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26404,8 +25215,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26495,8 +25304,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Rebagged {
@@ -26521,8 +25328,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ScoreUpdated {
@@ -26582,7 +25387,7 @@ pub mod api {
                 }
                 pub fn list_nodes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::list_nodes::Param0>,
+                    _0: types::list_nodes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::list_nodes::Param0,
@@ -26595,9 +25400,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "VoterList",
                         "ListNodes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             240u8, 139u8, 78u8, 185u8, 159u8, 185u8, 33u8, 229u8, 171u8, 222u8,
                             54u8, 81u8, 104u8, 170u8, 49u8, 232u8, 29u8, 117u8, 193u8, 68u8, 225u8,
@@ -26648,7 +25451,7 @@ pub mod api {
                 }
                 pub fn list_bags(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::list_bags::Param0>,
+                    _0: types::list_bags::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::list_bags::Param0,
@@ -26661,9 +25464,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "VoterList",
                         "ListBags",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             98u8, 52u8, 177u8, 147u8, 244u8, 169u8, 45u8, 213u8, 76u8, 163u8, 47u8,
                             96u8, 197u8, 245u8, 17u8, 208u8, 86u8, 15u8, 233u8, 156u8, 165u8, 44u8,
@@ -26713,8 +25514,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26742,8 +25541,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26769,8 +25566,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26789,8 +25584,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26821,8 +25614,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26849,8 +25640,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26880,8 +25669,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26922,8 +25709,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26966,8 +25751,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -26996,8 +25779,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27024,8 +25805,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27053,8 +25832,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27096,8 +25873,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27134,8 +25909,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27160,8 +25933,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27192,8 +25963,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27218,8 +25987,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27244,8 +26011,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27275,8 +26040,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27303,8 +26066,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27334,8 +26095,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27360,8 +26119,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27386,8 +26143,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27418,8 +26173,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27447,8 +26200,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -27476,8 +26227,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -28011,8 +26760,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Created {
@@ -28035,8 +26782,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Bonded {
@@ -28063,8 +26808,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PaidOut {
@@ -28089,8 +26832,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unbonded {
@@ -28119,8 +26860,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Withdrawn {
@@ -28147,8 +26886,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Destroyed {
@@ -28169,8 +26906,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct StateChanged {
@@ -28193,8 +26928,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MemberRemoved {
@@ -28219,8 +26952,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RolesUpdated {
@@ -28248,8 +26979,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolSlashed {
@@ -28272,8 +27001,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UnbondingPoolSlashed {
@@ -28298,8 +27025,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolCommissionUpdated {
@@ -28325,8 +27050,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolMaxCommissionUpdated {
@@ -28349,8 +27072,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolCommissionChangeRateUpdated {
@@ -28375,8 +27096,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolCommissionClaimPermissionUpdated {
@@ -28403,8 +27122,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolCommissionClaimed {
@@ -28427,8 +27144,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MinBalanceDeficitAdjusted {
@@ -28451,8 +27166,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MinBalanceExcessAdjusted {
@@ -28475,8 +27188,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MemberClaimPermissionUpdated {
@@ -28499,8 +27210,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MetadataUpdated {
@@ -28523,8 +27232,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolNominationMade {
@@ -28547,8 +27254,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolNominatorChilled {
@@ -28571,8 +27276,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct GlobalParamsUpdated {
@@ -28867,7 +27570,7 @@ pub mod api {
                 }
                 pub fn pool_members(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::pool_members::Param0>,
+                    _0: types::pool_members::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::pool_members::Param0,
@@ -28880,9 +27583,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "PoolMembers",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             71u8, 14u8, 198u8, 220u8, 13u8, 117u8, 189u8, 187u8, 123u8, 105u8,
                             247u8, 41u8, 154u8, 176u8, 134u8, 226u8, 195u8, 136u8, 193u8, 6u8,
@@ -28934,7 +27635,7 @@ pub mod api {
                 }
                 pub fn bonded_pools(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::bonded_pools::Param0>,
+                    _0: types::bonded_pools::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::bonded_pools::Param0,
@@ -28947,9 +27648,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "BondedPools",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             141u8, 117u8, 148u8, 7u8, 29u8, 55u8, 25u8, 139u8, 8u8, 233u8, 171u8,
                             230u8, 90u8, 110u8, 122u8, 134u8, 50u8, 179u8, 33u8, 248u8, 160u8,
@@ -29000,7 +27699,7 @@ pub mod api {
                 }
                 pub fn reward_pools(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::reward_pools::Param0>,
+                    _0: types::reward_pools::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::reward_pools::Param0,
@@ -29013,9 +27712,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "RewardPools",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             9u8, 12u8, 53u8, 236u8, 133u8, 154u8, 71u8, 150u8, 220u8, 31u8, 130u8,
                             126u8, 208u8, 240u8, 214u8, 66u8, 16u8, 43u8, 202u8, 222u8, 94u8,
@@ -29067,7 +27764,7 @@ pub mod api {
                 }
                 pub fn sub_pools_storage(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::sub_pools_storage::Param0>,
+                    _0: types::sub_pools_storage::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::sub_pools_storage::Param0,
@@ -29080,9 +27777,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "SubPoolsStorage",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             43u8, 35u8, 94u8, 197u8, 201u8, 86u8, 21u8, 118u8, 230u8, 10u8, 66u8,
                             180u8, 104u8, 146u8, 250u8, 207u8, 159u8, 153u8, 203u8, 58u8, 20u8,
@@ -29133,7 +27828,7 @@ pub mod api {
                 }
                 pub fn metadata(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::metadata::Param0>,
+                    _0: types::metadata::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::metadata::Param0,
@@ -29146,9 +27841,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "Metadata",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             10u8, 171u8, 251u8, 5u8, 72u8, 74u8, 86u8, 144u8, 59u8, 67u8, 92u8,
                             111u8, 217u8, 111u8, 175u8, 107u8, 119u8, 206u8, 199u8, 78u8, 182u8,
@@ -29220,7 +27913,7 @@ pub mod api {
                 }
                 pub fn reverse_pool_id_lookup(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::reverse_pool_id_lookup::Param0>,
+                    _0: types::reverse_pool_id_lookup::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::reverse_pool_id_lookup::Param0,
@@ -29233,9 +27926,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "ReversePoolIdLookup",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             76u8, 76u8, 150u8, 33u8, 64u8, 81u8, 90u8, 75u8, 212u8, 221u8, 59u8,
                             83u8, 178u8, 45u8, 86u8, 206u8, 196u8, 221u8, 117u8, 94u8, 229u8,
@@ -29286,7 +27977,7 @@ pub mod api {
                 }
                 pub fn claim_permissions(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::claim_permissions::Param0>,
+                    _0: types::claim_permissions::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::claim_permissions::Param0,
@@ -29299,9 +27990,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "NominationPools",
                         "ClaimPermissions",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             127u8, 58u8, 154u8, 103u8, 97u8, 80u8, 68u8, 18u8, 167u8, 41u8, 93u8,
                             100u8, 94u8, 81u8, 82u8, 98u8, 13u8, 162u8, 122u8, 199u8, 216u8, 139u8,
@@ -29383,8 +28072,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -29403,8 +28090,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -29423,8 +28108,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -29503,8 +28186,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unstaked {
@@ -29528,8 +28209,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -29552,8 +28231,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BatchChecked {
@@ -29574,8 +28251,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BatchFinished {
@@ -29596,8 +28271,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InternalError;
@@ -29673,7 +28346,7 @@ pub mod api {
                 }
                 pub fn queue(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::queue::Param0>,
+                    _0: types::queue::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::queue::Param0,
@@ -29686,9 +28359,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "FastUnstake",
                         "Queue",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             72u8, 219u8, 212u8, 99u8, 189u8, 234u8, 57u8, 32u8, 80u8, 130u8, 178u8,
                             101u8, 71u8, 186u8, 106u8, 129u8, 135u8, 165u8, 225u8, 112u8, 82u8,
@@ -29776,8 +28447,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Delegated {
@@ -29802,8 +28471,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Released {
@@ -29828,8 +28495,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -29854,8 +28519,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MigratedDelegation {
@@ -29922,7 +28585,7 @@ pub mod api {
                 }
                 pub fn delegators(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::delegators::Param0>,
+                    _0: types::delegators::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::delegators::Param0,
@@ -29935,9 +28598,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "DelegatedStaking",
                         "Delegators",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             16u8, 70u8, 185u8, 17u8, 33u8, 129u8, 186u8, 70u8, 13u8, 241u8, 101u8,
                             175u8, 93u8, 110u8, 22u8, 227u8, 166u8, 158u8, 172u8, 192u8, 214u8,
@@ -29987,7 +28648,7 @@ pub mod api {
                 }
                 pub fn agents(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::agents::Param0>,
+                    _0: types::agents::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::agents::Param0,
@@ -30000,9 +28661,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "DelegatedStaking",
                         "Agents",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             196u8, 227u8, 162u8, 110u8, 24u8, 71u8, 0u8, 211u8, 136u8, 126u8, 53u8,
                             241u8, 194u8, 133u8, 235u8, 95u8, 72u8, 175u8, 36u8, 181u8, 144u8,
@@ -30092,8 +28751,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30118,8 +28775,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30144,8 +28799,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30170,8 +28823,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30196,8 +28847,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30222,8 +28871,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30248,8 +28895,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30274,8 +28919,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30300,8 +28943,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30326,8 +28967,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30352,8 +28991,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30378,8 +29015,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30404,8 +29039,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30430,8 +29063,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30458,8 +29089,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30484,8 +29113,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30510,8 +29137,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30536,8 +29161,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30562,8 +29185,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30588,8 +29209,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30614,8 +29233,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30640,8 +29257,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30666,8 +29281,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30692,8 +29305,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30718,8 +29329,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30744,8 +29353,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30770,8 +29377,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30796,8 +29401,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30822,8 +29425,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30848,8 +29449,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30874,8 +29473,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30900,8 +29497,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30926,8 +29521,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30952,8 +29545,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -30978,8 +29569,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31004,8 +29593,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31030,8 +29617,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31057,8 +29642,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31084,8 +29667,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31110,8 +29691,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31136,8 +29715,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31162,8 +29739,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31188,8 +29763,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31214,8 +29787,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31242,8 +29813,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -31268,8 +29837,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32319,8 +30886,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CandidateBacked(
@@ -32350,8 +30915,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CandidateIncluded(
@@ -32381,8 +30944,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CandidateTimedOut(
@@ -32410,8 +30971,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UpwardMessagesReceived {
@@ -32463,7 +31022,7 @@ pub mod api {
                 }
                 pub fn v1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::v1::Param0>,
+                    _0: types::v1::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<types::v1::Param0>,
                     types::v1::V1,
@@ -32474,9 +31033,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParaInclusion",
                         "V1",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             163u8, 193u8, 111u8, 157u8, 84u8, 109u8, 186u8, 223u8, 76u8, 169u8,
                             221u8, 212u8, 74u8, 197u8, 126u8, 44u8, 170u8, 85u8, 158u8, 255u8,
@@ -32506,8 +31063,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32718,8 +31273,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32747,8 +31300,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32776,8 +31327,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32807,8 +31356,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32836,8 +31383,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32862,8 +31407,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32889,8 +31432,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32915,8 +31456,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -32944,8 +31483,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -33147,8 +31684,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CurrentCodeUpdated(pub current_code_updated::Field0);
@@ -33167,8 +31702,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CurrentHeadUpdated(pub current_head_updated::Field0);
@@ -33187,8 +31720,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CodeUpgradeScheduled(pub code_upgrade_scheduled::Field0);
@@ -33207,8 +31738,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewHeadNoted(pub new_head_noted::Field0);
@@ -33227,8 +31756,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ActionQueued(pub action_queued::Field0, pub action_queued::Field1);
@@ -33248,8 +31775,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PvfCheckStarted(
@@ -33273,8 +31798,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PvfCheckAccepted(
@@ -33298,8 +31821,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PvfCheckRejected(
@@ -33364,8 +31885,10 @@ pub mod api {
                 pub mod past_code_hash {
                     use super::runtime_types;
                     pub type PastCodeHash = runtime_types :: polkadot_parachain_primitives :: primitives :: ValidationCodeHash ;
-                    pub type Param0 = runtime_types::polkadot_parachain_primitives::primitives::Id;
-                    pub type Param1 = ::core::primitive::u32;
+                    pub type Param0 = (
+                        runtime_types::polkadot_parachain_primitives::primitives::Id,
+                        ::core::primitive::u32,
+                    );
                 }
                 pub mod past_code_meta {
                     use super::runtime_types;
@@ -33474,7 +31997,7 @@ pub mod api {
                 }
                 pub fn pvf_active_vote_map(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::pvf_active_vote_map::Param0>,
+                    _0: types::pvf_active_vote_map::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::pvf_active_vote_map::Param0,
@@ -33487,9 +32010,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "PvfActiveVoteMap",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             180u8, 73u8, 103u8, 207u8, 245u8, 111u8, 142u8, 8u8, 159u8, 143u8,
                             245u8, 212u8, 149u8, 78u8, 213u8, 224u8, 206u8, 8u8, 95u8, 40u8, 24u8,
@@ -33561,7 +32082,7 @@ pub mod api {
                 }
                 pub fn para_lifecycles(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::para_lifecycles::Param0>,
+                    _0: types::para_lifecycles::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::para_lifecycles::Param0,
@@ -33574,9 +32095,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "ParaLifecycles",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             2u8, 203u8, 32u8, 194u8, 76u8, 227u8, 250u8, 9u8, 168u8, 201u8, 171u8,
                             180u8, 18u8, 169u8, 206u8, 183u8, 48u8, 189u8, 204u8, 192u8, 237u8,
@@ -33607,7 +32126,7 @@ pub mod api {
                 }
                 pub fn heads(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::heads::Param0>,
+                    _0: types::heads::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::heads::Param0,
@@ -33620,9 +32139,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "Heads",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             222u8, 116u8, 180u8, 190u8, 172u8, 192u8, 174u8, 132u8, 225u8, 180u8,
                             119u8, 90u8, 5u8, 39u8, 92u8, 230u8, 116u8, 202u8, 92u8, 99u8, 135u8,
@@ -33652,7 +32169,7 @@ pub mod api {
                 }
                 pub fn most_recent_context(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::most_recent_context::Param0>,
+                    _0: types::most_recent_context::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::most_recent_context::Param0,
@@ -33665,9 +32182,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "MostRecentContext",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             196u8, 150u8, 125u8, 121u8, 196u8, 182u8, 2u8, 5u8, 244u8, 170u8, 75u8,
                             57u8, 162u8, 8u8, 104u8, 94u8, 114u8, 32u8, 192u8, 236u8, 120u8, 91u8,
@@ -33698,7 +32213,7 @@ pub mod api {
                 }
                 pub fn current_code_hash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::current_code_hash::Param0>,
+                    _0: types::current_code_hash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::current_code_hash::Param0,
@@ -33711,9 +32226,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "CurrentCodeHash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             251u8, 100u8, 30u8, 46u8, 191u8, 60u8, 45u8, 221u8, 218u8, 20u8, 154u8,
                             233u8, 211u8, 198u8, 151u8, 195u8, 99u8, 210u8, 126u8, 165u8, 240u8,
@@ -33742,45 +32255,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn past_code_hash_iter1(
+                pub fn past_code_hash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::past_code_hash::Param0>,
+                    _0: types::past_code_hash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::past_code_hash::Param0,
                     >,
                     types::past_code_hash::PastCodeHash,
-                    (),
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Paras",
-                        "PastCodeHash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            73u8, 209u8, 188u8, 36u8, 127u8, 42u8, 171u8, 136u8, 29u8, 126u8,
-                            220u8, 209u8, 230u8, 22u8, 12u8, 63u8, 8u8, 102u8, 45u8, 158u8, 178u8,
-                            232u8, 8u8, 6u8, 71u8, 188u8, 140u8, 41u8, 10u8, 215u8, 22u8, 153u8,
-                        ],
-                    )
-                }
-                pub fn past_code_hash(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::past_code_hash::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::past_code_hash::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::past_code_hash::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::past_code_hash::Param1,
-                        >,
-                    ),
-                    types::past_code_hash::PastCodeHash,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
                     (),
@@ -33788,14 +32270,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "PastCodeHash",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             73u8, 209u8, 188u8, 36u8, 127u8, 42u8, 171u8, 136u8, 29u8, 126u8,
                             220u8, 209u8, 230u8, 22u8, 12u8, 63u8, 8u8, 102u8, 45u8, 158u8, 178u8,
@@ -33825,7 +32300,7 @@ pub mod api {
                 }
                 pub fn past_code_meta(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::past_code_meta::Param0>,
+                    _0: types::past_code_meta::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::past_code_meta::Param0,
@@ -33838,9 +32313,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "PastCodeMeta",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             233u8, 47u8, 137u8, 174u8, 98u8, 64u8, 11u8, 75u8, 93u8, 222u8, 78u8,
                             58u8, 66u8, 245u8, 151u8, 39u8, 144u8, 36u8, 84u8, 176u8, 239u8, 183u8,
@@ -33890,7 +32363,7 @@ pub mod api {
                 }
                 pub fn future_code_upgrades(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::future_code_upgrades::Param0>,
+                    _0: types::future_code_upgrades::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::future_code_upgrades::Param0,
@@ -33903,9 +32376,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "FutureCodeUpgrades",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             163u8, 168u8, 23u8, 138u8, 198u8, 70u8, 135u8, 221u8, 167u8, 187u8,
                             15u8, 144u8, 228u8, 8u8, 138u8, 125u8, 101u8, 154u8, 11u8, 74u8, 173u8,
@@ -33956,7 +32427,7 @@ pub mod api {
                 }
                 pub fn future_code_hash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::future_code_hash::Param0>,
+                    _0: types::future_code_hash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::future_code_hash::Param0,
@@ -33969,9 +32440,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "FutureCodeHash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             62u8, 238u8, 183u8, 12u8, 197u8, 119u8, 163u8, 239u8, 192u8, 228u8,
                             110u8, 58u8, 128u8, 223u8, 32u8, 137u8, 109u8, 127u8, 41u8, 83u8, 91u8,
@@ -34002,7 +32471,7 @@ pub mod api {
                 }
                 pub fn upgrade_go_ahead_signal(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::upgrade_go_ahead_signal::Param0>,
+                    _0: types::upgrade_go_ahead_signal::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::upgrade_go_ahead_signal::Param0,
@@ -34015,9 +32484,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "UpgradeGoAheadSignal",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             41u8, 80u8, 120u8, 6u8, 98u8, 85u8, 36u8, 37u8, 170u8, 189u8, 56u8,
                             127u8, 155u8, 180u8, 112u8, 195u8, 135u8, 214u8, 235u8, 87u8, 197u8,
@@ -34049,7 +32516,7 @@ pub mod api {
                 }
                 pub fn upgrade_restriction_signal(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::upgrade_restriction_signal::Param0>,
+                    _0: types::upgrade_restriction_signal::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::upgrade_restriction_signal::Param0,
@@ -34062,9 +32529,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "UpgradeRestrictionSignal",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             158u8, 105u8, 62u8, 252u8, 149u8, 145u8, 34u8, 92u8, 119u8, 204u8,
                             46u8, 96u8, 117u8, 183u8, 134u8, 20u8, 172u8, 243u8, 145u8, 113u8,
@@ -34136,7 +32601,7 @@ pub mod api {
                 }
                 pub fn actions_queue(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::actions_queue::Param0>,
+                    _0: types::actions_queue::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::actions_queue::Param0,
@@ -34149,9 +32614,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "ActionsQueue",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             13u8, 25u8, 129u8, 203u8, 95u8, 206u8, 254u8, 240u8, 170u8, 209u8,
                             55u8, 117u8, 70u8, 220u8, 139u8, 102u8, 9u8, 229u8, 139u8, 120u8, 67u8,
@@ -34182,7 +32645,7 @@ pub mod api {
                 }
                 pub fn upcoming_paras_genesis(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::upcoming_paras_genesis::Param0>,
+                    _0: types::upcoming_paras_genesis::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::upcoming_paras_genesis::Param0,
@@ -34195,9 +32658,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "UpcomingParasGenesis",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             215u8, 121u8, 106u8, 13u8, 102u8, 47u8, 129u8, 221u8, 153u8, 91u8,
                             23u8, 94u8, 11u8, 39u8, 19u8, 180u8, 136u8, 136u8, 254u8, 152u8, 250u8,
@@ -34229,7 +32690,7 @@ pub mod api {
                 }
                 pub fn code_by_hash_refs(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::code_by_hash_refs::Param0>,
+                    _0: types::code_by_hash_refs::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::code_by_hash_refs::Param0,
@@ -34242,9 +32703,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "CodeByHashRefs",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             47u8, 50u8, 103u8, 161u8, 130u8, 252u8, 157u8, 35u8, 174u8, 37u8,
                             102u8, 60u8, 195u8, 30u8, 164u8, 203u8, 67u8, 129u8, 107u8, 181u8,
@@ -34275,7 +32734,7 @@ pub mod api {
                 }
                 pub fn code_by_hash(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::code_by_hash::Param0>,
+                    _0: types::code_by_hash::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::code_by_hash::Param0,
@@ -34288,9 +32747,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Paras",
                         "CodeByHash",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             155u8, 102u8, 73u8, 180u8, 127u8, 211u8, 181u8, 44u8, 56u8, 235u8,
                             49u8, 4u8, 25u8, 213u8, 116u8, 200u8, 232u8, 203u8, 190u8, 90u8, 93u8,
@@ -34340,8 +32797,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34493,7 +32948,7 @@ pub mod api {
                 }
                 pub fn downward_message_queues(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::downward_message_queues::Param0>,
+                    _0: types::downward_message_queues::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::downward_message_queues::Param0,
@@ -34506,9 +32961,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Dmp",
                         "DownwardMessageQueues",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             38u8, 183u8, 133u8, 200u8, 199u8, 135u8, 68u8, 232u8, 189u8, 168u8,
                             3u8, 219u8, 201u8, 180u8, 156u8, 79u8, 134u8, 164u8, 94u8, 114u8,
@@ -34539,7 +32992,7 @@ pub mod api {
                 }
                 pub fn downward_message_queue_heads(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::downward_message_queue_heads::Param0>,
+                    _0: types::downward_message_queue_heads::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::downward_message_queue_heads::Param0,
@@ -34552,9 +33005,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Dmp",
                         "DownwardMessageQueueHeads",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             135u8, 165u8, 240u8, 0u8, 25u8, 110u8, 9u8, 108u8, 251u8, 225u8, 109u8,
                             184u8, 90u8, 132u8, 9u8, 151u8, 12u8, 118u8, 153u8, 212u8, 140u8,
@@ -34584,7 +33035,7 @@ pub mod api {
                 }
                 pub fn delivery_fee_factor(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::delivery_fee_factor::Param0>,
+                    _0: types::delivery_fee_factor::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::delivery_fee_factor::Param0,
@@ -34597,9 +33048,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Dmp",
                         "DeliveryFeeFactor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             43u8, 5u8, 63u8, 235u8, 115u8, 155u8, 130u8, 27u8, 75u8, 216u8, 177u8,
                             135u8, 203u8, 147u8, 167u8, 95u8, 208u8, 188u8, 25u8, 14u8, 84u8, 63u8,
@@ -34628,8 +33077,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34659,8 +33106,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34685,8 +33130,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34712,8 +33155,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34742,8 +33183,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34768,8 +33207,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34794,8 +33231,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34823,8 +33258,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34856,8 +33289,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34885,8 +33316,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -34914,8 +33343,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -35162,8 +33589,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpenChannelRequested {
@@ -35190,8 +33615,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpenChannelCanceled {
@@ -35215,8 +33638,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpenChannelAccepted {
@@ -35239,8 +33660,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ChannelClosed {
@@ -35264,8 +33683,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct HrmpChannelForceOpened {
@@ -35292,8 +33709,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct HrmpSystemChannelOpened {
@@ -35320,8 +33735,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpenChannelDepositsUpdated {
@@ -35451,7 +33864,7 @@ pub mod api {
                 }
                 pub fn hrmp_open_channel_requests(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_open_channel_requests::Param0>,
+                    _0: types::hrmp_open_channel_requests::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_open_channel_requests::Param0,
@@ -35464,9 +33877,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpOpenChannelRequests",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             164u8, 97u8, 52u8, 242u8, 255u8, 67u8, 248u8, 170u8, 204u8, 92u8, 81u8,
                             144u8, 11u8, 63u8, 145u8, 167u8, 8u8, 174u8, 221u8, 147u8, 125u8,
@@ -35519,7 +33930,7 @@ pub mod api {
                 }
                 pub fn hrmp_open_channel_request_count(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_open_channel_request_count::Param0>,
+                    _0: types::hrmp_open_channel_request_count::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_open_channel_request_count::Param0,
@@ -35532,9 +33943,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpOpenChannelRequestCount",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             136u8, 72u8, 56u8, 31u8, 229u8, 99u8, 241u8, 14u8, 159u8, 243u8, 179u8,
                             222u8, 252u8, 56u8, 63u8, 24u8, 204u8, 130u8, 47u8, 161u8, 133u8,
@@ -35566,7 +33975,7 @@ pub mod api {
                 }
                 pub fn hrmp_accepted_channel_request_count(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_accepted_channel_request_count::Param0>,
+                    _0: types::hrmp_accepted_channel_request_count::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_accepted_channel_request_count::Param0,
@@ -35579,9 +33988,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpAcceptedChannelRequestCount",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             29u8, 100u8, 52u8, 28u8, 180u8, 84u8, 132u8, 120u8, 117u8, 172u8,
                             169u8, 40u8, 237u8, 92u8, 89u8, 87u8, 230u8, 148u8, 140u8, 226u8, 60u8,
@@ -35613,7 +34020,7 @@ pub mod api {
                 }
                 pub fn hrmp_close_channel_requests(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_close_channel_requests::Param0>,
+                    _0: types::hrmp_close_channel_requests::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_close_channel_requests::Param0,
@@ -35626,9 +34033,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpCloseChannelRequests",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             155u8, 13u8, 73u8, 166u8, 58u8, 67u8, 138u8, 58u8, 215u8, 172u8, 241u8,
                             168u8, 57u8, 4u8, 230u8, 248u8, 31u8, 183u8, 227u8, 224u8, 139u8,
@@ -35679,7 +34084,7 @@ pub mod api {
                 }
                 pub fn hrmp_watermarks(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_watermarks::Param0>,
+                    _0: types::hrmp_watermarks::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_watermarks::Param0,
@@ -35692,9 +34097,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpWatermarks",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             245u8, 104u8, 137u8, 120u8, 131u8, 7u8, 178u8, 85u8, 96u8, 124u8,
                             241u8, 2u8, 86u8, 63u8, 116u8, 77u8, 217u8, 235u8, 162u8, 38u8, 104u8,
@@ -35725,7 +34128,7 @@ pub mod api {
                 }
                 pub fn hrmp_channels(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_channels::Param0>,
+                    _0: types::hrmp_channels::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_channels::Param0,
@@ -35738,9 +34141,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpChannels",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             174u8, 90u8, 72u8, 93u8, 43u8, 140u8, 181u8, 170u8, 138u8, 171u8,
                             179u8, 156u8, 33u8, 87u8, 63u8, 1u8, 131u8, 59u8, 230u8, 14u8, 40u8,
@@ -35772,7 +34173,7 @@ pub mod api {
                 }
                 pub fn hrmp_ingress_channels_index(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_ingress_channels_index::Param0>,
+                    _0: types::hrmp_ingress_channels_index::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_ingress_channels_index::Param0,
@@ -35785,9 +34186,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpIngressChannelsIndex",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             125u8, 229u8, 102u8, 230u8, 74u8, 109u8, 173u8, 67u8, 176u8, 169u8,
                             57u8, 24u8, 75u8, 129u8, 246u8, 198u8, 63u8, 49u8, 56u8, 102u8, 149u8,
@@ -35818,7 +34217,7 @@ pub mod api {
                 }
                 pub fn hrmp_egress_channels_index(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_egress_channels_index::Param0>,
+                    _0: types::hrmp_egress_channels_index::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_egress_channels_index::Param0,
@@ -35831,9 +34230,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpEgressChannelsIndex",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             237u8, 183u8, 188u8, 57u8, 20u8, 238u8, 166u8, 7u8, 94u8, 155u8, 22u8,
                             9u8, 173u8, 209u8, 210u8, 17u8, 160u8, 79u8, 243u8, 4u8, 245u8, 240u8,
@@ -35864,7 +34261,7 @@ pub mod api {
                 }
                 pub fn hrmp_channel_contents(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_channel_contents::Param0>,
+                    _0: types::hrmp_channel_contents::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_channel_contents::Param0,
@@ -35877,9 +34274,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpChannelContents",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             55u8, 16u8, 135u8, 69u8, 54u8, 180u8, 246u8, 124u8, 104u8, 92u8, 45u8,
                             18u8, 223u8, 145u8, 43u8, 190u8, 121u8, 59u8, 35u8, 195u8, 234u8,
@@ -35910,7 +34305,7 @@ pub mod api {
                 }
                 pub fn hrmp_channel_digests(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::hrmp_channel_digests::Param0>,
+                    _0: types::hrmp_channel_digests::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::hrmp_channel_digests::Param0,
@@ -35923,9 +34318,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Hrmp",
                         "HrmpChannelDigests",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             90u8, 90u8, 139u8, 78u8, 47u8, 2u8, 104u8, 211u8, 42u8, 246u8, 193u8,
                             210u8, 142u8, 223u8, 17u8, 136u8, 3u8, 182u8, 25u8, 56u8, 72u8, 72u8,
@@ -36038,7 +34431,7 @@ pub mod api {
                 }
                 pub fn sessions(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::sessions::Param0>,
+                    _0: types::sessions::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::sessions::Param0,
@@ -36051,9 +34444,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParaSessionInfo",
                         "Sessions",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             234u8, 87u8, 239u8, 243u8, 224u8, 177u8, 208u8, 208u8, 80u8, 111u8,
                             190u8, 108u8, 189u8, 81u8, 68u8, 30u8, 108u8, 83u8, 43u8, 150u8, 87u8,
@@ -36085,7 +34476,7 @@ pub mod api {
                 }
                 pub fn account_keys(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::account_keys::Param0>,
+                    _0: types::account_keys::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::account_keys::Param0,
@@ -36098,9 +34489,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParaSessionInfo",
                         "AccountKeys",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             30u8, 98u8, 58u8, 140u8, 96u8, 231u8, 205u8, 111u8, 194u8, 100u8,
                             185u8, 242u8, 210u8, 143u8, 110u8, 144u8, 170u8, 187u8, 62u8, 196u8,
@@ -36131,7 +34520,7 @@ pub mod api {
                 }
                 pub fn session_executor_params(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::session_executor_params::Param0>,
+                    _0: types::session_executor_params::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::session_executor_params::Param0,
@@ -36144,9 +34533,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParaSessionInfo",
                         "SessionExecutorParams",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             38u8, 80u8, 118u8, 112u8, 189u8, 55u8, 95u8, 184u8, 19u8, 8u8, 114u8,
                             6u8, 173u8, 80u8, 254u8, 98u8, 107u8, 202u8, 215u8, 107u8, 149u8,
@@ -36175,8 +34562,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -36218,8 +34603,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DisputeInitiated(
@@ -36243,8 +34626,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DisputeConcluded(
@@ -36268,8 +34649,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Revert(pub revert::Field0);
@@ -36363,7 +34742,7 @@ pub mod api {
                 }
                 pub fn disputes_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::disputes::Param0>,
+                    _0: types::disputes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::disputes::Param0,
@@ -36376,9 +34755,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParasDisputes",
                         "Disputes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             38u8, 237u8, 141u8, 222u8, 135u8, 82u8, 210u8, 166u8, 192u8, 122u8,
                             175u8, 96u8, 91u8, 1u8, 225u8, 182u8, 128u8, 4u8, 159u8, 56u8, 180u8,
@@ -36389,8 +34766,8 @@ pub mod api {
                 }
                 pub fn disputes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::disputes::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::disputes::Param1>,
+                    _0: types::disputes::Param0,
+                    _1: types::disputes::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -36409,12 +34786,8 @@ pub mod api {
                         "ParasDisputes",
                         "Disputes",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             38u8, 237u8, 141u8, 222u8, 135u8, 82u8, 210u8, 166u8, 192u8, 122u8,
@@ -36447,7 +34820,7 @@ pub mod api {
                 }
                 pub fn backers_on_disputes_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::backers_on_disputes::Param0>,
+                    _0: types::backers_on_disputes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::backers_on_disputes::Param0,
@@ -36460,9 +34833,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParasDisputes",
                         "BackersOnDisputes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             136u8, 171u8, 20u8, 204u8, 135u8, 153u8, 144u8, 241u8, 46u8, 193u8,
                             65u8, 22u8, 116u8, 161u8, 144u8, 186u8, 31u8, 194u8, 202u8, 225u8,
@@ -36473,8 +34844,8 @@ pub mod api {
                 }
                 pub fn backers_on_disputes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::backers_on_disputes::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::backers_on_disputes::Param1>,
+                    _0: types::backers_on_disputes::Param0,
+                    _1: types::backers_on_disputes::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -36493,12 +34864,8 @@ pub mod api {
                         "ParasDisputes",
                         "BackersOnDisputes",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             136u8, 171u8, 20u8, 204u8, 135u8, 153u8, 144u8, 241u8, 46u8, 193u8,
@@ -36531,7 +34898,7 @@ pub mod api {
                 }
                 pub fn included_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::included::Param0>,
+                    _0: types::included::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::included::Param0,
@@ -36544,9 +34911,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParasDisputes",
                         "Included",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             47u8, 105u8, 189u8, 233u8, 206u8, 153u8, 162u8, 217u8, 141u8, 118u8,
                             31u8, 85u8, 87u8, 53u8, 100u8, 187u8, 31u8, 245u8, 50u8, 171u8, 4u8,
@@ -36557,8 +34922,8 @@ pub mod api {
                 }
                 pub fn included(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::included::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::included::Param1>,
+                    _0: types::included::Param0,
+                    _1: types::included::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -36577,12 +34942,8 @@ pub mod api {
                         "ParasDisputes",
                         "Included",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             47u8, 105u8, 189u8, 233u8, 206u8, 153u8, 162u8, 217u8, 141u8, 118u8,
@@ -36635,8 +34996,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -36729,7 +35088,7 @@ pub mod api {
                 }
                 pub fn unapplied_slashes_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::unapplied_slashes::Param0>,
+                    _0: types::unapplied_slashes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::unapplied_slashes::Param0,
@@ -36742,9 +35101,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParasSlashing",
                         "UnappliedSlashes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             33u8, 56u8, 255u8, 142u8, 106u8, 140u8, 122u8, 102u8, 103u8, 68u8,
                             118u8, 101u8, 50u8, 11u8, 42u8, 230u8, 186u8, 94u8, 118u8, 217u8,
@@ -36755,8 +35112,8 @@ pub mod api {
                 }
                 pub fn unapplied_slashes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::unapplied_slashes::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::unapplied_slashes::Param1>,
+                    _0: types::unapplied_slashes::Param0,
+                    _1: types::unapplied_slashes::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -36775,12 +35132,8 @@ pub mod api {
                         "ParasSlashing",
                         "UnappliedSlashes",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             33u8, 56u8, 255u8, 142u8, 106u8, 140u8, 122u8, 102u8, 103u8, 68u8,
@@ -36812,7 +35165,7 @@ pub mod api {
                 }
                 pub fn validator_set_counts(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::validator_set_counts::Param0>,
+                    _0: types::validator_set_counts::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::validator_set_counts::Param0,
@@ -36825,9 +35178,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "ParasSlashing",
                         "ValidatorSetCounts",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             195u8, 220u8, 79u8, 140u8, 114u8, 80u8, 241u8, 103u8, 4u8, 7u8, 53u8,
                             100u8, 16u8, 78u8, 104u8, 171u8, 134u8, 110u8, 158u8, 191u8, 37u8,
@@ -36856,8 +35207,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -36884,8 +35233,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -36912,8 +35259,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37011,8 +35356,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OnDemandOrderPlaced {
@@ -37037,8 +35380,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SpotPriceSet {
@@ -37059,8 +35400,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AccountCredited {
@@ -37140,7 +35479,7 @@ pub mod api {
                 }
                 pub fn para_id_affinity(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::para_id_affinity::Param0>,
+                    _0: types::para_id_affinity::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::para_id_affinity::Param0,
@@ -37153,9 +35492,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "OnDemand",
                         "ParaIdAffinity",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             84u8, 171u8, 103u8, 180u8, 176u8, 210u8, 232u8, 184u8, 221u8, 129u8,
                             174u8, 253u8, 250u8, 168u8, 2u8, 250u8, 105u8, 143u8, 120u8, 204u8,
@@ -37228,7 +35565,7 @@ pub mod api {
                 }
                 pub fn affinity_entries(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::affinity_entries::Param0>,
+                    _0: types::affinity_entries::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::affinity_entries::Param0,
@@ -37241,9 +35578,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "OnDemand",
                         "AffinityEntries",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             130u8, 236u8, 62u8, 133u8, 71u8, 121u8, 51u8, 37u8, 27u8, 240u8, 134u8,
                             28u8, 221u8, 211u8, 28u8, 182u8, 222u8, 220u8, 249u8, 227u8, 2u8,
@@ -37294,7 +35629,7 @@ pub mod api {
                 }
                 pub fn credits(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::credits::Param0>,
+                    _0: types::credits::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::credits::Param0,
@@ -37307,9 +35642,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "OnDemand",
                         "Credits",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             59u8, 62u8, 141u8, 61u8, 25u8, 95u8, 77u8, 151u8, 218u8, 104u8, 152u8,
                             237u8, 135u8, 135u8, 41u8, 130u8, 220u8, 168u8, 94u8, 180u8, 251u8,
@@ -37388,8 +35721,10 @@ pub mod api {
                         runtime_types::polkadot_runtime_parachains::assigner_coretime::Schedule<
                             ::core::primitive::u32,
                         >;
-                    pub type Param0 = ::core::primitive::u32;
-                    pub type Param1 = runtime_types::polkadot_primitives::v8::CoreIndex;
+                    pub type Param0 = (
+                        ::core::primitive::u32,
+                        runtime_types::polkadot_primitives::v8::CoreIndex,
+                    );
                 }
                 pub mod core_descriptors {
                     use super::runtime_types;
@@ -37419,42 +35754,20 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn core_schedules_iter1(
+                pub fn core_schedules(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::core_schedules::Param0>,
+                    _0: types::core_schedules::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (),
                     types::core_schedules::CoreSchedules,
-                    (),
-                    (),
                     ::subxt::ext::subxt_core::utils::Yes,
+                    (),
+                    (),
                 > {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "CoretimeAssignmentProvider",
                         "CoreSchedules",
                         (),
-                        [
-                            34u8, 85u8, 91u8, 158u8, 28u8, 200u8, 76u8, 188u8, 253u8, 91u8, 153u8,
-                            42u8, 42u8, 227u8, 119u8, 181u8, 247u8, 44u8, 29u8, 24u8, 128u8, 49u8,
-                            57u8, 248u8, 24u8, 145u8, 34u8, 74u8, 21u8, 225u8, 159u8, 232u8,
-                        ],
-                    )
-                }
-                pub fn core_schedules(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::core_schedules::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::core_schedules::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    ((), ()),
-                    types::core_schedules::CoreSchedules,
-                    ::subxt::ext::subxt_core::utils::Yes,
-                    (),
-                    (),
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "CoretimeAssignmentProvider",
-                        "CoreSchedules",
-                        ((), ()),
                         [
                             34u8, 85u8, 91u8, 158u8, 28u8, 200u8, 76u8, 188u8, 253u8, 91u8, 153u8,
                             42u8, 42u8, 227u8, 119u8, 181u8, 247u8, 44u8, 29u8, 24u8, 128u8, 49u8,
@@ -37484,7 +35797,7 @@ pub mod api {
                 }
                 pub fn core_descriptors(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::core_descriptors::Param0>,
+                    _0: types::core_descriptors::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (),
                     types::core_descriptors::CoreDescriptors,
@@ -37524,8 +35837,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37556,8 +35867,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37592,8 +35901,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37618,8 +35925,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37646,8 +35951,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37672,8 +35975,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37692,8 +35993,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37718,8 +36017,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37747,8 +36044,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -37950,8 +36245,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Registered {
@@ -37974,8 +36267,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Deregistered {
@@ -37996,8 +36287,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Reserved {
@@ -38020,8 +36309,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Swapped {
@@ -38088,7 +36375,7 @@ pub mod api {
                 }
                 pub fn pending_swap(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::pending_swap::Param0>,
+                    _0: types::pending_swap::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::pending_swap::Param0,
@@ -38101,9 +36388,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Registrar",
                         "PendingSwap",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             75u8, 6u8, 68u8, 43u8, 108u8, 147u8, 220u8, 90u8, 190u8, 86u8, 209u8,
                             141u8, 9u8, 254u8, 103u8, 10u8, 94u8, 187u8, 155u8, 249u8, 140u8,
@@ -38134,7 +36419,7 @@ pub mod api {
                 }
                 pub fn paras(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::paras::Param0>,
+                    _0: types::paras::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::paras::Param0,
@@ -38147,9 +36432,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Registrar",
                         "Paras",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             125u8, 62u8, 50u8, 209u8, 40u8, 170u8, 61u8, 62u8, 61u8, 246u8, 103u8,
                             229u8, 213u8, 94u8, 249u8, 49u8, 18u8, 90u8, 138u8, 14u8, 101u8, 133u8,
@@ -38235,8 +36518,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38269,8 +36550,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38295,8 +36574,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38388,8 +36665,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NewLeasePeriod {
@@ -38410,8 +36685,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Leased {
@@ -38476,7 +36749,7 @@ pub mod api {
                 }
                 pub fn leases(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::leases::Param0>,
+                    _0: types::leases::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::leases::Param0,
@@ -38489,9 +36762,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Slots",
                         "Leases",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             233u8, 226u8, 181u8, 160u8, 216u8, 86u8, 238u8, 229u8, 31u8, 67u8,
                             200u8, 188u8, 134u8, 22u8, 88u8, 147u8, 204u8, 11u8, 34u8, 244u8,
@@ -38559,8 +36830,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38589,8 +36858,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38628,8 +36895,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -38718,8 +36983,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AuctionStarted {
@@ -38744,8 +37007,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AuctionClosed {
@@ -38766,8 +37027,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Reserved {
@@ -38792,8 +37051,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Unreserved {
@@ -38816,8 +37073,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ReserveConfiscated {
@@ -38842,8 +37097,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BidAccepted {
@@ -38872,8 +37125,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct WinningOffset {
@@ -38905,8 +37156,10 @@ pub mod api {
                 pub mod reserved_amounts {
                     use super::runtime_types;
                     pub type ReservedAmounts = ::core::primitive::u128;
-                    pub type Param0 = ::subxt::ext::subxt_core::utils::AccountId32;
-                    pub type Param1 = runtime_types::polkadot_parachain_primitives::primitives::Id;
+                    pub type Param0 = (
+                        ::subxt::ext::subxt_core::utils::AccountId32,
+                        runtime_types::polkadot_parachain_primitives::primitives::Id,
+                    );
                 }
                 pub mod winning {
                     use super::runtime_types;
@@ -38981,46 +37234,14 @@ pub mod api {
                         ],
                     )
                 }
-                pub fn reserved_amounts_iter1(
+                pub fn reserved_amounts(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::reserved_amounts::Param0>,
+                    _0: types::reserved_amounts::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::reserved_amounts::Param0,
                     >,
                     types::reserved_amounts::ReservedAmounts,
-                    (),
-                    (),
-                    ::subxt::ext::subxt_core::utils::Yes,
-                > {
-                    ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
-                        "Auctions",
-                        "ReservedAmounts",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
-                        [
-                            77u8, 44u8, 116u8, 36u8, 189u8, 213u8, 126u8, 32u8, 42u8, 131u8, 108u8,
-                            41u8, 147u8, 40u8, 247u8, 245u8, 161u8, 42u8, 152u8, 195u8, 28u8,
-                            142u8, 231u8, 209u8, 113u8, 11u8, 240u8, 37u8, 112u8, 38u8, 239u8,
-                            245u8,
-                        ],
-                    )
-                }
-                pub fn reserved_amounts(
-                    &self,
-                    _0: impl ::core::borrow::Borrow<types::reserved_amounts::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::reserved_amounts::Param1>,
-                ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
-                    (
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::reserved_amounts::Param0,
-                        >,
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
-                            types::reserved_amounts::Param1,
-                        >,
-                    ),
-                    types::reserved_amounts::ReservedAmounts,
                     ::subxt::ext::subxt_core::utils::Yes,
                     (),
                     (),
@@ -39028,14 +37249,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Auctions",
                         "ReservedAmounts",
-                        (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             77u8, 44u8, 116u8, 36u8, 189u8, 213u8, 126u8, 32u8, 42u8, 131u8, 108u8,
                             41u8, 147u8, 40u8, 247u8, 245u8, 161u8, 42u8, 152u8, 195u8, 28u8,
@@ -39066,7 +37280,7 @@ pub mod api {
                 }
                 pub fn winning(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::winning::Param0>,
+                    _0: types::winning::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::winning::Param0,
@@ -39079,9 +37293,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Auctions",
                         "Winning",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             8u8, 136u8, 174u8, 152u8, 223u8, 1u8, 143u8, 45u8, 213u8, 5u8, 239u8,
                             163u8, 152u8, 99u8, 197u8, 109u8, 194u8, 140u8, 246u8, 10u8, 40u8,
@@ -39180,8 +37392,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39222,8 +37432,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39255,8 +37463,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39284,8 +37490,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39311,8 +37515,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39338,8 +37540,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39380,8 +37580,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39409,8 +37607,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39435,8 +37631,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -39656,8 +37850,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Created {
@@ -39678,8 +37870,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Contributed {
@@ -39704,8 +37894,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Withdrew {
@@ -39730,8 +37918,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PartiallyRefunded {
@@ -39752,8 +37938,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AllRefunded {
@@ -39774,8 +37958,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Dissolved {
@@ -39796,8 +37978,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct HandleBidResult {
@@ -39821,8 +38001,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Edited {
@@ -39843,8 +38021,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MemoUpdated {
@@ -39869,8 +38045,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AddedToNewRaise {
@@ -39939,7 +38113,7 @@ pub mod api {
                 }
                 pub fn funds(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::funds::Param0>,
+                    _0: types::funds::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::funds::Param0,
@@ -39952,9 +38126,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Crowdloan",
                         "Funds",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             201u8, 39u8, 80u8, 58u8, 162u8, 213u8, 138u8, 215u8, 11u8, 6u8, 39u8,
                             197u8, 142u8, 151u8, 231u8, 166u8, 255u8, 142u8, 219u8, 116u8, 56u8,
@@ -40098,8 +38270,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40124,8 +38294,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40150,8 +38318,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40178,8 +38344,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40297,8 +38461,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RevenueInfoRequested {
@@ -40319,8 +38481,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CoreAssigned {
@@ -40392,8 +38552,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40420,8 +38578,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40452,8 +38608,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40482,8 +38636,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40515,8 +38667,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40542,8 +38692,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40695,8 +38843,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Migrated {
@@ -40722,8 +38868,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slashed {
@@ -40746,8 +38890,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AutoMigrationFinished;
@@ -40762,8 +38904,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Halted {
@@ -40905,8 +39045,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40933,8 +39071,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -40967,8 +39103,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41004,8 +39138,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41032,8 +39164,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41061,8 +39191,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41087,8 +39215,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41115,8 +39241,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41143,8 +39267,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41183,8 +39305,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41222,8 +39342,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41248,8 +39366,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41284,8 +39400,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41313,8 +39427,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41365,8 +39477,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41394,8 +39504,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41422,8 +39530,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -41842,8 +39948,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Attempted {
@@ -41864,8 +39968,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Sent {
@@ -41892,8 +39994,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SendFailed {
@@ -41920,8 +40020,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProcessXcmError {
@@ -41946,8 +40044,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UnexpectedResponse {
@@ -41970,8 +40066,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ResponseReady {
@@ -41994,8 +40088,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Notified {
@@ -42020,8 +40112,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NotifyOverweight {
@@ -42050,8 +40140,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NotifyDispatchError {
@@ -42076,8 +40164,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NotifyDecodeFailed {
@@ -42102,8 +40188,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InvalidResponder {
@@ -42129,8 +40213,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InvalidResponderVersion {
@@ -42153,8 +40235,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ResponseTaken {
@@ -42175,8 +40255,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetsTrapped {
@@ -42201,8 +40279,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VersionChangeNotified {
@@ -42229,8 +40305,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SupportedVersionChanged {
@@ -42253,8 +40327,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NotifyTargetSendFail {
@@ -42279,8 +40351,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NotifyTargetMigrationFail {
@@ -42303,8 +40373,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InvalidQuerierVersion {
@@ -42327,8 +40395,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InvalidQuerier {
@@ -42356,8 +40422,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VersionNotifyStarted {
@@ -42382,8 +40446,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VersionNotifyRequested {
@@ -42408,8 +40470,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VersionNotifyUnrequested {
@@ -42434,8 +40494,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct FeesPaid {
@@ -42458,8 +40516,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetsClaimed {
@@ -42484,8 +40540,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VersionMigrationFinished {
@@ -42506,8 +40560,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AliasAuthorized {
@@ -42532,8 +40584,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AliasAuthorizationRemoved {
@@ -42556,8 +40606,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AliasesAuthorizationsRemoved {
@@ -42714,7 +40762,7 @@ pub mod api {
                 }
                 pub fn queries(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::queries::Param0>,
+                    _0: types::queries::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::queries::Param0,
@@ -42727,9 +40775,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "Queries",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             134u8, 206u8, 252u8, 211u8, 156u8, 173u8, 214u8, 205u8, 17u8, 177u8,
                             139u8, 121u8, 43u8, 29u8, 30u8, 233u8, 210u8, 222u8, 172u8, 171u8,
@@ -42760,7 +40806,7 @@ pub mod api {
                 }
                 pub fn asset_traps(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::asset_traps::Param0>,
+                    _0: types::asset_traps::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::asset_traps::Param0,
@@ -42773,9 +40819,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "AssetTraps",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             148u8, 41u8, 254u8, 134u8, 61u8, 172u8, 126u8, 146u8, 78u8, 178u8,
                             50u8, 77u8, 226u8, 8u8, 200u8, 78u8, 77u8, 91u8, 26u8, 133u8, 104u8,
@@ -42827,7 +40871,7 @@ pub mod api {
                 }
                 pub fn supported_version_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::supported_version::Param0>,
+                    _0: types::supported_version::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::supported_version::Param0,
@@ -42840,9 +40884,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "SupportedVersion",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             156u8, 153u8, 195u8, 67u8, 72u8, 227u8, 183u8, 107u8, 71u8, 221u8,
                             125u8, 172u8, 34u8, 22u8, 56u8, 182u8, 219u8, 223u8, 183u8, 137u8,
@@ -42853,8 +40895,8 @@ pub mod api {
                 }
                 pub fn supported_version(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::supported_version::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::supported_version::Param1>,
+                    _0: types::supported_version::Param0,
+                    _1: types::supported_version::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -42873,12 +40915,8 @@ pub mod api {
                         "XcmPallet",
                         "SupportedVersion",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             156u8, 153u8, 195u8, 67u8, 72u8, 227u8, 183u8, 107u8, 71u8, 221u8,
@@ -42910,7 +40948,7 @@ pub mod api {
                 }
                 pub fn version_notifiers_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::version_notifiers::Param0>,
+                    _0: types::version_notifiers::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::version_notifiers::Param0,
@@ -42923,9 +40961,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "VersionNotifiers",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             216u8, 78u8, 44u8, 71u8, 246u8, 59u8, 163u8, 153u8, 68u8, 31u8, 197u8,
                             114u8, 33u8, 203u8, 20u8, 60u8, 61u8, 177u8, 94u8, 13u8, 213u8, 203u8,
@@ -42935,8 +40971,8 @@ pub mod api {
                 }
                 pub fn version_notifiers(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::version_notifiers::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::version_notifiers::Param1>,
+                    _0: types::version_notifiers::Param0,
+                    _1: types::version_notifiers::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -42955,12 +40991,8 @@ pub mod api {
                         "XcmPallet",
                         "VersionNotifiers",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             216u8, 78u8, 44u8, 71u8, 246u8, 59u8, 163u8, 153u8, 68u8, 31u8, 197u8,
@@ -42991,7 +41023,7 @@ pub mod api {
                 }
                 pub fn version_notify_targets_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::version_notify_targets::Param0>,
+                    _0: types::version_notify_targets::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::version_notify_targets::Param0,
@@ -43004,9 +41036,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "VersionNotifyTargets",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             166u8, 29u8, 245u8, 121u8, 177u8, 119u8, 188u8, 0u8, 32u8, 188u8, 9u8,
                             180u8, 60u8, 28u8, 161u8, 5u8, 189u8, 78u8, 238u8, 14u8, 148u8, 5u8,
@@ -43016,8 +41046,8 @@ pub mod api {
                 }
                 pub fn version_notify_targets(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::version_notify_targets::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::version_notify_targets::Param1>,
+                    _0: types::version_notify_targets::Param0,
+                    _1: types::version_notify_targets::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -43036,12 +41066,8 @@ pub mod api {
                         "XcmPallet",
                         "VersionNotifyTargets",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             166u8, 29u8, 245u8, 121u8, 177u8, 119u8, 188u8, 0u8, 32u8, 188u8, 9u8,
@@ -43114,7 +41140,7 @@ pub mod api {
                 }
                 pub fn remote_locked_fungibles_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param0>,
+                    _0: types::remote_locked_fungibles::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::remote_locked_fungibles::Param0,
@@ -43127,9 +41153,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "RemoteLockedFungibles",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             166u8, 178u8, 87u8, 32u8, 245u8, 121u8, 41u8, 67u8, 60u8, 239u8, 43u8,
                             155u8, 114u8, 241u8, 54u8, 176u8, 63u8, 204u8, 197u8, 250u8, 60u8,
@@ -43140,8 +41164,8 @@ pub mod api {
                 }
                 pub fn remote_locked_fungibles_iter2(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param1>,
+                    _0: types::remote_locked_fungibles::Param0,
+                    _1: types::remote_locked_fungibles::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -43160,12 +41184,8 @@ pub mod api {
                         "XcmPallet",
                         "RemoteLockedFungibles",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             166u8, 178u8, 87u8, 32u8, 245u8, 121u8, 41u8, 67u8, 60u8, 239u8, 43u8,
@@ -43177,9 +41197,9 @@ pub mod api {
                 }
                 pub fn remote_locked_fungibles(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param1>,
-                    _2: impl ::core::borrow::Borrow<types::remote_locked_fungibles::Param2>,
+                    _0: types::remote_locked_fungibles::Param0,
+                    _1: types::remote_locked_fungibles::Param1,
+                    _2: types::remote_locked_fungibles::Param2,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -43201,15 +41221,9 @@ pub mod api {
                         "XcmPallet",
                         "RemoteLockedFungibles",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _2.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_2),
                         ),
                         [
                             166u8, 178u8, 87u8, 32u8, 245u8, 121u8, 41u8, 67u8, 60u8, 239u8, 43u8,
@@ -43241,7 +41255,7 @@ pub mod api {
                 }
                 pub fn locked_fungibles(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::locked_fungibles::Param0>,
+                    _0: types::locked_fungibles::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::locked_fungibles::Param0,
@@ -43254,9 +41268,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "LockedFungibles",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             112u8, 157u8, 87u8, 224u8, 37u8, 77u8, 11u8, 17u8, 173u8, 230u8, 168u8,
                             230u8, 33u8, 8u8, 209u8, 110u8, 182u8, 34u8, 118u8, 28u8, 15u8, 14u8,
@@ -43346,7 +41358,7 @@ pub mod api {
                 }
                 pub fn authorized_aliases(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::authorized_aliases::Param0>,
+                    _0: types::authorized_aliases::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::authorized_aliases::Param0,
@@ -43359,9 +41371,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "XcmPallet",
                         "AuthorizedAliases",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             240u8, 28u8, 155u8, 219u8, 136u8, 114u8, 250u8, 219u8, 149u8, 37u8,
                             248u8, 248u8, 115u8, 12u8, 249u8, 220u8, 104u8, 132u8, 84u8, 29u8, 4u8,
@@ -43412,8 +41422,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -43440,8 +41448,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -43525,8 +41531,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProcessingFailed {
@@ -43553,8 +41557,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Processed {
@@ -43582,8 +41584,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OverweightEnqueued {
@@ -43611,8 +41611,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PageReaped {
@@ -43676,7 +41674,7 @@ pub mod api {
                 }
                 pub fn book_state_for(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::book_state_for::Param0>,
+                    _0: types::book_state_for::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::book_state_for::Param0,
@@ -43689,9 +41687,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "MessageQueue",
                         "BookStateFor",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             32u8, 61u8, 161u8, 81u8, 134u8, 136u8, 252u8, 113u8, 204u8, 115u8,
                             206u8, 180u8, 33u8, 185u8, 137u8, 155u8, 178u8, 189u8, 234u8, 201u8,
@@ -43744,7 +41740,7 @@ pub mod api {
                 }
                 pub fn pages_iter1(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::pages::Param0>,
+                    _0: types::pages::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::pages::Param0,
@@ -43757,9 +41753,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "MessageQueue",
                         "Pages",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             56u8, 181u8, 157u8, 16u8, 157u8, 123u8, 106u8, 93u8, 199u8, 208u8,
                             153u8, 53u8, 168u8, 188u8, 124u8, 77u8, 140u8, 163u8, 113u8, 16u8,
@@ -43770,8 +41764,8 @@ pub mod api {
                 }
                 pub fn pages(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::pages::Param0>,
-                    _1: impl ::core::borrow::Borrow<types::pages::Param1>,
+                    _0: types::pages::Param0,
+                    _1: types::pages::Param1,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     (
                         ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
@@ -43790,12 +41784,8 @@ pub mod api {
                         "MessageQueue",
                         "Pages",
                         (
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _0.borrow(),
-                            ),
-                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                                _1.borrow(),
-                            ),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
+                            ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_1),
                         ),
                         [
                             56u8, 181u8, 157u8, 16u8, 157u8, 123u8, 106u8, 93u8, 199u8, 208u8,
@@ -43894,8 +41884,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -43923,8 +41911,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -43952,8 +41938,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44052,8 +42036,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetRateCreated {
@@ -44077,8 +42059,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetRateRemoved {
@@ -44100,8 +42080,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AssetRateUpdated {
@@ -44157,7 +42135,7 @@ pub mod api {
                 }
                 pub fn conversion_rate_to_native(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::conversion_rate_to_native::Param0>,
+                    _0: types::conversion_rate_to_native::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::conversion_rate_to_native::Param0,
@@ -44170,9 +42148,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "AssetRate",
                         "ConversionRateToNative",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             102u8, 116u8, 47u8, 128u8, 65u8, 18u8, 208u8, 127u8, 21u8, 115u8, 49u8,
                             131u8, 2u8, 198u8, 162u8, 114u8, 158u8, 246u8, 235u8, 161u8, 117u8,
@@ -44201,8 +42177,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44236,8 +42210,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44271,8 +42243,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44297,8 +42267,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44333,8 +42301,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44369,8 +42335,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44403,8 +42367,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -44708,7 +42670,7 @@ pub mod api {
                 }
                 pub fn set_id_session(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::set_id_session::Param0>,
+                    _0: types::set_id_session::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::set_id_session::Param0,
@@ -44721,9 +42683,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Beefy",
                         "SetIdSession",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             47u8, 0u8, 239u8, 121u8, 187u8, 213u8, 254u8, 50u8, 238u8, 10u8, 162u8,
                             65u8, 189u8, 166u8, 37u8, 74u8, 82u8, 81u8, 160u8, 20u8, 180u8, 253u8,
@@ -44893,7 +42853,7 @@ pub mod api {
                 }
                 pub fn nodes(
                     &self,
-                    _0: impl ::core::borrow::Borrow<types::nodes::Param0>,
+                    _0: types::nodes::Param0,
                 ) -> ::subxt::ext::subxt_core::storage::address::StaticAddress<
                     ::subxt::ext::subxt_core::storage::address::StaticStorageKey<
                         types::nodes::Param0,
@@ -44906,9 +42866,7 @@ pub mod api {
                     ::subxt::ext::subxt_core::storage::address::StaticAddress::new_static(
                         "Mmr",
                         "Nodes",
-                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(
-                            _0.borrow(),
-                        ),
+                        ::subxt::ext::subxt_core::storage::address::StaticStorageKey::new(_0),
                         [
                             27u8, 84u8, 41u8, 195u8, 146u8, 81u8, 211u8, 189u8, 63u8, 125u8, 173u8,
                             206u8, 69u8, 198u8, 202u8, 213u8, 89u8, 31u8, 89u8, 177u8, 76u8, 154u8,
@@ -45000,8 +42958,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45021,8 +42977,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45040,8 +42994,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45060,8 +43012,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Equivocation<_0, _1, _2> {
@@ -45077,8 +43027,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Precommit<_0, _1> {
@@ -45092,8 +43040,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Prevote<_0, _1> {
@@ -45110,8 +43056,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CheckMetadataHash {
@@ -45124,8 +43068,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Mode {
@@ -45146,8 +43088,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45169,8 +43109,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45190,8 +43128,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45210,8 +43146,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45230,8 +43164,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45258,8 +43190,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45290,8 +43220,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45326,8 +43254,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45350,8 +43276,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45372,8 +43296,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -45391,8 +43313,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -45412,8 +43332,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -45434,8 +43352,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PalletId(pub [::core::primitive::u8; 8usize]);
@@ -45453,8 +43369,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45472,8 +43386,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45491,8 +43403,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45510,8 +43420,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45529,8 +43437,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45548,8 +43454,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45567,8 +43471,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -45587,8 +43489,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45607,8 +43507,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45629,8 +43527,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45656,8 +43552,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45721,8 +43615,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45756,8 +43648,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45808,8 +43698,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AccountInfo<_0, _1> {
@@ -45826,8 +43714,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CodeUpgradeAuthorization {
@@ -45841,8 +43727,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DispatchEventInfo {
@@ -45857,8 +43741,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EventRecord<_0, _1> {
@@ -45873,8 +43755,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct LastRuntimeUpgradeInfo {
@@ -45889,8 +43769,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Phase {
@@ -45913,8 +43791,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45950,8 +43826,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -45973,8 +43847,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46014,8 +43886,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46059,8 +43929,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46090,8 +43958,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46109,8 +43975,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46134,8 +43998,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46159,8 +44021,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46201,8 +44061,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46220,8 +44078,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46254,8 +44110,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46345,8 +44199,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46386,8 +44238,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46513,8 +44363,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46534,8 +44382,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46555,8 +44401,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46576,8 +44420,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46592,8 +44434,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46615,8 +44455,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46640,8 +44478,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46733,8 +44569,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46770,8 +44604,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46856,8 +44688,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46895,8 +44725,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -46951,8 +44779,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Bounty<_0, _1, _2> {
@@ -46970,8 +44796,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum BountyStatus<_0, _1> {
@@ -47006,8 +44830,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47035,8 +44857,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47113,8 +44933,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47136,8 +44954,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47177,8 +44993,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ChildBounty<_0, _1, _2> {
@@ -47195,8 +45009,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ChildBountyStatus<_0, _1> {
@@ -47225,8 +45037,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47259,8 +45069,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47318,8 +45126,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47359,8 +45165,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47405,8 +45209,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47424,8 +45226,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47447,8 +45247,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47473,8 +45271,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47499,8 +45295,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47522,8 +45316,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47539,8 +45331,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47555,8 +45345,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47585,8 +45373,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47626,8 +45412,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47667,8 +45451,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47689,8 +45471,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47713,8 +45493,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47738,8 +45516,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47755,8 +45531,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47802,8 +45576,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47858,8 +45630,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -47881,8 +45651,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ElectionCompute {
@@ -47904,8 +45672,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Phase<_0> {
@@ -47925,8 +45691,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RawSolution<_0> {
@@ -47941,8 +45705,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ReadySolution {
@@ -47962,8 +45724,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RoundSnapshot<_0, _1> {
@@ -47977,8 +45737,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SolutionOrSnapshotSize {
@@ -47999,8 +45757,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48024,8 +45780,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48053,8 +45807,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48092,8 +45844,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48122,8 +45872,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48164,8 +45912,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48195,8 +45941,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48224,8 +45968,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct StoredPendingChange<_0> {
@@ -48245,8 +45987,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum StoredState<_0> {
@@ -48271,8 +46011,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48313,8 +46051,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48340,8 +46076,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48382,8 +46116,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48399,8 +46131,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48434,8 +46164,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48452,8 +46180,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BookState<_0> {
@@ -48472,8 +46198,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Neighbours<_0> {
@@ -48487,8 +46211,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Page<_0> {
@@ -48513,8 +46235,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48583,8 +46303,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48628,8 +46346,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48685,8 +46401,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Multisig<_0, _1, _2> {
@@ -48702,8 +46416,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Timepoint<_0> {
@@ -48722,8 +46434,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48930,8 +46640,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -48961,8 +46669,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49054,8 +46760,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49211,8 +46915,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49231,8 +46933,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum BondExtra<_0> {
@@ -49248,8 +46948,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BondedPoolInner {
@@ -49268,8 +46966,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ClaimPermission {
@@ -49289,8 +46985,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Commission {
@@ -49318,8 +47012,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CommissionChangeRate<_0> {
@@ -49333,8 +47025,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum CommissionClaimPermission<_0> {
@@ -49350,8 +47040,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ConfigOp<_0> {
@@ -49369,8 +47057,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolMember {
@@ -49391,8 +47077,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PoolRoles<_0> {
@@ -49408,8 +47092,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum PoolState {
@@ -49427,8 +47109,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RewardPool {
@@ -49446,8 +47126,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SubPools {
@@ -49465,8 +47143,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UnbondPool {
@@ -49485,8 +47161,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49513,8 +47187,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49552,8 +47224,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49585,8 +47255,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49614,8 +47282,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49634,8 +47300,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum OldRequestStatus<_0, _1> {
@@ -49658,8 +47322,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RequestStatus<_0, _1> {
@@ -49687,8 +47349,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49799,8 +47459,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49832,8 +47490,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49889,8 +47545,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Announcement<_0, _1, _2> {
@@ -49905,8 +47559,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum DepositKind {
@@ -49922,8 +47574,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ProxyDefinition<_0, _1, _2> {
@@ -49943,8 +47593,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -49993,8 +47641,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50038,8 +47684,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50153,8 +47797,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50189,8 +47831,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50208,8 +47848,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50227,8 +47865,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50299,8 +47935,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50331,8 +47965,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50363,8 +47995,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50459,8 +48089,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50486,8 +48114,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50555,8 +48181,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RetryConfig<_0> {
@@ -50571,8 +48195,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Scheduled<_0, _1, _2, _3, _4> {
@@ -50596,8 +48218,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50620,8 +48240,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50647,8 +48265,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -50684,8 +48300,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -50891,8 +48505,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -50914,8 +48526,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -50999,8 +48609,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -51100,8 +48708,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -51123,8 +48729,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51144,8 +48748,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51164,8 +48766,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ActiveEraInfo {
@@ -51179,8 +48779,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EraRewardPoints<_0> {
@@ -51195,8 +48793,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Forcing {
@@ -51216,8 +48812,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Nominations {
@@ -51234,8 +48828,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RewardDestination<_0> {
@@ -51257,8 +48849,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct StakingLedger {
@@ -51282,8 +48872,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UnappliedSlash<_0, _1> {
@@ -51300,8 +48888,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct UnlockChunk<_0> {
@@ -51317,8 +48903,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ValidatorPrefs {
@@ -51338,8 +48922,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51393,8 +48975,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51422,8 +49002,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51457,8 +49035,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51476,8 +49052,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51497,8 +49071,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51516,8 +49088,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51539,8 +49109,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51572,8 +49140,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51600,8 +49166,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51626,8 +49190,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51647,8 +49209,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51667,8 +49227,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51688,8 +49246,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ChargeTransactionPayment(#[codec(compact)] pub ::core::primitive::u128);
@@ -51700,8 +49256,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Releases {
@@ -51722,8 +49276,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51771,8 +49323,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51810,8 +49360,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -51883,8 +49431,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum PaymentState<_0> {
@@ -51902,8 +49448,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Proposal<_0, _1> {
@@ -51919,8 +49463,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SpendStatus<_0, _1, _2, _3, _4> {
@@ -51943,8 +49485,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52019,8 +49559,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52038,8 +49576,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52087,8 +49623,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52152,8 +49686,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52179,8 +49711,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52208,8 +49738,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52229,8 +49757,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Releases {
@@ -52251,8 +49777,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52288,8 +49812,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52315,8 +49837,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52356,8 +49876,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52373,8 +49891,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52444,8 +49960,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52625,8 +50139,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52644,8 +50156,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52660,8 +50170,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52681,8 +50189,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52717,8 +50223,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52741,8 +50245,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52771,8 +50273,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AuthorizedAliasesEntry<_0, _1> {
@@ -52793,8 +50293,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CandidateHash(pub ::subxt::ext::subxt_core::utils::H256);
@@ -52805,8 +50303,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InboundDownwardMessage<_0> {
@@ -52820,8 +50316,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InboundHrmpMessage<_0> {
@@ -52835,8 +50329,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OutboundHrmpMessage<_0> {
@@ -52855,8 +50347,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52873,8 +50363,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52893,8 +50381,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52909,8 +50395,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52927,8 +50411,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -52951,8 +50433,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -52970,8 +50450,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -52989,8 +50467,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53005,8 +50481,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53023,8 +50497,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53045,8 +50517,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53064,8 +50534,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53101,8 +50569,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53124,8 +50590,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53150,8 +50614,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53174,8 +50636,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53193,8 +50653,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53211,8 +50669,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53234,8 +50690,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53258,8 +50712,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53274,8 +50726,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53292,8 +50742,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53310,8 +50758,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53331,8 +50777,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53366,8 +50810,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53382,8 +50824,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53409,8 +50849,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53430,8 +50868,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53455,8 +50891,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53471,8 +50905,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53491,8 +50923,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53510,8 +50940,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53529,8 +50957,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53552,8 +50978,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53574,8 +50998,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53590,8 +51012,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53611,8 +51031,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53632,8 +51050,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53653,8 +51069,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53683,8 +51097,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53727,8 +51139,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53748,8 +51158,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53767,8 +51175,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53799,8 +51205,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53815,8 +51219,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53841,8 +51243,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53857,8 +51257,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53881,8 +51279,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -53898,8 +51294,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53926,8 +51320,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53942,8 +51334,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53979,8 +51369,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -53999,8 +51387,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54021,8 +51407,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54044,8 +51428,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54067,8 +51449,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54089,8 +51469,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54122,8 +51500,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54138,8 +51514,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54171,8 +51545,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54193,8 +51565,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -54232,8 +51602,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -54282,8 +51650,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct NposCompactSolution16 {
@@ -54449,8 +51815,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum OriginCaller {
@@ -54462,8 +51826,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Runtime;
@@ -54474,8 +51836,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RuntimeCall {
@@ -54585,8 +51945,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RuntimeError {
@@ -54696,8 +52054,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RuntimeEvent {
@@ -54791,8 +52147,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RuntimeFreezeReason {
@@ -54806,8 +52160,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum RuntimeHoldReason {
@@ -54829,8 +52181,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct SessionKeys {
@@ -54855,8 +52205,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -54894,8 +52242,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -54925,8 +52271,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -54988,8 +52332,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55045,8 +52387,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55074,8 +52414,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55099,8 +52437,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55115,8 +52451,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55131,8 +52465,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55147,8 +52479,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55173,8 +52503,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55261,8 +52589,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55324,8 +52650,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55394,8 +52718,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55422,8 +52744,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55448,8 +52768,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55485,8 +52803,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55502,8 +52818,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55547,8 +52861,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55584,8 +52896,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55609,8 +52919,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55642,8 +52950,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55663,8 +52969,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55700,8 +53004,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55741,8 +53043,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55763,8 +53063,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55784,8 +53082,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55801,8 +53097,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55817,8 +53111,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55836,8 +53128,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55859,8 +53149,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55880,8 +53168,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55897,8 +53183,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55917,8 +53201,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -55981,8 +53263,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -55998,8 +53278,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56021,8 +53299,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56050,8 +53326,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56069,8 +53343,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56104,8 +53376,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56138,8 +53408,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -56162,8 +53430,6 @@ pub mod api {
                             :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                             Debug,
                         )]
-                        # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                        #[codec(dumb_trait_bound)]
                         #[decode_as_type(
                             crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                         )]
@@ -56193,8 +53459,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56214,8 +53478,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56240,8 +53502,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56257,8 +53517,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56314,8 +53572,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56332,8 +53588,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56357,8 +53611,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56385,8 +53637,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56401,8 +53651,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56452,8 +53700,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56501,8 +53747,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56520,8 +53764,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56554,8 +53796,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56578,8 +53818,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56598,8 +53836,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56627,8 +53863,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56659,8 +53893,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56682,8 +53914,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56715,8 +53945,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56734,8 +53962,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56751,8 +53977,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56767,8 +53991,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56784,8 +54006,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56806,8 +54026,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56831,8 +54049,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56848,8 +54064,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56891,8 +54105,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -56909,8 +54121,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56931,8 +54141,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56962,8 +54170,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -56983,8 +54189,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57013,8 +54217,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57039,8 +54241,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57058,8 +54258,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57084,8 +54282,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -57109,8 +54305,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -57140,8 +54334,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -57170,8 +54362,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -57187,8 +54377,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57208,8 +54396,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57242,8 +54428,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57267,8 +54451,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57284,8 +54466,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57304,8 +54484,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57321,8 +54499,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57338,8 +54514,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57355,8 +54529,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57372,8 +54544,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57389,8 +54559,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ArithmeticError {
@@ -57413,8 +54581,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57435,8 +54601,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57454,8 +54618,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57476,8 +54638,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57501,8 +54661,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57521,8 +54679,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57540,8 +54696,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57561,8 +54715,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum AllowedSlots {
@@ -57580,8 +54732,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BabeConfiguration {
@@ -57602,8 +54752,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct BabeEpochConfiguration {
@@ -57617,8 +54765,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Epoch {
@@ -57639,8 +54785,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpaqueKeyOwnershipProof(
@@ -57658,8 +54802,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57681,8 +54823,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57697,8 +54837,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57716,8 +54854,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57739,8 +54875,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57761,8 +54895,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DoubleVotingProof<_0, _1, _2> {
@@ -57776,8 +54908,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ForkVotingProof<_0, _1, _2> {
@@ -57796,8 +54926,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct FutureBlockVotingProof<_0, _1> {
@@ -57814,8 +54942,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ValidatorSet<_0> {
@@ -57829,8 +54955,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct VoteMessage<_0, _1, _2> {
@@ -57850,8 +54974,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57866,8 +54988,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57883,8 +55003,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Equivocation<_0, _1> {
@@ -57912,8 +55030,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EquivocationProof<_0, _1> {
@@ -57930,8 +55046,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EquivocationProof<_0, _1> {
@@ -57948,8 +55062,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Slot(pub ::core::primitive::u64);
@@ -57965,8 +55077,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -57986,8 +55096,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58007,8 +55115,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpaqueMetadata(
@@ -58024,8 +55130,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct CheckInherentsResult {
@@ -58040,8 +55144,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct InherentData {
@@ -58060,8 +55162,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct AncestryProof<_0> {
@@ -58077,8 +55177,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct EncodableOpaqueLeaf(
@@ -58091,8 +55189,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum Error {
@@ -58124,8 +55220,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct LeafProof<_0> {
@@ -58143,8 +55237,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ElectionScore {
@@ -58159,8 +55251,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Support<_0> {
@@ -58182,8 +55272,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58204,8 +55292,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58224,8 +55310,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58263,8 +55347,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58795,8 +55877,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -58822,8 +55902,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58870,8 +55948,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58889,8 +55965,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58932,8 +56006,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58955,8 +56027,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58976,8 +56046,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -58999,8 +56067,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -59026,8 +56092,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum DispatchError {
@@ -59069,8 +56133,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct DispatchErrorWithPostInfo<_0> {
@@ -59084,8 +56146,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum ExtrinsicInclusionMode {
@@ -59101,8 +56161,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ModuleError {
@@ -59116,8 +56174,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum MultiSignature {
@@ -59135,8 +56191,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum MultiSigner {
@@ -59154,8 +56208,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct OpaqueValue(
@@ -59168,8 +56220,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum TokenError {
@@ -59201,8 +56251,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum TransactionalError {
@@ -59221,8 +56269,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct MembershipProof {
@@ -59244,8 +56290,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -59263,8 +56307,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -59280,8 +56322,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct Exposure<_0, _1> {
@@ -59300,8 +56340,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct ExposurePage<_0, _1> {
@@ -59318,8 +56356,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct IndividualExposure<_0, _1> {
@@ -59334,8 +56370,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct PagedExposureMetadata<_0> {
@@ -59356,8 +56390,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RuntimeVersion {
@@ -59385,8 +56417,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -59407,8 +56437,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub struct RuntimeDbWeight {
@@ -59429,8 +56457,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59454,8 +56480,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59473,8 +56497,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59494,8 +56516,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59510,8 +56530,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59539,8 +56557,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59559,8 +56575,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59580,8 +56594,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59613,8 +56625,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59637,8 +56647,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59696,8 +56704,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59744,8 +56750,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59782,8 +56786,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -59802,8 +56804,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60027,8 +57027,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60058,8 +57056,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60079,8 +57075,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60117,8 +57111,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60142,8 +57134,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60161,8 +57151,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60182,8 +57170,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60198,8 +57184,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60227,8 +57211,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60250,8 +57232,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60270,8 +57250,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60291,8 +57269,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60324,8 +57300,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60348,8 +57322,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60407,8 +57379,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60449,8 +57419,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60487,8 +57455,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60509,8 +57475,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60540,8 +57504,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60561,8 +57523,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60816,8 +57776,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60847,8 +57805,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60868,8 +57824,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60906,8 +57860,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60934,8 +57886,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -60966,8 +57916,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -60989,8 +57937,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61026,8 +57972,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61071,8 +58015,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61127,8 +58069,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61175,8 +58115,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61255,8 +58193,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61276,8 +58212,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61305,8 +58239,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61326,8 +58258,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61345,8 +58275,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61366,8 +58294,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61386,8 +58312,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61407,8 +58331,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61443,8 +58365,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61540,8 +58460,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -61572,8 +58490,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61799,8 +58715,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61830,8 +58744,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61855,8 +58767,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61886,8 +58796,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61907,8 +58815,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61945,8 +58851,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61966,8 +58870,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -61991,8 +58893,6 @@ pub mod api {
                         :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                         Debug,
                     )]
-                    # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                    #[codec(dumb_trait_bound)]
                     #[decode_as_type(
                         crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                     )]
@@ -62092,8 +58992,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedAssetId {
@@ -62111,8 +59009,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedAssets {
@@ -62130,8 +59026,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedLocation {
@@ -62149,8 +59043,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedResponse {
@@ -62168,8 +59060,6 @@ pub mod api {
                 :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                 Debug,
             )]
-            # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-            #[codec(dumb_trait_bound)]
             #[decode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode")]
             #[encode_as_type(crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode")]
             pub enum VersionedXcm {
@@ -62192,8 +59082,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -62214,8 +59102,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -62238,8 +59124,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -62267,8 +59151,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -62288,8 +59170,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
@@ -62314,8 +59194,6 @@ pub mod api {
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
                     Debug,
                 )]
-                # [codec (crate = :: subxt :: ext :: subxt_core :: ext :: codec)]
-                #[codec(dumb_trait_bound)]
                 #[decode_as_type(
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
                 )]
