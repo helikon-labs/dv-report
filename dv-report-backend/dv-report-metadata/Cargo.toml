@@ -12,5 +12,6 @@ kusama = []
 polkadot = []
 
 [dependencies]
+parity-scale-codec = { workspace = true }
 subxt = { workspace = true }
 dv-report-types = { path = "../dv-report-types" }
