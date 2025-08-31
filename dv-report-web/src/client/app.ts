@@ -99,7 +99,10 @@ class App {
 
         for (const network of this.dataStore.getNetworks()) {
             this.ui.setLoadingDescription(`loading<br>${network.display} referenda`);
-            await this.dataStore.fetchNetworkReferenda(network.id);
+            await this.dataStore.fetchNetworkCohortReferenda(
+                network.id,
+                this.dataStore.getSelectedCohortNumber(),
+            );
         }
 
         for (const delegate of this.dataStore.getDelegates()) {

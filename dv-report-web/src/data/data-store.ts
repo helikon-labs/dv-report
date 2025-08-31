@@ -130,7 +130,7 @@ class DataStore {
         return this.delegates;
     }
 
-    async fetchNetworkReferenda(networkId: number) {
+    async fetchNetworkCohortReferenda(networkId: number, cohortNumber: number) {
         const networkReferenda: Referendum[] = await (
             await fetch(`${Constants.API_URL}/network/${networkId}/referendum`, {
                 method: 'GET',
