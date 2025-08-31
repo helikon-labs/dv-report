@@ -225,6 +225,41 @@ pub(crate) struct NetworkCohortPathParameter {
     cohort_number: u32,
 }
 
+#[get("/network/{network_id}/cohort/{cohort_number}/referendum")]
+pub(crate) async fn get_network_cohort_referenda(
+    path: web::Path<NetworkCohortPathParameter>,
+    state: web::Data<ServiceState>,
+) -> ResultResponse {
+    let rows = state
+        .postgres
+        .get_network_cohort_referenda(path.network_id, path.cohort_number)
+        .await?;
+    let mut referenda = Vec::new();
+    for row in rows.iter() {
+        let submission_block = state
+            .postgres
+            .get_block(row.network_id as u32, row.submission_block_hash.as_str())
+            .await?;
+        let track = Track::from_id(row.track_id as u16);
+        let status = ReferendumStatus::from_id(row.status_id as u32);
+        referenda.push(ReferendumDTO {
+            network_id: row.network_id as u32,
+            index: row.index as u32,
+            track: TrackRow {
+                network_id: row.network_id,
+                id: track.id() as i32,
+                name: track.name().to_string(),
+            },
+            submission_block,
+            status: ReferendumStatusRow {
+                id: status.id() as i32,
+                status: status.name(),
+            },
+        });
+    }
+    Ok(HttpResponse::Ok().json(referenda))
+}
+
 #[get("/network/{network_id}/cohort/{cohort_number}/track")]
 pub(crate) async fn get_all_network_cohort_tracks(
     path: web::Path<NetworkCohortPathParameter>,

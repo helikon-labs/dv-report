@@ -18,6 +18,7 @@ pub struct Indexer {
 async fn process_block(
     repository: &Repository,
     network_id: u32,
+    cohort_number: u32,
     block_number: u64,
 ) -> anyhow::Result<()> {
     log::info!("Process block {block_number}.");
@@ -45,6 +46,7 @@ async fn process_block(
     repository
         .save_block_with_details(
             network_id,
+            cohort_number,
             &block,
             &new_referenda,
             &block_referendum_events,
@@ -89,7 +91,13 @@ impl Service for Indexer {
             let max_block_number = repository.get_max_block_number(network.id).await?;
             let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
             for block_number in start_block_number..=end_block_number {
-                process_block(&repository, network.id, block_number).await?;
+                process_block(
+                    &repository,
+                    network.id,
+                    self.config.indexer.cohort_number,
+                    block_number,
+                )
+                .await?;
                 metrics::indexed_finalized_block_number().set(block_number as i64);
                 log::info!("Indexed block {block_number}.");
             }
@@ -100,7 +108,13 @@ impl Service for Indexer {
             let max_block_number = repository.get_max_block_number(network.id).await?;
             let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
             for block_number in start_block_number..=finalized_block.number {
-                process_block(&repository, network.id, block_number).await?;
+                process_block(
+                    &repository,
+                    network.id,
+                    self.config.indexer.cohort_number,
+                    block_number,
+                )
+                .await?;
                 metrics::indexed_finalized_block_number().set(block_number as i64);
                 log::info!("Indexed block {block_number}.");
             }

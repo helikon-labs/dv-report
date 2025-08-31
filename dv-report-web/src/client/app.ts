@@ -4,6 +4,10 @@ import { UI, UIDelegate } from '../ui/ui';
 class App {
     private readonly ui: UI;
     private readonly uiDelegate: UIDelegate = {
+        onCohortSelectChanged: (value) => {
+            this.dataStore.setSelectedCohortNumber(value);
+            this.start();
+        },
         onNetworkSelectChanged: (value) => {
             if (value == 'all') {
                 this.dataStore.selectNetworks(this.dataStore.getNetworks());
@@ -53,6 +57,7 @@ class App {
         try {
             await this.initData();
             this.ui.initFilters(
+                this.dataStore.getSelectedCohortNumber(),
                 this.dataStore.getNetworks(),
                 this.dataStore.getTracks(),
                 this.dataStore.getReferendumStatuses(),
@@ -100,6 +105,9 @@ class App {
         for (const delegate of this.dataStore.getDelegates()) {
             delegate.votes = [];
             for (const delegation of delegate.delegations) {
+                if (delegation.cohortNumber != this.dataStore.getSelectedCohortNumber()) {
+                    continue;
+                }
                 const network = this.dataStore
                     .getNetworks()
                     .find((network) => network.id == delegation.networkId)!;

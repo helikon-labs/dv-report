@@ -12,15 +12,20 @@ import {
     VoteCall,
 } from './types';
 
+const COHORT_NUMBERS = [4, 5];
+
 interface DataStoreDelegate {}
 
 class DataStore {
+    private readonly DEFAULT_COHORT = 4;
+
     private delegate: DataStoreDelegate;
     private networks: Network[] = [];
     private tracks: Track[] = [];
     private referendumStatuses: ReferendumStatus[] = [];
     private delegates: Delegate[] = [];
     private referenda: Referendum[] = [];
+    private selectedCohortNumber: number = this.DEFAULT_COHORT;
 
     private selectedNetworkIds = new Set<number>();
     private selectedStatusIds = new Set<number>();
@@ -31,6 +36,10 @@ class DataStore {
     }
 
     async init() {}
+
+    getSelectedCohortNumber(): number {
+        return this.selectedCohortNumber;
+    }
 
     async fetchNetworks() {
         this.selectedNetworkIds.clear();
@@ -113,6 +122,7 @@ class DataStore {
                 headers: {},
             })
         ).json();
+        this.delegates = this.delegates.filter((d) => d.delegations.findIndex((d) => d.cohortNumber == this.selectedCohortNumber) >= 0);
         this.delegates.sort((d1, d2) => d1.name.localeCompare(d2.name));
     }
 
@@ -148,6 +158,10 @@ class DataStore {
                     ) != undefined,
             )!
             .votes.push(...voteCalls);
+    }
+
+    setSelectedCohortNumber(cohortNumber: number) {
+        this.selectedCohortNumber = cohortNumber;
     }
 
     selectNetworks(networks: Network[]) {
@@ -418,4 +432,4 @@ class DataStore {
     }
 }
 
-export { DataStore, DataStoreDelegate };
+export { COHORT_NUMBERS, DataStore, DataStoreDelegate };

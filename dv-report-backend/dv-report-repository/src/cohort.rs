@@ -113,7 +113,9 @@ impl Repository {
                             "Save ongoing referendum #{referendum_index} on track {}.",
                             referendum.track.name()
                         );
-                        self.postgres.save_referendum(&referendum, &mut tx).await?;
+                        self.postgres
+                            .save_referendum(&referendum, cohort.number, &mut tx)
+                            .await?;
                         let mut vote_calls = self
                             .subsquare_client
                             .fetch_vote_calls(network, referendum_index)
@@ -146,7 +148,9 @@ impl Repository {
                                     self.postgres
                                         .save_block(network.id, &block, &mut tx)
                                         .await?;
-                                    self.postgres.save_referendum(&referendum, &mut tx).await?;
+                                    self.postgres
+                                        .save_referendum(&referendum, cohort.number, &mut tx)
+                                        .await?;
                                     let block_vote_calls = self
                                         .substrate_client
                                         .get_vote_calls_in_block(network.id, block.hash.as_str())

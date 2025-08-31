@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import { show, hide } from '../util/ui-util';
 import {
+    Cohort,
     Delegate,
     DelegateSimilarity,
     DelegateVoteCount,
@@ -12,8 +13,10 @@ import {
     VoteCall,
 } from '../data/types';
 import { Constants } from '../util/constants';
+import { COHORT_NUMBERS } from '../data/data-store';
 
 interface UIDelegate {
+    onCohortSelectChanged(value: number): void;
     onNetworkSelectChanged(value: string): void;
     onTrackSelectChanged(value: string): void;
     onStatusSelectChanged(value: string): void;
@@ -26,6 +29,7 @@ class UI {
     private readonly loadingDescription: HTMLDivElement;
 
     private readonly filterContainer: HTMLDivElement;
+    private readonly cohortSelect: HTMLSelectElement;
     private readonly networkSelect: HTMLSelectElement;
     private readonly trackSelect: HTMLSelectElement;
     private readonly statusSelect: HTMLSelectElement;
@@ -51,6 +55,7 @@ class UI {
         this.loadingDescription = <HTMLDivElement>document.getElementById('loading-description');
 
         this.filterContainer = <HTMLDivElement>document.getElementById('filter-container');
+        this.cohortSelect = <HTMLSelectElement>document.getElementById('cohort-select');
         this.networkSelect = <HTMLSelectElement>document.getElementById('network-select');
         this.trackSelect = <HTMLSelectElement>document.getElementById('track-select');
         this.statusSelect = <HTMLSelectElement>document.getElementById('status-select');
@@ -77,7 +82,21 @@ class UI {
         this.loadingDescription.innerHTML = description;
     }
 
-    initFilters(networks: Network[], tracks: Track[], statuses: ReferendumStatus[]) {
+    initFilters(
+        selectedCohortNumber: number,
+        networks: Network[],
+        tracks: Track[],
+        statuses: ReferendumStatus[],
+    ) {
+        let cohortSelectHTML = '';
+        for (const cohortNumber of COHORT_NUMBERS) {
+            cohortSelectHTML += `<option value="${cohortNumber}" ${cohortNumber == selectedCohortNumber ? 'selected' : ''}>${cohortNumber}</option>`;
+        }
+        this.cohortSelect.innerHTML = cohortSelectHTML;
+        this.cohortSelect.onchange = (_) => {
+            this.delegate.onCohortSelectChanged(Number.parseInt(this.cohortSelect.value));
+        };
+
         let networkSelectHTML = '<option value="all" selected>All</option>';
         networks.forEach((n) => {
             networkSelectHTML += `<option value="${n.id}">${n.display}</option>`;

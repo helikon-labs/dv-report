@@ -47,6 +47,7 @@ impl Repository {
     pub async fn save_block_with_details(
         &self,
         network_id: u32,
+        cohort_number: u32,
         block: &Block,
         new_referenda: &[Referendum],
         referendum_events: &[ReferendumEvent],
@@ -57,7 +58,9 @@ impl Repository {
         self.postgres.save_block(network_id, block, &mut tx).await?;
         // save referenda
         for referendum in new_referenda.iter() {
-            self.postgres.save_referendum(referendum, &mut tx).await?;
+            self.postgres
+                .save_referendum(referendum, cohort_number, &mut tx)
+                .await?;
         }
         // save vote calls
         for vote_call in block_vote_calls.vote_calls.iter() {

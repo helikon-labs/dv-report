@@ -43,6 +43,7 @@ impl PostgreSQLStorage {
     pub async fn save_referendum(
         &self,
         referendum: &Referendum,
+        cohort_number: u32,
         tx: &mut Transaction<'_, Postgres>,
     ) -> anyhow::Result<()> {
         sqlx::query(
@@ -61,6 +62,19 @@ impl PostgreSQLStorage {
         .bind(referendum.track.id() as i32)
         .bind(referendum.submission_block.hash.as_str())
         .bind(referendum.status.id() as i32)
+        .execute(&mut **tx)
+        .await?;
+
+        sqlx::query(
+            r#"
+            INSERT INTO cohort_referendum (network_id, cohort_number, referendum_index)
+            VALUES ($1, $2, $3)
+            ON CONFLICT(network_id, cohort_number, referendum_index) DO NOTHING
+            "#,
+        )
+        .bind(referendum.network_id as i32)
+        .bind(cohort_number as i32)
+        .bind(referendum.index as i32)
         .execute(&mut **tx)
         .await?;
         Ok(())
@@ -109,6 +123,31 @@ impl PostgreSQLStorage {
             ORDER BY index ASC",
         )
         .bind(network_id as i32)
+        .fetch_all(&self.connection_pool)
+        .await?;
+        Ok(rows)
+    }
+
+    pub async fn get_network_cohort_referenda(
+        &self,
+        network_id: u32,
+        cohort_number: u32,
+    ) -> anyhow::Result<Vec<ReferendumRow>> {
+        let rows: Vec<ReferendumRow> = sqlx::query_as::<_, ReferendumRow>(
+            "SELECT R.network_id, R.index, R.track_id, R.submission_block_hash, R.status_id
+            FROM referendum R
+            WHERE R.network_id = $1
+            AND EXISTS (
+                SELECT *
+                FROM cohort_referendum CR
+                WHERE CR.network_id = R.network_id
+                AND CR.cohort_number = $2
+                AND CR.referendum_index = R.index
+            )
+            ORDER BY index ASC",
+        )
+        .bind(network_id as i32)
+        .bind(cohort_number as i32)
         .fetch_all(&self.connection_pool)
         .await?;
         Ok(rows)

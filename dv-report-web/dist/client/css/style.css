@@ -359,7 +359,7 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     .page-header {
         font-size: 8px;
         height: 48px;
@@ -395,7 +395,7 @@ p {
     .header-1 {
         font-size: 22px;
         font-weight: 500;
-        margin-top: 150px;
+        margin-top: 184px;
     }
 
     p {
