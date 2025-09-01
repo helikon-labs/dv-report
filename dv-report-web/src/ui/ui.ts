@@ -38,10 +38,6 @@ class UI {
     private readonly voteList: HTMLDivElement;
 
     private delegate: UIDelegate;
-    private voteCountsMaxX = 0;
-    private policyMaxX = 0;
-    private responseTimeMaxX = 0;
-    private changedVoteMaxX = 0;
 
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
     private responseTimeGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
@@ -141,7 +137,7 @@ class UI {
             .range([Constants.NAY_COLOR, Constants.ABSTAIN_COLOR, Constants.AYE_COLOR]);
 
         const width = 800;
-        const height = 320;
+        const height = 45 * data.length;
         const margin = { top: 12, right: 20, bottom: 16, left: 80 };
 
         const svg = d3
@@ -149,12 +145,12 @@ class UI {
             .attr('viewBox', `0 0 ${width} ${height}`);
 
         // Fixed max x-domain for smooth updates
-        const newMax = d3.max(data, (d) => stackKeys.reduce((sum, key) => sum + d[key], 0))!;
-        this.voteCountsMaxX = Math.max(this.voteCountsMaxX, newMax);
+        const max = d3.max(data, (d) => stackKeys.reduce((sum, key) => sum + d[key], 0))!;
+        // this.voteCountsMaxX = Math.max(this.voteCountsMaxX, newMax);
 
         const x = d3
             .scaleLinear()
-            .domain([0, this.voteCountsMaxX + 5])
+            .domain([0, max + Math.floor(max / 10)])
             .range([margin.left, width - margin.right]);
         const y = d3
             .scaleBand()
@@ -315,7 +311,7 @@ class UI {
 
     displayPolicyDirectionChart(data: DelegateVoteCount[]) {
         const width = 800;
-        const height = 320;
+        const height = 45 * data.length;
         const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
@@ -328,13 +324,11 @@ class UI {
         }));
         scoredData.sort((a, b) => b.score - a.score);
 
-        // Cache max absolute score
         const maxScore = d3.max(scoredData, (d) => Math.abs(d.score))!;
-        this.policyMaxX = Math.max(this.policyMaxX, maxScore);
 
         const x = d3
             .scaleLinear()
-            .domain([-this.policyMaxX, this.policyMaxX])
+            .domain([-maxScore, maxScore])
             .range([margin.left, width - margin.right]);
 
         const y = d3
@@ -472,8 +466,8 @@ class UI {
     }
 
     displaySimilarityMatrixChart(delegates: Delegate[], similarities: DelegateSimilarity[]) {
-        const cellWidth = 112;
-        const cellHeight = 42;
+        const cellWidth = Math.floor(672 / delegates.length);
+        const cellHeight = Math.floor(300 / delegates.length);
         const margin = { top: 50, left: 70, bottom: 20, right: 20 };
         const width = (delegates.length - 1) * cellWidth + margin.left + margin.right;
         const height = (delegates.length - 1) * cellHeight + margin.top + margin.bottom;
@@ -637,13 +631,9 @@ class UI {
             .attr('viewBox', `0 0 ${width} ${height}`);
 
         const computedMaxTime = d3.max(delegatesWithTimes, (d) => d.blocks)! + 10 * 60 * 12;
-        if (this.responseTimeMaxX < computedMaxTime) {
-            this.responseTimeMaxX = computedMaxTime;
-        }
-
         const x = d3
             .scaleLinear()
-            .domain([0, this.responseTimeMaxX])
+            .domain([0, computedMaxTime])
             .range([0, width - margin.left - margin.right]);
 
         // x-axis
@@ -755,7 +745,7 @@ class UI {
 
     displayMissedVoteCountChart(data: DelegateVoteCount[]) {
         const width = 800;
-        const height = 320;
+        const height = 50 * data.length;
         const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
@@ -877,7 +867,7 @@ class UI {
 
     displayChangedVoteCountChart(data: DelegateVoteCount[]) {
         const width = 800;
-        const height = 320;
+        const height = 40 * data.length;
         const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3

@@ -36,7 +36,7 @@ service_host = "0.0.0.0"
 api_service_port = 7900
 
 [indexer]
-cohort_number = 4
+cohort_number = 5
 # optional - will be used the current runtime metadata if left blank
 # metadata_file_path = "/path/to/metadata/file.scale"
 # optional - the indexer uses the finalized block if left blank

@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS delegate
     short_name  TEXT                        NOT NULL,
     url         TEXT,
     twitter     TEXT,
+    email       TEXT,
     created_at  TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT delegate_fk_delegate_type_id
         FOREIGN KEY (type_id)

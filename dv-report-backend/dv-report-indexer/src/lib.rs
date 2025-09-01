@@ -80,12 +80,14 @@ impl Service for Indexer {
             network.display,
             cohort.number,
         );
+        /*
         let delegates = repository
             .get_cohort_delegates(network.id, cohort.number)
             .await?;
         repository
             .init_cohort(&network, &cohort, delegates.as_slice())
             .await?;
+         */
         let delay_seconds = self.config.common.recovery_retry_seconds;
         if let Some(end_block_number) = self.config.indexer.end_block_number {
             let max_block_number = repository.get_max_block_number(network.id).await?;

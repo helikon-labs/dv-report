@@ -17,7 +17,7 @@ const COHORT_NUMBERS = [4, 5];
 interface DataStoreDelegate {}
 
 class DataStore {
-    private readonly DEFAULT_COHORT = 4;
+    private readonly DEFAULT_COHORT = 5;
 
     private delegate: DataStoreDelegate;
     private networks: Network[] = [];
@@ -132,7 +132,7 @@ class DataStore {
 
     async fetchNetworkCohortReferenda(networkId: number, cohortNumber: number) {
         const networkReferenda: Referendum[] = await (
-            await fetch(`${Constants.API_URL}/network/${networkId}/referendum`, {
+            await fetch(`${Constants.API_URL}/network/${networkId}/cohort/${cohortNumber}/referendum`, {
                 method: 'GET',
                 headers: {},
             })
@@ -191,6 +191,10 @@ class DataStore {
             const referendum = this.referenda.find(
                 (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
             )!;
+            if (!referendum) {
+                // referendum is not in the given cohort - skip
+                continue;
+            }
             if (!this.selectedStatusIds.has(referendum.status.id)) {
                 continue;
             }
@@ -228,7 +232,11 @@ class DataStore {
             }
             const referendum = this.referenda.find(
                 (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
-            )!;
+            );
+            if (!referendum) {
+                // referendum is not in the given cohort - skip
+                continue;
+            }
             if (!this.selectedStatusIds.has(referendum.status.id)) {
                 continue;
             }
