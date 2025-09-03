@@ -1,7 +1,6 @@
 import * as d3 from 'd3';
 import { show, hide } from '../util/ui-util';
 import {
-    Cohort,
     Delegate,
     DelegateSimilarity,
     DelegateVoteCount,
@@ -25,6 +24,8 @@ interface UIDelegate {
 class UI {
     private readonly root: HTMLDivElement;
     private readonly content: HTMLDivElement;
+    private readonly title: HTMLDivElement;
+    private readonly subtitle: HTMLParagraphElement;
     private readonly loadingContainer: HTMLDivElement;
     private readonly loadingDescription: HTMLDivElement;
 
@@ -41,12 +42,13 @@ class UI {
 
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
     private responseTimeGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
-    private changedVoteGroup?: d3.Selection<SVGGElement, unknown, HTMLElement, any>;
 
     constructor(delegate: UIDelegate) {
         this.delegate = delegate;
         this.root = <HTMLDivElement>document.getElementById('root');
         this.content = <HTMLDivElement>document.getElementById('content');
+        this.title = <HTMLDivElement>document.getElementById('title');
+        this.subtitle = <HTMLDivElement>document.getElementById('subtitle');
         this.loadingContainer = <HTMLDivElement>document.getElementById('loading-container');
         this.loadingDescription = <HTMLDivElement>document.getElementById('loading-description');
 
@@ -60,6 +62,25 @@ class UI {
             document.getElementById('vote-list-delegate-column')
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
+    }
+
+    cleanup() {
+        d3.selectAll('*').interrupt();
+
+        d3.select('#vote-count-chart').selectAll('*').remove();
+        d3.select('#policy-direction-chart').selectAll('*').remove();
+        d3.select('#similarity-matrix-chart').selectAll('*').remove();
+        d3.select('#first-vote-time-chart').selectAll('*').remove();
+        d3.select('#missed-vote-count-chart').selectAll('*').remove();
+        d3.select('#changed-vote-count-chart').selectAll('*').remove();
+
+        // Clear vote list
+        this.voteList.innerHTML = '';
+        this.voteListDelegateColumn.innerHTML = '';
+
+        // Reset stored references
+        this.similarityGroup = null;
+        this.responseTimeGroup = undefined;
     }
 
     lock() {
@@ -76,6 +97,14 @@ class UI {
 
     setLoadingDescription(description: string) {
         this.loadingDescription.innerHTML = description;
+    }
+
+    setTitleAndSubtitle(cohortNumber: number) {
+        this.title.innerHTML = `W3F DV Cohort ${cohortNumber == 4 ? 'IV' : 'V'} Report`;
+        this.subtitle.innerHTML =
+            cohortNumber == 4
+                ? 'The fourth cohort of the Decentralized Voices program by Web3 Foundation was <a href="https://medium.com/web3foundation/decentralized-voices-cohort-4-delegates-announced-a5a9c64927fd" target="_blank">announced</a> on the 27th of March, 2025, and the on-chain delegations were dispatched on the 14th of April, 2025. The <span class="bold">delegates are Permanence DAO, The Kus DAO, PolkaWorld, Trustless Core, JAM Implementers DAO (JID), and Polkadot Hungary DAO</span>. The delegates are represented by their short names on the charts for convenience. Green represents <span class="vote-legend aye">aye</span> votes, gray represents <span class="vote-legend abstain">abstain</span>, and red represents <span class="vote-legend nay">nay</span>.'
+                : 'The fifth cohort of the Decentralized Voices program by Web3 Foundation was <a href="https://medium.com/web3foundation/decentralized-voices-cohort-5-announced-45fbf1c017ad" target="_blank">announced</a> on the 19th of August, 2025, and the on-chain delegations were dispatched on the 1st of September, 2025. The <span class="bold">delegates are Polkadot Poland DAO, Reeeeeeeeee DAO, PBA Alumni Voting DAO, Saxemberg, Permanence DAO, Trustless Core, Le Nexus, Flez, Cybergov, Daniel Olano, GoverNoun AI, and The White Rabbit</span>. The delegates are represented by their short names on the charts for convenience. Green represents <span class="vote-legend aye">aye</span> votes, gray represents <span class="vote-legend abstain">abstain</span>, and red represents <span class="vote-legend nay">nay</span>.';
     }
 
     initFilters(

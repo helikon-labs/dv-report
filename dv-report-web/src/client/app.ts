@@ -53,6 +53,7 @@ class App {
     }
 
     async start() {
+        this.ui.cleanup();
         this.ui.lock();
         try {
             await this.initData();
@@ -62,6 +63,7 @@ class App {
                 this.dataStore.getTracks(),
                 this.dataStore.getReferendumStatuses(),
             );
+            this.ui.setTitleAndSubtitle(this.dataStore.getSelectedCohortNumber());
             this.updateVoteCounts();
         } catch (error) {
             alert(`Error while fetching initial data: ${error}. Please reload the page.`);
@@ -86,6 +88,7 @@ class App {
     }
 
     private async initData() {
+        this.dataStore.init();
         this.ui.setLoadingDescription('loading networks');
         await this.dataStore.fetchNetworks();
         this.ui.setLoadingDescription('loading tracks');

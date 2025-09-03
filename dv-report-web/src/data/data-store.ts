@@ -35,7 +35,17 @@ class DataStore {
         this.delegate = delegate;
     }
 
-    async init() {}
+    async init() {
+        this.networks = [];
+        this.tracks = [];
+        this.referendumStatuses = [];
+        this.delegates = [];
+        this.referenda = [];
+
+        this.selectedNetworkIds.clear();
+        this.selectedStatusIds.clear();
+        this.selectedTrackIds.clear();
+    }
 
     getSelectedCohortNumber(): number {
         return this.selectedCohortNumber;
@@ -122,7 +132,9 @@ class DataStore {
                 headers: {},
             })
         ).json();
-        this.delegates = this.delegates.filter((d) => d.delegations.findIndex((d) => d.cohortNumber == this.selectedCohortNumber) >= 0);
+        this.delegates = this.delegates.filter(
+            (d) => d.delegations.findIndex((d) => d.cohortNumber == this.selectedCohortNumber) >= 0,
+        );
         this.delegates.sort((d1, d2) => d1.name.localeCompare(d2.name));
     }
 
@@ -132,10 +144,13 @@ class DataStore {
 
     async fetchNetworkCohortReferenda(networkId: number, cohortNumber: number) {
         const networkReferenda: Referendum[] = await (
-            await fetch(`${Constants.API_URL}/network/${networkId}/cohort/${cohortNumber}/referendum`, {
-                method: 'GET',
-                headers: {},
-            })
+            await fetch(
+                `${Constants.API_URL}/network/${networkId}/cohort/${cohortNumber}/referendum`,
+                {
+                    method: 'GET',
+                    headers: {},
+                },
+            )
         ).json();
         this.referenda.push(...networkReferenda);
     }
