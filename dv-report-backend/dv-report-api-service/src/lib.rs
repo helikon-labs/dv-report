@@ -92,6 +92,7 @@ impl Service for APIService {
                 .service(service::get_all_referendum_tracks)
                 .service(service::get_all_cohorts)
                 .service(service::get_all_network_cohort_tracks)
+                .service(service::get_all_delegate_types)
                 .service(service::get_all_delegates)
                 .service(service::get_network_referenda)
                 .service(service::get_network_cohort_referenda)

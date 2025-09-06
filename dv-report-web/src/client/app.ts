@@ -97,6 +97,8 @@ class App {
         await this.dataStore.fetchCohorts();
         this.ui.setLoadingDescription('loading statuses');
         await this.dataStore.fetchReferendumStatuses();
+        this.ui.setLoadingDescription('loading delegate types');
+        await this.dataStore.fetchDelegateTypes();
         this.ui.setLoadingDescription('loading delegates');
         await this.dataStore.fetchDelegates();
 

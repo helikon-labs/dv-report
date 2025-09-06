@@ -54,6 +54,12 @@ interface Delegation {
     endExtrinsicIndex?: number;
 }
 
+interface DelegateType {
+    id: number;
+    name: string;
+    code: string;
+}
+
 interface Delegate {
     id: string;
     name: string;
@@ -130,6 +136,7 @@ type DelegateSimilarity = {
 export {
     Block,
     Cohort,
+    DelegateType,
     Delegate,
     Network,
     Referendum,

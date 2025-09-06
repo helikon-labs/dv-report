@@ -3,6 +3,7 @@ import {
     Cohort,
     Delegate,
     DelegateSimilarity,
+    DelegateType,
     DelegateVoteCount,
     getVoteValue,
     Network,
@@ -23,6 +24,7 @@ class DataStore {
     private networks: Network[] = [];
     private tracks: Track[] = [];
     private referendumStatuses: ReferendumStatus[] = [];
+    private delegateTypes: DelegateType[] = [];
     private delegates: Delegate[] = [];
     private referenda: Referendum[] = [];
     private selectedCohortNumber: number = this.DEFAULT_COHORT;
@@ -30,6 +32,7 @@ class DataStore {
     private selectedNetworkIds = new Set<number>();
     private selectedStatusIds = new Set<number>();
     private selectedTrackIds = new Set<number>();
+    private selectedTypeIds = new Set<number>();
 
     constructor(delegate: DataStoreDelegate) {
         this.delegate = delegate;
@@ -39,6 +42,7 @@ class DataStore {
         this.networks = [];
         this.tracks = [];
         this.referendumStatuses = [];
+        this.delegateTypes = [];
         this.delegates = [];
         this.referenda = [];
 
@@ -125,6 +129,19 @@ class DataStore {
         return this.referendumStatuses;
     }
 
+    async fetchDelegateTypes() {
+        this.delegateTypes =  await (
+            await fetch(`${Constants.API_URL}/delegate/type`, {
+                method: 'GET',
+                headers: {},
+            })
+        ).json();
+    }
+
+    getDelegateTypes(): DelegateType[] {
+        return this.delegateTypes;
+    }
+
     async fetchDelegates() {
         this.delegates = await (
             await fetch(`${Constants.API_URL}/delegate`, {
@@ -192,6 +209,11 @@ class DataStore {
     selectStatuses(statuses: ReferendumStatus[]) {
         this.selectedStatusIds.clear();
         statuses.forEach((s) => this.selectedStatusIds.add(s.id));
+    }
+
+    selectTypes(typeIds: number[]) {
+        this.selectedTypeIds.clear();
+        typeIds.forEach((id) => this.selectedTypeIds.add(id));
     }
 
     private getDelegateFirstVoteMap(delegate: Delegate): Map<string, VoteCall> {

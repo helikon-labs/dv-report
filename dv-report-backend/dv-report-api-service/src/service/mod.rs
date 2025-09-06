@@ -45,6 +45,12 @@ pub(crate) async fn get_all_cohorts(state: web::Data<ServiceState>) -> ResultRes
     Ok(HttpResponse::Ok().json(cohorts))
 }
 
+#[get("/delegate/type")]
+pub(crate) async fn get_all_delegate_types(state: web::Data<ServiceState>) -> ResultResponse {
+    let rows = state.postgres.get_all_delegate_types().await?;
+    Ok(HttpResponse::Ok().json(rows))
+}
+
 #[get("/delegate")]
 pub(crate) async fn get_all_delegates(state: web::Data<ServiceState>) -> ResultResponse {
     let rows = state.postgres.get_all_delegates().await?;
