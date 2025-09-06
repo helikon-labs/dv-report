@@ -32,7 +32,7 @@ class DataStore {
     private selectedNetworkIds = new Set<number>();
     private selectedStatusIds = new Set<number>();
     private selectedTrackIds = new Set<number>();
-    private selectedTypeIds = new Set<number>();
+    private selectedDelegateTypeIds = new Set<number>();
 
     constructor(delegate: DataStoreDelegate) {
         this.delegate = delegate;
@@ -136,6 +136,7 @@ class DataStore {
                 headers: {},
             })
         ).json();
+        this.delegateTypes.forEach((s) => this.selectedDelegateTypeIds.add(s.id));
     }
 
     getDelegateTypes(): DelegateType[] {
@@ -156,7 +157,7 @@ class DataStore {
     }
 
     getDelegates(): Delegate[] {
-        return this.delegates;
+        return this.delegates.filter((d) => this.selectedDelegateTypeIds.has(d.typeId));
     }
 
     async fetchNetworkCohortReferenda(networkId: number, cohortNumber: number) {
@@ -211,9 +212,9 @@ class DataStore {
         statuses.forEach((s) => this.selectedStatusIds.add(s.id));
     }
 
-    selectTypes(typeIds: number[]) {
-        this.selectedTypeIds.clear();
-        typeIds.forEach((id) => this.selectedTypeIds.add(id));
+    selectDelegateTypes(delegateTypes: DelegateType[]) {
+        this.selectedDelegateTypeIds.clear();
+        delegateTypes.forEach((delegateType) => this.selectedDelegateTypeIds.add(delegateType.id));
     }
 
     private getDelegateFirstVoteMap(delegate: Delegate): Map<string, VoteCall> {
@@ -334,7 +335,10 @@ class DataStore {
     getDelegateVoteCounts(): DelegateVoteCount[] {
         const delegateVoteCounts: DelegateVoteCount[] = [];
         const filteredReferenda = this.getFilteredReferenda();
-        for (const delegate of this.delegates) {
+        for (const delegate of this.getDelegates()) {
+            if (!this.selectedDelegateTypeIds.has(delegate.typeId)) {
+                continue;
+            }
             const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
             const delegateVoteCount: DelegateVoteCount = {
                 delegateId: delegate.id,
@@ -379,7 +383,10 @@ class DataStore {
 
     getDelegateSimilarities(): DelegateSimilarity[] {
         const voteMap = new Map<string, Map<string, number>>();
-        for (const delegate of this.delegates) {
+        for (const delegate of this.getDelegates()) {
+            if (!this.selectedDelegateTypeIds.has(delegate.typeId)) {
+                continue;
+            }
             const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
             if (delegateVoteMap.size == 0) {
                 voteMap.set(delegate.id, new Map());
@@ -431,7 +438,7 @@ class DataStore {
 
     getResponseTimes(): Map<Delegate, number> {
         const responseTimeMap = new Map<Delegate, number>();
-        for (const delegate of this.delegates) {
+        for (const delegate of this.getDelegates()) {
             const delegateVoteMap = this.getDelegateFirstVoteMap(delegate);
             let responseTimeSum = 0;
             for (const vote of delegateVoteMap.values()) {
@@ -470,7 +477,7 @@ class DataStore {
 
     getAllDelegatesLastVoteMaps(): Map<string, Map<string, VoteCall>> {
         const map: Map<string, Map<string, VoteCall>> = new Map<string, Map<string, VoteCall>>();
-        for (const delegate of this.delegates) {
+        for (const delegate of this.getDelegates()) {
             map.set(delegate.id, this.getDelegateLastVoteMap(delegate));
         }
         return map;

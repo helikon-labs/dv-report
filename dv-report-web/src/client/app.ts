@@ -42,6 +42,17 @@ class App {
             }
             this.updateVoteCounts();
         },
+        onDelegateTypeSelectChanged: (value) => {
+            if (value == 'all') {
+                this.dataStore.selectDelegateTypes(this.dataStore.getDelegateTypes());
+            } else {
+                const delegateType = this.dataStore
+                    .getDelegateTypes()
+                    .find((t) => t.id.toString() == value)!;
+                this.dataStore.selectDelegateTypes([delegateType]);
+            }
+            this.updateVoteCounts();
+        },
     };
 
     private readonly dataStore: DataStore;
@@ -62,6 +73,7 @@ class App {
                 this.dataStore.getNetworks(),
                 this.dataStore.getTracks(),
                 this.dataStore.getReferendumStatuses(),
+                this.dataStore.getDelegateTypes(),
             );
             this.ui.setTitleAndSubtitle(this.dataStore.getSelectedCohortNumber());
             this.updateVoteCounts();

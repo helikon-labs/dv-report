@@ -3,6 +3,7 @@ import { show, hide } from '../util/ui-util';
 import {
     Delegate,
     DelegateSimilarity,
+    DelegateType,
     DelegateVoteCount,
     getVoteValue,
     Network,
@@ -19,6 +20,7 @@ interface UIDelegate {
     onNetworkSelectChanged(value: string): void;
     onTrackSelectChanged(value: string): void;
     onStatusSelectChanged(value: string): void;
+    onDelegateTypeSelectChanged(value: string): void;
 }
 
 class UI {
@@ -34,6 +36,7 @@ class UI {
     private readonly networkSelect: HTMLSelectElement;
     private readonly trackSelect: HTMLSelectElement;
     private readonly statusSelect: HTMLSelectElement;
+    private readonly delegateTypeSelect: HTMLSelectElement;
 
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
@@ -57,6 +60,7 @@ class UI {
         this.networkSelect = <HTMLSelectElement>document.getElementById('network-select');
         this.trackSelect = <HTMLSelectElement>document.getElementById('track-select');
         this.statusSelect = <HTMLSelectElement>document.getElementById('status-select');
+        this.delegateTypeSelect = <HTMLSelectElement>document.getElementById('delegate-type-select');
 
         this.voteListDelegateColumn = <HTMLDivElement>(
             document.getElementById('vote-list-delegate-column')
@@ -112,6 +116,7 @@ class UI {
         networks: Network[],
         tracks: Track[],
         statuses: ReferendumStatus[],
+        delegateTypes: DelegateType[],
     ) {
         let cohortSelectHTML = '';
         for (const cohortNumber of COHORT_NUMBERS) {
@@ -148,6 +153,15 @@ class UI {
         this.statusSelect.innerHTML = statusSelectHTML;
         this.statusSelect.onchange = (_) => {
             this.delegate.onStatusSelectChanged(this.statusSelect.value);
+        };
+
+        let delegateTypeSelectHTML = '<option value="all">All</option>';
+        for (const delegateType of delegateTypes) {
+            delegateTypeSelectHTML += `<option value="${delegateType.id}">${delegateType.name}</option>`;
+        }
+        this.delegateTypeSelect.innerHTML = delegateTypeSelectHTML;
+        this.delegateTypeSelect.onchange = (_) => {
+            this.delegate.onDelegateTypeSelectChanged(this.delegateTypeSelect.value);
         };
     }
 
@@ -495,6 +509,7 @@ class UI {
     }
 
     displaySimilarityMatrixChart(delegates: Delegate[], similarities: DelegateSimilarity[]) {
+        d3.select('#similarity-matrix-chart').selectAll('*').remove();
         const cellWidth = Math.floor(672 / delegates.length);
         const cellHeight = Math.floor(300 / delegates.length);
         const margin = { top: 50, left: 70, bottom: 20, right: 20 };

@@ -32,7 +32,7 @@ impl PostgreSQLStorage {
     pub async fn get_all_delegates(&self) -> anyhow::Result<Vec<DelegateRow>> {
         let rows: Vec<DelegateRow> = sqlx::query_as::<_, DelegateRow>(
             "
-            SELECT id, name, short_name, url, twitter
+            SELECT id, type_id, name, short_name, url, twitter
             FROM delegate
             ORDER BY name ASC
             ",
