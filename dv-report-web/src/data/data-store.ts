@@ -130,7 +130,7 @@ class DataStore {
     }
 
     async fetchDelegateTypes() {
-        this.delegateTypes =  await (
+        this.delegateTypes = await (
             await fetch(`${Constants.API_URL}/delegate/type`, {
                 method: 'GET',
                 headers: {},

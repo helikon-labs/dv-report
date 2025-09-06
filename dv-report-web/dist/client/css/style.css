@@ -128,7 +128,7 @@ hr {
 
 .filter-outer-container {
     background: transparent;
-    width: 820px;
+    width: 860px;
     margin-top: 20px;
     position: fixed;
 }
@@ -155,6 +155,10 @@ hr {
     align-items: center;
 }
 
+.filter-container .filter-item .filter-item-title {
+    white-space: nowrap;
+}
+
 .filter-container select {
     border: 1px solid #f2f2f2;
     border-radius: 4px;
@@ -167,7 +171,7 @@ hr {
 }
 
 .content {
-    width: 820px;
+    width: 860px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -331,7 +335,7 @@ p {
     color: #00000099;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .filter-outer-container {
         width: 86%;
     }
@@ -357,9 +361,7 @@ p {
     .section-header {
         font-size: 20px;
     }
-}
 
-@media screen and (max-width: 720px) {
     .page-header {
         font-size: 8px;
         height: 48px;
@@ -395,7 +397,7 @@ p {
     .header-1 {
         font-size: 22px;
         font-weight: 500;
-        margin-top: 184px;
+        margin-top: 224px;
     }
 
     p {

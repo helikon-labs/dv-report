@@ -14,6 +14,7 @@ import {
 } from '../data/types';
 import { Constants } from '../util/constants';
 import { COHORT_NUMBERS } from '../data/data-store';
+import { animate, AnimationControls } from 'motion';
 
 interface UIDelegate {
     onCohortSelectChanged(value: number): void;
@@ -25,6 +26,7 @@ interface UIDelegate {
 
 class UI {
     private readonly root: HTMLDivElement;
+    private readonly contentContainer: HTMLDivElement;
     private readonly content: HTMLDivElement;
     private readonly title: HTMLDivElement;
     private readonly subtitle: HTMLParagraphElement;
@@ -41,6 +43,10 @@ class UI {
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
 
+    private lastScrollTop = 0;
+    private disappearAnimation: AnimationControls | undefined = undefined;
+    private appearAnimation: AnimationControls | undefined = undefined;
+
     private delegate: UIDelegate;
 
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
@@ -49,6 +55,7 @@ class UI {
     constructor(delegate: UIDelegate) {
         this.delegate = delegate;
         this.root = <HTMLDivElement>document.getElementById('root');
+        this.contentContainer = <HTMLDivElement>document.getElementById('content-container');
         this.content = <HTMLDivElement>document.getElementById('content');
         this.title = <HTMLDivElement>document.getElementById('title');
         this.subtitle = <HTMLDivElement>document.getElementById('subtitle');
@@ -60,12 +67,41 @@ class UI {
         this.networkSelect = <HTMLSelectElement>document.getElementById('network-select');
         this.trackSelect = <HTMLSelectElement>document.getElementById('track-select');
         this.statusSelect = <HTMLSelectElement>document.getElementById('status-select');
-        this.delegateTypeSelect = <HTMLSelectElement>document.getElementById('delegate-type-select');
+        this.delegateTypeSelect = <HTMLSelectElement>(
+            document.getElementById('delegate-type-select')
+        );
 
         this.voteListDelegateColumn = <HTMLDivElement>(
             document.getElementById('vote-list-delegate-column')
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
+
+        this.contentContainer.onscroll = (_) => {
+            this.appearAnimation = undefined;
+            if (this.lastScrollTop - this.contentContainer.scrollTop < 0) {
+                if (this.disappearAnimation == undefined) {
+                    this.disappearAnimation = animate(
+                        '#filter-container',
+                        {
+                            marginTop: '-500px',
+                        },
+                        { duration: 1 },
+                    );
+                }
+            } else {
+                this.disappearAnimation = undefined;
+                if (this.appearAnimation == undefined) {
+                    this.appearAnimation = animate(
+                        '#filter-container',
+                        {
+                            marginTop: '0px',
+                        },
+                        { duration: 1 },
+                    );
+                }
+            }
+            this.lastScrollTop = this.contentContainer.scrollTop;
+        };
     }
 
     cleanup() {

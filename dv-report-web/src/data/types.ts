@@ -62,7 +62,7 @@ interface DelegateType {
 
 interface Delegate {
     id: string;
-    typeId: number,
+    typeId: number;
     name: string;
     shortName: string;
     url?: string;
