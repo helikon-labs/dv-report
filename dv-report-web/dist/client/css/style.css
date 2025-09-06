@@ -331,7 +331,7 @@ p {
     color: #00000099;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .filter-outer-container {
         width: 86%;
     }
