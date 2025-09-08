@@ -131,6 +131,14 @@ pub(crate) async fn get_network_voter_votes(
         Ok(account_id) => account_id,
         Err(response) => return Ok(response),
     };
+    if let Some(cached_vote_calls) = state
+        .network_voter_vote_cache
+        .get(&(path.network_id, account_id))
+        .await
+    {
+        return Ok(HttpResponse::Ok().json(cached_vote_calls));
+    }
+
     let rows = state
         .postgres
         .get_network_voter_votes(path.network_id, &account_id)
@@ -164,6 +172,10 @@ pub(crate) async fn get_network_voter_votes(
             abstain: row.abstain.clone(),
         })
     }
+    state
+        .network_voter_vote_cache
+        .insert((path.network_id, account_id), vote_calls.clone())
+        .await;
     Ok(HttpResponse::Ok().json(vote_calls))
 }
 
@@ -195,8 +207,8 @@ pub(crate) async fn get_network_referenda(
     path: web::Path<NetworkPathParameter>,
     state: web::Data<ServiceState>,
 ) -> ResultResponse {
-    if let Some(referenda) = state.network_referendum_cache.get(&path.network_id).await {
-        return Ok(HttpResponse::Ok().json(referenda));
+    if let Some(cached_referenda) = state.network_referendum_cache.get(&path.network_id).await {
+        return Ok(HttpResponse::Ok().json(cached_referenda));
     }
 
     let rows = state
@@ -226,6 +238,10 @@ pub(crate) async fn get_network_referenda(
             },
         });
     }
+    state
+        .network_referendum_cache
+        .insert(path.network_id, referenda.clone())
+        .await;
     Ok(HttpResponse::Ok().json(referenda))
 }
 
@@ -240,6 +256,14 @@ pub(crate) async fn get_network_cohort_referenda(
     path: web::Path<NetworkCohortPathParameter>,
     state: web::Data<ServiceState>,
 ) -> ResultResponse {
+    if let Some(cached_referenda) = state
+        .network_cohort_referendum_cache
+        .get(&(path.network_id, path.cohort_number))
+        .await
+    {
+        return Ok(HttpResponse::Ok().json(cached_referenda));
+    }
+
     let rows = state
         .postgres
         .get_network_cohort_referenda(path.network_id, path.cohort_number)
@@ -267,6 +291,10 @@ pub(crate) async fn get_network_cohort_referenda(
             },
         });
     }
+    state
+        .network_cohort_referendum_cache
+        .insert((path.network_id, path.cohort_number), referenda.clone())
+        .await;
     Ok(HttpResponse::Ok().json(referenda))
 }
 

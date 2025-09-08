@@ -1,3 +1,4 @@
+use crate::service::VoteCall;
 use crate::types::ReferendumDTO;
 use actix_cors::Cors;
 use actix_web::{dev::Service as _, web, App, HttpResponse, HttpServer};
@@ -6,6 +7,7 @@ use dv_report_config::Config;
 use dv_report_persistence::postgres::PostgreSQLStorage;
 use dv_report_service::err::InternalServerError;
 use dv_report_service::Service;
+use dv_report_types::substrate::account_id::AccountId;
 use futures_util::future::FutureExt;
 use moka::future::Cache;
 use std::sync::Arc;
@@ -24,6 +26,8 @@ async fn on_server_ready() {
 #[derive(Clone)]
 pub(crate) struct ServiceState {
     network_referendum_cache: Cache<u32, Vec<ReferendumDTO>>,
+    network_cohort_referendum_cache: Cache<(u32, u32), Vec<ReferendumDTO>>,
+    network_voter_vote_cache: Cache<(u32, AccountId), Vec<VoteCall>>,
     postgres: Arc<PostgreSQLStorage>,
 }
 
@@ -64,11 +68,19 @@ impl Service for APIService {
 
             App::new()
                 .app_data(web::Data::new(ServiceState {
+                    postgres: postgres.clone(),
                     network_referendum_cache: Cache::builder()
                         .time_to_live(std::time::Duration::from_secs(60 * 10))
                         .max_capacity(1000)
                         .build(),
-                    postgres: postgres.clone(),
+                    network_cohort_referendum_cache: Cache::builder()
+                        .time_to_live(std::time::Duration::from_secs(60 * 10))
+                        .max_capacity(1000)
+                        .build(),
+                    network_voter_vote_cache: Cache::builder()
+                        .time_to_live(std::time::Duration::from_secs(60 * 10))
+                        .max_capacity(1000)
+                        .build(),
                 }))
                 //.wrap(cors)
                 .wrap_fn(|request, service| {
