@@ -1,3 +1,4 @@
+use crate::types::ReferendumDTO;
 use actix_cors::Cors;
 use actix_web::{dev::Service as _, web, App, HttpResponse, HttpServer};
 use async_trait::async_trait;
@@ -6,6 +7,7 @@ use dv_report_persistence::postgres::PostgreSQLStorage;
 use dv_report_service::err::InternalServerError;
 use dv_report_service::Service;
 use futures_util::future::FutureExt;
+use moka::future::Cache;
 use std::sync::Arc;
 use std::time::Instant;
 
@@ -21,6 +23,7 @@ async fn on_server_ready() {
 
 #[derive(Clone)]
 pub(crate) struct ServiceState {
+    network_referendum_cache: Cache<u32, Vec<ReferendumDTO>>,
     postgres: Arc<PostgreSQLStorage>,
 }
 
@@ -61,6 +64,10 @@ impl Service for APIService {
 
             App::new()
                 .app_data(web::Data::new(ServiceState {
+                    network_referendum_cache: Cache::builder()
+                        .time_to_live(std::time::Duration::from_secs(60 * 10))
+                        .max_capacity(1000)
+                        .build(),
                     postgres: postgres.clone(),
                 }))
                 //.wrap(cors)

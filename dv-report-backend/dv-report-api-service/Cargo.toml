@@ -18,8 +18,9 @@ dv-report-metrics = { path = "../dv-report-metrics" }
 dv-report-persistence = { path = "../dv-report-persistence" }
 dv-report-service = { path = "../dv-report-service" }
 dv-report-types = { path = "../dv-report-types" }
-futures-util = "0.3"
+futures-util = { workspace = true }
 log = { workspace = true }
+moka = { workspace = true }
 once_cell = { workspace = true }
 tokio = { workspace = true, features = ["full"] }
 serde = { workspace = true, features = ["derive"] }

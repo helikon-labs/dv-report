@@ -195,6 +195,10 @@ pub(crate) async fn get_network_referenda(
     path: web::Path<NetworkPathParameter>,
     state: web::Data<ServiceState>,
 ) -> ResultResponse {
+    if let Some(referenda) = state.network_referendum_cache.get(&path.network_id).await {
+        return Ok(HttpResponse::Ok().json(referenda));
+    }
+
     let rows = state
         .postgres
         .get_network_referenda(path.network_id)
