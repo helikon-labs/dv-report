@@ -136,6 +136,11 @@ pub(crate) async fn get_network_voter_votes(
         .get(&(path.network_id, account_id))
         .await
     {
+        log::info!(
+            "Return cached votes for {} on network {}.",
+            account_id,
+            path.network_id
+        );
         return Ok(HttpResponse::Ok().json(cached_vote_calls));
     }
 
