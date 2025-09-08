@@ -14,7 +14,6 @@ import {
 } from '../data/types';
 import { Constants } from '../util/constants';
 import { COHORT_NUMBERS } from '../data/data-store';
-import { animate, AnimationControls } from 'motion';
 
 interface UIDelegate {
     onCohortSelectChanged(value: number): void;
@@ -44,8 +43,8 @@ class UI {
     private readonly voteList: HTMLDivElement;
 
     private lastScrollTop = 0;
-    private disappearAnimation: AnimationControls | undefined = undefined;
-    private appearAnimation: AnimationControls | undefined = undefined;
+    private disappearAnimation: Animation | undefined = undefined;
+    private appearAnimation: Animation | undefined = undefined;
 
     private delegate: UIDelegate;
 
@@ -77,27 +76,34 @@ class UI {
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
 
         this.contentContainer.onscroll = (_) => {
-            this.appearAnimation = undefined;
             if (this.lastScrollTop - this.contentContainer.scrollTop < 0) {
+                if (this.appearAnimation) {
+                    this.appearAnimation.commitStyles();
+                    this.appearAnimation.cancel();
+                    this.appearAnimation = undefined;
+                }
                 if (this.disappearAnimation == undefined) {
-                    this.disappearAnimation = animate(
-                        '#filter-container',
+                    this.disappearAnimation = this.filterContainer.animate(
+                        [{ marginTop: '-250px' }],
                         {
-                            marginTop: '-500px',
+                            duration: 500,
+                            easing: 'ease-in-out',
+                            fill: 'forwards',
                         },
-                        { duration: 1 },
                     );
                 }
             } else {
-                this.disappearAnimation = undefined;
+                if (this.disappearAnimation) {
+                    this.disappearAnimation.commitStyles();
+                    this.disappearAnimation.cancel();
+                    this.disappearAnimation = undefined;
+                }
                 if (this.appearAnimation == undefined) {
-                    this.appearAnimation = animate(
-                        '#filter-container',
-                        {
-                            marginTop: '0px',
-                        },
-                        { duration: 1 },
-                    );
+                    this.appearAnimation = this.filterContainer.animate([{ marginTop: '0px' }], {
+                        duration: 500,
+                        easing: 'ease-in-out',
+                        fill: 'forwards',
+                    });
                 }
             }
             this.lastScrollTop = this.contentContainer.scrollTop;
@@ -545,7 +551,6 @@ class UI {
     }
 
     displaySimilarityMatrixChart(delegates: Delegate[], similarities: DelegateSimilarity[]) {
-        d3.select('#similarity-matrix-chart').selectAll('*').remove();
         const cellWidth = Math.floor(672 / delegates.length);
         const cellHeight = Math.floor(300 / delegates.length);
         const margin = { top: 50, left: 70, bottom: 20, right: 20 };
@@ -555,6 +560,7 @@ class UI {
         const svg = d3
             .select<SVGSVGElement, unknown>('#similarity-matrix-chart')
             .attr('viewBox', `0 0 ${width} ${height}`);
+        svg.selectAll('*').remove();
 
         const color = d3
             .scaleLinear<string>()

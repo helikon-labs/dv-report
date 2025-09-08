@@ -1,4 +1,4 @@
-import { DataStore, DataStoreDelegate } from '../data/data-store';
+import { DataStore } from '../data/data-store';
 import { UI, UIDelegate } from '../ui/ui';
 
 class App {
@@ -56,10 +56,9 @@ class App {
     };
 
     private readonly dataStore: DataStore;
-    private readonly dataStoreDelegate = <DataStoreDelegate>{};
 
     constructor() {
-        this.dataStore = new DataStore(this.dataStoreDelegate);
+        this.dataStore = new DataStore();
         this.ui = new UI(this.uiDelegate);
     }
 

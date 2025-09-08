@@ -15,12 +15,9 @@ import {
 
 const COHORT_NUMBERS = [4, 5];
 
-interface DataStoreDelegate {}
-
 class DataStore {
     private readonly DEFAULT_COHORT = 5;
 
-    private delegate: DataStoreDelegate;
     private networks: Network[] = [];
     private tracks: Track[] = [];
     private referendumStatuses: ReferendumStatus[] = [];
@@ -34,9 +31,7 @@ class DataStore {
     private selectedTrackIds = new Set<number>();
     private selectedDelegateTypeIds = new Set<number>();
 
-    constructor(delegate: DataStoreDelegate) {
-        this.delegate = delegate;
-    }
+    constructor() {}
 
     async init() {
         this.networks = [];
@@ -484,4 +479,4 @@ class DataStore {
     }
 }
 
-export { COHORT_NUMBERS, DataStore, DataStoreDelegate };
+export { COHORT_NUMBERS, DataStore };
