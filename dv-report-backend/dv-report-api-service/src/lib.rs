@@ -7,6 +7,7 @@ use dv_report_config::Config;
 use dv_report_persistence::postgres::PostgreSQLStorage;
 use dv_report_service::err::InternalServerError;
 use dv_report_service::Service;
+use dv_report_types::dv::delegate::Delegate;
 use dv_report_types::substrate::account_id::AccountId;
 use futures_util::future::FutureExt;
 use moka::future::Cache;
@@ -19,21 +20,36 @@ mod types;
 
 pub(crate) type ResultResponse = Result<HttpResponse, InternalServerError>;
 
+const CACHE_LIFETIME_MS: u64 = 10 * 60 * 1000;
+const CACHE_MAX_CAPACITY: u64 = 1000;
+
 async fn on_server_ready() {
     log::info!("HTTP service started.");
 }
 
 #[derive(Clone)]
 pub(crate) struct ServiceState {
-    network_referendum_cache: Cache<u32, Vec<ReferendumDTO>>,
-    network_cohort_referendum_cache: Cache<(u32, u32), Vec<ReferendumDTO>>,
-    network_voter_vote_cache: Cache<(u32, AccountId), Vec<VoteCall>>,
+    network_referendum_cache: Arc<Cache<u32, Vec<ReferendumDTO>>>,
+    network_cohort_referendum_cache: Arc<Cache<(u32, u32), Vec<ReferendumDTO>>>,
+    network_voter_vote_cache: Arc<Cache<(u32, AccountId), Vec<VoteCall>>>,
+    delegate_cache: Arc<Cache<u32, Vec<Delegate>>>,
     postgres: Arc<PostgreSQLStorage>,
 }
 
 #[derive(Debug, Default)]
 pub struct APIService {
     config: Config,
+}
+
+fn build_cache<A, B>() -> Cache<A, B>
+where
+    A: std::hash::Hash + Send + Eq + Sync + 'static,
+    B: Clone + Send + Sync + 'static,
+{
+    Cache::builder()
+        .time_to_live(std::time::Duration::from_millis(CACHE_LIFETIME_MS))
+        .max_capacity(CACHE_MAX_CAPACITY)
+        .build()
 }
 
 #[async_trait(?Send)]
@@ -51,13 +67,17 @@ impl Service for APIService {
 
     async fn run(&self) -> anyhow::Result<()> {
         let postgres = Arc::new(PostgreSQLStorage::new(&self.config).await?);
+        let network_referendum_cache = Arc::new(build_cache());
+        let network_cohort_referendum_cache = Arc::new(build_cache());
+        let network_voter_vote_cache = Arc::new(build_cache());
+        let delegate_cache = Arc::new(build_cache());
         log::info!(
             "Starting HTTP service @ {}:{}.",
             self.config.api.service_host,
             self.config.api.api_service_port
         );
         let server = HttpServer::new(move || {
-            let _cors = Cors::default()
+            let cors = Cors::default()
                 .allowed_origin("http://localhost:8080")
                 .allowed_methods(vec!["GET", "POST", "OPTIONS"])
                 .allowed_headers(vec![
@@ -69,20 +89,12 @@ impl Service for APIService {
             App::new()
                 .app_data(web::Data::new(ServiceState {
                     postgres: postgres.clone(),
-                    network_referendum_cache: Cache::builder()
-                        .time_to_live(std::time::Duration::from_secs(60 * 10))
-                        .max_capacity(1000)
-                        .build(),
-                    network_cohort_referendum_cache: Cache::builder()
-                        .time_to_live(std::time::Duration::from_secs(60 * 10))
-                        .max_capacity(1000)
-                        .build(),
-                    network_voter_vote_cache: Cache::builder()
-                        .time_to_live(std::time::Duration::from_secs(60 * 10))
-                        .max_capacity(1000)
-                        .build(),
+                    network_referendum_cache: network_referendum_cache.clone(),
+                    network_cohort_referendum_cache: network_cohort_referendum_cache.clone(),
+                    network_voter_vote_cache: network_voter_vote_cache.clone(),
+                    delegate_cache: delegate_cache.clone(),
                 }))
-                //.wrap(cors)
+                .wrap(cors)
                 .wrap_fn(|request, service| {
                     metrics::request_counter().inc();
                     metrics::connection_count().inc();

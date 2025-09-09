@@ -53,6 +53,9 @@ pub(crate) async fn get_all_delegate_types(state: web::Data<ServiceState>) -> Re
 
 #[get("/delegate")]
 pub(crate) async fn get_all_delegates(state: web::Data<ServiceState>) -> ResultResponse {
+    if let Some(cached_delegates) = state.delegate_cache.get(&0).await {
+        return Ok(HttpResponse::Ok().json(cached_delegates));
+    }
     let rows = state.postgres.get_all_delegates().await?;
     let mut delegates = Vec::new();
     for delegate_row in rows.iter() {
@@ -88,6 +91,7 @@ pub(crate) async fn get_all_delegates(state: web::Data<ServiceState>) -> ResultR
         }
         delegates.push(delegate_row.clone().into_delegate(delegations))
     }
+    state.delegate_cache.insert(0, delegates.clone()).await;
     Ok(HttpResponse::Ok().json(delegates))
 }
 
@@ -136,11 +140,6 @@ pub(crate) async fn get_network_voter_votes(
         .get(&(path.network_id, account_id))
         .await
     {
-        log::info!(
-            "Return cached votes for {} on network {}.",
-            account_id,
-            path.network_id
-        );
         return Ok(HttpResponse::Ok().json(cached_vote_calls));
     }
 
