@@ -80,7 +80,6 @@ class UI {
 
         const headerHeadroom = new Headroom(this.headerContainer, {
             scroller: this.contentContainer,
-            tolerance: 10,
             classes: {
                 initial: 'header-headroom',
                 pinned: 'header-headroom-pinned',
@@ -91,7 +90,6 @@ class UI {
 
         const filterHeadroom = new Headroom(this.filterContainer, {
             scroller: this.contentContainer,
-            tolerance: 10,
             classes: {
                 initial: 'filter-headroom',
                 pinned: 'filter-headroom-pinned',
