@@ -26,6 +26,7 @@ interface UIDelegate {
 
 class UI {
     private readonly root: HTMLDivElement;
+    private readonly headerContainer: HTMLDivElement;
     private readonly contentContainer: HTMLDivElement;
     private readonly content: HTMLDivElement;
     private readonly title: HTMLDivElement;
@@ -55,6 +56,7 @@ class UI {
     constructor(delegate: UIDelegate) {
         this.delegate = delegate;
         this.root = <HTMLDivElement>document.getElementById('root');
+        this.headerContainer = <HTMLDivElement>document.getElementById('page-header-container');
         this.contentContainer = <HTMLDivElement>document.getElementById('content-container');
         this.content = <HTMLDivElement>document.getElementById('content');
         this.title = <HTMLDivElement>document.getElementById('title');
@@ -76,11 +78,27 @@ class UI {
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
 
-        const headroom = new Headroom(this.filterContainer, {
+        const headerHeadroom = new Headroom(this.headerContainer, {
             scroller: this.contentContainer,
             tolerance: 10,
+            classes: {
+                initial: 'header-headroom',
+                pinned: 'header-headroom-pinned',
+                unpinned: 'header-headroom-unpinned',
+            },
         });
-        headroom.init();
+        headerHeadroom.init();
+
+        const filterHeadroom = new Headroom(this.filterContainer, {
+            scroller: this.contentContainer,
+            tolerance: 10,
+            classes: {
+                initial: 'filter-headroom',
+                pinned: 'filter-headroom-pinned',
+                unpinned: 'filter-headroom-unpinned',
+            },
+        });
+        filterHeadroom.init();
     }
 
     cleanup() {
