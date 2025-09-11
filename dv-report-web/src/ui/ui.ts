@@ -135,14 +135,14 @@ class UI {
     ) {
         let cohortSelectHTML = '';
         for (const cohortNumber of COHORT_NUMBERS) {
-            cohortSelectHTML += `<option value="${cohortNumber}" ${cohortNumber == selectedCohortNumber ? 'selected' : ''}>${cohortNumber}</option>`;
+            cohortSelectHTML += `<option value="${cohortNumber}" ${cohortNumber == selectedCohortNumber ? 'selected' : ''}>Cohort ${cohortNumber}</option>`;
         }
         this.cohortSelect.innerHTML = cohortSelectHTML;
         this.cohortSelect.onchange = (_) => {
             this.delegate.onCohortSelectChanged(Number.parseInt(this.cohortSelect.value));
         };
 
-        let networkSelectHTML = '<option value="all" selected>All</option>';
+        let networkSelectHTML = '<option value="all" selected>All Networks</option>';
         networks.forEach((n) => {
             networkSelectHTML += `<option value="${n.id}">${n.display}</option>`;
         });
@@ -151,7 +151,7 @@ class UI {
             this.delegate.onNetworkSelectChanged(this.networkSelect.value);
         };
 
-        let trackSelectHTML = '<option value="all">All</option>';
+        let trackSelectHTML = '<option value="all">All Tracks</option>';
         trackSelectHTML += '<option value="dv" selected>DV Tracks</option>';
         for (const track of tracks) {
             trackSelectHTML += `<option value="${track.id}">${track.name}</option>`;
@@ -161,7 +161,7 @@ class UI {
             this.delegate.onTrackSelectChanged(this.trackSelect.value);
         };
 
-        let statusSelectHTML = '<option value="all">All</option>';
+        let statusSelectHTML = '<option value="all">All Statuses</option>';
         for (const status of statuses) {
             statusSelectHTML += `<option value="${status.id}">${status.status}</option>`;
         }
@@ -170,7 +170,7 @@ class UI {
             this.delegate.onStatusSelectChanged(this.statusSelect.value);
         };
 
-        let delegateTypeSelectHTML = '<option value="all">All</option>';
+        let delegateTypeSelectHTML = '<option value="all">All DVs</option>';
         for (const delegateType of delegateTypes) {
             delegateTypeSelectHTML += `<option value="${delegateType.id}">${delegateType.name}</option>`;
         }

@@ -438,6 +438,10 @@ p {
 
 @media screen and (max-width: 580px) {
     .filter-item-title {
+        display: none;
+    }
+
+    .filter-item-title {
         width: 48px;
     }
 
