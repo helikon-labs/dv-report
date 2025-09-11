@@ -44,10 +44,6 @@ class UI {
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
 
-    private lastScrollTop = 0;
-    private disappearAnimation: Animation | undefined = undefined;
-    private appearAnimation: Animation | undefined = undefined;
-
     private delegate: UIDelegate;
 
     private similarityGroup: d3.Selection<SVGGElement, unknown, HTMLElement, any> | null = null;
