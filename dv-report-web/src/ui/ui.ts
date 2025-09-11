@@ -14,7 +14,7 @@ import {
 } from '../data/types';
 import { Constants } from '../util/constants';
 import { COHORT_NUMBERS } from '../data/data-store';
-import Headroom from "headroom.js";
+import Headroom from 'headroom.js';
 
 interface UIDelegate {
     onCohortSelectChanged(value: number): void;
@@ -76,44 +76,11 @@ class UI {
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
 
-        const headroom = new Headroom(this.filterContainer);
+        const headroom = new Headroom(this.filterContainer, {
+            scroller: this.contentContainer,
+            tolerance: 10,
+        });
         headroom.init();
-
-        /*
-        this.contentContainer.onscroll = (_) => {
-            if (this.lastScrollTop - this.contentContainer.scrollTop < -20) {
-                if (this.appearAnimation) {
-                    this.appearAnimation.commitStyles();
-                    this.appearAnimation.cancel();
-                    this.appearAnimation = undefined;
-                }
-                if (this.disappearAnimation == undefined) {
-                    this.disappearAnimation = this.filterContainer.animate(
-                        [{ marginTop: '-250px' }],
-                        {
-                            duration: 500,
-                            easing: 'ease-in-out',
-                            fill: 'forwards',
-                        },
-                    );
-                }
-            } else {
-                if (this.disappearAnimation) {
-                    this.disappearAnimation.commitStyles();
-                    this.disappearAnimation.cancel();
-                    this.disappearAnimation = undefined;
-                }
-                if (this.appearAnimation == undefined) {
-                    this.appearAnimation = this.filterContainer.animate([{ marginTop: '0px' }], {
-                        duration: 500,
-                        easing: 'ease-in-out',
-                        fill: 'forwards',
-                    });
-                }
-            }
-            this.lastScrollTop = this.contentContainer.scrollTop;
-        };
-        */
     }
 
     cleanup() {
