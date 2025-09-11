@@ -117,19 +117,19 @@ hr {
 /* header headroom */
 .header-headroom {
     will-change: margin-to;
-    transition: margin-top 200ms linear;
+    transition: margin-top 300ms ease-in-out;
 }
 .header-headroom-pinned {
     margin-top: 0px;
 }
 .header-headroom-unpinned {
-    margin-top: -50px;
+    margin-top: -70px;
 }
 
 /* filter headroom */
 .filter-headroom {
     will-change: transform;
-    transition: transform 200ms linear;
+    transition: transform 500ms ease-in-out;
 }
 .filter-headroom-pinned {
     transform: translateY(0%);
