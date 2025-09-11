@@ -20,7 +20,7 @@ mod types;
 
 pub(crate) type ResultResponse = Result<HttpResponse, InternalServerError>;
 
-const CACHE_LIFETIME_MS: u64 = 10 * 60 * 1000;
+const CACHE_LIFETIME_MS: u64 = 60 * 1000;
 const CACHE_MAX_CAPACITY: u64 = 1000;
 
 async fn on_server_ready() {
