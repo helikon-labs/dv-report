@@ -40,6 +40,7 @@ class UI {
     private readonly trackSelect: HTMLSelectElement;
     private readonly statusSelect: HTMLSelectElement;
     private readonly delegateTypeSelect: HTMLSelectElement;
+    private readonly delegateTypeFilterItem: HTMLDivElement;
 
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
@@ -67,6 +68,9 @@ class UI {
         this.statusSelect = <HTMLSelectElement>document.getElementById('status-select');
         this.delegateTypeSelect = <HTMLSelectElement>(
             document.getElementById('delegate-type-select')
+        );
+        this.delegateTypeFilterItem = <HTMLDivElement>(
+            document.getElementById('delegate-type-filter-item')
         );
 
         this.voteListDelegateColumn = <HTMLDivElement>(
@@ -151,7 +155,13 @@ class UI {
         }
         this.cohortSelect.innerHTML = cohortSelectHTML;
         this.cohortSelect.onchange = (_) => {
-            this.delegate.onCohortSelectChanged(Number.parseInt(this.cohortSelect.value));
+            const cohortNumber = Number.parseInt(this.cohortSelect.value);
+            if (cohortNumber == 4) {
+                hide(this.delegateTypeFilterItem);
+            } else {
+                show(this.delegateTypeFilterItem);
+            }
+            this.delegate.onCohortSelectChanged(cohortNumber);
         };
 
         let networkSelectHTML = '<option value="all" selected>All Networks</option>';
