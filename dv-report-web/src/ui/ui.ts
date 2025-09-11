@@ -14,6 +14,7 @@ import {
 } from '../data/types';
 import { Constants } from '../util/constants';
 import { COHORT_NUMBERS } from '../data/data-store';
+import Headroom from "headroom.js";
 
 interface UIDelegate {
     onCohortSelectChanged(value: number): void;
@@ -75,8 +76,12 @@ class UI {
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
 
+        const headroom = new Headroom(this.filterContainer);
+        headroom.init();
+
+        /*
         this.contentContainer.onscroll = (_) => {
-            if (this.lastScrollTop - this.contentContainer.scrollTop < 0) {
+            if (this.lastScrollTop - this.contentContainer.scrollTop < -20) {
                 if (this.appearAnimation) {
                     this.appearAnimation.commitStyles();
                     this.appearAnimation.cancel();
@@ -108,6 +113,7 @@ class UI {
             }
             this.lastScrollTop = this.contentContainer.scrollTop;
         };
+        */
     }
 
     cleanup() {
