@@ -397,6 +397,7 @@ class UI {
         const svg = d3
             .select<SVGSVGElement, unknown>('#policy-direction-chart')
             .attr('viewBox', `0 0 ${width} ${height}`);
+        svg.selectAll('*').remove();
 
         const scoredData = data.map((d) => ({
             ...d,
