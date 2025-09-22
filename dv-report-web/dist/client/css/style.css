@@ -155,6 +155,7 @@ hr {
     width: 860px;
     margin-top: 82px;
     position: fixed;
+    z-index: 1;
 }
 
 .filter-group {
@@ -284,6 +285,7 @@ p {
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: 2;
 }
 
 .page-header {
@@ -352,6 +354,21 @@ p {
     font-weight: 500;
     font-family: 'unbounded';
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header i.fa {
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.section-header i.fa:hover {
+    opacity: 1;
 }
 
 .section-body {

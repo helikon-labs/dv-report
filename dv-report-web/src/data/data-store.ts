@@ -12,6 +12,7 @@ import {
     Track,
     VoteCall,
 } from './types';
+import * as ExcelJS from 'exceljs';
 
 const COHORT_NUMBERS = [4, 5];
 
@@ -476,6 +477,95 @@ class DataStore {
             map.set(delegate.id, this.getDelegateLastVoteMap(delegate));
         }
         return map;
+    }
+
+    getExportWorkbook(): ExcelJS.Workbook {
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('DV Votes', {
+            properties: { defaultRowHeight: 18, defaultColWidth: 15 },
+            views: [{ state: 'frozen', xSplit: 1, ySplit: 1 }],
+        });
+
+        const data: Array<Array<string>> = [];
+        const voteMaps = this.getAllDelegatesLastVoteMaps();
+        const referenda = this.getFilteredReferenda();
+        const headerRow = [''];
+        for (const referendum of referenda) {
+            const network = this.networks.find((n) => n.id == referendum.networkId)!;
+            headerRow.push(`${network.tokenTicker} ${referendum.index.toString()}`);
+        }
+        data.push(headerRow);
+        const delegates = this.delegates.sort((d1, d2) =>
+            d1.typeId == d2.typeId
+                ? d1.shortName.localeCompare(d2.shortName)
+                : d1.typeId - d2.typeId,
+        );
+        for (const delegate of delegates) {
+            const delegateRow = [delegate.shortName];
+            for (const referendum of referenda) {
+                const network = this.networks.find((n) => n.id == referendum.networkId)!;
+                const voteMap = voteMaps.get(delegate.id)!;
+                const key = `${referendum.networkId}_${referendum.index}`;
+                if (voteMap.has(key)) {
+                    const voteCall = voteMap.get(key)!;
+                    const voteValue = getVoteValue(voteCall);
+                    let voteIndicator;
+                    if (voteValue > 0) {
+                        voteIndicator = 'aye';
+                    } else if (voteValue == 0) {
+                        voteIndicator = 'abstain';
+                    } else {
+                        voteIndicator = 'nay';
+                    }
+                    const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
+                    const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
+                    delegateRow.push(`${voteIndicator}||${extrinsicURL}||${extrinsicDisplay}`);
+                } else {
+                    delegateRow.push('-');
+                }
+            }
+            data.push(delegateRow);
+        }
+
+        data.forEach((row, rowIndex) => {
+            const newRow = worksheet.addRow(row);
+            row.forEach((_, colIndex) => {
+                const cell = newRow.getCell(colIndex + 1);
+                cell.font = { color: { argb: '000000FF' } };
+                if (rowIndex === 0) {
+                    cell.font = { bold: true };
+                    cell.alignment = { horizontal: 'center' };
+                    if (colIndex > 0) {
+                        const referendum = referenda[colIndex - 1];
+                        const network = this.networks.find((n) => n.id == referendum.networkId)!;
+                        const referendumURL = `https://${network.chain}.subsquare.io/referenda/${referendum.index}`;
+                        cell.value = {
+                            text: `${network.tokenTicker} ${referendum.index}`,
+                            hyperlink: referendumURL,
+                        };
+                    }
+                }
+                if (colIndex === 0) {
+                    cell.font = { ...(cell.font || {}), bold: true, color: { argb: 'FF000000' } };
+                    cell.alignment = { horizontal: 'left' };
+                } else {
+                    cell.alignment = { horizontal: 'center' };
+                    const raw = data[rowIndex][colIndex];
+                    if (raw.includes('||')) {
+                        const [vote, url, _display] = data[rowIndex][colIndex].split('||');
+                        cell.value = { text: vote, hyperlink: url };
+                        let argb = 'FF999999';
+                        if (vote === 'aye') argb = 'FF00AA00';
+                        else if (vote === 'nay') argb = 'FFFF0000';
+                        cell.font = { ...(cell.font || {}), color: { argb }, underline: true };
+                    } else {
+                        // non-link cell
+                        cell.font = { ...(cell.font || {}), color: { argb: 'FF000000' } };
+                    }
+                }
+            });
+        });
+        return workbook;
     }
 }
 

@@ -1,5 +1,6 @@
 import { DataStore } from '../data/data-store';
 import { UI, UIDelegate } from '../ui/ui';
+import FileSaver from 'file-saver';
 
 class App {
     private readonly ui: UI;
@@ -53,6 +54,9 @@ class App {
             }
             this.updateVoteCounts();
         },
+        onVotesDownloadButtonClicked: () => {
+            this.exportData();
+        },
     };
 
     private readonly dataStore: DataStore;
@@ -60,6 +64,13 @@ class App {
     constructor() {
         this.dataStore = new DataStore();
         this.ui = new UI(this.uiDelegate);
+    }
+
+    private async exportData() {
+        // const lastVotesMaps = this.dataStore.getAllDelegatesLastVoteMaps();
+        const workbook = this.dataStore.getExportWorkbook();
+        const buffer = await workbook.xlsx.writeBuffer();
+        FileSaver.saveAs(new Blob([buffer]), 'out.xlsx');
     }
 
     async start() {

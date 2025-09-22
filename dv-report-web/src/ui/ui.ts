@@ -22,6 +22,7 @@ interface UIDelegate {
     onTrackSelectChanged(value: string): void;
     onStatusSelectChanged(value: string): void;
     onDelegateTypeSelectChanged(value: string): void;
+    onVotesDownloadButtonClicked(): void;
 }
 
 class UI {
@@ -44,6 +45,7 @@ class UI {
 
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
+    private readonly votesDownloadButton: HTMLElement;
 
     private delegate: UIDelegate;
 
@@ -77,6 +79,10 @@ class UI {
             document.getElementById('vote-list-delegate-column')
         );
         this.voteList = <HTMLDivElement>document.getElementById('vote-list');
+        this.votesDownloadButton = <HTMLElement>document.getElementById('votes-download-button');
+        this.votesDownloadButton.addEventListener('click', () => {
+            this.delegate.onVotesDownloadButtonClicked();
+        });
 
         const headerHeadroom = new Headroom(this.headerContainer, {
             scroller: this.contentContainer,
