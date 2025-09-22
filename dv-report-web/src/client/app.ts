@@ -67,10 +67,22 @@ class App {
     }
 
     private async exportData() {
+        function getExportFilename(): string {
+            const now = new Date();
+            const pad = (n: number) => String(n).padStart(2, '0');
+
+            const yyyy = now.getFullYear();
+            const mm = pad(now.getMonth() + 1); // 01–12
+            const dd = pad(now.getDate()); // 01–31
+            const HH = pad(now.getHours()); // 00–23
+            const MM = pad(now.getMinutes()); // 00–59
+
+            return `dv_report_export_${yyyy}${mm}${dd}_${HH}${MM}.xlsx`;
+        }
         // const lastVotesMaps = this.dataStore.getAllDelegatesLastVoteMaps();
         const workbook = this.dataStore.getExportWorkbook();
         const buffer = await workbook.xlsx.writeBuffer();
-        FileSaver.saveAs(new Blob([buffer]), 'out.xlsx');
+        FileSaver.saveAs(new Blob([buffer]), getExportFilename());
     }
 
     async start() {
