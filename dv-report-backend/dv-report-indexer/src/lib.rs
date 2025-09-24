@@ -56,6 +56,50 @@ async fn process_block(
     Ok(())
 }
 
+async fn import_comments(config: &Config) -> anyhow::Result<()> {
+    let network = Network::from_id(config.substrate.network_id);
+    let repository = Repository::new(config).await?;
+    let referenda = repository.get_network_referenda(network.id).await?;
+    let mut imported_comment_count = 0;
+    for referendum in referenda.iter() {
+        log::info!(
+            "Import Subsquare comments for {} #{}.",
+            network.token_ticker,
+            referendum.index
+        );
+        let subsquare_comments = repository
+            .get_subsquare_referendum_comments(&network, referendum.index)
+            .await?;
+        for subsquare_comment in subsquare_comments.iter() {
+            repository
+                .save_subsquare_referendum_comment(network.id, referendum.index, subsquare_comment)
+                .await?;
+        }
+        imported_comment_count += subsquare_comments.len();
+        log::info!(
+            "Import Polkassembly comments for {} #{}.",
+            network.token_ticker,
+            referendum.index
+        );
+        let polkassembly_comments = repository
+            .get_polkassembly_referendum_comments(&network, referendum.index)
+            .await?;
+        for polkassembly_comment in polkassembly_comments.iter() {
+            repository
+                .save_polkassembly_referendum_comment(
+                    network.id,
+                    referendum.index,
+                    polkassembly_comment,
+                    None,
+                )
+                .await?;
+        }
+        imported_comment_count += polkassembly_comments.len();
+    }
+    metrics::imported_comment_count().set(imported_comment_count as i64);
+    Ok(())
+}
+
 #[async_trait(?Send)]
 impl Service for Indexer {
     fn name(&self) -> String {
@@ -80,7 +124,20 @@ impl Service for Indexer {
             network.display,
             cohort.number,
         );
-        /*
+        tokio::spawn({
+            let config = self.config.clone();
+            async move {
+                loop {
+                    match import_comments(&config).await {
+                        Ok(()) => log::info!("Comments imported successfully."),
+                        Err(error) => log::error!("Error while importing comments: {}", error),
+                    }
+                    log::info!("Comment will be imported again after {} minutes.", 30);
+                    sleep(Duration::from_secs(30 * 60)).await;
+                }
+            }
+        });
+        /* // cohort init cancelled
         let delegates = repository
             .get_cohort_delegates(network.id, cohort.number)
             .await?;

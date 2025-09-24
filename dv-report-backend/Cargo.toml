@@ -28,6 +28,7 @@ license = "GPL-3"
 actix-web = "4.11"
 actix-cors = "0.7"
 anyhow = "1"
+async-recursion = "1.1"
 async-trait = "0.1"
 chrono = { version = "0.4", default-features = true, features = ["serde"] }
 config = "0.15"

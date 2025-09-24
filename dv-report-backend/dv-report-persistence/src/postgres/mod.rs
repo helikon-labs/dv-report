@@ -8,6 +8,7 @@ mod delegate;
 mod delegation;
 mod network;
 mod referendum;
+mod referendum_comment;
 mod referendum_event;
 mod track;
 mod vote;

@@ -14,3 +14,15 @@ pub fn indexed_finalized_block_number() -> IntGauge {
     });
     METER.clone()
 }
+
+pub fn imported_comment_count() -> IntGauge {
+    static METER: Lazy<IntGauge> = Lazy::new(|| {
+        dv_report_metrics::registry::register_int_gauge(
+            METRIC_PREFIX,
+            "imported_comment_count",
+            "Number of imported comments from Subsquare",
+        )
+        .unwrap()
+    });
+    METER.clone()
+}

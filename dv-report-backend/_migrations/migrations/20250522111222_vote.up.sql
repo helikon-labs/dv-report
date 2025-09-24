@@ -43,3 +43,6 @@ CREATE INDEX IF NOT EXISTS vote_idx_network_voter
 
 CREATE INDEX vote_idx_network_voter_referendum
     ON vote (network_id, voter_account_id, referendum_index);
+
+CREATE INDEX vote_idx_ordering
+    ON vote (network_id ASC, referendum_index ASC);

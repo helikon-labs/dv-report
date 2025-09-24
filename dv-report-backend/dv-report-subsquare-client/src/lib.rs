@@ -1,6 +1,9 @@
 use dv_report_config::Config;
+use dv_report_types::governance::polkassembly::{
+    PolkassemblyReferendumComment, PolkassemblyReferendumCommentListResponse,
+};
 use dv_report_types::governance::subsquare::{
-    SubsquareReferendum, SubsquareReferendumList, SubsquareVoteCall,
+    SubsquarePagedData, SubsquareReferendum, SubsquareReferendumComment, SubsquareVoteCall,
 };
 use dv_report_types::substrate::network::Network;
 
@@ -41,7 +44,7 @@ impl SubsquareClient {
         chain: &Network,
         page: u16,
         page_size: u16,
-    ) -> anyhow::Result<SubsquareReferendumList> {
+    ) -> anyhow::Result<SubsquarePagedData<SubsquareReferendum>> {
         let url = format!(
             "https://{}-api.subsquare.io/gov2/referendums?simple=false&page_size={page_size}&page={page}",
             chain.chain,
@@ -51,7 +54,7 @@ impl SubsquareClient {
             .get(url)
             .send()
             .await?
-            .json::<SubsquareReferendumList>()
+            .json::<SubsquarePagedData<SubsquareReferendum>>()
             .await?)
     }
 
@@ -71,5 +74,61 @@ impl SubsquareClient {
             .await?
             .json::<Vec<SubsquareVoteCall>>()
             .await?)
+    }
+
+    pub async fn fetch_subsquare_referendum_comments(
+        &self,
+        chain: &Network,
+        index: u32,
+    ) -> anyhow::Result<Vec<SubsquareReferendumComment>> {
+        let mut comments = Vec::new();
+        let page_size = 10;
+        let mut page = 1;
+        loop {
+            let url = format!(
+                "https://{}-api.subsquare.io/gov2/referendums/{index}/comments?page_size={page_size}&page={page}",
+                chain.chain,
+            );
+            let data = self
+                .http_client
+                .get(url)
+                .send()
+                .await?
+                .json::<SubsquarePagedData<SubsquareReferendumComment>>()
+                .await?;
+            if data.items.is_empty() {
+                break;
+            }
+            data.items
+                .iter()
+                .cloned()
+                .for_each(|item| comments.push(item));
+            page += 1;
+        }
+        Ok(comments)
+    }
+
+    pub async fn fetch_polkassembly_referendum_comments(
+        &self,
+        chain: &Network,
+        index: u32,
+    ) -> anyhow::Result<Vec<PolkassemblyReferendumComment>> {
+        let url = format!(
+            "https://{}-api.subsquare.io/polkassembly-comments?post_id={}&post_type=ReferendumV2",
+            chain.chain, index,
+        );
+        let data = self
+            .http_client
+            .get(url)
+            .send()
+            .await?
+            .json::<PolkassemblyReferendumCommentListResponse>()
+            .await?;
+        Ok(data
+            .comments
+            .iter()
+            .filter(|c| c.comment_source == "polkassembly")
+            .cloned()
+            .collect())
     }
 }

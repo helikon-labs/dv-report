@@ -37,6 +37,9 @@ CREATE TABLE IF NOT EXISTS delegation
             ON UPDATE CASCADE
 );
 
+CREATE INDEX IF NOT EXISTS delegation_idx_network_delegate
+    ON delegation (network_id, delegate_id);
+
 INSERT INTO block (network_id, hash, number, timestamp, parent_hash)
 VALUES (1, 'f08e99db347e207c0539d1c7c8dc4ab4b443c3fb74c5d8bef8722f71e5b43edb', 25571026, 1744618824000,
         '0dd1c16f0c999a5501bf34a395eab60849749a04d590f7a15c3c86142af53cc0');

@@ -1,4 +1,4 @@
-use crate::service::VoteCall;
+use crate::service::Vote;
 use crate::types::ReferendumDTO;
 use actix_cors::Cors;
 use actix_web::{dev::Service as _, web, App, HttpResponse, HttpServer};
@@ -31,7 +31,7 @@ async fn on_server_ready() {
 pub(crate) struct ServiceState {
     network_referendum_cache: Arc<Cache<u32, Vec<ReferendumDTO>>>,
     network_cohort_referendum_cache: Arc<Cache<(u32, u32), Vec<ReferendumDTO>>>,
-    network_voter_vote_cache: Arc<Cache<(u32, AccountId), Vec<VoteCall>>>,
+    network_voter_vote_cache: Arc<Cache<(u32, AccountId), Vec<Vote>>>,
     delegate_cache: Arc<Cache<u32, Vec<Delegate>>>,
     postgres: Arc<PostgreSQLStorage>,
 }

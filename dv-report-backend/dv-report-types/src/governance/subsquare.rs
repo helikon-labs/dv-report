@@ -1,5 +1,6 @@
 use crate::substrate::account_id::AccountId;
 use crate::util::string_or_number_to_string;
+use chrono::{DateTime, Utc};
 use serde::{self, Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
@@ -171,8 +172,8 @@ pub struct SubsquareReferendum {
 
 #[derive(Clone, Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct SubsquareReferendumList {
-    pub items: Vec<SubsquareReferendum>,
+pub struct SubsquarePagedData<T> {
+    pub items: Vec<T>,
     pub total: u32,
     pub page: u32,
     pub page_size: u32,
@@ -246,4 +247,51 @@ impl SubsquareVoteCall {
         };
         Ok(vote)
     }
+}
+
+#[derive(Clone, Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubsquareReferendumCommentAuthor {
+    pub username: String,
+    pub public_key: Option<AccountId>,
+    pub address: AccountId,
+    pub email_md5: Option<String>,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubsquareReferendumCommentReaction {
+    #[serde(rename = "_id")]
+    pub id: String,
+    #[serde(rename = "comment")]
+    pub comment_id: String,
+    pub data_source: String,
+    pub proposer: AccountId,
+    pub cid: String,
+    pub created_at: DateTime<Utc>,
+    pub parent_cid: String,
+    pub reaction: u32,
+    pub updated_at: DateTime<Utc>,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubsquareReferendumComment {
+    #[serde(rename = "_id")]
+    pub id: String,
+    #[serde(rename = "referendaReferendum")]
+    pub referendum_post_id: String,
+    #[serde(rename = "replyToComment")]
+    pub reply_to_comment_id: Option<String>,
+    pub content: String,
+    pub content_type: String,
+    pub content_version: String,
+    pub author: SubsquareReferendumCommentAuthor,
+    pub height: u32,
+    pub created_at: DateTime<Utc>,
+    pub updated_at: DateTime<Utc>,
+    pub data_source: String,
+    pub cid: String,
+    pub proposer: AccountId,
+    pub replies: Option<Vec<SubsquareReferendumComment>>,
 }

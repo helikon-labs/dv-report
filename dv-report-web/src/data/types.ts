@@ -100,6 +100,8 @@ interface VoteCall {
     aye?: string;
     nay?: string;
     abstain?: string;
+    subsquareCommentId?: string;
+    polkassemblyCommentId?: string;
 }
 
 function getVoteValue(vote: VoteCall): number {

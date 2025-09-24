@@ -100,16 +100,44 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<Vec<VoteCallRow>> {
         let rows: Vec<VoteCallRow> = sqlx::query_as::<_, VoteCallRow>(
             "
-            SELECT id, network_id, referendum_index, block_hash, extrinsic_index, extrinsic_hash, is_batch, is_multisig, is_multisig_executed, is_proxy, is_successful, signer_account_id, voter_account_id, vote_type, is_aye, conviction, balance, aye, nay, abstain
-            FROM vote
-            WHERE network_id= $1 AND voter_account_id = $2
-            ORDER BY network_id ASC, referendum_index ASC
+            WITH comment_account_ids AS (
+                SELECT DCA.comment_account_id
+                FROM delegate_comment_account DCA
+                WHERE DCA.network_id = $1
+                AND DCA.delegate_id IN (
+                    SELECT D.delegate_id
+                    FROM delegation D
+                    WHERE D.network_id = $1
+                    AND D.delegate_account_id = $2
+                )
+            )
+            SELECT V.id, V.network_id, V.referendum_index,
+                   V.block_hash, V.extrinsic_index, V.extrinsic_hash, V.is_batch,
+                   V.is_multisig, V.is_multisig_executed, V.is_proxy, V.is_successful,
+                   V.signer_account_id, V.voter_account_id, V.vote_type, V.is_aye,
+                   V.conviction, V.balance, V.aye, V.nay, V.abstain,
+                   SC.id as subsquare_comment_id,
+                   PC.id as polkassembly_comment_id
+            FROM vote V
+            LEFT JOIN subsquare_referendum_comment SC ON (
+                SC.network_id = $1
+                AND SC.referendum_index = V.referendum_index
+                AND SC.proposer IN (SELECT comment_account_id FROM comment_account_ids)
+            )
+            LEFT JOIN polkassembly_referendum_comment PC ON (
+                PC.network_id = $1
+                AND PC.referendum_index = V.referendum_index
+                AND PC.proposer IN (SELECT comment_account_id FROM comment_account_ids)
+            )
+            WHERE V.network_id = $1
+                AND V.voter_account_id = $2
+            ORDER BY V.network_id ASC, V.referendum_index ASC;
             ",
         )
-            .bind(network_id as i32)
-            .bind(voter_account_id.to_string())
-            .fetch_all(&self.connection_pool)
-            .await?;
+        .bind(network_id as i32)
+        .bind(voter_account_id.to_string())
+        .fetch_all(&self.connection_pool)
+        .await?;
         Ok(rows)
     }
 }

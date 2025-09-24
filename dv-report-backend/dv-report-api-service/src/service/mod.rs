@@ -103,7 +103,7 @@ pub(crate) struct NetworkVoterAccountIdPathParameter {
 
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
-pub struct VoteCall {
+pub struct Vote {
     pub id: i32,
     pub network_id: i32,
     pub referendum_index: i32,
@@ -124,6 +124,8 @@ pub struct VoteCall {
     pub aye: Option<String>,
     pub nay: Option<String>,
     pub abstain: Option<String>,
+    pub subsquare_comment_id: Option<String>,
+    pub polkassembly_comment_id: Option<String>,
 }
 
 #[get("/network/{network_id}/voter/{voter_account_id}/vote")]
@@ -147,13 +149,13 @@ pub(crate) async fn get_network_voter_votes(
         .postgres
         .get_network_voter_votes(path.network_id, &account_id)
         .await?;
-    let mut vote_calls = Vec::new();
+    let mut votes = Vec::new();
     for row in rows.iter() {
         let block = state
             .postgres
             .get_block(row.network_id as u32, row.block_hash.as_str())
             .await?;
-        vote_calls.push(VoteCall {
+        votes.push(Vote {
             id: row.id,
             network_id: row.network_id,
             referendum_index: row.referendum_index,
@@ -174,13 +176,15 @@ pub(crate) async fn get_network_voter_votes(
             aye: row.aye.clone(),
             nay: row.nay.clone(),
             abstain: row.abstain.clone(),
+            subsquare_comment_id: row.subsquare_comment_id.clone(),
+            polkassembly_comment_id: row.polkassembly_comment_id.clone(),
         })
     }
     state
         .network_voter_vote_cache
-        .insert((path.network_id, account_id), vote_calls.clone())
+        .insert((path.network_id, account_id), votes.clone())
         .await;
-    Ok(HttpResponse::Ok().json(vote_calls))
+    Ok(HttpResponse::Ok().json(votes))
 }
 
 #[get("/referendum/status")]

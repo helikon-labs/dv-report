@@ -57,6 +57,8 @@ pub struct VoteCallRow {
     pub aye: Option<String>,
     pub nay: Option<String>,
     pub abstain: Option<String>,
+    pub subsquare_comment_id: Option<String>,
+    pub polkassembly_comment_id: Option<String>,
 }
 
 #[derive(Debug)]
