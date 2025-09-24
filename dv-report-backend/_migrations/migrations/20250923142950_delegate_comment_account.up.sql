@@ -3,7 +3,17 @@ CREATE TABLE IF NOT EXISTS delegate_comment_account
     delegate_id        VARCHAR(64) NOT NULL,
     network_id         INTEGER     NOT NULL,
     comment_account_id VARCHAR(64) NOT NULL,
-    CONSTRAINT delegate_comment_account_pk PRIMARY KEY (delegate_id, network_id, comment_account_id)
+    CONSTRAINT delegate_comment_account_pk PRIMARY KEY (delegate_id, network_id, comment_account_id),
+    CONSTRAINT delegate_comment_account_fk_delegate
+        FOREIGN KEY (delegate_id)
+            REFERENCES delegate (id)
+            ON DELETE RESTRICT
+            ON UPDATE CASCADE,
+    CONSTRAINT delegate_comment_account_fk_network
+        FOREIGN KEY (network_id)
+            REFERENCES network (id)
+            ON DELETE RESTRICT
+            ON UPDATE CASCADE
 );
 
 CREATE INDEX IF NOT EXISTS delegate_comment_account_idx_delegate

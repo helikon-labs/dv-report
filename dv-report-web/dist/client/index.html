@@ -69,7 +69,7 @@
                 </div>
                 <div class="header-1 medium" id="title">W3F DV Cohort IV Report</div>
                 <p id="subtitle"></p>
-                <!-- activity -->
+                <!-- vote count -->
                 <div class="section">
                     <div class="section-header"><span>Vote Counts</span></div>
                     <div class="section-body">
@@ -81,6 +81,18 @@
                             vote is counted.
                         </div>
                         <svg id="vote-count-chart"></svg>
+                    </div>
+                </div>
+                <!-- feedback rate -->
+                <div class="section">
+                    <div class="section-header"><span>Feedback Rate</span></div>
+                    <div class="section-body">
+                        <div class="section-description">
+                            Displays the percentage of votes where delegates provided rationale or
+                            feedback for their decision. Higher feedback rates indicate better
+                            delegate engagement and transparency.
+                        </div>
+                        <svg id="feedback-rate-chart"></svg>
                     </div>
                 </div>
                 <!-- policy -->
@@ -156,7 +168,8 @@
                         <div class="section-description">
                             List of vote calls for all filtered referenda. Only the final call on
                             each referendum is displayed. For multisig calls, only the call that
-                            triggered execution is included.
+                            triggered execution is included. 💬 indicates that the delegate left
+                            feedback for their rationale, and ⚠️ indicates missing feedback.
                         </div>
                         <div id="vote-list-container" class="vote-list-container">
                             <div id="vote-list-delegate-column" class="delegate-column"></div>

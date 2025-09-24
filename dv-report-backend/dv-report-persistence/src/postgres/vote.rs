@@ -131,7 +131,7 @@ impl PostgreSQLStorage {
             )
             WHERE V.network_id = $1
                 AND V.voter_account_id = $2
-            ORDER BY V.network_id ASC, V.referendum_index ASC;
+            ORDER BY V.network_id ASC, V.referendum_index ASC
             ",
         )
         .bind(network_id as i32)

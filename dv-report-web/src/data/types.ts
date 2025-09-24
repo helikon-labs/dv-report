@@ -77,6 +77,7 @@ interface Referendum {
     track: Track;
     submissionBlock: Block;
     status: ReferendumStatus;
+    isRetracted: boolean;
 }
 
 interface VoteCall {
@@ -128,6 +129,7 @@ type DelegateVoteCount = {
     ayeCount: number;
     missedCount: number;
     changedCount: number;
+    feedbackCount: number;
 };
 
 type DelegateSimilarity = {

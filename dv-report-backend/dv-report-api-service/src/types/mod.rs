@@ -11,4 +11,5 @@ pub(crate) struct ReferendumDTO {
     pub track: TrackRow,
     pub submission_block: Block,
     pub status: ReferendumStatusRow,
+    pub is_retracted: bool,
 }

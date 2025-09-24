@@ -482,6 +482,10 @@ p {
     .filter-item-select {
         width: 140px;
     }
+
+    .section-header i.fa {
+        font-size: 12px;
+    }
 }
 
 rect:hover {
@@ -538,11 +542,16 @@ rect:hover {
 }
 
 .vote-list-container .vote-list div.referendum-column div {
-    width: 108px;
+    width: 130px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.vote-list-container .vote-list div.referendum-column div span {
+    margin-top: 2px;
+    margin-left: 4px;
 }
 
 .vote-list-container .vote-list div.referendum-column .referendum-index {

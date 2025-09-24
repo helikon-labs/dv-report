@@ -244,6 +244,7 @@ pub(crate) async fn get_network_referenda(
                 id: status.id() as i32,
                 status: status.name(),
             },
+            is_retracted: row.is_retracted,
         });
     }
     state
@@ -297,6 +298,7 @@ pub(crate) async fn get_network_cohort_referenda(
                 id: status.id() as i32,
                 status: status.name(),
             },
+            is_retracted: row.is_retracted,
         });
     }
     state

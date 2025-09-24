@@ -80,4 +80,5 @@ pub struct ReferendumRow {
     pub track_id: i32,
     pub submission_block_hash: String,
     pub status_id: i32,
+    pub is_retracted: bool,
 }

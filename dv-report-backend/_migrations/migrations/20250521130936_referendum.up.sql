@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS referendum
     track_id              INTEGER                     NOT NULL,
     submission_block_hash VARCHAR(64)                 NOT NULL,
     status_id             INTEGER                     NOT NULL,
+    is_retracted          BOOLEAN                     NOT NULL DEFAULT FALSE,
     created_at            TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     updated_at            TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT referendum_pk PRIMARY KEY (network_id, index),

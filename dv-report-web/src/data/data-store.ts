@@ -345,6 +345,7 @@ class DataStore {
                 abstainCount: 0,
                 missedCount: 0,
                 changedCount: this.getDelegateChangedVoteCount(delegate),
+                feedbackCount: 0,
             };
             for (const vote of delegateVoteMap.values()) {
                 const voteValue = getVoteValue(vote);
@@ -354,6 +355,15 @@ class DataStore {
                     delegateVoteCount.nayCount++;
                 } else {
                     delegateVoteCount.abstainCount++;
+                }
+                if (
+                    vote.subsquareCommentId != undefined ||
+                    vote.polkassemblyCommentId != undefined
+                ) {
+                    console.log('yes', delegate.shortName);
+                    delegateVoteCount.feedbackCount++;
+                } else {
+                    console.log('no', delegate.shortName);
                 }
             }
             for (const filteredReferendum of filteredReferenda) {
@@ -482,7 +492,7 @@ class DataStore {
     getExportWorkbook(): ExcelJS.Workbook {
         const workbook = new ExcelJS.Workbook();
         const worksheet = workbook.addWorksheet('DV Votes', {
-            properties: { defaultRowHeight: 18, defaultColWidth: 15 },
+            properties: { defaultRowHeight: 20, defaultColWidth: 17 },
             views: [{ state: 'frozen', xSplit: 1, ySplit: 1 }],
         });
 
@@ -517,9 +527,18 @@ class DataStore {
                     } else {
                         voteIndicator = 'nay';
                     }
+                    let feedbackIndicator = '⚠️';
+                    if (
+                        voteCall.subsquareCommentId != undefined ||
+                        voteCall.polkassemblyCommentId != undefined
+                    ) {
+                        feedbackIndicator = '💬';
+                    }
                     const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
                     const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
-                    delegateRow.push(`${voteIndicator}||${extrinsicURL}||${extrinsicDisplay}`);
+                    delegateRow.push(
+                        `${voteIndicator}  ${feedbackIndicator}||${extrinsicURL}||${extrinsicDisplay}`,
+                    );
                 } else {
                     delegateRow.push('-');
                 }
@@ -555,8 +574,8 @@ class DataStore {
                         const [vote, url, _display] = data[rowIndex][colIndex].split('||');
                         cell.value = { text: vote, hyperlink: url };
                         let argb = 'FF999999';
-                        if (vote === 'aye') argb = 'FF00AA00';
-                        else if (vote === 'nay') argb = 'FFFF0000';
+                        if (vote.indexOf('aye') >= 0) argb = 'FF00AA00';
+                        else if (vote.indexOf('nay') >= 0) argb = 'FFFF0000';
                         cell.font = { ...(cell.font || {}), color: { argb }, underline: true };
                     } else {
                         // non-link cell
