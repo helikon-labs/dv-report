@@ -395,159 +395,15 @@ class UI {
         barGroups.exit().remove();
     }
 
-    /*
-    displayFeedbackRateChart(filteredReferendumCount: number, data: DelegateVoteCount[]) {
+    displayFeedbackRateChart(data: DelegateVoteCount[]) {
         const width = 800;
-        const height = 40 * data.length;
+        const height = 42 * data.length;
         const margin = { top: 12, right: 20, bottom: 20, left: 80 };
 
         const svg = d3
             .select<SVGSVGElement, unknown>('#feedback-rate-chart')
             .attr('viewBox', `0 0 ${width} ${height}`);
-
-        const sortedData = [...data].sort((a, b) => b.feedbackCount - a.feedbackCount);
-        const maxFeedbackCount = d3.max(sortedData, (d) => d.feedbackCount)!;
-        const x = d3
-            .scaleLinear()
-            .domain([0, maxFeedbackCount + 5])
-            .range([margin.left, width - margin.right]);
-
-        const y = d3
-            .scaleBand()
-            .domain(sortedData.map((d) => d.delegateShortName))
-            .range([margin.top, height - margin.bottom])
-            .padding(0.1);
-
-        const getBarColor = (feedbackCount: number, totalCount: number): string => {
-            if (totalCount === 0) return '#f44336'; // Red for 0%
-            const ratio = totalCount > 0 ? feedbackCount / totalCount : 0;
-
-            if (ratio <= 0.5) {
-                // Interpolate from red to gray (0% to 50%)
-                return d3.interpolate('#f44336', '#aaaaaa')(ratio * 2);
-            } else {
-                // Interpolate from gray to green (50% to 100%)
-                return d3.interpolate('#aaaaaa', '#4caf50')((ratio - 0.5) * 2);
-            }
-        };
-
-        // bars
-        svg.selectAll<SVGRectElement, DelegateVoteCount>('.missed-bar')
-            .data(sortedData, (d) => d.delegateId)
-            .join(
-                (enter) =>
-                    enter
-                        .append('rect')
-                        .attr('class', 'missed-bar')
-                        .attr('x', x(0))
-                        .attr('y', (d) => y(d.delegateShortName)!)
-                        .attr('width', (d) => x(d.feedbackCount) - x(0))
-                        .attr('height', y.bandwidth())
-                        .attr('fill', (d) => getBarColor(d.feedbackCount, filteredReferendumCount)),
-                (update) =>
-                    update
-                        .transition()
-                        .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        .attr('x', x(0))
-                        .attr('y', (d) => y(d.delegateShortName)!)
-                        .attr('width', (d) => x(d.feedbackCount) - x(0))
-                        .attr('fill', (d) => getBarColor(d.feedbackCount, filteredReferendumCount)),
-                (exit) => exit.remove(),
-            );
-        // labels at the end of the bars
-        svg.selectAll<SVGTextElement, DelegateVoteCount>('.missed-label')
-            .data(sortedData, (d) => d.delegateId)
-            .join(
-                (enter) =>
-                    enter
-                        .append('text')
-                        .attr('class', 'missed-label')
-                        .attr('x', (d) => x(d.feedbackCount) + 4)
-                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
-                        .attr('dy', '0.35em')
-                        .attr('text-anchor', 'start')
-                        .style('fill', 'black')
-                        .style('font-size', '10px')
-                        .text((d) =>
-                            filteredReferendumCount > 0
-                                ? `${Math.floor((d.feedbackCount / filteredReferendumCount) * 100)}%`
-                                : '0%',
-                        ),
-                (update) =>
-                    update
-                        .transition()
-                        .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        .attr('x', (d) => x(d.feedbackCount) + 4)
-                        .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
-                        .text((d) =>
-                            filteredReferendumCount > 0
-                                ? `${Math.floor((d.feedbackCount / filteredReferendumCount) * 100)}%`
-                                : '0%',
-                        ),
-                (exit) => exit.remove(),
-            );
-        // x axis
-        svg.selectAll('.x-axis')
-            .data([null])
-            .join(
-                (enter) =>
-                    enter
-                        .append('g')
-                        .attr('class', 'x-axis')
-                        .attr('transform', `translate(0,${height - margin.bottom})`)
-                        .call(
-                            d3
-                                .axisBottom(x)
-                                .ticks(5)
-                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
-                        ),
-                (update) =>
-                    update
-                        .transition()
-                        .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        .call(
-                            // @ts-ignore
-                            d3
-                                .axisBottom(x)
-                                .ticks(5)
-                                .tickFormat((d) => Math.round(d.valueOf()).toString()),
-                        ),
-            );
-        // y axis
-        svg.selectAll('.y-axis')
-            .data([null])
-            .join(
-                (enter) =>
-                    enter
-                        .append('g')
-                        .attr('class', 'y-axis')
-                        .attr('transform', `translate(${margin.left},0)`)
-                        .call((g) => {
-                            g.call(d3.axisLeft(y));
-                            g.selectAll('text')
-                                .style('font-size', '11px')
-                                .style('font-family', 'Inter');
-                        }),
-                (update) =>
-                    update.attr('transform', `translate(${margin.left},0)`).call((g) => {
-                        // @ts-ignore
-                        g.call(d3.axisLeft(y));
-                        g.selectAll('text')
-                            .style('font-size', '11px')
-                            .style('font-family', 'Inter');
-                    }),
-            );
-    }
-    */
-
-    displayFeedbackRateChart(filteredReferendumCount: number, data: DelegateVoteCount[]) {
-        const width = 800;
-        const height = 40 * data.length;
-        const margin = { top: 12, right: 20, bottom: 20, left: 80 };
-
-        const svg = d3
-            .select<SVGSVGElement, unknown>('#feedback-rate-chart')
-            .attr('viewBox', `0 0 ${width} ${height}`);
+        svg.selectAll('*').remove();
 
         const sortedData = [...data].sort((a, b) => {
             const aTotal = a.ayeCount + a.nayCount + a.abstainCount;
@@ -1398,7 +1254,6 @@ class UI {
         referenda: Referendum[],
         lastVoteMaps: Map<string, Map<string, VoteCall>>,
     ) {
-        const uniqueNetworkCount = new Set(referenda.map((r) => r.networkId)).size;
         let delegateColumnHTML = '<div class="item delegate">&nbsp;</div>';
         for (const delegate of delegates) {
             delegateColumnHTML += `<div class="item delegate bold">${delegate.shortName}</div>`;
@@ -1408,8 +1263,8 @@ class UI {
         for (const referendum of referenda) {
             const network = networks.find((n) => n.id == referendum.networkId)!;
             const referendumURL = `https://${network.chain}.subsquare.io/referenda/${referendum.index}`;
-            const referendumIndexDisplay = `${uniqueNetworkCount > 1 ? network.tokenTicker + '&nbsp;' : ''}${referendum.index}`;
-            let referendumColumnHTML = `<div class="item bold referendum-index"><a href="${referendumURL}" target="_blank">${referendumIndexDisplay}</a></div>`;
+            const referendumIndexDisplay = `${network.tokenTicker + '&nbsp;'}${referendum.index}`;
+            let referendumColumnHTML = `<div class="item bold referendum-index ${referendum.isRetracted ? 'retracted' : ''}"><a href="${referendumURL}" target="_blank">${referendumIndexDisplay}</a></div>`;
             for (const delegate of delegates) {
                 const voteMap = lastVoteMaps.get(delegate.id)!;
                 const key = `${referendum.networkId}_${referendum.index}`;
@@ -1424,12 +1279,16 @@ class UI {
                     } else {
                         voteIndicator = `<div class="vote-indicator nay"></div>`;
                     }
-                    let feedbackIndicator = '<span>⚠️</span>';
-                    if (
-                        voteCall.subsquareCommentId != undefined ||
-                        voteCall.polkassemblyCommentId != undefined
-                    ) {
-                        feedbackIndicator = '<span>💬</span>';
+                    let feedbackIndicator = '';
+                    if (!referendum.isRetracted) {
+                        if (
+                            voteCall.subsquareCommentId != undefined ||
+                            voteCall.polkassemblyCommentId != undefined
+                        ) {
+                            feedbackIndicator = '<span>💬</span>';
+                        } else {
+                            feedbackIndicator = '<span>⚠️</span>';
+                        }
                     }
                     const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
                     const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;

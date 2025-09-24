@@ -255,7 +255,10 @@ class DataStore {
         return voteMap;
     }
 
-    private getDelegateLastVoteMap(delegate: Delegate): Map<string, VoteCall> {
+    private getDelegateLastVoteMap(
+        delegate: Delegate,
+        include_retracted_referenda: boolean = true,
+    ): Map<string, VoteCall> {
         const voteMap: Map<string, VoteCall> = new Map();
         for (const vote of delegate.votes) {
             if (!this.selectedNetworkIds.has(vote.networkId)) {
@@ -269,6 +272,9 @@ class DataStore {
             );
             if (!referendum) {
                 // referendum is not in the given cohort - skip
+                continue;
+            }
+            if (!include_retracted_referenda && referendum.isRetracted) {
                 continue;
             }
             if (!this.selectedStatusIds.has(referendum.status.id)) {
@@ -328,14 +334,17 @@ class DataStore {
         return changedCount;
     }
 
-    getDelegateVoteCounts(): DelegateVoteCount[] {
+    getDelegateVoteCounts(include_retracted_referenda: boolean = true): DelegateVoteCount[] {
         const delegateVoteCounts: DelegateVoteCount[] = [];
-        const filteredReferenda = this.getFilteredReferenda();
+        const filteredReferenda = this.getFilteredReferenda(include_retracted_referenda);
         for (const delegate of this.getDelegates()) {
             if (!this.selectedDelegateTypeIds.has(delegate.typeId)) {
                 continue;
             }
-            const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
+            const delegateVoteMap = this.getDelegateLastVoteMap(
+                delegate,
+                include_retracted_referenda,
+            );
             const delegateVoteCount: DelegateVoteCount = {
                 delegateId: delegate.id,
                 delegateName: delegate.name,
@@ -360,10 +369,7 @@ class DataStore {
                     vote.subsquareCommentId != undefined ||
                     vote.polkassemblyCommentId != undefined
                 ) {
-                    console.log('yes', delegate.shortName);
                     delegateVoteCount.feedbackCount++;
-                } else {
-                    console.log('no', delegate.shortName);
                 }
             }
             for (const filteredReferendum of filteredReferenda) {
@@ -463,7 +469,7 @@ class DataStore {
         return responseTimeMap;
     }
 
-    getFilteredReferenda(): Referendum[] {
+    getFilteredReferenda(include_retracted: boolean = true): Referendum[] {
         const referenda: Referendum[] = [];
         for (const referendum of this.referenda) {
             if (!this.selectedNetworkIds.has(referendum.networkId)) {
@@ -473,6 +479,9 @@ class DataStore {
                 continue;
             }
             if (!this.selectedTrackIds.has(referendum.track.id)) {
+                continue;
+            }
+            if (!include_retracted && referendum.isRetracted) {
                 continue;
             }
             referenda.push(referendum);
@@ -505,7 +514,7 @@ class DataStore {
             headerRow.push(`${network.tokenTicker} ${referendum.index.toString()}`);
         }
         data.push(headerRow);
-        const delegates = this.delegates.sort((d1, d2) =>
+        const delegates = this.getDelegates().sort((d1, d2) =>
             d1.typeId == d2.typeId
                 ? d1.shortName.localeCompare(d2.shortName)
                 : d1.typeId - d2.typeId,
@@ -527,12 +536,16 @@ class DataStore {
                     } else {
                         voteIndicator = 'nay';
                     }
-                    let feedbackIndicator = '⚠️';
-                    if (
-                        voteCall.subsquareCommentId != undefined ||
-                        voteCall.polkassemblyCommentId != undefined
-                    ) {
-                        feedbackIndicator = '💬';
+                    let feedbackIndicator = '';
+                    if (!referendum.isRetracted) {
+                        if (
+                            voteCall.subsquareCommentId != undefined ||
+                            voteCall.polkassemblyCommentId != undefined
+                        ) {
+                            feedbackIndicator = '💬';
+                        } else {
+                            feedbackIndicator = '⚠️';
+                        }
                     }
                     const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
                     const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
@@ -562,10 +575,18 @@ class DataStore {
                             text: `${network.tokenTicker} ${referendum.index}`,
                             hyperlink: referendumURL,
                         };
+                        cell.font = {
+                            ...(cell.font || {}),
+                            strike: referendum.isRetracted,
+                        };
                     }
                 }
                 if (colIndex === 0) {
-                    cell.font = { ...(cell.font || {}), bold: true, color: { argb: 'FF000000' } };
+                    cell.font = {
+                        ...(cell.font || {}),
+                        bold: true,
+                        color: { argb: 'FF000000' },
+                    };
                     cell.alignment = { horizontal: 'left' };
                 } else {
                     cell.alignment = { horizontal: 'center' };

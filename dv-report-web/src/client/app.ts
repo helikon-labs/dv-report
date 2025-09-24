@@ -108,11 +108,9 @@ class App {
 
     private updateVoteCounts() {
         const voteCountData = this.dataStore.getDelegateVoteCounts();
+        const nonRetractedVoteCountData = this.dataStore.getDelegateVoteCounts(false);
         this.ui.displayVoteCountChart(voteCountData);
-        this.ui.displayFeedbackRateChart(
-            this.dataStore.getFilteredReferenda().length,
-            voteCountData,
-        );
+        this.ui.displayFeedbackRateChart(nonRetractedVoteCountData);
         this.ui.displayPolicyDirectionChart(voteCountData);
         const delegates = this.dataStore.getDelegates();
         const similarities = this.dataStore.getDelegateSimilarities();

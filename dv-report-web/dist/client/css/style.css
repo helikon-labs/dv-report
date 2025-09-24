@@ -114,6 +114,11 @@ hr {
     border-radius: 4px;
 }
 
+.retracted {
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+
 /* header headroom */
 .header-headroom {
     will-change: margin-to;
