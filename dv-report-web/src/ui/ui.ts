@@ -413,7 +413,11 @@ class UI {
             const aRate = aTotal > 0 ? a.feedbackCount / aTotal : 0;
             const bTotal = b.ayeCount + b.nayCount + b.abstainCount;
             const bRate = bTotal > 0 ? b.feedbackCount / bTotal : 0;
-            return bRate - aRate;
+            if (aRate == bRate) {
+                return a.delegateShortName.localeCompare(b.delegateShortName);
+            } else {
+                return bRate - aRate;
+            }
         });
         const maxFeedbackRate = d3.max(sortedData, (d) => {
             const total = d.ayeCount + d.nayCount + d.abstainCount;
