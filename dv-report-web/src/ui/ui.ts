@@ -456,7 +456,7 @@ class UI {
                         .attr('width', (d) => {
                             const total = d.ayeCount + d.nayCount + d.abstainCount;
                             const rate = total > 0 ? (d.feedbackCount / total) * 100 : 0;
-                            return x(rate) - x(0);
+                            return x(Math.round(rate)) - x(0);
                         })
                         .attr('height', y.bandwidth())
                         .attr('fill', (d) =>
@@ -499,7 +499,7 @@ class UI {
                         .text((d) => {
                             const total = d.ayeCount + d.nayCount + d.abstainCount;
                             const rate = total > 0 ? (d.feedbackCount / total) * 100 : 0;
-                            return `${Math.floor(rate)}%`;
+                            return `${Math.round(rate)}%`;
                         }),
                 (update) =>
                     update
