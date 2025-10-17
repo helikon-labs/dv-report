@@ -10,7 +10,7 @@ license.workspace = true
 [dependencies]
 anyhow = { workspace = true }
 chrono = { workspace = true }
-enum-iterator = "2.1"
+enum-iterator = "2.3"
 frame-support = { workspace = true }
 frame-system = { workspace = true }
 hex = { workspace = true }
