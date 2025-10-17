@@ -32,11 +32,11 @@ impl Repository {
         let referendum = match referendum_info {
             ReferendumInfo::Ongoing(status) => {
                 let submission_block_hash = self
-                    .asset_hub_substrate_client
+                    .relay_substrate_client
                     .get_block_hash(status.submitted as u64)
                     .await?;
                 let submission_block = self
-                    .asset_hub_substrate_client
+                    .relay_substrate_client
                     .get_block(submission_block_hash.as_str())
                     .await?;
                 Referendum {

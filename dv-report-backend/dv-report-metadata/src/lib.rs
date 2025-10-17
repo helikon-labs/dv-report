@@ -4,9 +4,9 @@ compile_error!("You must enable only one of the features: polkadot or kusama.");
 #[cfg(feature = "kusama")]
 pub use runtime::kusama as metadata;
 #[cfg(feature = "kusama")]
-pub use runtime::kusama::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
-#[cfg(feature = "kusama")]
 pub use runtime::kusama::api::runtime_types::asset_hub_kusama_runtime::RuntimeCall;
+#[cfg(feature = "kusama")]
+pub use runtime::kusama::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 #[cfg(feature = "kusama")]
 pub use runtime::kusama_current as metadata_current;
 #[cfg(feature = "polkadot")]
