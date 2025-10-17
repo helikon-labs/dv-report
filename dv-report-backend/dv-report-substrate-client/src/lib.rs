@@ -48,10 +48,9 @@ impl SubstrateClient {
             .build(rpc_url)
             .await?;
         let chain: String = ws_client.request("system_chain", rpc_params!()).await?;
-        let chain = Network::from_str(chain.as_str())?;
         log::info!("{chain} Substrate connection successful.");
 
-        log::info!("Constructing {} SubXT API.", chain.display);
+        log::info!("Constructing {} SubXT API.", chain);
         let rpc_client_1 = RpcClient::builder()
             .retry_policy(
                 ExponentialBackoff::from_millis(100)
@@ -83,7 +82,7 @@ impl SubstrateClient {
             };
             api.set_metadata(metadata);
         }
-        log::info!("SubXT {} API ready.", chain.display);
+        log::info!("SubXT {} API ready.", chain);
         Ok(SubstrateClient {
             chain_type: chain_type.to_string(),
             current_api,
