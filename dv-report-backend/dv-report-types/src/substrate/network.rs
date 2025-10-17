@@ -68,8 +68,8 @@ impl FromStr for Network {
     /// Get network from string.
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s.to_lowercase().as_str() {
-            "kusama" | "ksm" => Ok(Self::kusama()),
-            "polkadot" | "dot" => Ok(Self::polkadot()),
+            "kusama" | "ksm" | "kusama asset hub" => Ok(Self::kusama()),
+            "polkadot" | "dot" | "polkadot asset hub" => Ok(Self::polkadot()),
             _ => Err(ParseChainError(format!("Unknown chain: {s}"))),
         }
     }

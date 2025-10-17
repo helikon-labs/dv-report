@@ -25,7 +25,6 @@ mod storage_utility;
 mod vote;
 
 pub struct SubstrateClient {
-    pub network: Network,
     pub chain_type: String,
     current_api: OnlineClient<PolkadotConfig>,
     api: OnlineClient<PolkadotConfig>,
@@ -86,7 +85,6 @@ impl SubstrateClient {
         }
         log::info!("SubXT {} API ready.", chain.display);
         Ok(SubstrateClient {
-            network: chain,
             chain_type: chain_type.to_string(),
             current_api,
             api,

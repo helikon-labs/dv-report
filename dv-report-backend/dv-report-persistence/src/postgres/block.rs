@@ -43,11 +43,7 @@ impl PostgreSQLStorage {
         Ok(row.0)
     }
 
-    pub async fn get_block(
-        &self,
-        network_id: u32,
-        hash: &str,
-    ) -> anyhow::Result<Block> {
+    pub async fn get_block(&self, network_id: u32, hash: &str) -> anyhow::Result<Block> {
         let row: BlockRow = sqlx::query_as::<_, BlockRow>(
             r#"
             SELECT network_id, chain_type, hash, number, timestamp, parent_hash FROM BLOCK
