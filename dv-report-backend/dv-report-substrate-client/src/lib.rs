@@ -7,7 +7,6 @@ pub use dv_report_metadata::metadata_current::{
 };
 use dv_report_types::substrate::block::{Block, BlockHeader};
 use dv_report_types::substrate::event::ReferendumEvent;
-use dv_report_types::substrate::network::Network;
 use dv_report_types::substrate::vote::BlockVoteCalls;
 use jsonrpsee::ws_client::WsClientBuilder;
 use jsonrpsee_core::client::{Client, ClientT};

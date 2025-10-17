@@ -21,7 +21,13 @@ rm ./polkadot.scale
 echo "Get Kusama metadata."
 subxt metadata --url "wss://rpc.helikon.io/asset-hub-kusama" -o ./kusama.scale
 echo "Generate Kusama runtime code from metadata."
-subxt codegen --file ./kusama.scale --no-docs --derive ::subxt::ext::subxt_core::ext::codec::Encode --derive ::subxt::ext::subxt_core::ext::codec::Decode | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama.rs
+subxt codegen --file ./kusama.scale --no-docs \
+  --substitute-type sp_arithmetic::per_things::PerU16=::core::primitive::u16 \
+  --substitute-type sp_arithmetic::per_things::Perbill=::core::primitive::u32 \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=Clone,recursive \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=::subxt::ext::codec::Encode,recursive \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=::subxt::ext::codec::Decode,recursive \
+  | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama.rs
 echo "Remove Kusama metadata."
 rm ./kusama.scale
 
@@ -29,6 +35,12 @@ rm ./kusama.scale
 echo "Get Kusama current metadata."
 subxt metadata --url "wss://rpc.helikon.io/asset-hub-kusama" --pallets Referenda,ConvictionVoting,Utility,Multisig,Proxy -o ./kusama.scale
 echo "Generate Kusama current runtime code from metadata."
-subxt codegen --file ./kusama.scale --no-docs --derive ::subxt::ext::subxt_core::ext::codec::Encode --derive ::subxt::ext::subxt_core::ext::codec::Decode  | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama_current.rs
+subxt codegen --file ./kusama.scale --no-docs  \
+  --substitute-type sp_arithmetic::per_things::PerU16=::core::primitive::u16 \
+  --substitute-type sp_arithmetic::per_things::Perbill=::core::primitive::u32 \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=Clone,recursive \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=::subxt::ext::codec::Encode,recursive \
+  --derive-for-type asset_hub_kusama_runtime::RuntimeCall=::subxt::ext::codec::Decode,recursive \
+  | rustfmt --edition=2021 --emit=stdout > ../dv-report-metadata/src/runtime/kusama_current.rs
 echo "Remove Kusama current metadata."
 rm ./kusama.scale
