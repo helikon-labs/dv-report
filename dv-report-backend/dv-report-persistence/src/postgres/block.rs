@@ -6,17 +6,19 @@ impl PostgreSQLStorage {
     pub async fn save_block(
         &self,
         network_id: u32,
+        chain_type: &str,
         block: &Block,
         tx: &mut Transaction<'_, Postgres>,
     ) -> anyhow::Result<()> {
         sqlx::query(
             r#"
-            INSERT INTO block (network_id, hash, number, timestamp, parent_hash)
-            VALUES ($1, $2, $3, $4, $5)
+            INSERT INTO block (network_id, chain_type, hash, number, timestamp, parent_hash)
+            VALUES ($1, $2, $3, $4, $5, $6)
             ON CONFLICT (network_id, hash) DO NOTHING
             "#,
         )
         .bind(network_id as i32)
+        .bind(chain_type)
         .bind(block.hash.as_str())
         .bind(block.number as i64)
         .bind(block.timestamp as i64)
@@ -26,20 +28,30 @@ impl PostgreSQLStorage {
         Ok(())
     }
 
-    pub async fn get_max_block_number(&self, network_id: u32) -> anyhow::Result<i64> {
-        let row: (i64,) =
-            sqlx::query_as("SELECT COALESCE(MAX(number), -1) FROM block WHERE network_id = $1")
-                .bind(network_id as i32)
-                .fetch_one(&self.connection_pool)
-                .await?;
+    pub async fn get_max_block_number(
+        &self,
+        network_id: u32,
+        chain_type: &str,
+    ) -> anyhow::Result<i64> {
+        let row: (i64,) = sqlx::query_as(
+            "SELECT COALESCE(MAX(number), -1) FROM block WHERE network_id = $1 AND chain_type = $2",
+        )
+        .bind(network_id as i32)
+        .bind(chain_type)
+        .fetch_one(&self.connection_pool)
+        .await?;
         Ok(row.0)
     }
 
-    pub async fn get_block(&self, network_id: u32, hash: &str) -> anyhow::Result<Block> {
+    pub async fn get_block(
+        &self,
+        network_id: u32,
+        hash: &str,
+    ) -> anyhow::Result<Block> {
         let row: BlockRow = sqlx::query_as::<_, BlockRow>(
             r#"
-            SELECT network_id, hash, number, timestamp, parent_hash FROM BLOCK
-            WHERE network_id = $1 and hash = $2
+            SELECT network_id, chain_type, hash, number, timestamp, parent_hash FROM BLOCK
+            WHERE network_id = $1 AND hash = $3
             "#,
         )
         .bind(network_id as i32)

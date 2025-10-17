@@ -18,6 +18,7 @@ pub struct Indexer {
 async fn process_block(
     repository: &Repository,
     network_id: u32,
+    chain_type: &str,
     cohort_number: u32,
     block_number: u64,
 ) -> anyhow::Result<()> {
@@ -46,6 +47,7 @@ async fn process_block(
     repository
         .save_block_with_details(
             network_id,
+            chain_type,
             cohort_number,
             &block,
             &new_referenda,
@@ -147,12 +149,21 @@ impl Service for Indexer {
          */
         let delay_seconds = self.config.common.recovery_retry_seconds;
         if let Some(end_block_number) = self.config.indexer.end_block_number {
-            let max_block_number = repository.get_max_block_number(network.id).await?;
-            let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
+            let max_block_number = repository
+                .get_max_block_number(network.id, &self.config.indexer.source_chain_type)
+                .await?;
+            let start_block_number = max(
+                (max_block_number + 1) as u64,
+                match self.config.indexer.start_block_number {
+                    Some(start_block_number) => start_block_number,
+                    None => cohort.start_block.number,
+                },
+            );
             for block_number in start_block_number..=end_block_number {
                 process_block(
                     &repository,
                     network.id,
+                    &self.config.indexer.source_chain_type,
                     self.config.indexer.cohort_number,
                     block_number,
                 )
@@ -164,12 +175,21 @@ impl Service for Indexer {
         }
         loop {
             let finalized_block = repository.get_finalized_block().await?;
-            let max_block_number = repository.get_max_block_number(network.id).await?;
-            let start_block_number = max((max_block_number + 1) as u64, cohort.start_block.number);
+            let max_block_number = repository
+                .get_max_block_number(network.id, &self.config.indexer.source_chain_type)
+                .await?;
+            let start_block_number = max(
+                (max_block_number + 1) as u64,
+                match self.config.indexer.start_block_number {
+                    Some(start_block_number) => start_block_number,
+                    None => cohort.start_block.number,
+                },
+            );
             for block_number in start_block_number..=finalized_block.number {
                 process_block(
                     &repository,
                     network.id,
+                    &self.config.indexer.source_chain_type,
                     self.config.indexer.cohort_number,
                     block_number,
                 )

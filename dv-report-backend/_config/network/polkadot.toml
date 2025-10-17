@@ -3,7 +3,11 @@ network_id = 1
 chain = "polkadot"
 chain_display = "Polkadot"
 rpc_url = "wss://rpc.helikon.io:443/polkadot"
+asset_hub_rpc_url = "wss://rpc.helikon.io:443/asset-hub-polkadot"
 people_rpc_url = "wss://rpc.helikon.io:443/people-polkadot"
 sidecar_url = "https://sidecar.helikon.io/polkadot"
 token_ticker = "DOT"
 token_decimals = 10
+
+[indexer]
+source_chain_type = "relay"

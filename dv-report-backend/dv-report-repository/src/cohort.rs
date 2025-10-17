@@ -69,6 +69,7 @@ impl Repository {
     pub async fn init_cohort(
         &self,
         network: &Network,
+        chain_type: &str,
         cohort: &Cohort,
         delegates: &[Delegate],
     ) -> anyhow::Result<()> {
@@ -100,7 +101,12 @@ impl Repository {
                             .get_block(submission_block_hash.as_str())
                             .await?;
                         self.postgres
-                            .save_block(network.id, &submission_block, &mut tx)
+                            .save_block(
+                                network.id,
+                                chain_type,
+                                &submission_block,
+                                &mut tx,
+                            )
                             .await?;
                         let referendum = Referendum {
                             network_id: network.id,
@@ -146,7 +152,12 @@ impl Repository {
                                         .get_block(delegate_vote_call.extrinsic.block_hash.as_str())
                                         .await?;
                                     self.postgres
-                                        .save_block(network.id, &block, &mut tx)
+                                        .save_block(
+                                            network.id,
+                                            chain_type,
+                                            &block,
+                                            &mut tx,
+                                        )
                                         .await?;
                                     self.postgres
                                         .save_referendum(&referendum, cohort.number, &mut tx)

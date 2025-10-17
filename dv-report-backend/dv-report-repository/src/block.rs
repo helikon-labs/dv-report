@@ -37,9 +37,16 @@ impl Repository {
             .await
     }
 
-    pub async fn save_block(&self, network_id: u32, block: &Block) -> anyhow::Result<()> {
+    pub async fn save_block(
+        &self,
+        network_id: u32,
+        chain_type: &str,
+        block: &Block,
+    ) -> anyhow::Result<()> {
         let mut tx = self.postgres.begin_tx().await?;
-        self.postgres.save_block(network_id, block, &mut tx).await?;
+        self.postgres
+            .save_block(network_id, chain_type, block, &mut tx)
+            .await?;
         self.postgres.commit_tx(tx).await
     }
 
@@ -47,6 +54,7 @@ impl Repository {
     pub async fn save_block_with_details(
         &self,
         network_id: u32,
+        chain_type: &str,
         cohort_number: u32,
         block: &Block,
         new_referenda: &[Referendum],
@@ -55,7 +63,9 @@ impl Repository {
     ) -> anyhow::Result<()> {
         let mut tx = self.postgres.begin_tx().await?;
         // save block
-        self.postgres.save_block(network_id, block, &mut tx).await?;
+        self.postgres
+            .save_block(network_id, chain_type, block, &mut tx)
+            .await?;
         // save referenda
         for referendum in new_referenda.iter() {
             self.postgres
@@ -457,7 +467,13 @@ impl Repository {
         self.postgres.commit_tx(tx).await
     }
 
-    pub async fn get_max_block_number(&self, network_id: u32) -> anyhow::Result<i64> {
-        self.postgres.get_max_block_number(network_id).await
+    pub async fn get_max_block_number(
+        &self,
+        network_id: u32,
+        chain_type: &str,
+    ) -> anyhow::Result<i64> {
+        self.postgres
+            .get_max_block_number(network_id, chain_type)
+            .await
     }
 }

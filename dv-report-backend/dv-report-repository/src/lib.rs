@@ -20,7 +20,15 @@ impl Repository {
             postgres: PostgreSQLStorage::new(config).await?,
             subsquare_client: SubsquareClient::new(config)?,
             substrate_client: SubstrateClient::new(
-                config.substrate.rpc_url.as_str(),
+                config.indexer.source_chain_type.as_str(),
+                match config.indexer.source_chain_type.as_str() {
+                    "relay" => config.substrate.rpc_url.as_str(),
+                    "asset_hub" => config.substrate.asset_hub_rpc_url.as_str(),
+                    _ => anyhow::bail!(
+                        "Unknown source chain type: {}",
+                        config.indexer.source_chain_type
+                    ),
+                },
                 config.substrate.connection_timeout_seconds,
                 config.substrate.request_timeout_seconds,
                 &config.indexer.metadata_file_path,

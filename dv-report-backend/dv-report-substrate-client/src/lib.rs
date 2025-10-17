@@ -26,6 +26,7 @@ mod vote;
 
 pub struct SubstrateClient {
     pub network: Network,
+    pub chain_type: String,
     current_api: OnlineClient<PolkadotConfig>,
     api: OnlineClient<PolkadotConfig>,
     ws_client: Client,
@@ -33,6 +34,7 @@ pub struct SubstrateClient {
 
 impl SubstrateClient {
     pub async fn new(
+        chain_type: &str,
         rpc_url: &str,
         connection_timeout: u64,
         request_timeout: u64,
@@ -85,6 +87,7 @@ impl SubstrateClient {
         log::info!("SubXT {} API ready.", chain.display);
         Ok(SubstrateClient {
             network: chain,
+            chain_type: chain_type.to_string(),
             current_api,
             api,
             ws_client,
@@ -146,6 +149,7 @@ impl SubstrateClient {
         let header = self.get_block_header(hash).await?;
         let timestamp = self.get_block_timestamp(hash).await?;
         Ok(Block {
+            chain_type: self.chain_type.clone(),
             timestamp,
             number: header.get_number()?,
             hash: hash.to_string().trim_start_matches("0x").to_string(),

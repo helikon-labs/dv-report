@@ -4,6 +4,7 @@ use sqlx::FromRow;
 #[derive(Serialize, Deserialize, Clone, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct Block {
+    pub chain_type: String,
     pub timestamp: u64,
     pub number: u64,
     pub hash: String,
@@ -13,6 +14,7 @@ pub struct Block {
 #[derive(Debug, FromRow)]
 pub struct BlockRow {
     pub network_id: i32,
+    pub chain_type: String,
     pub hash: String,
     pub number: i64,
     pub timestamp: i64,
@@ -22,6 +24,7 @@ pub struct BlockRow {
 impl From<BlockRow> for Block {
     fn from(row: BlockRow) -> Self {
         Self {
+            chain_type: row.chain_type.clone(),
             timestamp: row.timestamp as u64,
             number: row.number as u64,
             hash: row.hash.clone(),

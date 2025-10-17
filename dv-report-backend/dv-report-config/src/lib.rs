@@ -49,6 +49,7 @@ pub struct SubstrateConfig {
     pub chain: String,
     pub chain_display: String,
     pub rpc_url: String,
+    pub asset_hub_rpc_url: String,
     pub people_rpc_url: String,
     pub sidecar_url: String,
     pub connection_timeout_seconds: u64,
@@ -62,7 +63,9 @@ pub struct SubstrateConfig {
 pub struct IndexerConfig {
     pub cohort_number: u32,
     pub metadata_file_path: Option<String>,
+    pub start_block_number: Option<u64>,
     pub end_block_number: Option<u64>,
+    pub source_chain_type: String,
 }
 
 #[derive(Clone, Debug, Deserialize)]
