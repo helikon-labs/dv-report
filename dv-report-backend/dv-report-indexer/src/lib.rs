@@ -23,7 +23,9 @@ async fn process_block(
     block_number: u64,
 ) -> anyhow::Result<()> {
     log::info!("Process block {block_number}.");
-    let block = repository.get_block_by_number(block_number).await?;
+    let block = repository
+        .get_asset_hub_block_by_number(block_number)
+        .await?;
     let block_vote_calls = repository
         .get_vote_calls_in_block(network_id, block_number)
         .await?;
@@ -174,7 +176,7 @@ impl Service for Indexer {
             return Ok(());
         }
         loop {
-            let finalized_block = repository.get_finalized_block().await?;
+            let finalized_block = repository.get_asset_hub_finalized_block().await?;
             let max_block_number = repository
                 .get_max_block_number(network.id, &self.config.indexer.source_chain_type)
                 .await?;

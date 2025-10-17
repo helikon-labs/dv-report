@@ -11,7 +11,8 @@ pub mod referendum;
 pub struct Repository {
     postgres: PostgreSQLStorage,
     subsquare_client: SubsquareClient,
-    substrate_client: SubstrateClient,
+    relay_substrate_client: SubstrateClient,
+    asset_hub_substrate_client: SubstrateClient,
 }
 
 impl Repository {
@@ -19,16 +20,17 @@ impl Repository {
         Ok(Self {
             postgres: PostgreSQLStorage::new(config).await?,
             subsquare_client: SubsquareClient::new(config)?,
-            substrate_client: SubstrateClient::new(
+            relay_substrate_client: SubstrateClient::new(
                 config.indexer.source_chain_type.as_str(),
-                match config.indexer.source_chain_type.as_str() {
-                    "relay" => config.substrate.rpc_url.as_str(),
-                    "asset_hub" => config.substrate.asset_hub_rpc_url.as_str(),
-                    _ => anyhow::bail!(
-                        "Unknown source chain type: {}",
-                        config.indexer.source_chain_type
-                    ),
-                },
+                &config.substrate.rpc_url,
+                config.substrate.connection_timeout_seconds,
+                config.substrate.request_timeout_seconds,
+                &config.indexer.metadata_file_path,
+            )
+            .await?,
+            asset_hub_substrate_client: SubstrateClient::new(
+                config.indexer.source_chain_type.as_str(),
+                &config.substrate.asset_hub_rpc_url,
                 config.substrate.connection_timeout_seconds,
                 config.substrate.request_timeout_seconds,
                 &config.indexer.metadata_file_path,
@@ -37,7 +39,11 @@ impl Repository {
         })
     }
 
-    pub fn set_metadata(&self, path: &str) -> anyhow::Result<()> {
-        self.substrate_client.set_metadata(path)
+    pub fn set_relay_metadata(&self, path: &str) -> anyhow::Result<()> {
+        self.relay_substrate_client.set_metadata(path)
+    }
+
+    pub fn set_asset_hub_metadata(&self, path: &str) -> anyhow::Result<()> {
+        self.asset_hub_substrate_client.set_metadata(path)
     }
 }

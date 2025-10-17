@@ -5,9 +5,12 @@ use dv_report_types::substrate::event::ReferendumEvent;
 use dv_report_types::substrate::vote::BlockVoteCalls;
 
 impl Repository {
-    pub async fn get_finalized_block(&self) -> anyhow::Result<Block> {
-        let hash = self.substrate_client.get_finalized_block_hash().await?;
-        self.substrate_client.get_block(&hash).await
+    pub async fn get_asset_hub_finalized_block(&self) -> anyhow::Result<Block> {
+        let hash = self
+            .asset_hub_substrate_client
+            .get_finalized_block_hash()
+            .await?;
+        self.asset_hub_substrate_client.get_block(&hash).await
     }
 
     pub async fn get_vote_calls_in_block(
@@ -15,8 +18,11 @@ impl Repository {
         network_id: u32,
         block_number: u64,
     ) -> anyhow::Result<BlockVoteCalls> {
-        let hash = self.substrate_client.get_block_hash(block_number).await?;
-        self.substrate_client
+        let hash = self
+            .asset_hub_substrate_client
+            .get_block_hash(block_number)
+            .await?;
+        self.asset_hub_substrate_client
             .get_vote_calls_in_block(network_id, hash.as_str())
             .await
     }
@@ -25,14 +31,17 @@ impl Repository {
         &self,
         block_number: u64,
     ) -> anyhow::Result<Vec<ReferendumEvent>> {
-        let hash = self.substrate_client.get_block_hash(block_number).await?;
-        self.substrate_client
+        let hash = self
+            .asset_hub_substrate_client
+            .get_block_hash(block_number)
+            .await?;
+        self.asset_hub_substrate_client
             .get_referendum_events_in_block(hash.as_str())
             .await
     }
 
-    pub async fn get_block_by_number(&self, block_number: u64) -> anyhow::Result<Block> {
-        self.substrate_client
+    pub async fn get_asset_hub_block_by_number(&self, block_number: u64) -> anyhow::Result<Block> {
+        self.asset_hub_substrate_client
             .get_block_by_number(block_number)
             .await
     }

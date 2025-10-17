@@ -13,7 +13,7 @@ impl Repository {
         let mut cohorts = Vec::new();
         for row in rows.iter() {
             let cohort_start_block = self
-                .substrate_client
+                .relay_substrate_client
                 .get_block(row.start_block_hash.as_str())
                 .await?;
             cohorts.push(row.clone().into_cohort(cohort_start_block));
@@ -24,7 +24,7 @@ impl Repository {
     pub async fn get_cohort(&self, network_id: u32, cohort_number: u32) -> anyhow::Result<Cohort> {
         let cohort_row = self.postgres.get_cohort(network_id, cohort_number).await?;
         let cohort_start_block = self
-            .substrate_client
+            .relay_substrate_client
             .get_block(cohort_row.start_block_hash.as_str())
             .await?;
         Ok(cohort_row.into_cohort(cohort_start_block))
@@ -47,12 +47,12 @@ impl Repository {
                 )
                 .await?;
             let start_block = self
-                .substrate_client
+                .relay_substrate_client
                 .get_block(delegation_row.start_block_hash.as_str())
                 .await?;
             let end_block = if let Some(end_block_hash) = delegation_row.end_block_hash.as_ref() {
                 Some(
-                    self.substrate_client
+                    self.relay_substrate_client
                         .get_block(end_block_hash.as_str())
                         .await?,
                 )
@@ -79,25 +79,25 @@ impl Repository {
         }
         log::info!("Initialize {} cohort #{}.", network.display, cohort.number);
         let referendum_count = self
-            .substrate_client
+            .asset_hub_substrate_client
             .get_referendum_count(cohort.start_block.hash.as_str())
             .await?;
         log::info!("{referendum_count} ongoing referenda.");
         let mut tx = self.postgres.begin_tx().await?;
         for referendum_index in 0..referendum_count {
             if let Some(referendum_info) = self
-                .substrate_client
+                .asset_hub_substrate_client
                 .get_referendum_info(referendum_index, cohort.start_block.hash.as_str())
                 .await?
             {
                 match referendum_info {
                     ReferendumInfo::Ongoing(status) => {
                         let submission_block_hash = self
-                            .substrate_client
+                            .asset_hub_substrate_client
                             .get_block_hash(status.submitted as u64)
                             .await?;
                         let submission_block = self
-                            .substrate_client
+                            .asset_hub_substrate_client
                             .get_block(submission_block_hash.as_str())
                             .await?;
                         self.postgres
@@ -143,7 +143,7 @@ impl Repository {
                                         referendum_index
                                     );
                                     let block = self
-                                        .substrate_client
+                                        .asset_hub_substrate_client
                                         .get_block(delegate_vote_call.extrinsic.block_hash.as_str())
                                         .await?;
                                     self.postgres
@@ -153,7 +153,7 @@ impl Repository {
                                         .save_referendum(&referendum, cohort.number, &mut tx)
                                         .await?;
                                     let block_vote_calls = self
-                                        .substrate_client
+                                        .asset_hub_substrate_client
                                         .get_vote_calls_in_block(network.id, block.hash.as_str())
                                         .await?;
                                     let vote_call = block_vote_calls

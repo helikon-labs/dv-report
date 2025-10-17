@@ -9,7 +9,9 @@ use dv_report_types::substrate::track::Track;
 
 impl Repository {
     pub async fn get_referendum_count(&self, block_hash: &str) -> anyhow::Result<u32> {
-        self.substrate_client.get_referendum_count(block_hash).await
+        self.asset_hub_substrate_client
+            .get_referendum_count(block_hash)
+            .await
     }
 
     pub async fn get_ongoing_referendum(
@@ -19,7 +21,7 @@ impl Repository {
         block_hash: &str,
     ) -> anyhow::Result<Referendum> {
         let Some(referendum_info) = self
-            .substrate_client
+            .asset_hub_substrate_client
             .get_referendum_info(referendum_index, block_hash)
             .await?
         else {
@@ -30,11 +32,11 @@ impl Repository {
         let referendum = match referendum_info {
             ReferendumInfo::Ongoing(status) => {
                 let submission_block_hash = self
-                    .substrate_client
+                    .asset_hub_substrate_client
                     .get_block_hash(status.submitted as u64)
                     .await?;
                 let submission_block = self
-                    .substrate_client
+                    .asset_hub_substrate_client
                     .get_block(submission_block_hash.as_str())
                     .await?;
                 Referendum {
