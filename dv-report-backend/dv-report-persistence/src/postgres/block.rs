@@ -51,7 +51,7 @@ impl PostgreSQLStorage {
         let row: BlockRow = sqlx::query_as::<_, BlockRow>(
             r#"
             SELECT network_id, chain_type, hash, number, timestamp, parent_hash FROM BLOCK
-            WHERE network_id = $1 AND hash = $3
+            WHERE network_id = $1 AND hash = $2
             "#,
         )
         .bind(network_id as i32)
