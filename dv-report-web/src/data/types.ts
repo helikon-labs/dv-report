@@ -1,4 +1,5 @@
 interface Block {
+    chainType: string;
     timestamp: number;
     number: number;
     hash: string;

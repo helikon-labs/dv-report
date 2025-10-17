@@ -861,8 +861,8 @@ class UI {
             );
     }
 
-    private blocksToTime(blocks: number): string {
-        const totalSeconds = blocks * 6;
+    private millisToTime(millis: number): string {
+        const totalSeconds = millis / 1000;
         const days = Math.floor(totalSeconds / 86400);
         const hours = Math.floor((totalSeconds % 86400) / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -881,8 +881,8 @@ class UI {
 
     displayFirstVoteTimeChart(responseTimeMap: Map<Delegate, number>) {
         const delegatesWithTimes = Array.from(responseTimeMap.entries())
-            .map(([delegate, blocks]) => ({ delegate, blocks }))
-            .sort((a, b) => a.blocks - b.blocks); // Fastest first
+            .map(([delegate, millis]) => ({ delegate, millis }))
+            .sort((a, b) => a.millis - b.millis); // Fastest first
 
         if (delegatesWithTimes.length === 0) {
             console.warn('No data to display in response time chart.');
@@ -898,19 +898,25 @@ class UI {
             .select<SVGSVGElement, unknown>('#first-vote-time-chart')
             .attr('viewBox', `0 0 ${width} ${height}`);
 
-        const computedMaxTime = d3.max(delegatesWithTimes, (d) => d.blocks)! + 10 * 60 * 12;
+        const millis_per_day = 24 * 60 * 60 * 1000;
+        const computedMaxDays =
+            (d3.max(delegatesWithTimes, (d) => d.millis)! + millis_per_day) / millis_per_day;
         const x = d3
             .scaleLinear()
-            .domain([0, computedMaxTime])
+            .domain([0, computedMaxDays])
             .range([0, width - margin.left - margin.right]);
 
         // x-axis
+        const xAxis = d3
+            .axisBottom(x)
+            .ticks(5)
+            .tickFormat((d) => d3.format('.1f')(d as number));
         if (svg.select('.x-axis').empty()) {
             const xAxisGroup = svg
                 .append('g')
                 .attr('class', 'x-axis')
                 .attr('transform', `translate(${margin.left},${height - margin.bottom})`)
-                .call(d3.axisBottom(x).ticks(5));
+                .call(xAxis);
 
             xAxisGroup
                 .append('text')
@@ -921,7 +927,7 @@ class UI {
                 .attr('text-anchor', 'end')
                 .style('font-size', '8px')
                 .style('font-family', 'Inter')
-                .text('blocks');
+                .text('days');
         } else {
             svg.select<SVGGElement>('.x-axis')
                 .transition()
@@ -949,14 +955,14 @@ class UI {
                         .append('rect')
                         .attr('x', 0)
                         .attr('y', (_, i) => i * barHeight)
-                        .attr('width', (d) => x(d.blocks ?? 0))
+                        .attr('width', (d) => x(d.millis ?? 0) / millis_per_day)
                         .attr('height', barHeight - 6)
                         .attr('fill', '#3b82f6'),
                 (update) =>
                     update
                         .transition()
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        .attr('width', (d) => x(d.blocks ?? 0))
+                        .attr('width', (d) => x(d.millis ?? 0) / millis_per_day)
                         .attr('y', (_, i) => i * barHeight),
             );
 
@@ -969,21 +975,21 @@ class UI {
                     enter
                         .append('text')
                         .attr('class', 'value')
-                        .attr('x', (d) => x(d.blocks ?? 0) / 2)
+                        .attr('x', (d) => x(d.millis ?? 0) / millis_per_day / 2)
                         .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
                         .attr('dy', '0.35em')
                         .attr('text-anchor', 'middle')
                         .style('fill', 'white')
                         .style('font-size', '9.2px')
                         .style('font-family', 'Inter')
-                        .text((d) => this.blocksToTime(d.blocks ?? 0)),
+                        .text((d) => this.millisToTime(d.millis ?? 0)),
                 (update) =>
                     update
                         .transition()
                         .duration(Constants.CHART_TRANSITION_TIME_MS)
-                        .attr('x', (d) => x(d.blocks ?? 0) / 2)
+                        .attr('x', (d) => x(d.millis ?? 0) / millis_per_day / 2)
                         .attr('y', (_, i) => i * barHeight + (barHeight - 6) / 2)
-                        .text((d) => this.blocksToTime(d.blocks ?? 0)),
+                        .text((d) => this.millisToTime(d.millis ?? 0)),
             );
 
         // left-side labels
@@ -1297,7 +1303,7 @@ class UI {
                             feedbackIndicator = '<span>⚠️</span>';
                         }
                     }
-                    const extrinsicURL = `https://${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
+                    const extrinsicURL = `https://${voteCall.block.chainType == 'asset_hub' ? 'assethub-' : ''}${network.chain}.subscan.io/extrinsic/0x${voteCall.extrinsicHash}`;
                     const extrinsicDisplay = `${voteCall.block.number}-${voteCall.extrinsicIndex}`;
                     referendumColumnHTML += `<div class="item">${voteIndicator}<a href="${extrinsicURL}" target="_blank">${extrinsicDisplay}</a>${feedbackIndicator}</div>`;
                 } else {

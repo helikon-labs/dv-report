@@ -457,7 +457,7 @@ class DataStore {
                 const referendum = this.referenda.find(
                     (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
                 )!;
-                responseTimeSum += vote.block.number - referendum.submissionBlock.number;
+                responseTimeSum += vote.block.timestamp - referendum.submissionBlock.timestamp;
             }
             if (delegateVoteMap.size == 0) {
                 responseTimeMap.set(delegate, 0);
