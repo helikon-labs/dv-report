@@ -18,7 +18,6 @@ pub struct Indexer {
 async fn process_block(
     repository: &Repository,
     network_id: u32,
-    chain_type: &str,
     cohort_number: u32,
     block_number: u64,
 ) -> anyhow::Result<()> {
@@ -49,7 +48,6 @@ async fn process_block(
     repository
         .save_block_with_details(
             network_id,
-            chain_type,
             cohort_number,
             &block,
             &new_referenda,
@@ -165,7 +163,6 @@ impl Service for Indexer {
                 process_block(
                     &repository,
                     network.id,
-                    &self.config.indexer.source_chain_type,
                     self.config.indexer.cohort_number,
                     block_number,
                 )
@@ -191,7 +188,6 @@ impl Service for Indexer {
                 process_block(
                     &repository,
                     network.id,
-                    &self.config.indexer.source_chain_type,
                     self.config.indexer.cohort_number,
                     block_number,
                 )

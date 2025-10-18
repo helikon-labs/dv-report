@@ -6,7 +6,6 @@ impl PostgreSQLStorage {
     pub async fn save_block(
         &self,
         network_id: u32,
-        chain_type: &str,
         block: &Block,
         tx: &mut Transaction<'_, Postgres>,
     ) -> anyhow::Result<()> {
@@ -18,7 +17,7 @@ impl PostgreSQLStorage {
             "#,
         )
         .bind(network_id as i32)
-        .bind(chain_type)
+        .bind(block.chain_type.as_str())
         .bind(block.hash.as_str())
         .bind(block.number as i64)
         .bind(block.timestamp as i64)

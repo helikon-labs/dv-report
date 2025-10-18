@@ -49,13 +49,10 @@ impl Repository {
     pub async fn save_block(
         &self,
         network_id: u32,
-        chain_type: &str,
         block: &Block,
     ) -> anyhow::Result<()> {
         let mut tx = self.postgres.begin_tx().await?;
-        self.postgres
-            .save_block(network_id, chain_type, block, &mut tx)
-            .await?;
+        self.postgres.save_block(network_id, block, &mut tx).await?;
         self.postgres.commit_tx(tx).await
     }
 
@@ -63,7 +60,6 @@ impl Repository {
     pub async fn save_block_with_details(
         &self,
         network_id: u32,
-        chain_type: &str,
         cohort_number: u32,
         block: &Block,
         new_referenda: &[Referendum],
@@ -72,11 +68,13 @@ impl Repository {
     ) -> anyhow::Result<()> {
         let mut tx = self.postgres.begin_tx().await?;
         // save block
-        self.postgres
-            .save_block(network_id, chain_type, block, &mut tx)
-            .await?;
+        self.postgres.save_block(network_id, block, &mut tx).await?;
         // save referenda
         for referendum in new_referenda.iter() {
+            // save referendum submission block on relay chain
+            self.postgres
+                .save_block(network_id, &referendum.submission_block, &mut tx)
+                .await?;
             self.postgres
                 .save_referendum(referendum, cohort_number, &mut tx)
                 .await?;
