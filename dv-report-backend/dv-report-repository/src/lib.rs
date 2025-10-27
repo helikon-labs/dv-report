@@ -21,7 +21,7 @@ impl Repository {
             postgres: PostgreSQLStorage::new(config).await?,
             subsquare_client: SubsquareClient::new(config)?,
             relay_substrate_client: SubstrateClient::new(
-                config.indexer.source_chain_type.as_str(),
+                "relay",
                 &config.substrate.rpc_url,
                 config.substrate.connection_timeout_seconds,
                 config.substrate.request_timeout_seconds,
