@@ -1,3 +1,4 @@
+use dv_report_types::governance::event::ReferendumDecisionDepositPlacedEvent;
 use dv_report_types::governance::referendum::ReferendumStatusRow;
 use dv_report_types::substrate::block::Block;
 use dv_report_types::substrate::track::TrackRow;
@@ -11,5 +12,6 @@ pub(crate) struct ReferendumDTO {
     pub track: TrackRow,
     pub submission_block: Block,
     pub status: ReferendumStatusRow,
+    pub decision_deposit_placed_event: Option<ReferendumDecisionDepositPlacedEvent>,
     pub is_retracted: bool,
 }

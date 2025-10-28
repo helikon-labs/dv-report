@@ -72,12 +72,21 @@ interface Delegate {
     votes: VoteCall[];
 }
 
+interface DecisionDepositPlacedEvent {
+    networkId: number;
+    blockHash: string;
+    referendumIndex: number;
+    amount: bigint;
+    who: string;
+}
+
 interface Referendum {
     networkId: number;
     index: number;
     track: Track;
     submissionBlock: Block;
     status: ReferendumStatus;
+    decisionDepositPlacedEvent: DecisionDepositPlacedEvent | undefined;
     isRetracted: boolean;
 }
 

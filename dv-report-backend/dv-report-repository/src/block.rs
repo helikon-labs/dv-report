@@ -46,11 +46,7 @@ impl Repository {
             .await
     }
 
-    pub async fn save_block(
-        &self,
-        network_id: u32,
-        block: &Block,
-    ) -> anyhow::Result<()> {
+    pub async fn save_block(&self, network_id: u32, block: &Block) -> anyhow::Result<()> {
         let mut tx = self.postgres.begin_tx().await?;
         self.postgres.save_block(network_id, block, &mut tx).await?;
         self.postgres.commit_tx(tx).await

@@ -1,7 +1,9 @@
 use crate::postgres::PostgreSQLStorage;
+use dv_report_types::governance::event::ReferendumDecisionDepositPlacedEvent;
 use dv_report_types::substrate::account_id::AccountId;
 use dv_report_types::substrate::vote::Tally;
 use sqlx::{Postgres, Transaction};
+use std::str::FromStr;
 
 impl PostgreSQLStorage {
     pub async fn save_referendum_submitted_event(
@@ -54,6 +56,36 @@ impl PostgreSQLStorage {
             .fetch_one(&mut **tx)
             .await?;
         Ok(result.0)
+    }
+
+    pub async fn get_referendum_decision_deposit_placed_event(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+    ) -> anyhow::Result<Option<ReferendumDecisionDepositPlacedEvent>> {
+        let maybe_row: Option<(i32, i32, String, i32, String, String)> = sqlx::query_as(
+            r#"
+            SELECT id, network_id, block_hash, referendum_index, amount, who
+            FROM referendum_event_decision_deposit_placed
+            WHERE network_id = $1 AND referendum_index = $2
+            "#,
+        )
+        .bind(network_id as i32)
+        .bind(referendum_index as i32)
+        .fetch_optional(&self.connection_pool)
+        .await?;
+        if let Some(row) = maybe_row {
+            Ok(Some(ReferendumDecisionDepositPlacedEvent {
+                id: row.0 as u32,
+                network_id: row.1 as u32,
+                block_hash: row.2.clone(),
+                referendum_index: row.3 as u32,
+                amount: row.4.parse()?,
+                who: AccountId::from_str(&row.5)?,
+            }))
+        } else {
+            Ok(None)
+        }
     }
 
     pub async fn save_referendum_decision_deposit_refunded_event(

@@ -288,6 +288,18 @@ class DataStore {
             if (!this.selectedTrackIds.has(referendum.track.id)) {
                 continue;
             }
+            if (
+                this.selectedDecisionDepositSubmissionStatus === true &&
+                !referendum.decisionDepositPlacedEvent
+            ) {
+                continue;
+            }
+            if (
+                this.selectedDecisionDepositSubmissionStatus === false &&
+                referendum.decisionDepositPlacedEvent
+            ) {
+                continue;
+            }
             if (vote.isMultisig && !vote.isMultisigExecuted) {
                 continue;
             }
@@ -487,6 +499,18 @@ class DataStore {
                 continue;
             }
             if (!include_retracted && referendum.isRetracted) {
+                continue;
+            }
+            if (
+                this.selectedDecisionDepositSubmissionStatus === true &&
+                !referendum.decisionDepositPlacedEvent
+            ) {
+                continue;
+            }
+            if (
+                this.selectedDecisionDepositSubmissionStatus === false &&
+                referendum.decisionDepositPlacedEvent
+            ) {
                 continue;
             }
             referenda.push(referendum);

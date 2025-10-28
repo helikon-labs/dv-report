@@ -245,6 +245,13 @@ pub(crate) async fn get_network_referenda(
                 status: status.name(),
             },
             is_retracted: row.is_retracted,
+            decision_deposit_placed_event: state
+                .postgres
+                .get_referendum_decision_deposit_placed_event(
+                    row.network_id as u32,
+                    row.index as u32,
+                )
+                .await?,
         });
     }
     state
@@ -298,6 +305,13 @@ pub(crate) async fn get_network_cohort_referenda(
                 id: status.id() as i32,
                 status: status.name(),
             },
+            decision_deposit_placed_event: state
+                .postgres
+                .get_referendum_decision_deposit_placed_event(
+                    row.network_id as u32,
+                    row.index as u32,
+                )
+                .await?,
             is_retracted: row.is_retracted,
         });
     }
