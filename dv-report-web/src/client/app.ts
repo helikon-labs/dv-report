@@ -54,6 +54,16 @@ class App {
             }
             this.updateVoteCounts();
         },
+        onDecisionDepositSubmissionStatusSelectChanged: (value) => {
+            if (value == 'submitted') {
+                this.dataStore.selectDecisionDepositSubmissionStatus(true);
+            } else if (value == 'not-submitted') {
+                this.dataStore.selectDecisionDepositSubmissionStatus(false);
+            } else {
+                this.dataStore.selectDecisionDepositSubmissionStatus(undefined);
+            }
+            this.updateVoteCounts();
+        },
         onVotesDownloadButtonClicked: () => {
             this.exportData();
         },

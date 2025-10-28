@@ -31,6 +31,7 @@ class DataStore {
     private selectedStatusIds = new Set<number>();
     private selectedTrackIds = new Set<number>();
     private selectedDelegateTypeIds = new Set<number>();
+    private selectedDecisionDepositSubmissionStatus: boolean | undefined = true;
 
     constructor() {}
 
@@ -211,6 +212,10 @@ class DataStore {
     selectDelegateTypes(delegateTypes: DelegateType[]) {
         this.selectedDelegateTypeIds.clear();
         delegateTypes.forEach((delegateType) => this.selectedDelegateTypeIds.add(delegateType.id));
+    }
+
+    selectDecisionDepositSubmissionStatus(decisionDepositSubmissionStatus: boolean | undefined) {
+        this.selectedDecisionDepositSubmissionStatus = decisionDepositSubmissionStatus;
     }
 
     private getDelegateFirstVoteMap(delegate: Delegate): Map<string, VoteCall> {

@@ -22,6 +22,7 @@ interface UIDelegate {
     onTrackSelectChanged(value: string): void;
     onStatusSelectChanged(value: string): void;
     onDelegateTypeSelectChanged(value: string): void;
+    onDecisionDepositSubmissionStatusSelectChanged(value: string): void;
     onVotesDownloadButtonClicked(): void;
 }
 
@@ -42,6 +43,7 @@ class UI {
     private readonly statusSelect: HTMLSelectElement;
     private readonly delegateTypeSelect: HTMLSelectElement;
     private readonly delegateTypeFilterItem: HTMLDivElement;
+    private readonly decisionDepositSubmissionStatusSelect: HTMLSelectElement;
 
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
@@ -73,6 +75,9 @@ class UI {
         );
         this.delegateTypeFilterItem = <HTMLDivElement>(
             document.getElementById('delegate-type-filter-item')
+        );
+        this.decisionDepositSubmissionStatusSelect = <HTMLSelectElement>(
+            document.getElementById('decision-deposit-submission-status-select')
         );
 
         this.voteListDelegateColumn = <HTMLDivElement>(
@@ -208,6 +213,12 @@ class UI {
         this.delegateTypeSelect.innerHTML = delegateTypeSelectHTML;
         this.delegateTypeSelect.onchange = (_) => {
             this.delegate.onDelegateTypeSelectChanged(this.delegateTypeSelect.value);
+        };
+
+        this.decisionDepositSubmissionStatusSelect.onchange = (_) => {
+            this.delegate.onDecisionDepositSubmissionStatusSelectChanged(
+                this.decisionDepositSubmissionStatusSelect.value,
+            );
         };
     }
 
