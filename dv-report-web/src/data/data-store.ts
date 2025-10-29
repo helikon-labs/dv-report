@@ -218,7 +218,10 @@ class DataStore {
         this.selectedDecisionDepositSubmissionStatus = decisionDepositSubmissionStatus;
     }
 
-    private getDelegateFirstVoteMap(delegate: Delegate): Map<string, VoteCall> {
+    private getDelegateFirstVoteMap(
+        delegate: Delegate,
+        referenda: Referendum[],
+    ): Map<string, VoteCall> {
         const voteMap: Map<string, VoteCall> = new Map();
         for (const vote of delegate.votes) {
             if (!this.selectedNetworkIds.has(vote.networkId)) {
@@ -227,7 +230,7 @@ class DataStore {
             if (!vote.isSuccessful) {
                 continue;
             }
-            const referendum = this.referenda.find(
+            const referendum = referenda.find(
                 (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
             )!;
             if (!referendum) {
@@ -262,6 +265,7 @@ class DataStore {
 
     private getDelegateLastVoteMap(
         delegate: Delegate,
+        referenda: Referendum[],
         include_retracted_referenda: boolean = true,
     ): Map<string, VoteCall> {
         const voteMap: Map<string, VoteCall> = new Map();
@@ -272,11 +276,11 @@ class DataStore {
             if (!vote.isSuccessful) {
                 continue;
             }
-            const referendum = this.referenda.find(
+            const referendum = referenda.find(
                 (r) => r.networkId == vote.networkId && r.index == vote.referendumIndex,
             );
             if (!referendum) {
-                // referendum is not in the given cohort - skip
+                // referendum is not in the given list - skip
                 continue;
             }
             if (!include_retracted_referenda && referendum.isRetracted) {
@@ -360,6 +364,7 @@ class DataStore {
             }
             const delegateVoteMap = this.getDelegateLastVoteMap(
                 delegate,
+                filteredReferenda,
                 include_retracted_referenda,
             );
             const delegateVoteCount: DelegateVoteCount = {
@@ -412,11 +417,12 @@ class DataStore {
 
     getDelegateSimilarities(): DelegateSimilarity[] {
         const voteMap = new Map<string, Map<string, number>>();
+        const referenda = this.getFilteredReferenda();
         for (const delegate of this.getDelegates()) {
             if (!this.selectedDelegateTypeIds.has(delegate.typeId)) {
                 continue;
             }
-            const delegateVoteMap = this.getDelegateLastVoteMap(delegate);
+            const delegateVoteMap = this.getDelegateLastVoteMap(delegate, referenda);
             if (delegateVoteMap.size == 0) {
                 voteMap.set(delegate.id, new Map());
                 continue;
@@ -467,8 +473,9 @@ class DataStore {
 
     getResponseTimes(): Map<Delegate, number> {
         const responseTimeMap = new Map<Delegate, number>();
+        const referenda = this.getFilteredReferenda();
         for (const delegate of this.getDelegates()) {
-            const delegateVoteMap = this.getDelegateFirstVoteMap(delegate);
+            const delegateVoteMap = this.getDelegateFirstVoteMap(delegate, referenda);
             let responseTimeSum = 0;
             for (const vote of delegateVoteMap.values()) {
                 const referendum = this.referenda.find(
@@ -520,9 +527,10 @@ class DataStore {
     }
 
     getAllDelegatesLastVoteMaps(): Map<string, Map<string, VoteCall>> {
+        const referenda = this.getFilteredReferenda();
         const map: Map<string, Map<string, VoteCall>> = new Map<string, Map<string, VoteCall>>();
         for (const delegate of this.getDelegates()) {
-            map.set(delegate.id, this.getDelegateLastVoteMap(delegate));
+            map.set(delegate.id, this.getDelegateLastVoteMap(delegate, referenda));
         }
         return map;
     }
@@ -535,8 +543,8 @@ class DataStore {
         });
 
         const data: Array<Array<string>> = [];
-        const voteMaps = this.getAllDelegatesLastVoteMaps();
         const referenda = this.getFilteredReferenda();
+        const voteMaps = this.getAllDelegatesLastVoteMaps();
         const headerRow = [''];
         for (const referendum of referenda) {
             const network = this.networks.find((n) => n.id == referendum.networkId)!;

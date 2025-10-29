@@ -424,7 +424,14 @@ class UI {
             const aRate = aTotal > 0 ? a.feedbackCount / aTotal : 0;
             const bTotal = b.ayeCount + b.nayCount + b.abstainCount;
             const bRate = bTotal > 0 ? b.feedbackCount / bTotal : 0;
-            if (aRate == bRate) {
+
+            if (aTotal == 0) {
+                if (bTotal == 0) {
+                    return a.delegateShortName.localeCompare(b.delegateShortName);
+                } else {
+                    return 1;
+                }
+            } else if (aRate == bRate) {
                 return a.delegateShortName.localeCompare(b.delegateShortName);
             } else {
                 return bRate - aRate;
@@ -513,8 +520,9 @@ class UI {
                         .style('font-size', '10px')
                         .text((d) => {
                             const total = d.ayeCount + d.nayCount + d.abstainCount;
-                            const rate = total > 0 ? (d.feedbackCount / total) * 100 : 0;
-                            return `${Math.round(rate)}%`;
+                            return total > 0
+                                ? `${Math.round((d.feedbackCount / total) * 100)}%`
+                                : '-';
                         }),
                 (update) =>
                     update
