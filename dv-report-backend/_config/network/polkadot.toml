@@ -10,5 +10,5 @@ token_ticker = "DOT"
 token_decimals = 10
 
 [indexer]
-start_block_number = 10255210
+start_block_number = 10259208
 source_chain_type = "asset_hub"
