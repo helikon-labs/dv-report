@@ -10,4 +10,5 @@ token_ticker = "DOT"
 token_decimals = 10
 
 [indexer]
-source_chain_type = "relay"
+start_block_number = 10255210
+source_chain_type = "asset_hub"

@@ -14,7 +14,7 @@ pub mod api {
         "ConvictionVoting",
         "Referenda",
     ];
-    pub static RUNTIME_APIS: [&str; 25usize] = [
+    pub static RUNTIME_APIS: [&str; 26usize] = [
         "AuraApi",
         "RelayParentOffsetApi",
         "AuraUnincludedSegmentApi",
@@ -24,6 +24,7 @@ pub mod api {
         "TaggedTransactionQueue",
         "OffchainWorkerApi",
         "SessionKeys",
+        "RuntimeViewFunction",
         "AccountNonceApi",
         "AssetConversionApi",
         "TransactionPaymentApi",
@@ -97,6 +98,9 @@ pub mod api {
             }
             pub fn session_keys(&self) -> session_keys::SessionKeys {
                 session_keys::SessionKeys
+            }
+            pub fn runtime_view_function(&self) -> runtime_view_function::RuntimeViewFunction {
+                runtime_view_function::RuntimeViewFunction
             }
             pub fn account_nonce_api(&self) -> account_nonce_api::AccountNonceApi {
                 account_nonce_api::AccountNonceApi
@@ -977,6 +981,63 @@ pub mod api {
                 )]
                 pub struct DecodeSessionKeys {
                     pub encoded: decode_session_keys::Encoded,
+                }
+            }
+        }
+        pub mod runtime_view_function {
+            use super::root_mod;
+            use super::runtime_types;
+            pub struct RuntimeViewFunction;
+            impl RuntimeViewFunction {
+                pub fn execute_view_function(
+                    &self,
+                    query_id: types::execute_view_function::QueryId,
+                    input: types::execute_view_function::Input,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::ExecuteViewFunction,
+                    types::execute_view_function::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "RuntimeViewFunction",
+                        "execute_view_function",
+                        types::ExecuteViewFunction { query_id, input },
+                        [
+                            104u8, 132u8, 108u8, 136u8, 93u8, 251u8, 187u8, 218u8, 108u8, 238u8,
+                            87u8, 89u8, 86u8, 176u8, 142u8, 19u8, 211u8, 249u8, 75u8, 165u8, 142u8,
+                            174u8, 163u8, 245u8, 67u8, 57u8, 189u8, 72u8, 15u8, 232u8, 57u8, 81u8,
+                        ],
+                    )
+                }
+            }
+            pub mod types {
+                use super::runtime_types;
+                pub mod execute_view_function {
+                    use super::runtime_types;
+                    pub type QueryId = runtime_types::frame_support::view_functions::ViewFunctionId;
+                    pub type Input =
+                        ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output = ::core::result::Result<
+                            ::subxt::ext::subxt_core::alloc::vec::Vec<::core::primitive::u8>,
+                            runtime_types::frame_support::view_functions::ViewFunctionDispatchError,
+                        >;
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ExecuteViewFunction {
+                    pub query_id: execute_view_function::QueryId,
+                    pub input: execute_view_function::Input,
                 }
             }
         }
@@ -3869,9 +3930,9 @@ pub mod api {
             .hash();
         runtime_metadata_hash
             == [
-                161u8, 132u8, 211u8, 212u8, 5u8, 73u8, 27u8, 140u8, 19u8, 118u8, 150u8, 208u8,
-                71u8, 18u8, 135u8, 151u8, 54u8, 220u8, 144u8, 121u8, 205u8, 111u8, 220u8, 27u8,
-                151u8, 185u8, 50u8, 200u8, 243u8, 10u8, 208u8, 60u8,
+                237u8, 159u8, 37u8, 163u8, 211u8, 240u8, 115u8, 120u8, 48u8, 156u8, 232u8, 130u8,
+                113u8, 82u8, 96u8, 237u8, 212u8, 42u8, 191u8, 44u8, 22u8, 85u8, 174u8, 180u8, 58u8,
+                100u8, 109u8, 232u8, 77u8, 213u8, 122u8, 198u8,
             ]
     }
     pub mod system {
@@ -9416,6 +9477,43 @@ pub mod api {
                             pub amount: _1,
                         }
                     }
+                }
+            }
+            pub mod view_functions {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub enum ViewFunctionDispatchError {
+                    #[codec(index = 0)]
+                    NotImplemented,
+                    #[codec(index = 1)]
+                    NotFound(runtime_types::frame_support::view_functions::ViewFunctionId),
+                    #[codec(index = 2)]
+                    Codec,
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ViewFunctionId {
+                    pub prefix: [::core::primitive::u8; 16usize],
+                    pub suffix: [::core::primitive::u8; 16usize],
                 }
             }
         }
