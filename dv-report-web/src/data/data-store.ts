@@ -310,11 +310,11 @@ class DataStore {
             const key = `${vote.networkId}_${vote.referendumIndex}`;
             const existingVote = voteMap.get(key);
             if (existingVote) {
-                if (existingVote.block.number == vote.block.number) {
+                if (existingVote.block.timestamp == vote.block.timestamp) {
                     if (existingVote.extrinsicIndex < vote.extrinsicIndex) {
                         voteMap.set(key, vote);
                     }
-                } else if (existingVote.block.number < vote.block.number) {
+                } else if (existingVote.block.timestamp < vote.block.timestamp) {
                     voteMap.set(key, vote);
                 }
             } else {
