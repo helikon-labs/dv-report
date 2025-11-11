@@ -493,7 +493,7 @@ class UI {
                         .attr('width', (d) => {
                             const total = d.ayeCount + d.nayCount + d.abstainCount;
                             const rate = total > 0 ? (d.feedbackCount / total) * 100 : 0;
-                            return x(rate) - x(0);
+                            return x(Math.round(rate)) - x(0);
                         })
                         .attr('fill', (d) =>
                             getBarColor(d.feedbackCount, d.ayeCount + d.nayCount + d.abstainCount),
@@ -511,7 +511,7 @@ class UI {
                         .attr('x', (d) => {
                             const total = d.ayeCount + d.nayCount + d.abstainCount;
                             const rate = total > 0 ? (d.feedbackCount / total) * 100 : 0;
-                            return x(rate) + 4;
+                            return x(Math.round(rate)) + 4;
                         })
                         .attr('y', (d) => y(d.delegateShortName)! + y.bandwidth() / 2)
                         .attr('dy', '0.35em')
