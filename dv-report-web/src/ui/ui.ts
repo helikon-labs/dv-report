@@ -65,7 +65,7 @@ class UI {
         this.loadingContainer = <HTMLDivElement>document.getElementById('loading-container');
         this.loadingDescription = <HTMLDivElement>document.getElementById('loading-description');
 
-        this.filterContainer = <HTMLDivElement>document.getElementById('filter-container');
+        this.filterContainer = <HTMLDivElement>document.getElementById('filter-outer-container');
         this.cohortSelect = <HTMLSelectElement>document.getElementById('cohort-select');
         this.networkSelect = <HTMLSelectElement>document.getElementById('network-select');
         this.trackSelect = <HTMLSelectElement>document.getElementById('track-select');
