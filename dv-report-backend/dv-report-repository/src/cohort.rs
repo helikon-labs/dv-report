@@ -108,6 +108,7 @@ impl Repository {
                             track: Track::from_id(status.track),
                             submission_block,
                             status: ReferendumStatus::Ongoing,
+                            vote_import_is_finalized: false,
                         };
                         log::info!(
                             "Save ongoing referendum #{referendum_index} on track {}.",

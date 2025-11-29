@@ -10,6 +10,7 @@ mod network;
 mod referendum;
 mod referendum_comment;
 mod referendum_event;
+mod referendum_vote;
 mod track;
 mod vote;
 

@@ -1,13 +1,14 @@
 CREATE TABLE IF NOT EXISTS referendum
 (
-    network_id            INTEGER                     NOT NULL,
-    index                 INTEGER                     NOT NULL,
-    track_id              INTEGER                     NOT NULL,
-    submission_block_hash VARCHAR(64)                 NOT NULL,
-    status_id             INTEGER                     NOT NULL,
-    is_retracted          BOOLEAN                     NOT NULL DEFAULT FALSE,
-    created_at            TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-    updated_at            TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
+    network_id               INTEGER                     NOT NULL,
+    index                    INTEGER                     NOT NULL,
+    track_id                 INTEGER                     NOT NULL,
+    submission_block_hash    VARCHAR(64)                 NOT NULL,
+    status_id                INTEGER                     NOT NULL,
+    is_retracted             BOOLEAN                     NOT NULL DEFAULT FALSE,
+    vote_import_is_finalized BOOLEAN                     NOT NULL DEFAULT FALSE,
+    created_at               TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
+    updated_at               TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now(),
     CONSTRAINT referendum_pk PRIMARY KEY (network_id, index),
     CONSTRAINT referendum_u_cohort_network_index UNIQUE (network_id, index),
     CONSTRAINT referendum_fk_network

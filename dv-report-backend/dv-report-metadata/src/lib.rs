@@ -12,9 +12,9 @@ pub use runtime::kusama_current as metadata_current;
 #[cfg(feature = "polkadot")]
 pub use runtime::polkadot as metadata;
 #[cfg(feature = "polkadot")]
-pub use runtime::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
-#[cfg(feature = "polkadot")]
 pub use runtime::polkadot::api::runtime_types::asset_hub_polkadot_runtime::RuntimeCall;
+#[cfg(feature = "polkadot")]
+pub use runtime::polkadot::api::runtime_types::pallet_conviction_voting::vote::AccountVote;
 #[cfg(feature = "polkadot")]
 pub use runtime::polkadot_current as metadata_current;
 use subxt::ext::jsonrpsee::core::Serialize;

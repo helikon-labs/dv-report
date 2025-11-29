@@ -102,6 +102,47 @@ async fn import_comments(config: &Config) -> anyhow::Result<()> {
     Ok(())
 }
 
+async fn import_subsquare_votes(config: &Config) -> anyhow::Result<()> {
+    let network = Network::from_id(config.substrate.network_id);
+    let repository = Repository::new(config).await?;
+    let referenda = repository.get_network_referenda(network.id).await?;
+    let mut imported_vote_count = 0;
+    for referendum in referenda.iter() {
+        if referendum.vote_import_is_finalized {
+            log::info!(
+                "{} #{} vote import has been finalized, skipping.",
+                network.token_ticker,
+                referendum.index
+            );
+            continue;
+        }
+        log::info!(
+            "Import Subsquare votes for {} #{}.",
+            network.token_ticker,
+            referendum.index
+        );
+        let votes = repository
+            .get_subsquare_referendum_votes(&network, referendum.index)
+            .await?;
+        repository
+            .save_subsquare_referendum_votes(network.id, referendum.index, &votes)
+            .await?;
+        if referendum.status.is_terminated() {
+            log::info!(
+                "{} #{} has terminated. Finalize vote import.",
+                network.token_ticker,
+                referendum.index
+            );
+            repository
+                .set_referendum_vote_import_is_finalized(network.id, referendum.index, true)
+                .await?;
+        }
+        imported_vote_count += votes.len();
+    }
+    metrics::imported_vote_count().set(imported_vote_count as i64);
+    Ok(())
+}
+
 #[async_trait(?Send)]
 impl Service for Indexer {
     fn name(&self) -> String {
@@ -126,19 +167,42 @@ impl Service for Indexer {
             network.display,
             cohort.number,
         );
+
         tokio::spawn({
             let config = self.config.clone();
+            let wait_minutes = 30;
             async move {
                 loop {
                     match import_comments(&config).await {
                         Ok(()) => log::info!("Comments imported successfully."),
                         Err(error) => log::error!("Error while importing comments: {}", error),
                     }
-                    log::info!("Comment will be imported again after {} minutes.", 30);
-                    sleep(Duration::from_secs(30 * 60)).await;
+                    log::info!("Comments will be imported again after {} minutes.", wait_minutes);
+                    sleep(Duration::from_secs(wait_minutes * 60)).await;
                 }
             }
         });
+
+        tokio::spawn({
+            let config = self.config.clone();
+            let wait_minutes = 5;
+            async move {
+                loop {
+                    match import_subsquare_votes(&config).await {
+                        Ok(()) => log::info!("Subsquare votes imported successfully."),
+                        Err(error) => {
+                            log::error!("Error while importing Subsquare votes: {}", error)
+                        }
+                    }
+                    log::info!(
+                        "Votes will be imported again after {} minutes.",
+                        wait_minutes
+                    );
+                    sleep(Duration::from_secs(wait_minutes * 60)).await;
+                }
+            }
+        });
+
         /* // cohort init cancelled
         let delegates = repository
             .get_cohort_delegates(network.id, cohort.number)
@@ -147,6 +211,7 @@ impl Service for Indexer {
             .init_cohort(&network, &cohort, delegates.as_slice())
             .await?;
          */
+
         let delay_seconds = self.config.common.recovery_retry_seconds;
         if let Some(end_block_number) = self.config.indexer.end_block_number {
             let max_block_number = repository

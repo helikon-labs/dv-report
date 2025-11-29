@@ -3,7 +3,8 @@ use dv_report_types::governance::polkassembly::{
     PolkassemblyReferendumComment, PolkassemblyReferendumCommentListResponse,
 };
 use dv_report_types::governance::subsquare::{
-    SubsquarePagedData, SubsquareReferendum, SubsquareReferendumComment, SubsquareVoteCall,
+    SubsquarePagedData, SubsquareReferendum, SubsquareReferendumComment, SubsquareReferendumVote,
+    SubsquareVoteCall,
 };
 use dv_report_types::substrate::network::Network;
 
@@ -130,5 +131,24 @@ impl SubsquareClient {
             .filter(|c| c.comment_source == "polkassembly")
             .cloned()
             .collect())
+    }
+
+    pub async fn fetch_subsquare_referendum_votes(
+        &self,
+        chain: &Network,
+        index: u32,
+    ) -> anyhow::Result<Vec<SubsquareReferendumVote>> {
+        let url = format!(
+            "https://{}-api.subsquare.io/gov2/referendums/{index}/votes",
+            chain.chain,
+        );
+        let votes = self
+            .http_client
+            .get(url)
+            .send()
+            .await?
+            .json::<Vec<SubsquareReferendumVote>>()
+            .await?;
+        Ok(votes)
     }
 }

@@ -61,7 +61,7 @@ pub mod api {
         "AhOps",
         "AhMigrator",
     ];
-    pub static RUNTIME_APIS: [&str; 25usize] = [
+    pub static RUNTIME_APIS: [&str; 26usize] = [
         "AuraApi",
         "RelayParentOffsetApi",
         "AuraUnincludedSegmentApi",
@@ -87,6 +87,7 @@ pub mod api {
         "GetParachainInfo",
         "NominationPoolsApi",
         "StakingApi",
+        "Inflation",
     ];
     #[doc = r" The error type that is returned when there is a runtime issue."]
     pub type DispatchError = runtime_types::sp_runtime::DispatchError;
@@ -198,6 +199,9 @@ pub mod api {
             }
             pub fn staking_api(&self) -> staking_api::StakingApi {
                 staking_api::StakingApi
+            }
+            pub fn inflation(&self) -> inflation::Inflation {
+                inflation::Inflation
             }
         }
         pub mod aura_api {
@@ -3091,6 +3095,54 @@ pub mod api {
                 }
             }
         }
+        pub mod inflation {
+            use super::root_mod;
+            use super::runtime_types;
+            pub struct Inflation;
+            impl Inflation {
+                pub fn experimental_issuance_prediction_info(
+                    &self,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::ExperimentalIssuancePredictionInfo,
+                    types::experimental_issuance_prediction_info::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "Inflation",
+                        "experimental_issuance_prediction_info",
+                        types::ExperimentalIssuancePredictionInfo {},
+                        [
+                            55u8, 121u8, 174u8, 225u8, 75u8, 30u8, 238u8, 175u8, 181u8, 18u8,
+                            157u8, 234u8, 159u8, 7u8, 187u8, 31u8, 23u8, 170u8, 203u8, 224u8, 69u8,
+                            219u8, 149u8, 233u8, 38u8, 138u8, 158u8, 131u8, 129u8, 213u8, 159u8,
+                            158u8,
+                        ],
+                    )
+                }
+            }
+            pub mod types {
+                use super::runtime_types;
+                pub mod experimental_issuance_prediction_info {
+                    use super::runtime_types;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output =
+                            runtime_types::system_parachains_common::apis::InflationInfo;
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ExperimentalIssuancePredictionInfo {}
+            }
+        }
     }
     pub fn view_functions() -> ViewFunctionsApi {
         ViewFunctionsApi
@@ -3538,9 +3590,9 @@ pub mod api {
             .hash();
         runtime_metadata_hash
             == [
-                70u8, 200u8, 205u8, 14u8, 86u8, 192u8, 77u8, 154u8, 211u8, 212u8, 179u8, 96u8,
-                221u8, 14u8, 7u8, 175u8, 57u8, 7u8, 244u8, 183u8, 138u8, 73u8, 122u8, 159u8, 141u8,
-                244u8, 120u8, 20u8, 76u8, 44u8, 35u8, 202u8,
+                190u8, 194u8, 21u8, 120u8, 252u8, 39u8, 141u8, 102u8, 29u8, 81u8, 140u8, 72u8,
+                205u8, 232u8, 88u8, 59u8, 224u8, 60u8, 22u8, 198u8, 244u8, 138u8, 117u8, 221u8,
+                226u8, 12u8, 92u8, 222u8, 93u8, 7u8, 175u8, 74u8,
             ]
     }
     pub mod system {
@@ -65767,6 +65819,18 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub struct Permill(pub ::core::primitive::u32);
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct Perquintill(pub ::core::primitive::u64);
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
@@ -68551,6 +68615,27 @@ pub mod api {
                         #[codec(index = 3)]
                         RemoteReserve(runtime_types::xcm::VersionedLocation),
                     }
+                }
+            }
+        }
+        pub mod system_parachains_common {
+            use super::runtime_types;
+            pub mod apis {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct InflationInfo {
+                    pub issuance: runtime_types::sp_arithmetic::per_things::Perquintill,
+                    pub next_mint: (::core::primitive::u128, ::core::primitive::u128),
                 }
             }
         }

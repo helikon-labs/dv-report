@@ -54,6 +54,17 @@ impl ReferendumStatus {
         }
         .to_string()
     }
+
+    pub fn is_terminated(&self) -> bool {
+        match self {
+            ReferendumStatus::Ongoing => false,
+            ReferendumStatus::Confirmed => true,
+            ReferendumStatus::Rejected => true,
+            ReferendumStatus::Cancelled => true,
+            ReferendumStatus::TimedOut => true,
+            ReferendumStatus::Killed => true,
+        }
+    }
 }
 
 #[derive(Clone, Debug, FromRow, Serialize)]
@@ -70,6 +81,7 @@ pub struct Referendum {
     pub track: Track,
     pub submission_block: Block,
     pub status: ReferendumStatus,
+    pub vote_import_is_finalized: bool,
 }
 
 #[derive(Clone, Debug, FromRow, Serialize)]
@@ -81,4 +93,5 @@ pub struct ReferendumRow {
     pub submission_block_hash: String,
     pub status_id: i32,
     pub is_retracted: bool,
+    pub vote_import_is_finalized: bool,
 }

@@ -26,3 +26,15 @@ pub fn imported_comment_count() -> IntGauge {
     });
     METER.clone()
 }
+
+pub fn imported_vote_count() -> IntGauge {
+    static METER: Lazy<IntGauge> = Lazy::new(|| {
+        dv_report_metrics::registry::register_int_gauge(
+            METRIC_PREFIX,
+            "imported_vote_count",
+            "Number of imported votes from Subsquare",
+        )
+        .unwrap()
+    });
+    METER.clone()
+}

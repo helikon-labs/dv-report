@@ -117,7 +117,7 @@ impl PostgreSQLStorage {
         network_id: u32,
     ) -> anyhow::Result<Vec<ReferendumRow>> {
         let rows: Vec<ReferendumRow> = sqlx::query_as::<_, ReferendumRow>(
-            "SELECT network_id, index, track_id, submission_block_hash, status_id, is_retracted
+            "SELECT network_id, index, track_id, submission_block_hash, status_id, is_retracted, vote_import_is_finalized
             FROM referendum
             WHERE network_id = $1
             ORDER BY index ASC",
@@ -134,7 +134,7 @@ impl PostgreSQLStorage {
         cohort_number: u32,
     ) -> anyhow::Result<Vec<ReferendumRow>> {
         let rows: Vec<ReferendumRow> = sqlx::query_as::<_, ReferendumRow>(
-            "SELECT R.network_id, R.index, R.track_id, R.submission_block_hash, R.status_id, R.is_retracted
+            "SELECT R.network_id, R.index, R.track_id, R.submission_block_hash, R.status_id, R.is_retracted, R.vote_import_is_finalized
             FROM referendum R
             WHERE R.network_id = $1
             AND EXISTS (
@@ -151,5 +151,26 @@ impl PostgreSQLStorage {
         .fetch_all(&self.connection_pool)
         .await?;
         Ok(rows)
+    }
+
+    pub async fn set_referendum_vote_import_is_finalized(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+        vote_import_is_finalized: bool,
+    ) -> anyhow::Result<()> {
+        sqlx::query(
+            r#"
+            UPDATE referendum
+            SET vote_import_is_finalized = $1
+            WHERE network_id = $2 AND index = $3
+            "#,
+        )
+        .bind(vote_import_is_finalized)
+        .bind(network_id as i32)
+        .bind(referendum_index as i32)
+        .execute(&self.connection_pool)
+        .await?;
+        Ok(())
     }
 }

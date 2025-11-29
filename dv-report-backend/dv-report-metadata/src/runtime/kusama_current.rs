@@ -14,7 +14,7 @@ pub mod api {
         "ConvictionVoting",
         "Referenda",
     ];
-    pub static RUNTIME_APIS: [&str; 26usize] = [
+    pub static RUNTIME_APIS: [&str; 27usize] = [
         "AuraApi",
         "RelayParentOffsetApi",
         "AuraUnincludedSegmentApi",
@@ -40,6 +40,7 @@ pub mod api {
         "GetParachainInfo",
         "NominationPoolsApi",
         "StakingApi",
+        "Inflation",
         "ReviveApi",
     ];
     #[doc = r" The error type that is returned when there is a runtime issue."]
@@ -152,6 +153,9 @@ pub mod api {
             }
             pub fn staking_api(&self) -> staking_api::StakingApi {
                 staking_api::StakingApi
+            }
+            pub fn inflation(&self) -> inflation::Inflation {
+                inflation::Inflation
             }
             pub fn revive_api(&self) -> revive_api::ReviveApi {
                 revive_api::ReviveApi
@@ -1459,9 +1463,10 @@ pub mod api {
                         "query_call_info",
                         types::QueryCallInfo { call, len },
                         [
-                            61u8, 164u8, 37u8, 227u8, 64u8, 149u8, 210u8, 25u8, 206u8, 159u8, 53u8,
-                            25u8, 71u8, 138u8, 35u8, 10u8, 61u8, 19u8, 219u8, 221u8, 224u8, 81u8,
-                            146u8, 53u8, 31u8, 199u8, 245u8, 103u8, 113u8, 206u8, 66u8, 19u8,
+                            169u8, 99u8, 25u8, 239u8, 254u8, 4u8, 63u8, 134u8, 45u8, 100u8, 61u8,
+                            192u8, 77u8, 152u8, 201u8, 203u8, 19u8, 170u8, 215u8, 173u8, 223u8,
+                            166u8, 216u8, 152u8, 56u8, 249u8, 142u8, 154u8, 41u8, 103u8, 41u8,
+                            249u8,
                         ],
                     )
                 }
@@ -1478,10 +1483,9 @@ pub mod api {
                         "query_call_fee_details",
                         types::QueryCallFeeDetails { call, len },
                         [
-                            7u8, 119u8, 180u8, 174u8, 92u8, 106u8, 11u8, 101u8, 162u8, 180u8,
-                            226u8, 34u8, 139u8, 168u8, 17u8, 97u8, 173u8, 191u8, 207u8, 155u8,
-                            110u8, 232u8, 221u8, 218u8, 7u8, 92u8, 148u8, 12u8, 58u8, 237u8, 217u8,
-                            142u8,
+                            220u8, 134u8, 132u8, 109u8, 196u8, 76u8, 33u8, 30u8, 202u8, 50u8,
+                            157u8, 162u8, 178u8, 242u8, 2u8, 29u8, 100u8, 121u8, 196u8, 71u8, 52u8,
+                            170u8, 194u8, 109u8, 193u8, 44u8, 232u8, 6u8, 99u8, 186u8, 82u8, 183u8,
                         ],
                     )
                 }
@@ -1843,9 +1847,9 @@ pub mod api {
                             result_xcms_version,
                         },
                         [
-                            60u8, 197u8, 194u8, 82u8, 146u8, 117u8, 155u8, 128u8, 122u8, 235u8,
-                            27u8, 9u8, 56u8, 77u8, 192u8, 2u8, 3u8, 202u8, 25u8, 239u8, 200u8,
-                            135u8, 227u8, 40u8, 36u8, 75u8, 39u8, 46u8, 104u8, 205u8, 167u8, 33u8,
+                            28u8, 137u8, 8u8, 248u8, 39u8, 86u8, 252u8, 249u8, 134u8, 80u8, 150u8,
+                            234u8, 252u8, 76u8, 77u8, 129u8, 158u8, 7u8, 101u8, 155u8, 69u8, 61u8,
+                            193u8, 211u8, 216u8, 45u8, 224u8, 69u8, 127u8, 126u8, 175u8, 156u8,
                         ],
                     )
                 }
@@ -1865,9 +1869,9 @@ pub mod api {
                             xcm,
                         },
                         [
-                            225u8, 45u8, 203u8, 89u8, 201u8, 203u8, 11u8, 4u8, 118u8, 55u8, 242u8,
-                            240u8, 113u8, 203u8, 119u8, 111u8, 240u8, 150u8, 205u8, 45u8, 166u8,
-                            218u8, 87u8, 123u8, 23u8, 91u8, 41u8, 7u8, 181u8, 175u8, 160u8, 185u8,
+                            53u8, 233u8, 220u8, 51u8, 68u8, 115u8, 12u8, 236u8, 79u8, 35u8, 128u8,
+                            137u8, 61u8, 239u8, 70u8, 188u8, 19u8, 211u8, 101u8, 28u8, 101u8,
+                            189u8, 22u8, 204u8, 7u8, 145u8, 179u8, 68u8, 80u8, 102u8, 101u8, 133u8,
                         ],
                     )
                 }
@@ -3046,6 +3050,54 @@ pub mod api {
                 }
             }
         }
+        pub mod inflation {
+            use super::root_mod;
+            use super::runtime_types;
+            pub struct Inflation;
+            impl Inflation {
+                pub fn experimental_issuance_prediction_info(
+                    &self,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::ExperimentalIssuancePredictionInfo,
+                    types::experimental_issuance_prediction_info::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "Inflation",
+                        "experimental_issuance_prediction_info",
+                        types::ExperimentalIssuancePredictionInfo {},
+                        [
+                            55u8, 121u8, 174u8, 225u8, 75u8, 30u8, 238u8, 175u8, 181u8, 18u8,
+                            157u8, 234u8, 159u8, 7u8, 187u8, 31u8, 23u8, 170u8, 203u8, 224u8, 69u8,
+                            219u8, 149u8, 233u8, 38u8, 138u8, 158u8, 131u8, 129u8, 213u8, 159u8,
+                            158u8,
+                        ],
+                    )
+                }
+            }
+            pub mod types {
+                use super::runtime_types;
+                pub mod experimental_issuance_prediction_info {
+                    use super::runtime_types;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output =
+                            runtime_types::system_parachains_common::apis::InflationInfo;
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ExperimentalIssuancePredictionInfo {}
+            }
+        }
         pub mod revive_api {
             use super::root_mod;
             use super::runtime_types;
@@ -3930,9 +3982,9 @@ pub mod api {
             .hash();
         runtime_metadata_hash
             == [
-                237u8, 159u8, 37u8, 163u8, 211u8, 240u8, 115u8, 120u8, 48u8, 156u8, 232u8, 130u8,
-                113u8, 82u8, 96u8, 237u8, 212u8, 42u8, 191u8, 44u8, 22u8, 85u8, 174u8, 180u8, 58u8,
-                100u8, 109u8, 232u8, 77u8, 213u8, 122u8, 198u8,
+                250u8, 4u8, 163u8, 164u8, 67u8, 34u8, 220u8, 245u8, 148u8, 111u8, 155u8, 196u8,
+                145u8, 48u8, 226u8, 216u8, 2u8, 93u8, 184u8, 61u8, 192u8, 178u8, 217u8, 84u8,
+                143u8, 62u8, 71u8, 52u8, 180u8, 114u8, 238u8, 42u8,
             ]
     }
     pub mod system {
@@ -4158,10 +4210,9 @@ pub mod api {
                         "batch",
                         types::Batch { calls },
                         [
-                            48u8, 254u8, 201u8, 43u8, 203u8, 181u8, 201u8, 223u8, 133u8, 153u8,
-                            40u8, 196u8, 91u8, 162u8, 239u8, 185u8, 194u8, 130u8, 34u8, 252u8,
-                            66u8, 82u8, 75u8, 40u8, 85u8, 61u8, 139u8, 181u8, 185u8, 96u8, 156u8,
-                            197u8,
+                            36u8, 22u8, 19u8, 40u8, 122u8, 146u8, 246u8, 185u8, 42u8, 27u8, 226u8,
+                            43u8, 213u8, 195u8, 145u8, 232u8, 50u8, 135u8, 224u8, 26u8, 43u8, 13u8,
+                            215u8, 98u8, 30u8, 144u8, 172u8, 94u8, 32u8, 53u8, 32u8, 0u8,
                         ],
                     )
                 }
@@ -4179,10 +4230,9 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            217u8, 144u8, 235u8, 20u8, 130u8, 217u8, 91u8, 242u8, 105u8, 72u8,
-                            18u8, 164u8, 34u8, 185u8, 186u8, 210u8, 3u8, 59u8, 145u8, 149u8, 206u8,
-                            97u8, 167u8, 166u8, 169u8, 210u8, 193u8, 229u8, 153u8, 239u8, 247u8,
-                            187u8,
+                            213u8, 123u8, 210u8, 36u8, 170u8, 26u8, 9u8, 60u8, 85u8, 55u8, 118u8,
+                            92u8, 86u8, 116u8, 33u8, 170u8, 19u8, 96u8, 157u8, 203u8, 180u8, 9u8,
+                            175u8, 85u8, 72u8, 239u8, 156u8, 213u8, 170u8, 70u8, 128u8, 191u8,
                         ],
                     )
                 }
@@ -4196,10 +4246,9 @@ pub mod api {
                         "batch_all",
                         types::BatchAll { calls },
                         [
-                            27u8, 29u8, 150u8, 54u8, 126u8, 252u8, 155u8, 161u8, 171u8, 159u8,
-                            172u8, 236u8, 1u8, 109u8, 178u8, 202u8, 38u8, 198u8, 243u8, 178u8,
-                            20u8, 91u8, 9u8, 231u8, 121u8, 237u8, 108u8, 234u8, 82u8, 146u8, 220u8,
-                            86u8,
+                            225u8, 78u8, 204u8, 142u8, 193u8, 96u8, 40u8, 196u8, 2u8, 255u8, 217u8,
+                            135u8, 124u8, 204u8, 155u8, 255u8, 193u8, 107u8, 120u8, 109u8, 195u8,
+                            48u8, 50u8, 159u8, 216u8, 92u8, 174u8, 170u8, 55u8, 221u8, 24u8, 226u8,
                         ],
                     )
                 }
@@ -4217,10 +4266,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            231u8, 223u8, 34u8, 155u8, 39u8, 196u8, 56u8, 214u8, 253u8, 169u8,
-                            82u8, 84u8, 184u8, 51u8, 82u8, 211u8, 150u8, 151u8, 110u8, 208u8,
-                            119u8, 245u8, 2u8, 87u8, 220u8, 66u8, 187u8, 227u8, 184u8, 112u8, 80u8,
-                            200u8,
+                            63u8, 182u8, 81u8, 123u8, 12u8, 249u8, 205u8, 202u8, 5u8, 70u8, 247u8,
+                            57u8, 10u8, 189u8, 101u8, 115u8, 35u8, 188u8, 154u8, 152u8, 231u8,
+                            17u8, 202u8, 152u8, 133u8, 178u8, 212u8, 226u8, 69u8, 135u8, 16u8,
+                            226u8,
                         ],
                     )
                 }
@@ -4234,9 +4283,9 @@ pub mod api {
                         "force_batch",
                         types::ForceBatch { calls },
                         [
-                            232u8, 9u8, 98u8, 72u8, 42u8, 142u8, 161u8, 171u8, 36u8, 47u8, 56u8,
-                            133u8, 29u8, 115u8, 190u8, 87u8, 181u8, 253u8, 227u8, 60u8, 147u8,
-                            250u8, 120u8, 244u8, 150u8, 56u8, 69u8, 244u8, 0u8, 15u8, 60u8, 193u8,
+                            77u8, 7u8, 212u8, 154u8, 124u8, 140u8, 196u8, 139u8, 36u8, 174u8, 48u8,
+                            147u8, 17u8, 132u8, 20u8, 30u8, 38u8, 180u8, 85u8, 164u8, 8u8, 114u8,
+                            138u8, 229u8, 18u8, 96u8, 205u8, 197u8, 88u8, 194u8, 129u8, 66u8,
                         ],
                     )
                 }
@@ -4254,10 +4303,9 @@ pub mod api {
                             weight,
                         },
                         [
-                            79u8, 64u8, 217u8, 205u8, 217u8, 206u8, 228u8, 19u8, 82u8, 215u8,
-                            224u8, 132u8, 120u8, 208u8, 9u8, 63u8, 197u8, 47u8, 230u8, 222u8, 27u8,
-                            150u8, 31u8, 87u8, 123u8, 182u8, 22u8, 108u8, 153u8, 18u8, 108u8,
-                            101u8,
+                            214u8, 94u8, 149u8, 238u8, 143u8, 81u8, 158u8, 152u8, 175u8, 221u8,
+                            57u8, 60u8, 170u8, 248u8, 104u8, 188u8, 9u8, 144u8, 75u8, 160u8, 19u8,
+                            2u8, 202u8, 42u8, 6u8, 146u8, 139u8, 170u8, 18u8, 236u8, 13u8, 210u8,
                         ],
                     )
                 }
@@ -4275,10 +4323,9 @@ pub mod api {
                             fallback: ::subxt::ext::subxt_core::alloc::boxed::Box::new(fallback),
                         },
                         [
-                            211u8, 158u8, 157u8, 105u8, 15u8, 255u8, 145u8, 153u8, 252u8, 123u8,
-                            178u8, 0u8, 248u8, 120u8, 182u8, 182u8, 150u8, 145u8, 235u8, 102u8,
-                            28u8, 240u8, 226u8, 214u8, 241u8, 209u8, 202u8, 27u8, 56u8, 100u8,
-                            154u8, 124u8,
+                            84u8, 86u8, 237u8, 215u8, 131u8, 27u8, 142u8, 106u8, 132u8, 82u8,
+                            222u8, 246u8, 205u8, 217u8, 38u8, 60u8, 31u8, 29u8, 34u8, 205u8, 43u8,
+                            161u8, 206u8, 243u8, 135u8, 40u8, 214u8, 67u8, 67u8, 185u8, 52u8, 5u8,
                         ],
                     )
                 }
@@ -4296,10 +4343,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            45u8, 113u8, 109u8, 61u8, 231u8, 81u8, 125u8, 11u8, 248u8, 9u8, 177u8,
-                            175u8, 208u8, 43u8, 253u8, 17u8, 168u8, 137u8, 176u8, 255u8, 209u8,
-                            66u8, 179u8, 126u8, 19u8, 27u8, 82u8, 248u8, 246u8, 204u8, 234u8,
-                            202u8,
+                            124u8, 56u8, 223u8, 218u8, 39u8, 220u8, 40u8, 136u8, 107u8, 137u8,
+                            145u8, 215u8, 112u8, 250u8, 78u8, 246u8, 147u8, 7u8, 121u8, 98u8,
+                            248u8, 151u8, 49u8, 175u8, 255u8, 247u8, 140u8, 95u8, 115u8, 228u8,
+                            244u8, 198u8,
                         ],
                     )
                 }
@@ -4637,9 +4684,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            161u8, 221u8, 89u8, 73u8, 87u8, 16u8, 211u8, 72u8, 7u8, 49u8, 234u8,
-                            202u8, 63u8, 13u8, 193u8, 238u8, 173u8, 33u8, 80u8, 97u8, 193u8, 189u8,
-                            200u8, 94u8, 168u8, 231u8, 240u8, 232u8, 255u8, 219u8, 111u8, 74u8,
+                            8u8, 182u8, 62u8, 107u8, 83u8, 187u8, 162u8, 202u8, 47u8, 109u8, 161u8,
+                            131u8, 67u8, 249u8, 251u8, 136u8, 82u8, 184u8, 11u8, 165u8, 176u8,
+                            217u8, 151u8, 217u8, 209u8, 77u8, 134u8, 227u8, 208u8, 234u8, 187u8,
+                            249u8,
                         ],
                     )
                 }
@@ -4663,10 +4711,9 @@ pub mod api {
                             max_weight,
                         },
                         [
-                            48u8, 193u8, 166u8, 25u8, 34u8, 182u8, 113u8, 137u8, 144u8, 151u8,
-                            70u8, 247u8, 99u8, 38u8, 149u8, 198u8, 224u8, 137u8, 131u8, 43u8, 27u8,
-                            249u8, 42u8, 25u8, 241u8, 156u8, 130u8, 141u8, 170u8, 235u8, 151u8,
-                            147u8,
+                            182u8, 2u8, 128u8, 248u8, 76u8, 138u8, 26u8, 206u8, 190u8, 179u8,
+                            206u8, 251u8, 80u8, 133u8, 20u8, 158u8, 253u8, 59u8, 39u8, 4u8, 81u8,
+                            217u8, 179u8, 0u8, 73u8, 9u8, 36u8, 158u8, 29u8, 2u8, 145u8, 227u8,
                         ],
                     )
                 }
@@ -5347,9 +5394,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            180u8, 164u8, 176u8, 34u8, 155u8, 220u8, 9u8, 27u8, 30u8, 205u8, 44u8,
-                            137u8, 108u8, 236u8, 217u8, 167u8, 88u8, 185u8, 3u8, 223u8, 0u8, 18u8,
-                            39u8, 24u8, 126u8, 177u8, 6u8, 156u8, 87u8, 182u8, 32u8, 91u8,
+                            180u8, 102u8, 171u8, 186u8, 243u8, 106u8, 243u8, 198u8, 104u8, 236u8,
+                            163u8, 226u8, 223u8, 127u8, 158u8, 156u8, 66u8, 192u8, 115u8, 195u8,
+                            135u8, 131u8, 231u8, 80u8, 30u8, 59u8, 219u8, 147u8, 197u8, 142u8,
+                            112u8, 49u8,
                         ],
                     )
                 }
@@ -5535,10 +5583,10 @@ pub mod api {
                             call: ::subxt::ext::subxt_core::alloc::boxed::Box::new(call),
                         },
                         [
-                            233u8, 204u8, 138u8, 108u8, 33u8, 126u8, 181u8, 169u8, 124u8, 248u8,
-                            124u8, 128u8, 52u8, 122u8, 174u8, 111u8, 179u8, 193u8, 38u8, 208u8,
-                            173u8, 57u8, 229u8, 42u8, 240u8, 153u8, 150u8, 223u8, 173u8, 156u8,
-                            11u8, 83u8,
+                            240u8, 252u8, 132u8, 175u8, 249u8, 86u8, 111u8, 139u8, 37u8, 217u8,
+                            60u8, 157u8, 215u8, 203u8, 181u8, 38u8, 184u8, 212u8, 31u8, 251u8,
+                            192u8, 103u8, 22u8, 186u8, 255u8, 240u8, 168u8, 109u8, 59u8, 103u8,
+                            213u8, 166u8,
                         ],
                     )
                 }
@@ -5573,10 +5621,9 @@ pub mod api {
                         ],
                         check_permissions::Input { call, proxy_type },
                         [
-                            177u8, 194u8, 45u8, 187u8, 87u8, 248u8, 227u8, 245u8, 143u8, 248u8,
-                            212u8, 254u8, 11u8, 15u8, 194u8, 116u8, 49u8, 220u8, 230u8, 139u8,
-                            90u8, 21u8, 243u8, 176u8, 219u8, 146u8, 106u8, 188u8, 97u8, 38u8,
-                            221u8, 169u8,
+                            134u8, 200u8, 43u8, 215u8, 53u8, 66u8, 255u8, 222u8, 95u8, 190u8, 94u8,
+                            138u8, 243u8, 170u8, 70u8, 131u8, 212u8, 82u8, 57u8, 252u8, 254u8,
+                            50u8, 70u8, 73u8, 207u8, 176u8, 198u8, 180u8, 65u8, 72u8, 238u8, 243u8,
                         ],
                     )
                 }                pub fn is_superset (& self , to_check : is_superset :: ToCheck , against : is_superset :: Against) -> :: subxt :: ext :: subxt_core :: view_functions :: payload :: StaticPayload < is_superset :: Input , is_superset :: output :: Output >{
@@ -9867,7 +9914,7 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub enum Call {
-                    # [codec (index = 0)] receive_accounts { accounts : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: accounts :: Account < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , runtime_types :: pallet_rc_migrator :: types :: PortableHoldReason , runtime_types :: pallet_rc_migrator :: types :: PortableFreezeReason > > , } , # [codec (index = 1)] receive_multisigs { accounts : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: multisig :: RcMultisig < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 2)] receive_proxy_proxies { proxies : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: proxy :: RcProxy < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , runtime_types :: kusama_runtime_constants :: proxy :: ProxyType , :: core :: primitive :: u32 > > , } , # [codec (index = 3)] receive_proxy_announcements { announcements : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: proxy :: RcProxyAnnouncement < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 4)] receive_preimage_chunks { chunks : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: chunks :: RcPreimageChunk > , } , # [codec (index = 5)] receive_preimage_request_status { request_status : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: request_status :: PortableRequestStatus > , } , # [codec (index = 6)] receive_preimage_legacy_status { legacy_status : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: legacy_request_status :: RcPreimageLegacyStatus < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 7)] receive_nom_pools_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: nom_pools :: RcNomPoolsMessage > , } , # [codec (index = 8)] receive_vesting_schedules { schedules : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: vesting :: RcVestingSchedule > , } , # [codec (index = 10)] receive_referenda_values { values : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: referenda :: ReferendaMessage < :: core :: primitive :: u16 > > , } , # [codec (index = 11)] receive_referendums { referendums : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (:: core :: primitive :: u32 , runtime_types :: pallet_referenda :: types :: ReferendumInfo < :: core :: primitive :: u16 , runtime_types :: asset_hub_kusama_runtime :: ah_migration :: RcPalletsOrigin , :: core :: primitive :: u32 , runtime_types :: frame_support :: traits :: preimages :: Bounded < runtime_types :: asset_hub_kusama_runtime :: RuntimeCall , runtime_types :: sp_runtime :: traits :: BlakeTwo256 > , :: core :: primitive :: u128 , runtime_types :: pallet_conviction_voting :: types :: Tally < :: core :: primitive :: u128 > , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , (:: core :: primitive :: u32 , :: core :: primitive :: u32 ,) > ,) > , } , # [codec (index = 12)] receive_claims { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: claims :: RcClaimsMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , :: core :: primitive :: u32 > > , } , # [codec (index = 13)] receive_bags_list_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: bags_list :: PortableBagsListMessage > , } , # [codec (index = 14)] receive_scheduler_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: scheduler :: RcSchedulerMessage < :: core :: primitive :: u32 > > , } , # [codec (index = 15)] receive_indices { indices : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: indices :: RcIndicesIndex < :: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 16)] receive_conviction_voting_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: conviction_voting :: RcConvictionVotingMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u16 , runtime_types :: pallet_conviction_voting :: vote :: Voting < :: core :: primitive :: u128 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u32 , :: core :: primitive :: u32 > , :: core :: primitive :: u128 > > , } , # [codec (index = 17)] receive_bounties_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: bounties :: RcBountiesMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , :: core :: primitive :: u32 > > , } , # [codec (index = 18)] receive_asset_rates { rates : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (runtime_types :: polkadot_runtime_common :: impls :: VersionedLocatableAsset , runtime_types :: sp_arithmetic :: fixed_point :: FixedU128 ,) > , } , # [codec (index = 19)] receive_crowdloan_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: crowdloan :: RcCrowdloanMessage < :: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 20)] receive_referenda_metadata { metadata : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (:: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: H256 ,) > , } , # [codec (index = 21)] receive_treasury_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: treasury :: PortableTreasuryMessage > , } , # [codec (index = 22)] receive_scheduler_agenda_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: scheduler :: SchedulerAgendaMessage < :: core :: primitive :: u32 , runtime_types :: pallet_rc_migrator :: scheduler :: alias :: Scheduled < runtime_types :: frame_support :: traits :: preimages :: Bounded < runtime_types :: asset_hub_kusama_runtime :: RuntimeCall , runtime_types :: sp_runtime :: traits :: BlakeTwo256 > , :: core :: primitive :: u32 , runtime_types :: asset_hub_kusama_runtime :: ah_migration :: RcPalletsOrigin > > > , } , # [codec (index = 23)] receive_delegated_staking_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: delegated_staking :: PortableDelegatedStakingMessage > , } , # [codec (index = 24)] receive_child_bounties_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: child_bounties :: PortableChildBountiesMessage > , } , # [codec (index = 25)] receive_staking_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: message :: PortableStakingMessage > , } , # [codec (index = 26)] receive_recovery_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: recovery :: PortableRecoveryMessage > , } , # [codec (index = 27)] receive_society_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: society :: PortableSocietyMessage > , } , # [codec (index = 100)] force_set_stage { stage : runtime_types :: pallet_ah_migrator :: MigrationStage , } , # [codec (index = 101)] start_migration , # [codec (index = 102)] set_dmp_queue_priority { new : runtime_types :: pallet_rc_migrator :: types :: QueuePriority < :: core :: primitive :: u32 > , } , # [codec (index = 103)] set_manager { new : :: core :: option :: Option < :: subxt :: ext :: subxt_core :: utils :: AccountId32 > , } , # [codec (index = 110)] finish_migration { data : :: core :: option :: Option < runtime_types :: pallet_rc_migrator :: types :: MigrationFinishedData < :: core :: primitive :: u128 > > , } , # [codec (index = 111)] send_xcm_message { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , } , }
+                    # [codec (index = 0)] receive_accounts { accounts : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: accounts :: Account < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , runtime_types :: pallet_rc_migrator :: types :: PortableHoldReason , runtime_types :: pallet_rc_migrator :: types :: PortableFreezeReason > > , } , # [codec (index = 1)] receive_multisigs { accounts : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: multisig :: RcMultisig < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 2)] receive_proxy_proxies { proxies : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: proxy :: RcProxy < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , runtime_types :: kusama_runtime_constants :: proxy :: ProxyType , :: core :: primitive :: u32 > > , } , # [codec (index = 3)] receive_proxy_announcements { announcements : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: proxy :: RcProxyAnnouncement < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 4)] receive_preimage_chunks { chunks : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: chunks :: RcPreimageChunk > , } , # [codec (index = 5)] receive_preimage_request_status { request_status : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: request_status :: PortableRequestStatus > , } , # [codec (index = 6)] receive_preimage_legacy_status { legacy_status : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: preimage :: legacy_request_status :: RcPreimageLegacyStatus < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 7)] receive_nom_pools_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: nom_pools :: RcNomPoolsMessage > , } , # [codec (index = 8)] receive_vesting_schedules { schedules : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: vesting :: RcVestingSchedule > , } , # [codec (index = 10)] receive_referenda_values { values : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: referenda :: ReferendaMessage < :: core :: primitive :: u16 > > , } , # [codec (index = 11)] receive_referendums { referendums : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (:: core :: primitive :: u32 , runtime_types :: pallet_referenda :: types :: ReferendumInfo < :: core :: primitive :: u16 , runtime_types :: asset_hub_kusama_runtime :: ah_migration :: RcPalletsOrigin , :: core :: primitive :: u32 , runtime_types :: frame_support :: traits :: preimages :: Bounded < runtime_types :: asset_hub_kusama_runtime :: RuntimeCall , runtime_types :: sp_runtime :: traits :: BlakeTwo256 > , :: core :: primitive :: u128 , runtime_types :: pallet_conviction_voting :: types :: Tally < :: core :: primitive :: u128 > , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , (:: core :: primitive :: u32 , :: core :: primitive :: u32 ,) > ,) > , } , # [codec (index = 12)] receive_claims { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: claims :: RcClaimsMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , :: core :: primitive :: u32 > > , } , # [codec (index = 13)] receive_bags_list_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: bags_list :: PortableBagsListMessage > , } , # [codec (index = 14)] receive_scheduler_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: scheduler :: RcSchedulerMessage < :: core :: primitive :: u32 > > , } , # [codec (index = 15)] receive_indices { indices : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: indices :: RcIndicesIndex < :: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 16)] receive_conviction_voting_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: conviction_voting :: RcConvictionVotingMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u16 , runtime_types :: pallet_conviction_voting :: vote :: Voting < :: core :: primitive :: u128 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u32 , :: core :: primitive :: u32 > , :: core :: primitive :: u128 > > , } , # [codec (index = 17)] receive_bounties_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: bounties :: RcBountiesMessage < :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 , :: core :: primitive :: u32 > > , } , # [codec (index = 18)] receive_asset_rates { rates : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (runtime_types :: polkadot_runtime_common :: impls :: VersionedLocatableAsset , runtime_types :: sp_arithmetic :: fixed_point :: FixedU128 ,) > , } , # [codec (index = 19)] receive_crowdloan_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: crowdloan :: RcCrowdloanMessage < :: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: AccountId32 , :: core :: primitive :: u128 > > , } , # [codec (index = 20)] receive_referenda_metadata { metadata : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < (:: core :: primitive :: u32 , :: subxt :: ext :: subxt_core :: utils :: H256 ,) > , } , # [codec (index = 21)] receive_treasury_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: treasury :: PortableTreasuryMessage > , } , # [codec (index = 22)] receive_scheduler_agenda_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: scheduler :: SchedulerAgendaMessage < :: core :: primitive :: u32 , runtime_types :: pallet_rc_migrator :: scheduler :: alias :: Scheduled < runtime_types :: frame_support :: traits :: preimages :: Bounded < runtime_types :: asset_hub_kusama_runtime :: RuntimeCall , runtime_types :: sp_runtime :: traits :: BlakeTwo256 > , :: core :: primitive :: u32 , runtime_types :: asset_hub_kusama_runtime :: ah_migration :: RcPalletsOrigin > > > , } , # [codec (index = 23)] receive_delegated_staking_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: delegated_staking :: PortableDelegatedStakingMessage > , } , # [codec (index = 24)] receive_child_bounties_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: child_bounties :: PortableChildBountiesMessage > , } , # [codec (index = 25)] receive_staking_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: staking :: message :: PortableStakingMessage > , } , # [codec (index = 26)] receive_recovery_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: recovery :: PortableRecoveryMessage > , } , # [codec (index = 27)] receive_society_messages { messages : :: subxt :: ext :: subxt_core :: alloc :: vec :: Vec < runtime_types :: pallet_rc_migrator :: society :: PortableSocietyMessage > , } , # [codec (index = 100)] force_set_stage { stage : runtime_types :: pallet_ah_migrator :: MigrationStage , } , # [codec (index = 101)] start_migration , # [codec (index = 102)] set_dmp_queue_priority { new : runtime_types :: pallet_rc_migrator :: types :: QueuePriority < :: core :: primitive :: u32 > , } , # [codec (index = 103)] set_manager { new : :: core :: option :: Option < :: subxt :: ext :: subxt_core :: utils :: AccountId32 > , } , # [codec (index = 110)] finish_migration { data : :: core :: option :: Option < runtime_types :: pallet_rc_migrator :: types :: MigrationFinishedData < :: core :: primitive :: u128 > > , cool_off_end_at : :: core :: primitive :: u32 , } , # [codec (index = 111)] send_xcm_message { dest : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedLocation > , message : :: subxt :: ext :: subxt_core :: alloc :: boxed :: Box < runtime_types :: xcm :: VersionedXcm > , } , }
                 #[derive(
                     :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
                     :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
@@ -10001,6 +10048,18 @@ pub mod api {
                         message: runtime_types::staging_xcm::v5::Xcm,
                         message_id: [::core::primitive::u8; 32usize],
                     },
+                    #[codec(index = 14)]
+                    FailedToUnreserveMultisigDeposit {
+                        expected_amount: ::core::primitive::u128,
+                        missing_amount: ::core::primitive::u128,
+                        account: ::subxt::ext::subxt_core::utils::AccountId32,
+                    },
+                    #[codec(index = 15)]
+                    FailedToUnreservePreimageDeposit {
+                        expected_amount: ::core::primitive::u128,
+                        missing_amount: ::core::primitive::u128,
+                        account: ::subxt::ext::subxt_core::utils::AccountId32,
+                    },
                 }
             }
             #[derive(
@@ -10020,6 +10079,8 @@ pub mod api {
                 DataMigrationOngoing,
                 #[codec(index = 2)]
                 MigrationDone,
+                #[codec(index = 3)]
+                CoolOff { end_at: ::core::primitive::u32 },
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
@@ -25824,6 +25885,27 @@ pub mod api {
                         #[codec(index = 3)]
                         RemoteReserve(runtime_types::xcm::VersionedLocation),
                     }
+                }
+            }
+        }
+        pub mod system_parachains_common {
+            use super::runtime_types;
+            pub mod apis {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct InflationInfo {
+                    pub issuance: runtime_types::sp_arithmetic::per_things::Perquintill,
+                    pub next_mint: (::core::primitive::u128, ::core::primitive::u128),
                 }
             }
         }

@@ -3,7 +3,7 @@ use async_recursion::async_recursion;
 use dv_report_substrate_client::ReferendumInfo;
 use dv_report_types::governance::polkassembly::PolkassemblyReferendumComment;
 use dv_report_types::governance::referendum::{Referendum, ReferendumStatus};
-use dv_report_types::governance::subsquare::SubsquareReferendumComment;
+use dv_report_types::governance::subsquare::{SubsquareReferendumComment, SubsquareReferendumVote};
 use dv_report_types::substrate::network::Network;
 use dv_report_types::substrate::track::Track;
 
@@ -45,6 +45,7 @@ impl Repository {
                     track: Track::from_id(status.track),
                     submission_block,
                     status: ReferendumStatus::Ongoing,
+                    vote_import_is_finalized: false,
                 }
             }
             _ => {
@@ -72,6 +73,7 @@ impl Repository {
                     )
                     .await?,
                 status: ReferendumStatus::from_id(referendum_row.status_id as u32),
+                vote_import_is_finalized: referendum_row.vote_import_is_finalized,
             });
         }
         Ok(referenda)
@@ -84,6 +86,16 @@ impl Repository {
     ) -> anyhow::Result<Vec<SubsquareReferendumComment>> {
         self.subsquare_client
             .fetch_subsquare_referendum_comments(chain, referendum_index)
+            .await
+    }
+
+    pub async fn get_subsquare_referendum_votes(
+        &self,
+        chain: &Network,
+        referendum_index: u32,
+    ) -> anyhow::Result<Vec<SubsquareReferendumVote>> {
+        self.subsquare_client
+            .fetch_subsquare_referendum_votes(chain, referendum_index)
             .await
     }
 
@@ -103,6 +115,30 @@ impl Repository {
                     .await?;
             }
         }
+        Ok(())
+    }
+
+    pub async fn save_subsquare_referendum_votes(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+        votes: &[SubsquareReferendumVote],
+    ) -> anyhow::Result<()> {
+        self.postgres
+            .save_subsquare_referendum_votes(network_id, referendum_index, votes)
+            .await?;
+        Ok(())
+    }
+
+    pub async fn save_subsquare_referendum_vote(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+        vote: &SubsquareReferendumVote,
+    ) -> anyhow::Result<()> {
+        self.postgres
+            .save_subsquare_referendum_vote(network_id, referendum_index, vote)
+            .await?;
         Ok(())
     }
 
@@ -142,5 +178,20 @@ impl Repository {
             .await?;
         }
         Ok(())
+    }
+
+    pub async fn set_referendum_vote_import_is_finalized(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+        vote_import_is_finalized: bool,
+    ) -> anyhow::Result<()> {
+        self.postgres
+            .set_referendum_vote_import_is_finalized(
+                network_id,
+                referendum_index,
+                vote_import_is_finalized,
+            )
+            .await
     }
 }

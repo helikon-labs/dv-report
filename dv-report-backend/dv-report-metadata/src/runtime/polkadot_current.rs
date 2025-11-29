@@ -14,7 +14,7 @@ pub mod api {
         "ConvictionVoting",
         "Referenda",
     ];
-    pub static RUNTIME_APIS: [&str; 25usize] = [
+    pub static RUNTIME_APIS: [&str; 26usize] = [
         "AuraApi",
         "RelayParentOffsetApi",
         "AuraUnincludedSegmentApi",
@@ -40,6 +40,7 @@ pub mod api {
         "GetParachainInfo",
         "NominationPoolsApi",
         "StakingApi",
+        "Inflation",
     ];
     #[doc = r" The error type that is returned when there is a runtime issue."]
     pub type DispatchError = runtime_types::sp_runtime::DispatchError;
@@ -151,6 +152,9 @@ pub mod api {
             }
             pub fn staking_api(&self) -> staking_api::StakingApi {
                 staking_api::StakingApi
+            }
+            pub fn inflation(&self) -> inflation::Inflation {
+                inflation::Inflation
             }
         }
         pub mod aura_api {
@@ -3044,6 +3048,54 @@ pub mod api {
                 }
             }
         }
+        pub mod inflation {
+            use super::root_mod;
+            use super::runtime_types;
+            pub struct Inflation;
+            impl Inflation {
+                pub fn experimental_issuance_prediction_info(
+                    &self,
+                ) -> ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload<
+                    types::ExperimentalIssuancePredictionInfo,
+                    types::experimental_issuance_prediction_info::output::Output,
+                > {
+                    ::subxt::ext::subxt_core::runtime_api::payload::StaticPayload::new_static(
+                        "Inflation",
+                        "experimental_issuance_prediction_info",
+                        types::ExperimentalIssuancePredictionInfo {},
+                        [
+                            55u8, 121u8, 174u8, 225u8, 75u8, 30u8, 238u8, 175u8, 181u8, 18u8,
+                            157u8, 234u8, 159u8, 7u8, 187u8, 31u8, 23u8, 170u8, 203u8, 224u8, 69u8,
+                            219u8, 149u8, 233u8, 38u8, 138u8, 158u8, 131u8, 129u8, 213u8, 159u8,
+                            158u8,
+                        ],
+                    )
+                }
+            }
+            pub mod types {
+                use super::runtime_types;
+                pub mod experimental_issuance_prediction_info {
+                    use super::runtime_types;
+                    pub mod output {
+                        use super::runtime_types;
+                        pub type Output =
+                            runtime_types::system_parachains_common::apis::InflationInfo;
+                    }
+                }
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct ExperimentalIssuancePredictionInfo {}
+            }
+        }
     }
     pub fn view_functions() -> ViewFunctionsApi {
         ViewFunctionsApi
@@ -3119,9 +3171,9 @@ pub mod api {
             .hash();
         runtime_metadata_hash
             == [
-                89u8, 158u8, 152u8, 153u8, 146u8, 168u8, 146u8, 232u8, 160u8, 49u8, 98u8, 17u8,
-                224u8, 91u8, 12u8, 243u8, 61u8, 212u8, 138u8, 109u8, 7u8, 241u8, 42u8, 252u8,
-                198u8, 82u8, 95u8, 168u8, 122u8, 204u8, 56u8, 11u8,
+                106u8, 128u8, 248u8, 11u8, 200u8, 82u8, 222u8, 200u8, 39u8, 210u8, 129u8, 66u8,
+                55u8, 57u8, 248u8, 174u8, 234u8, 228u8, 105u8, 233u8, 230u8, 163u8, 239u8, 55u8,
+                163u8, 191u8, 45u8, 219u8, 216u8, 47u8, 73u8, 8u8,
             ]
     }
     pub mod system {
@@ -20182,6 +20234,18 @@ pub mod api {
                     crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
                 )]
                 pub struct Permill(pub ::core::primitive::u32);
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct Perquintill(pub ::core::primitive::u64);
             }
             #[derive(
                 :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
@@ -22896,6 +22960,27 @@ pub mod api {
                         #[codec(index = 3)]
                         RemoteReserve(runtime_types::xcm::VersionedLocation),
                     }
+                }
+            }
+        }
+        pub mod system_parachains_common {
+            use super::runtime_types;
+            pub mod apis {
+                use super::runtime_types;
+                #[derive(
+                    :: subxt :: ext :: subxt_core :: ext :: scale_decode :: DecodeAsType,
+                    :: subxt :: ext :: subxt_core :: ext :: scale_encode :: EncodeAsType,
+                    Debug,
+                )]
+                #[decode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_decode"
+                )]
+                #[encode_as_type(
+                    crate_path = ":: subxt :: ext :: subxt_core :: ext :: scale_encode"
+                )]
+                pub struct InflationInfo {
+                    pub issuance: runtime_types::sp_arithmetic::per_things::Perquintill,
+                    pub next_mint: (::core::primitive::u128, ::core::primitive::u128),
                 }
             }
         }

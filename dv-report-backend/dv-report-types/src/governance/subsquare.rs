@@ -295,3 +295,36 @@ pub struct SubsquareReferendumComment {
     pub proposer: AccountId,
     pub replies: Option<Vec<SubsquareReferendumComment>>,
 }
+
+#[derive(Clone, Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubsquareReferendumVoteDelegation {
+    pub votes: String,
+    pub capital: String,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubsquareReferendumVote {
+    pub referendum_index: u32,
+    #[serde(rename = "account")]
+    pub account_id: AccountId,
+    #[serde(rename = "target")]
+    pub delegate_account_id: Option<AccountId>,
+    pub is_delegating: bool,
+    pub is_standard: bool,
+    pub is_split: bool,
+    pub is_split_abstain: bool,
+    pub balance: Option<String>,
+    pub aye: Option<bool>,
+    pub conviction: u8,
+    pub abstain_balance: Option<String>,
+    pub abstain_votes: Option<String>,
+    pub aye_balance: Option<String>,
+    pub aye_votes: Option<String>,
+    pub nay_balance: Option<String>,
+    pub nay_votes: Option<String>,
+    pub votes: Option<String>,
+    pub delegations: Option<SubsquareReferendumVoteDelegation>,
+    pub query_at: u64,
+}
