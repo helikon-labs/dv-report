@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS subsquare_referendum_vote
     referendum_index    INTEGER            NOT NULL,
     account_id          VARCHAR(64)        NOT NULL,
     delegate_account_id VARCHAR(64),
+    is_delegating       BOOLEAN            NOT NULL,
     is_standard         BOOLEAN            NOT NULL,
     is_split            BOOLEAN            NOT NULL,
     is_split_abstain    BOOLEAN            NOT NULL,

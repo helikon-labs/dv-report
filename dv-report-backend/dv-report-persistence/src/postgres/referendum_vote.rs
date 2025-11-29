@@ -1,5 +1,5 @@
 use crate::postgres::PostgreSQLStorage;
-use dv_report_types::governance::subsquare::SubsquareReferendumVote;
+use dv_report_types::governance::subsquare::{SubsquareReferendumVote, SubsquareReferendumVoteRow};
 use sqlx::{Postgres, QueryBuilder};
 
 impl PostgreSQLStorage {
@@ -11,7 +11,7 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<()> {
         for vote_chunk in votes.chunks(1000) {
             let mut query_builder = QueryBuilder::new(
-                "INSERT INTO subsquare_referendum_vote(network_id, referendum_index, account_id, delegate_account_id, is_standard, is_split, is_split_abstain, balance, aye, conviction, abstain_balance, abstain_votes, aye_balance, aye_votes, nay_balance, nay_votes, votes, delegated_votes, delegated_capital, query_at) ",
+                "INSERT INTO subsquare_referendum_vote(network_id, referendum_index, account_id, delegate_account_id, is_delegating, is_standard, is_split, is_split_abstain, balance, aye, conviction, abstain_balance, abstain_votes, aye_balance, aye_votes, nay_balance, nay_votes, votes, delegated_votes, delegated_capital, query_at) ",
             );
             query_builder.push_values(vote_chunk, |mut query, vote| {
                 query
@@ -22,6 +22,7 @@ impl PostgreSQLStorage {
                         vote.delegate_account_id
                             .map(|account_id| account_id.to_string()),
                     )
+                    .push_bind(vote.is_delegating)
                     .push_bind(vote.is_standard)
                     .push_bind(vote.is_split)
                     .push_bind(vote.is_split_abstain)
@@ -52,6 +53,7 @@ impl PostgreSQLStorage {
                 ON CONFLICT(network_id, referendum_index, account_id) DO UPDATE
                 SET
                     delegate_account_id = EXCLUDED.delegate_account_id,
+                    is_delegating = EXCLUDED.is_delegating,
                     is_standard = EXCLUDED.is_standard,
                     is_split = EXCLUDED.is_split,
                     is_split_abstain = EXCLUDED.is_split_abstain,
@@ -85,11 +87,12 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<()> {
         sqlx::query(
             r#"
-            INSERT INTO subsquare_referendum_vote(network_id, referendum_index, account_id, delegate_account_id, is_standard, is_split, is_split_abstain, balance, aye, conviction, abstain_balance, abstain_votes, aye_balance, aye_votes, nay_balance, nay_votes, votes, delegated_votes, delegated_capital, query_at)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)
+            INSERT INTO subsquare_referendum_vote(network_id, referendum_index, account_id, delegate_account_id, is_delegating, is_standard, is_split, is_split_abstain, balance, aye, conviction, abstain_balance, abstain_votes, aye_balance, aye_votes, nay_balance, nay_votes, votes, delegated_votes, delegated_capital, query_at)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)
             ON CONFLICT(network_id, referendum_index, account_id) DO UPDATE
             SET
                 delegate_account_id = EXCLUDED.delegate_account_id,
+                is_delegating = EXCLUDED.is_delegating,
                 is_standard = EXCLUDED.is_standard,
                 is_split = EXCLUDED.is_split,
                 is_split_abstain = EXCLUDED.is_split_abstain,
@@ -112,6 +115,7 @@ impl PostgreSQLStorage {
             .bind(referendum_index as i32)
             .bind(vote.account_id.to_string())
             .bind(vote.delegate_account_id.map(|account_id| account_id.to_string()))
+            .bind(vote.is_delegating)
             .bind(vote.is_standard)
             .bind(vote.is_split)
             .bind(vote.is_split_abstain)
@@ -131,5 +135,25 @@ impl PostgreSQLStorage {
             .execute(&self.connection_pool)
             .await?;
         Ok(())
+    }
+
+    pub async fn get_subsquare_referendum_votes(
+        &self,
+        network_id: u32,
+        referendum_index: u32,
+    ) -> anyhow::Result<Vec<SubsquareReferendumVoteRow>> {
+        let rows: Vec<SubsquareReferendumVoteRow> = sqlx::query_as::<_, SubsquareReferendumVoteRow>(
+            r#"
+            SELECT id, network_id, referendum_index, account_id, delegate_account_id, is_delegating, is_standard, is_split, is_split_abstain, balance, aye, conviction, abstain_balance, abstain_votes, aye_balance, aye_votes, nay_balance, nay_votes, votes, delegated_votes, delegated_capital, query_at
+            FROM subsquare_referendum_vote
+            WHERE network_id = $1 AND referendum_index = $2
+            ORDER BY id ASC
+            "#,
+        )
+            .bind(network_id as i32)
+            .bind(referendum_index as i32)
+            .fetch_all(&self.connection_pool)
+            .await?;
+        Ok(rows)
     }
 }

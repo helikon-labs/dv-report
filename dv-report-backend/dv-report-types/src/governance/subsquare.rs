@@ -2,6 +2,7 @@ use crate::substrate::account_id::AccountId;
 use crate::util::string_or_number_to_string;
 use chrono::{DateTime, Utc};
 use serde::{self, Deserialize, Serialize};
+use sqlx::FromRow;
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub enum SubsquareReferendumStatus {
@@ -327,4 +328,30 @@ pub struct SubsquareReferendumVote {
     pub votes: Option<String>,
     pub delegations: Option<SubsquareReferendumVoteDelegation>,
     pub query_at: u64,
+}
+
+#[derive(Clone, Debug, FromRow, Serialize)]
+pub struct SubsquareReferendumVoteRow {
+    pub id: i32,
+    pub network_id: i32,
+    pub referendum_index: i32,
+    pub account_id: String,
+    pub delegate_account_id: Option<String>,
+    pub is_delegating: bool,
+    pub is_standard: bool,
+    pub is_split: bool,
+    pub is_split_abstain: bool,
+    pub balance: Option<String>,
+    pub aye: Option<bool>,
+    pub conviction: i32,
+    pub abstain_balance: Option<String>,
+    pub abstain_votes: Option<String>,
+    pub aye_balance: Option<String>,
+    pub aye_votes: Option<String>,
+    pub nay_balance: Option<String>,
+    pub nay_votes: Option<String>,
+    pub votes: Option<String>,
+    pub delegated_votes: Option<String>,
+    pub delegated_capital: Option<String>,
+    pub query_at: i64,
 }

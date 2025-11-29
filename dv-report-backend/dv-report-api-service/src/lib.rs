@@ -128,6 +128,7 @@ impl Service for APIService {
                 .service(service::get_network_referenda)
                 .service(service::get_network_cohort_referenda)
                 .service(service::get_network_voter_votes)
+                .service(service::get_referendum_votes)
         })
         .workers(10)
         .disable_signals()

@@ -177,7 +177,10 @@ impl Service for Indexer {
                         Ok(()) => log::info!("Comments imported successfully."),
                         Err(error) => log::error!("Error while importing comments: {}", error),
                     }
-                    log::info!("Comments will be imported again after {} minutes.", wait_minutes);
+                    log::info!(
+                        "Comments will be imported again after {} minutes.",
+                        wait_minutes
+                    );
                     sleep(Duration::from_secs(wait_minutes * 60)).await;
                 }
             }

@@ -334,3 +334,22 @@ pub(crate) async fn get_all_network_cohort_tracks(
             .await?,
     ))
 }
+
+#[derive(Deserialize)]
+pub(crate) struct NetworkReferendumPathParameter {
+    network_id: u32,
+    referendum_index: u32,
+}
+
+#[get("/network/{network_id}/referendum/{referendum_index}/vote")]
+pub(crate) async fn get_referendum_votes(
+    path: web::Path<NetworkReferendumPathParameter>,
+    state: web::Data<ServiceState>,
+) -> ResultResponse {
+    Ok(HttpResponse::Ok().json(
+        state
+            .postgres
+            .get_subsquare_referendum_votes(path.network_id, path.referendum_index)
+            .await?,
+    ))
+}
