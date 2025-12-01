@@ -15,6 +15,7 @@ import {
 import { Constants } from '../util/constants';
 import { COHORT_NUMBERS } from '../data/data-store';
 import Headroom from 'headroom.js';
+import { formatNumber } from '../util/format';
 
 interface UIDelegate {
     onCohortSelectChanged(value: number): void;
@@ -44,6 +45,8 @@ class UI {
     private readonly delegateTypeSelect: HTMLSelectElement;
     private readonly delegateTypeFilterItem: HTMLDivElement;
     private readonly decisionDepositSubmissionStatusSelect: HTMLSelectElement;
+    private readonly dvInfluenceDescription: HTMLDivElement;
+    private readonly dvInfluenceDataContainer: HTMLDivElement;
 
     private readonly voteListDelegateColumn: HTMLDivElement;
     private readonly voteList: HTMLDivElement;
@@ -88,6 +91,12 @@ class UI {
         this.votesDownloadButton.addEventListener('click', () => {
             this.delegate.onVotesDownloadButtonClicked();
         });
+        this.dvInfluenceDescription = <HTMLDivElement>(
+            document.getElementById('dv-influence-description')
+        );
+        this.dvInfluenceDataContainer = <HTMLDivElement>(
+            document.getElementById('dv-influence-data-container')
+        );
 
         const headerHeadroom = new Headroom(this.headerContainer, {
             scroller: this.contentContainer,
@@ -1327,6 +1336,98 @@ class UI {
             voteListHTML += `<div class="referendum-column">${referendumColumnHTML}</div>`;
         }
         this.voteList.innerHTML = voteListHTML;
+    }
+
+    displayDVInfluence(networks: Network[], referenda: Referendum[]) {
+        this.dvInfluenceDataContainer.innerHTML = '';
+        let dataContainerHTML = '';
+        let positiveInfluenceCount = 0;
+        let negativeInfluenceCount = 0;
+        for (const referendum of referenda) {
+            const network = networks.find((n) => n.id == referendum.networkId)!;
+            let referendumRow = '<div class="dv-influence-row">';
+            // index
+            referendumRow += `<div class="dv-influence-row-referendum-id bold"><a href="https://${network.chain}.subsquare.io/referenda/${referendum.index}" target="_blank">${network.tokenTicker} ${referendum.index}</a></div>`;
+            // with DV
+            const aye = formatNumber(
+                BigInt(referendum.tally.ayes),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const nay = formatNumber(
+                BigInt(referendum.tally.nays),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const outcome =
+                BigInt(referendum.tally.ayes) > BigInt(referendum.tally.nays) ? 'aye' : 'nay';
+            referendumRow += '<div class="dv-influence-outcome-container">';
+            referendumRow += '<div class="dv-influence-outcome">';
+            referendumRow += `<div class="dv-influence-outcome-indicator ${outcome}"></div>`;
+            referendumRow += '</div>';
+            referendumRow += '<div class="dv-influence-tally-container">';
+            referendumRow += `<div class="dv-influence-tally-row aye-foreground mono">${aye}</div>`;
+            referendumRow += `<div class="dv-influence-tally-row nay-foreground mono">${nay}</div>`;
+            referendumRow += '</div>';
+            referendumRow += '</div>';
+            // without DV
+            const ayeWithoutDV = formatNumber(
+                BigInt(referendum.tallyWithoutDv.ayes),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const nayWithoutDV = formatNumber(
+                BigInt(referendum.tallyWithoutDv.nays),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const outcomeWithoutDV =
+                BigInt(referendum.tallyWithoutDv.ayes) > BigInt(referendum.tallyWithoutDv.nays)
+                    ? 'aye'
+                    : 'nay';
+            referendumRow += '<div class="dv-influence-outcome-container">';
+            referendumRow += '<div class="dv-influence-outcome">';
+            referendumRow += `<div class="dv-influence-outcome-indicator ${outcomeWithoutDV}"></div>`;
+            referendumRow += '</div>';
+            referendumRow += '<div class="dv-influence-tally-container">';
+            referendumRow += `<div class="dv-influence-tally-row aye-foreground mono">${ayeWithoutDV}</div>`;
+            referendumRow += `<div class="dv-influence-tally-row nay-foreground mono">${nayWithoutDV}</div>`;
+            referendumRow += '</div>';
+            referendumRow += '</div>';
+            // influence
+            let influenceIcon = undefined;
+            let influenceClass = '';
+            if (outcomeWithoutDV != outcome) {
+                if (outcome) {
+                    positiveInfluenceCount++;
+                    influenceIcon = 'fa-chevron-circle-up';
+                    influenceClass = 'aye-foreground';
+                } else {
+                    negativeInfluenceCount++;
+                    influenceIcon = 'fa-chevron-circle-down';
+                    influenceClass = 'nay-foreground';
+                }
+            }
+            referendumRow += `<div class="dv-influence-outcome-influence ${influenceClass}">`;
+            if (influenceIcon) {
+                referendumRow += `<i class="fa ${influenceIcon}" aria-hidden="true"></i>`;
+            } else {
+                referendumRow += '-';
+            }
+            referendumRow += `</div>`;
+            referendumRow += '</div>';
+            dataContainerHTML += referendumRow;
+        }
+        this.dvInfluenceDataContainer.innerHTML = dataContainerHTML;
+        const totalInfluenceCount = positiveInfluenceCount + negativeInfluenceCount;
+        const totalInfluencePercentage = ((totalInfluenceCount / referenda.length) * 100).toFixed(
+            2,
+        );
+        this.dvInfluenceDescription.innerHTML = `Among the filtered referenda, DV delegates changed the outcome of <span class="vote-legend aye">${positiveInfluenceCount} in a positive direction</span>, and <span class="vote-legend nay">${negativeInfluenceCount > 0 ? negativeInfluenceCount.toString() : 'none'} in a negative direction</span>. Overall, out of <span class="bold">${referenda.length} referenda</span>, delegates influenced the outcome of <span class="bold">${positiveInfluenceCount + negativeInfluenceCount}</span>, representing <span class="bold">${totalInfluencePercentage}%</span> of the total.`;
     }
 }
 

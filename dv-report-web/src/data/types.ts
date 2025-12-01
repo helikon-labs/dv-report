@@ -81,9 +81,9 @@ interface DecisionDepositPlacedEvent {
 }
 
 interface Tally {
-    ayes: bigint;
-    nays: bigint;
-    abstains: bigint;
+    ayes: string;
+    nays: string;
+    abstains: string;
 }
 
 interface Referendum {
@@ -95,7 +95,7 @@ interface Referendum {
     decisionDepositPlacedEvent: DecisionDepositPlacedEvent | undefined;
     isRetracted: boolean;
     tally: Tally;
-    tallyWithoutDV: Tally;
+    tallyWithoutDv: Tally;
 }
 
 interface VoteCall {

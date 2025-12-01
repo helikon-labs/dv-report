@@ -130,7 +130,9 @@ class App {
         this.ui.displayChangedVoteCountChart(voteCountData);
         const referenda = this.dataStore.getFilteredReferenda();
         const lastVotesMaps = this.dataStore.getAllDelegatesLastVoteMaps();
-        this.ui.displayVoteList(this.dataStore.getNetworks(), delegates, referenda, lastVotesMaps);
+        const networks = this.dataStore.getNetworks();
+        this.ui.displayVoteList(networks, delegates, referenda, lastVotesMaps);
+        this.ui.displayDVInfluence(networks, referenda);
     }
 
     private async initData() {

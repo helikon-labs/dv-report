@@ -402,7 +402,7 @@ p {
 
 .section-description {
     font-size: 13px;
-    line-height: 18px;
+    line-height: 20px;
     text-align: justify;
     color: #00000099;
 }
@@ -588,7 +588,7 @@ rect:hover {
 }
 
 /* DV influence table */
-.dv-influence-list-container {
+.dv-influence-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -597,26 +597,43 @@ rect:hover {
     gap: 1px;
 }
 
-.dv-influence-list-container :nth-child(1) div {
+.dv-influence-header {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 1px;
     background-color: #eeeeee;
+}
+
+.dv-influence-header div {
     padding: 4px 8px;
     box-sizing: border-box;
 }
 
-.dv-influence-list-container :nth-child(1) :nth-child(2),
-.dv-influence-list-container :nth-child(1) :nth-child(3) {
+.dv-influence-header :nth-child(2),
+.dv-influence-header :nth-child(3) {
     background-color: #eeeeee;
     justify-content: flex-start;
 }
 
-.dv-influence-list-row {
+.dv-influence-data-container {
+    max-height: 240px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    box-sizing: border-box;
+    gap: 1px;
+    overflow-y: auto;
+}
+
+.dv-influence-row {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     gap: 1px;
 }
 
-.dv-influence-list-row-referendum-id {
+.dv-influence-row-referendum-id {
     width: 12%;
     background-color: #eeeeee;
     display: flex;
@@ -639,10 +656,16 @@ rect:hover {
 
 .dv-influence-outcome {
     display: flex;
-    flex-grow: 0.25;
+    width: 40px;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+}
+
+.dv-influence-outcome-indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
 }
 
 .dv-influence-tally-container {
