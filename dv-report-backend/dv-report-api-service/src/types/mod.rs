@@ -6,6 +6,14 @@ use serde::Serialize;
 
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
+pub(crate) struct Tally {
+    pub ayes: String,
+    pub nays: String,
+    pub abstains: String,
+}
+
+#[derive(Clone, Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub(crate) struct ReferendumDTO {
     pub network_id: u32,
     pub index: u32,
@@ -14,4 +22,6 @@ pub(crate) struct ReferendumDTO {
     pub status: ReferendumStatusRow,
     pub decision_deposit_placed_event: Option<ReferendumDecisionDepositPlacedEvent>,
     pub is_retracted: bool,
+    pub tally: Tally,
+    pub tally_without_dv: Tally,
 }

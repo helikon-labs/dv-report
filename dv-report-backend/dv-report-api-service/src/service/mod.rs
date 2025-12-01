@@ -1,8 +1,9 @@
-use crate::types::ReferendumDTO;
+use crate::types::{ReferendumDTO, Tally};
 use crate::{ResultResponse, ServiceState};
 use actix_web::{get, web, HttpResponse};
 use dv_report_types::err::ServiceError;
 use dv_report_types::governance::referendum::{ReferendumStatus, ReferendumStatusRow};
+use dv_report_types::governance::subsquare::SubsquareReferendumVoteRow;
 use dv_report_types::substrate::account_id::AccountId;
 use dv_report_types::substrate::block::Block;
 use dv_report_types::substrate::track::{Track, TrackRow};
@@ -95,12 +96,6 @@ pub(crate) async fn get_all_delegates(state: web::Data<ServiceState>) -> ResultR
     Ok(HttpResponse::Ok().json(delegates))
 }
 
-#[derive(Deserialize)]
-pub(crate) struct NetworkVoterAccountIdPathParameter {
-    network_id: u32,
-    voter_account_id: String,
-}
-
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Vote {
@@ -128,9 +123,16 @@ pub struct Vote {
     pub polkassembly_comment_id: Option<String>,
 }
 
-#[get("/network/{network_id}/voter/{voter_account_id}/vote")]
-pub(crate) async fn get_network_voter_votes(
-    path: web::Path<NetworkVoterAccountIdPathParameter>,
+#[derive(Deserialize)]
+pub(crate) struct NetworkCohortVoterAccountIdPathParameter {
+    network_id: u32,
+    cohort_number: u32,
+    voter_account_id: String,
+}
+
+#[get("/network/{network_id}/cohort/{cohort_number}/voter/{voter_account_id}/vote")]
+pub(crate) async fn get_network_cohort_voter_votes(
+    path: web::Path<NetworkCohortVoterAccountIdPathParameter>,
     state: web::Data<ServiceState>,
 ) -> ResultResponse {
     let account_id = match validate_account_id_path_param(path.voter_account_id.as_str()) {
@@ -147,7 +149,7 @@ pub(crate) async fn get_network_voter_votes(
 
     let rows = state
         .postgres
-        .get_network_voter_votes(path.network_id, &account_id)
+        .get_network_cohort_voter_votes(path.network_id, path.cohort_number, &account_id)
         .await?;
     let mut votes = Vec::new();
     for row in rows.iter() {
@@ -210,61 +212,56 @@ pub(crate) async fn get_all_referendum_tracks(
     ))
 }
 
-#[get("/network/{network_id}/referendum")]
-pub(crate) async fn get_network_referenda(
-    path: web::Path<NetworkPathParameter>,
-    state: web::Data<ServiceState>,
-) -> ResultResponse {
-    if let Some(cached_referenda) = state.network_referendum_cache.get(&path.network_id).await {
-        return Ok(HttpResponse::Ok().json(cached_referenda));
-    }
-
-    let rows = state
-        .postgres
-        .get_network_referenda(path.network_id)
-        .await?;
-    let mut referenda = Vec::new();
-    for row in rows.iter() {
-        let submission_block = state
-            .postgres
-            .get_block(row.network_id as u32, row.submission_block_hash.as_str())
-            .await?;
-        let track = Track::from_id(row.track_id as u16);
-        let status = ReferendumStatus::from_id(row.status_id as u32);
-        referenda.push(ReferendumDTO {
-            network_id: row.network_id as u32,
-            index: row.index as u32,
-            track: TrackRow {
-                network_id: row.network_id,
-                id: track.id() as i32,
-                name: track.name().to_string(),
-            },
-            submission_block,
-            status: ReferendumStatusRow {
-                id: status.id() as i32,
-                status: status.name(),
-            },
-            is_retracted: row.is_retracted,
-            decision_deposit_placed_event: state
-                .postgres
-                .get_referendum_decision_deposit_placed_event(
-                    row.network_id as u32,
-                    row.index as u32,
-                )
-                .await?,
-        });
-    }
-    state
-        .network_referendum_cache
-        .insert(path.network_id, referenda.clone())
-        .await;
-    Ok(HttpResponse::Ok().json(referenda))
-}
-
 #[derive(Deserialize)]
 pub(crate) struct NetworkCohortPathParameter {
     network_id: u32,
     cohort_number: u32,
+}
+
+fn get_tally(
+    votes: &[SubsquareReferendumVoteRow],
+    exclude_account_ids: &[AccountId],
+) -> anyhow::Result<Tally> {
+    let mut tally = (0u128, 0u128, 0u128);
+    for vote in votes.iter() {
+        let account_id = AccountId::from_str(&vote.account_id)?;
+        if vote.delegate_account_id.is_some() || exclude_account_ids.contains(&account_id) {
+            continue;
+        }
+        if let (Some(is_aye), Some(power)) = (vote.aye, &vote.votes) {
+            let power: u128 = power.parse()?;
+            if is_aye {
+                tally.0 += power;
+            } else {
+                tally.1 += power;
+            }
+            if let Some(delegated_power) = &vote.delegated_votes {
+                let delegated_power: u128 = delegated_power.parse()?;
+                if is_aye {
+                    tally.0 += delegated_power;
+                } else {
+                    tally.1 += delegated_power;
+                }
+            }
+        }
+        if let Some(aye_power) = &vote.aye_votes {
+            let aye_power: u128 = aye_power.parse()?;
+            tally.0 += aye_power;
+        }
+        if let Some(nay_power) = &vote.nay_votes {
+            let nay_power: u128 = nay_power.parse()?;
+            tally.1 += nay_power;
+        }
+        if let Some(abstain_power) = &vote.abstain_votes {
+            let abstain_power: u128 = abstain_power.parse()?;
+            tally.2 += abstain_power;
+        }
+    }
+    Ok(Tally {
+        ayes: tally.0.to_string(),
+        nays: tally.1.to_string(),
+        abstains: tally.2.to_string(),
+    })
 }
 
 #[get("/network/{network_id}/cohort/{cohort_number}/referendum")]
@@ -284,8 +281,16 @@ pub(crate) async fn get_network_cohort_referenda(
         .postgres
         .get_network_cohort_referenda(path.network_id, path.cohort_number)
         .await?;
+    let delegate_account_ids = state
+        .postgres
+        .get_network_cohort_delegate_account_ids(path.network_id, path.cohort_number)
+        .await?;
     let mut referenda = Vec::new();
     for row in rows.iter() {
+        let votes = state
+            .postgres
+            .get_subsquare_referendum_votes(path.network_id, row.index as u32)
+            .await?;
         let submission_block = state
             .postgres
             .get_block(row.network_id as u32, row.submission_block_hash.as_str())
@@ -313,6 +318,8 @@ pub(crate) async fn get_network_cohort_referenda(
                 )
                 .await?,
             is_retracted: row.is_retracted,
+            tally: get_tally(&votes, &[])?,
+            tally_without_dv: get_tally(&votes, &delegate_account_ids)?,
         });
     }
     state
@@ -331,25 +338,6 @@ pub(crate) async fn get_all_network_cohort_tracks(
         state
             .postgres
             .get_all_tracks_for_network_cohort(path.network_id, path.cohort_number)
-            .await?,
-    ))
-}
-
-#[derive(Deserialize)]
-pub(crate) struct NetworkReferendumPathParameter {
-    network_id: u32,
-    referendum_index: u32,
-}
-
-#[get("/network/{network_id}/referendum/{referendum_index}/vote")]
-pub(crate) async fn get_referendum_votes(
-    path: web::Path<NetworkReferendumPathParameter>,
-    state: web::Data<ServiceState>,
-) -> ResultResponse {
-    Ok(HttpResponse::Ok().json(
-        state
-            .postgres
-            .get_subsquare_referendum_votes(path.network_id, path.referendum_index)
             .await?,
     ))
 }

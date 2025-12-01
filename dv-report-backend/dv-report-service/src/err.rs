@@ -1,5 +1,6 @@
 use dv_report_types::err::ServiceError;
 use std::fmt::{Display, Formatter};
+use std::num::ParseIntError;
 
 #[derive(Debug)]
 pub struct InternalServerError {
@@ -19,5 +20,13 @@ impl actix_web::error::ResponseError for InternalServerError {}
 impl From<anyhow::Error> for InternalServerError {
     fn from(err: anyhow::Error) -> InternalServerError {
         InternalServerError { err }
+    }
+}
+
+impl From<ParseIntError> for InternalServerError {
+    fn from(err: ParseIntError) -> InternalServerError {
+        InternalServerError {
+            err: anyhow::Error::from(err),
+        }
     }
 }

@@ -29,7 +29,6 @@ async fn on_server_ready() {
 
 #[derive(Clone)]
 pub(crate) struct ServiceState {
-    network_referendum_cache: Arc<Cache<u32, Vec<ReferendumDTO>>>,
     network_cohort_referendum_cache: Arc<Cache<(u32, u32), Vec<ReferendumDTO>>>,
     network_voter_vote_cache: Arc<Cache<(u32, AccountId), Vec<Vote>>>,
     delegate_cache: Arc<Cache<u32, Vec<Delegate>>>,
@@ -67,7 +66,6 @@ impl Service for APIService {
 
     async fn run(&self) -> anyhow::Result<()> {
         let postgres = Arc::new(PostgreSQLStorage::new(&self.config).await?);
-        let network_referendum_cache = Arc::new(build_cache());
         let network_cohort_referendum_cache = Arc::new(build_cache());
         let network_voter_vote_cache = Arc::new(build_cache());
         let delegate_cache = Arc::new(build_cache());
@@ -77,7 +75,7 @@ impl Service for APIService {
             self.config.api.api_service_port
         );
         let server = HttpServer::new(move || {
-            let _cors = Cors::default()
+            let cors = Cors::default()
                 .allowed_origin("http://localhost:8080")
                 .allowed_methods(vec!["GET", "POST", "OPTIONS"])
                 .allowed_headers(vec![
@@ -89,12 +87,11 @@ impl Service for APIService {
             App::new()
                 .app_data(web::Data::new(ServiceState {
                     postgres: postgres.clone(),
-                    network_referendum_cache: network_referendum_cache.clone(),
                     network_cohort_referendum_cache: network_cohort_referendum_cache.clone(),
                     network_voter_vote_cache: network_voter_vote_cache.clone(),
                     delegate_cache: delegate_cache.clone(),
                 }))
-                //.wrap(cors)
+                .wrap(cors)
                 .wrap_fn(|request, service| {
                     metrics::request_counter().inc();
                     metrics::connection_count().inc();
@@ -125,10 +122,8 @@ impl Service for APIService {
                 .service(service::get_all_network_cohort_tracks)
                 .service(service::get_all_delegate_types)
                 .service(service::get_all_delegates)
-                .service(service::get_network_referenda)
                 .service(service::get_network_cohort_referenda)
-                .service(service::get_network_voter_votes)
-                .service(service::get_referendum_votes)
+                .service(service::get_network_cohort_voter_votes)
         })
         .workers(10)
         .disable_signals()

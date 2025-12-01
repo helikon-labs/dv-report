@@ -93,9 +93,10 @@ impl PostgreSQLStorage {
         Ok(result.0)
     }
 
-    pub async fn get_network_voter_votes(
+    pub async fn get_network_cohort_voter_votes(
         &self,
         network_id: u32,
+        cohort_number: u32,
         voter_account_id: &AccountId,
     ) -> anyhow::Result<Vec<VoteCallRow>> {
         let rows: Vec<VoteCallRow> = sqlx::query_as::<_, VoteCallRow>(
@@ -129,13 +130,18 @@ impl PostgreSQLStorage {
                 AND PC.referendum_index = V.referendum_index
                 AND PC.proposer IN (SELECT comment_account_id FROM comment_account_ids)
             )
+            INNER JOIN cohort_referendum CR ON (
+                CR.referendum_index = V.referendum_index
+            )
             WHERE V.network_id = $1
                 AND V.voter_account_id = $2
+                AND CR.cohort_number = $3
             ORDER BY V.network_id ASC, V.referendum_index ASC
             ",
         )
         .bind(network_id as i32)
         .bind(voter_account_id.to_string())
+        .bind(cohort_number as i32)
         .fetch_all(&self.connection_pool)
         .await?;
         Ok(rows)

@@ -1,6 +1,8 @@
 use crate::postgres::PostgreSQLStorage;
 use dv_report_types::governance::subsquare::{SubsquareReferendumVote, SubsquareReferendumVoteRow};
+use dv_report_types::substrate::account_id::AccountId;
 use sqlx::{Postgres, QueryBuilder};
+use std::str::FromStr;
 
 impl PostgreSQLStorage {
     pub async fn save_subsquare_referendum_votes(
@@ -155,5 +157,28 @@ impl PostgreSQLStorage {
             .fetch_all(&self.connection_pool)
             .await?;
         Ok(rows)
+    }
+
+    pub async fn get_network_cohort_delegate_account_ids(
+        &self,
+        network_id: u32,
+        cohort_number: u32,
+    ) -> anyhow::Result<Vec<AccountId>> {
+        let rows: Vec<(String,)> = sqlx::query_as(
+            r#"
+            SELECT DISTINCT delegate_account_id
+            FROM delegation
+            WHERE network_id = $1 AND cohort_number = $2
+            "#,
+        )
+        .bind(network_id as i32)
+        .bind(cohort_number as i32)
+        .fetch_all(&self.connection_pool)
+        .await?;
+        let mut account_ids = Vec::new();
+        for row in rows {
+            account_ids.push(AccountId::from_str(row.0.as_str())?);
+        }
+        Ok(account_ids)
     }
 }
