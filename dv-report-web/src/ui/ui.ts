@@ -170,11 +170,6 @@ class UI {
         this.cohortSelect.innerHTML = cohortSelectHTML;
         this.cohortSelect.onchange = (_) => {
             const cohortNumber = Number.parseInt(this.cohortSelect.value);
-            if (cohortNumber == 4) {
-                hide(this.delegateTypeFilterItem);
-            } else {
-                show(this.delegateTypeFilterItem);
-            }
             this.delegate.onCohortSelectChanged(cohortNumber);
         };
 

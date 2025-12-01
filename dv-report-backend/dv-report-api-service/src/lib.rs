@@ -30,7 +30,7 @@ async fn on_server_ready() {
 #[derive(Clone)]
 pub(crate) struct ServiceState {
     network_cohort_referendum_cache: Arc<Cache<(u32, u32), Vec<ReferendumDTO>>>,
-    network_voter_vote_cache: Arc<Cache<(u32, AccountId), Vec<Vote>>>,
+    network_cohort_voter_vote_cache: Arc<Cache<(u32, u32, AccountId), Vec<Vote>>>,
     delegate_cache: Arc<Cache<u32, Vec<Delegate>>>,
     postgres: Arc<PostgreSQLStorage>,
 }
@@ -67,7 +67,7 @@ impl Service for APIService {
     async fn run(&self) -> anyhow::Result<()> {
         let postgres = Arc::new(PostgreSQLStorage::new(&self.config).await?);
         let network_cohort_referendum_cache = Arc::new(build_cache());
-        let network_voter_vote_cache = Arc::new(build_cache());
+        let network_cohort_voter_vote_cache = Arc::new(build_cache());
         let delegate_cache = Arc::new(build_cache());
         log::info!(
             "Starting HTTP service @ {}:{}.",
@@ -88,7 +88,7 @@ impl Service for APIService {
                 .app_data(web::Data::new(ServiceState {
                     postgres: postgres.clone(),
                     network_cohort_referendum_cache: network_cohort_referendum_cache.clone(),
-                    network_voter_vote_cache: network_voter_vote_cache.clone(),
+                    network_cohort_voter_vote_cache: network_cohort_voter_vote_cache.clone(),
                     delegate_cache: delegate_cache.clone(),
                 }))
                 //.wrap(cors)

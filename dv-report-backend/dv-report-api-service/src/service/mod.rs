@@ -140,8 +140,8 @@ pub(crate) async fn get_network_cohort_voter_votes(
         Err(response) => return Ok(response),
     };
     if let Some(cached_vote_calls) = state
-        .network_voter_vote_cache
-        .get(&(path.network_id, account_id))
+        .network_cohort_voter_vote_cache
+        .get(&(path.network_id, path.cohort_number, account_id))
         .await
     {
         return Ok(HttpResponse::Ok().json(cached_vote_calls));
@@ -183,8 +183,11 @@ pub(crate) async fn get_network_cohort_voter_votes(
         })
     }
     state
-        .network_voter_vote_cache
-        .insert((path.network_id, account_id), votes.clone())
+        .network_cohort_voter_vote_cache
+        .insert(
+            (path.network_id, path.cohort_number, account_id),
+            votes.clone(),
+        )
         .await;
     Ok(HttpResponse::Ok().json(votes))
 }
