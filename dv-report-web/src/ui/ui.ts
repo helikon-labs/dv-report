@@ -1347,7 +1347,7 @@ class UI {
             const network = networks.find((n) => n.id == referendum.networkId)!;
             let referendumRow = '<div class="dv-influence-row">';
             // index
-            referendumRow += `<div class="dv-influence-row-referendum-id bold"><a href="https://${network.chain}.subsquare.io/referenda/${referendum.index}" target="_blank">${network.tokenTicker} ${referendum.index}</a></div>`;
+            referendumRow += `<div class="dv-influence-row-referendum-id"><a href="https://${network.chain}.subsquare.io/referenda/${referendum.index}" target="_blank">${network.tokenTicker} ${referendum.index}</a></div>`;
             // with DV
             const aye = formatNumber(
                 BigInt(referendum.tally.ayes),

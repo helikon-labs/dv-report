@@ -494,6 +494,10 @@ p {
     .dv-influence-row-referendum-id {
         font-size: 10px;
     }
+
+    .dv-influence-header :nth-child(4) :nth-child(1) {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -519,10 +523,35 @@ p {
 
     .dv-influence-row-referendum-id {
         font-size: 9px;
+        font-weight: 400 !important;
     }
 
     .dv-influence-tally-row {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .dv-influence-row-referendum-id {
+        font-size: 5.75px;
+    }
+
+    .dv-influence-tally-container {
+        display: none !important;
+    }
+
+    .dv-influence-header :nth-child(4) :nth-child(1) {
+        display: none !important;
+    }
+
+    .dv-influence-outcome-indicator {
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 4px !important;
+    }
+
+    .dv-influence-outcome-influence {
+        font-size: 8px;
     }
 }
 
@@ -656,6 +685,7 @@ rect:hover {
     align-items: center;
     border: 1px solid #dddddd;
     box-sizing: border-box;
+    font-weight: 700;
 }
 
 .dv-influence-outcome-container {
@@ -667,6 +697,8 @@ rect:hover {
     gap: 1px;
     padding: 1px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 
 .dv-influence-outcome {
