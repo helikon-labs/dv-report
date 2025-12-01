@@ -168,8 +168,9 @@ class App {
                 this.ui.setLoadingDescription(
                     `loading<br>${delegate.name}<br>${network.display} votes`,
                 );
-                await this.dataStore.fetchNetworkDelegateVotes(
+                await this.dataStore.fetchNetworkCohortDelegateVotes(
                     delegation.networkId,
+                    this.dataStore.getSelectedCohortNumber(),
                     delegation.delegateAccountId,
                 );
             }

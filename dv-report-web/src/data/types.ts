@@ -80,6 +80,12 @@ interface DecisionDepositPlacedEvent {
     who: string;
 }
 
+interface Tally {
+    ayes: bigint;
+    nays: bigint;
+    abstains: bigint;
+}
+
 interface Referendum {
     networkId: number;
     index: number;
@@ -88,6 +94,8 @@ interface Referendum {
     status: ReferendumStatus;
     decisionDepositPlacedEvent: DecisionDepositPlacedEvent | undefined;
     isRetracted: boolean;
+    tally: Tally;
+    tallyWithoutDV: Tally;
 }
 
 interface VoteCall {

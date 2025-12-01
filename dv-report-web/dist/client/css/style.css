@@ -69,7 +69,7 @@ body {
 }
 
 .mono {
-    font-family: 'monospace';
+    font-family: 'Courier New', 'Lucida Console', monospace;
 }
 
 a:link,
@@ -100,12 +100,24 @@ hr {
     background-color: #4caf50;
 }
 
+.aye-foreground {
+    color: #4caf50;
+}
+
 .abstain {
     background-color: #aaaaaa;
 }
 
+.abstain-foreground {
+    color: #aaaaaa;
+}
+
 .nay {
     background-color: #f44336;
+}
+
+.nay-foreground {
+    color: #f44336;
 }
 
 .vote-legend {
@@ -573,4 +585,89 @@ rect:hover {
     height: 8px;
     border-radius: 4px;
     margin-right: 6px;
+}
+
+/* DV influence table */
+.dv-influence-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    box-sizing: border-box;
+    gap: 1px;
+}
+
+.dv-influence-list-container :nth-child(1) div {
+    background-color: #eeeeee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.dv-influence-list-container :nth-child(1) :nth-child(2),
+.dv-influence-list-container :nth-child(1) :nth-child(3) {
+    background-color: #eeeeee;
+    justify-content: flex-start;
+}
+
+.dv-influence-list-row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 1px;
+}
+
+.dv-influence-list-row-referendum-id {
+    width: 12%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+.dv-influence-outcome-container {
+    width: 39%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    gap: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.dv-influence-outcome {
+    display: flex;
+    flex-grow: 0.25;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.dv-influence-tally-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.dv-influence-tally-row {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.dv-influence-outcome-influence {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
