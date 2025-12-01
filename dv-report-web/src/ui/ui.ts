@@ -1424,10 +1424,16 @@ class UI {
         }
         this.dvInfluenceDataContainer.innerHTML = dataContainerHTML;
         const totalInfluenceCount = positiveInfluenceCount + negativeInfluenceCount;
-        const totalInfluencePercentage = ((totalInfluenceCount / referenda.length) * 100).toFixed(
-            2,
-        );
-        this.dvInfluenceDescription.innerHTML = `Among the filtered referenda, DV delegates changed the outcome of <span class="vote-legend aye">${positiveInfluenceCount} in a positive direction</span>, and <span class="vote-legend nay">${negativeInfluenceCount > 0 ? negativeInfluenceCount.toString() : 'none'} in a negative direction</span>. Overall, out of <span class="bold">${referenda.length} referenda</span>, delegates influenced the outcome of <span class="bold">${positiveInfluenceCount + negativeInfluenceCount}</span>, representing <span class="bold">${totalInfluencePercentage}%</span> of the total.`;
+        const totalInfluencePercentage = (
+            (totalInfluenceCount / (referenda.length > 0 ? referenda.length : 1)) *
+            100
+        ).toFixed(2);
+        const totalInfluence = totalInfluenceCount > 0 ? totalInfluenceCount.toString() : 'none';
+        const positiveInfluence =
+            positiveInfluenceCount > 0 ? positiveInfluenceCount.toString() : 'none';
+        const negativeInfluence =
+            negativeInfluenceCount > 0 ? negativeInfluenceCount.toString() : 'none';
+        this.dvInfluenceDescription.innerHTML = `Among the filtered referenda, DV delegates changed the outcome of <span class="vote-legend aye">${positiveInfluence} in a positive direction</span>, and <span class="vote-legend nay">${negativeInfluence} in a negative direction</span>. Overall, out of <span class="bold">${referenda.length} referenda</span>, delegates influenced the outcome of <span class="bold">${totalInfluence}</span>, representing <span class="bold">${totalInfluencePercentage}%</span> of the total.`;
     }
 }
 
