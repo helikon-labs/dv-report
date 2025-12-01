@@ -490,6 +490,10 @@ p {
         align-items: flex-start;
         gap: 12px;
     }
+
+    .dv-influence-row-referendum-id {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -507,6 +511,18 @@ p {
 
     .section-header i.fa {
         font-size: 12px;
+    }
+
+    .dv-influence-header {
+        font-size: 10px;
+    }
+
+    .dv-influence-row-referendum-id {
+        font-size: 9px;
+    }
+
+    .dv-influence-tally-row {
+        font-size: 10px;
     }
 }
 
@@ -612,7 +628,6 @@ rect:hover {
 
 .dv-influence-header :nth-child(2),
 .dv-influence-header :nth-child(3) {
-    background-color: #eeeeee;
     justify-content: flex-start;
 }
 
