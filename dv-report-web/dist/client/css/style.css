@@ -667,7 +667,7 @@ rect:hover {
     font-size: 12px;
     box-sizing: border-box;
     gap: 1px;
-    overflow-y: auto;
+    overflow-y: overlay;
 }
 
 .dv-influence-row {
