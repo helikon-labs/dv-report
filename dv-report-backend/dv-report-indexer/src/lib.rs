@@ -83,9 +83,17 @@ async fn import_comments(config: &Config) -> anyhow::Result<()> {
             network.token_ticker,
             referendum.index
         );
-        let polkassembly_comments = repository
+        let Ok(polkassembly_comments) = repository
             .get_polkassembly_referendum_comments(&network, referendum.index)
-            .await?;
+            .await
+        else {
+            log::error!(
+                "Error while fetching Polkassembly comments for {} #{}.",
+                network.token_ticker,
+                referendum.index
+            );
+            continue;
+        };
         for polkassembly_comment in polkassembly_comments.iter() {
             repository
                 .save_polkassembly_referendum_comment(
