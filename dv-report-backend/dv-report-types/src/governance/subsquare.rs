@@ -281,7 +281,9 @@ pub struct SubsquareReferendumComment {
     #[serde(rename = "_id")]
     pub id: String,
     #[serde(rename = "referendaReferendum")]
-    pub referendum_post_id: String,
+    pub referendum_post_id: Option<String>,
+    #[serde(rename = "post")]
+    pub discussion_post_id: Option<String>,
     #[serde(rename = "replyToComment")]
     pub reply_to_comment_id: Option<String>,
     pub content: String,

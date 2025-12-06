@@ -13,13 +13,14 @@ impl PostgreSQLStorage {
     ) -> anyhow::Result<()> {
         sqlx::query(
             r#"
-            INSERT INTO subsquare_referendum_comment(id, network_id, referendum_index, referendum_post_id, reply_to_comment_id, content, content_type, content_version, author_username, author_public_key, author_address, author_email_md5, height, created_at, updated_at, data_source, cid, proposer)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+            INSERT INTO subsquare_referendum_comment(id, network_id, referendum_index, referendum_post_id, discussion_post_id, reply_to_comment_id, content, content_type, content_version, author_username, author_public_key, author_address, author_email_md5, height, created_at, updated_at, data_source, cid, proposer)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
             ON CONFLICT(id) DO UPDATE
             SET
                 network_id = EXCLUDED.network_id,
                 referendum_index = EXCLUDED.referendum_index,
                 referendum_post_id = EXCLUDED.referendum_post_id,
+                discussion_post_id = EXCLUDED.discussion_post_id,
                 reply_to_comment_id = EXCLUDED.reply_to_comment_id,
                 content = EXCLUDED.content,
                 content_type = EXCLUDED.content_type,
@@ -40,6 +41,7 @@ impl PostgreSQLStorage {
             .bind(network_id as i32)
             .bind(referendum_index as i32)
             .bind(&comment.referendum_post_id)
+            .bind(&comment.discussion_post_id)
             .bind(&comment.reply_to_comment_id)
             .bind(&comment.content)
             .bind(&comment.content_type)
