@@ -1402,7 +1402,7 @@ class UI {
             let influenceIcon = undefined;
             let influenceClass = '';
             if (outcomeWithoutDV != outcome) {
-                if (outcome) {
+                if (outcome == 'aye') {
                     positiveInfluenceCount++;
                     influenceIcon = 'fa-chevron-circle-up';
                     influenceClass = 'aye-foreground';
