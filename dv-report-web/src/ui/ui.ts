@@ -1348,30 +1348,6 @@ class UI {
             let referendumRow = '<div class="dv-influence-row">';
             // index
             referendumRow += `<div class="dv-influence-row-referendum-id"><a href="https://${network.chain}.subsquare.io/referenda/${referendum.index}" target="_blank">${network.tokenTicker} ${referendum.index}</a></div>`;
-            // with DV
-            const aye = formatNumber(
-                BigInt(referendum.tally.ayes),
-                network.tokenDecimals,
-                2,
-                network.tokenTicker,
-            );
-            const nay = formatNumber(
-                BigInt(referendum.tally.nays),
-                network.tokenDecimals,
-                2,
-                network.tokenTicker,
-            );
-            const outcome =
-                BigInt(referendum.tally.ayes) > BigInt(referendum.tally.nays) ? 'aye' : 'nay';
-            referendumRow += '<div class="dv-influence-outcome-container">';
-            referendumRow += '<div class="dv-influence-outcome">';
-            referendumRow += `<div class="dv-influence-outcome-indicator ${outcome}"></div>`;
-            referendumRow += '</div>';
-            referendumRow += '<div class="dv-influence-tally-container">';
-            referendumRow += `<div class="dv-influence-tally-row aye-foreground mono">${aye}</div>`;
-            referendumRow += `<div class="dv-influence-tally-row nay-foreground mono">${nay}</div>`;
-            referendumRow += '</div>';
-            referendumRow += '</div>';
             // without DV
             const ayeWithoutDV = formatNumber(
                 BigInt(referendum.tallyWithoutDv.ayes),
@@ -1396,6 +1372,30 @@ class UI {
             referendumRow += '<div class="dv-influence-tally-container">';
             referendumRow += `<div class="dv-influence-tally-row aye-foreground mono">${ayeWithoutDV}</div>`;
             referendumRow += `<div class="dv-influence-tally-row nay-foreground mono">${nayWithoutDV}</div>`;
+            referendumRow += '</div>';
+            referendumRow += '</div>';
+            // with DV
+            const aye = formatNumber(
+                BigInt(referendum.tally.ayes),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const nay = formatNumber(
+                BigInt(referendum.tally.nays),
+                network.tokenDecimals,
+                2,
+                network.tokenTicker,
+            );
+            const outcome =
+                BigInt(referendum.tally.ayes) > BigInt(referendum.tally.nays) ? 'aye' : 'nay';
+            referendumRow += '<div class="dv-influence-outcome-container">';
+            referendumRow += '<div class="dv-influence-outcome">';
+            referendumRow += `<div class="dv-influence-outcome-indicator ${outcome}"></div>`;
+            referendumRow += '</div>';
+            referendumRow += '<div class="dv-influence-tally-container">';
+            referendumRow += `<div class="dv-influence-tally-row aye-foreground mono">${aye}</div>`;
+            referendumRow += `<div class="dv-influence-tally-row nay-foreground mono">${nay}</div>`;
             referendumRow += '</div>';
             referendumRow += '</div>';
             // influence
