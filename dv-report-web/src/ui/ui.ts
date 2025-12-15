@@ -1433,7 +1433,7 @@ class UI {
             positiveInfluenceCount > 0 ? positiveInfluenceCount.toString() : 'none';
         const negativeInfluence =
             negativeInfluenceCount > 0 ? negativeInfluenceCount.toString() : 'none';
-        this.dvInfluenceDescription.innerHTML = `Among the filtered referenda, DV delegates changed the outcome of <span class="vote-legend aye">${positiveInfluence} in a positive direction</span>, and <span class="vote-legend nay">${negativeInfluence} in a negative direction</span>. Overall, out of <span class="bold">${referenda.length} referenda</span>, delegates influenced the outcome of <span class="bold">${totalInfluence}</span>, representing <span class="bold">${totalInfluencePercentage}%</span> of the total.`;
+        this.dvInfluenceDescription.innerHTML = `Among the filtered referenda, DV delegates changed the outcome of <span class="vote-legend aye">${positiveInfluence} in a positive direction</span>, and <span class="vote-legend nay">${negativeInfluence} in a negative direction</span>. Overall, out of <span class="bold">${referenda.length} filtered referenda</span>, delegates influenced the outcome of <span class="bold">${totalInfluence}</span>, representing <span class="bold">${totalInfluencePercentage}%</span> of the total.`;
     }
 }
 
