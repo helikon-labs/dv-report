@@ -10,7 +10,7 @@ license.workspace = true
 [dependencies]
 anyhow = { workspace = true }
 chrono = { workspace = true }
-enum-iterator = "2.3"
+enum-iterator = { workspace = true }
 frame-support = { workspace = true }
 frame-system = { workspace = true }
 hex = { workspace = true }
@@ -20,6 +20,6 @@ serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
 sp-core = { workspace = true }
 sqlx = { workspace = true }
-strum = "0.27"
-strum_macros = "0.27"
+strum = { workspace = true }
+strum_macros = { workspace = true }
 thiserror = { workspace = true }
